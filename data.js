@@ -1,10 +1,10 @@
-// Auto-generated Quiz Data (Yoga + Kafi Unik)
+// Auto-generated Quiz Data (Informan 1 + Informan 2 Unik)
 const QUIZ_DATA = [
   {
     "id": 1,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Manakah pasangan yang benar-benar merupakan two-factor authentication?",
     "options": {
@@ -21,7 +21,7 @@ const QUIZ_DATA = [
     "id": 2,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Dalam biometric authentication digunakan matching score s dan threshold t. Sistem menerima pengguna jika s ≥ t. Jika threshold dinaikkan, kecenderungan yang paling tepat adalah ...",
     "options": {
@@ -38,7 +38,7 @@ const QUIZ_DATA = [
     "id": 3,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Setelah seorang pengguna menyatakan identitasnya, sistem meminta password untuk memastikan bahwa klaim identitas tersebut benar. Proses yang sedang dilakukan adalah ...",
     "options": {
@@ -55,7 +55,7 @@ const QUIZ_DATA = [
     "id": 4,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Remote user authentication umumnya memiliki risiko tambahan dibandingkan local authentication karena ...",
     "options": {
@@ -72,7 +72,7 @@ const QUIZ_DATA = [
     "id": 5,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sistem biometric menerima seorang impostor sebagai pengguna yang sah. Kejadian ini disebut ...",
     "options": {
@@ -89,7 +89,7 @@ const QUIZ_DATA = [
     "id": 6,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah perusahaan memiliki aturan: pegawai boleh mengubah data hanya jika data tersebut dimiliki oleh divisi di mana pegawai tersebut berada, menggunakan komputer perusahaan, berada pada internal network, dan sedang berada pada jam kerjanya. Model yang paling tepat adalah ...",
     "options": {
@@ -106,7 +106,7 @@ const QUIZ_DATA = [
     "id": 7,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Di sebuah universitas, permission untuk menginput nilai diberikan kepada role Dosen, bukan kepada setiap dosen secara individual. Model yang diterapkan terutama adalah ...",
     "options": {
@@ -123,7 +123,7 @@ const QUIZ_DATA = [
     "id": 8,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Mengapa sekadar mengirim password statis dalam bentuk terenkripsi belum tentu cukup untuk mencegah replay attack?",
     "options": {
@@ -140,7 +140,7 @@ const QUIZ_DATA = [
     "id": 9,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "PIN pada kartu ATM termasuk authentication factor kategori ...",
     "options": {
@@ -157,7 +157,7 @@ const QUIZ_DATA = [
     "id": 10,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Karakteristik utama continuous authentication adalah ...",
     "options": {
@@ -174,7 +174,7 @@ const QUIZ_DATA = [
     "id": 11,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Dalam trust triangle, sebuah aplikasi eksternal meminta pihak lain mengautentikasi pengguna dan kemudian mempercayai hasil verifikasinya. Aplikasi eksternal tersebut berperan sebagai ...",
     "options": {
@@ -191,7 +191,7 @@ const QUIZ_DATA = [
     "id": 12,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Alice dan Bob memilih password yang sama. Sistem menggunakan salt acak yang berbeda untuk setiap pengguna sebelum hashing. Apa yang diharapkan tersimpan di password database?",
     "options": {
@@ -208,7 +208,7 @@ const QUIZ_DATA = [
     "id": 13,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Seorang pengguna tidak memberikan username, tetapi memindai fingerprint. Sistem membandingkan fingerprint tersebut dengan seluruh template yang tersimpan untuk menemukan siapa pengguna tersebut. Operasi ini disebut ...",
     "options": {
@@ -225,7 +225,7 @@ const QUIZ_DATA = [
     "id": 14,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Manakah yang merupakan tiga elemen dasar access control?",
     "options": {
@@ -242,7 +242,7 @@ const QUIZ_DATA = [
     "id": 15,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Dalam biometric authentication digunakan matching score s dan threshold t. Sistem menerima pengguna jika s ≥ t. Jika threshold dinaikkan, kecenderungan yang paling tepat adalah ...",
     "options": {
@@ -259,7 +259,7 @@ const QUIZ_DATA = [
     "id": 16,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Fungsi utama salt pada mekanisme hashed password adalah ...",
     "options": {
@@ -276,7 +276,7 @@ const QUIZ_DATA = [
     "id": 17,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Manakah pasangan yang benar-benar merupakan two-factor authentication?",
     "options": {
@@ -293,7 +293,7 @@ const QUIZ_DATA = [
     "id": 18,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Pada proses enrollment biometric, aktivitas utama yang dilakukan adalah ...",
     "options": {
@@ -310,7 +310,7 @@ const QUIZ_DATA = [
     "id": 19,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Manakah data berikut yang paling sesuai digunakan sebagai passive indicator dalam continuous authentication?",
     "options": {
@@ -327,7 +327,7 @@ const QUIZ_DATA = [
     "id": 20,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Remote user authentication umumnya memiliki risiko tambahan dibandingkan local authentication karena ...",
     "options": {
@@ -344,7 +344,7 @@ const QUIZ_DATA = [
     "id": 21,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Teknologi komputer menimbulkan isu etika baru karena ...",
     "options": {
@@ -361,7 +361,7 @@ const QUIZ_DATA = [
     "id": 22,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Seorang security engineer menemukan kerentanan kritis pada aplikasi pembayaran perusahaan. Manajemen meminta engineer tersebut menunda perbaikan karena aplikasi akan diluncurkan besok dan keterlambatan dapat menyebabkan kerugian bisnis. Tindakan yang paling sesuai dengan tanggung jawab etika profesional adalah ...",
     "options": {
@@ -378,7 +378,7 @@ const QUIZ_DATA = [
     "id": 23,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Pendekatan human-centered security bertujuan untuk ...",
     "options": {
@@ -395,7 +395,7 @@ const QUIZ_DATA = [
     "id": 24,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Kasus penipuan terhadap Google dan Facebook yang menyebabkan kerugian besar dilakukan dengan cara ...",
     "options": {
@@ -412,7 +412,7 @@ const QUIZ_DATA = [
     "id": 25,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Memanipulasi informasi elektronik sehingga terlihat sebagai dokumen asli termasuk ...",
     "options": {
@@ -429,7 +429,7 @@ const QUIZ_DATA = [
     "id": 26,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Menghapus atau mengubah data elektronik milik pihak lain tanpa hak termasuk kategori ...",
     "options": {
@@ -446,7 +446,7 @@ const QUIZ_DATA = [
     "id": 27,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Code of Conduct bagi profesional komputer dibuat untuk...",
     "options": {
@@ -463,7 +463,7 @@ const QUIZ_DATA = [
     "id": 28,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Indonesia mengadopsi banyak konsep cybercrime dari Budapest Convention ke dalam regulasi nasional terutama melalui ...",
     "options": {
@@ -480,7 +480,7 @@ const QUIZ_DATA = [
     "id": 29,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Dalam kategori computer crime menurut U.S. Department of Justice, komputer sebagai target berarti ...",
     "options": {
@@ -497,7 +497,7 @@ const QUIZ_DATA = [
     "id": 30,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Berdasarkan Budapest Convention on Cybercrime, tindakan memasuki sistem komputer tanpa hak termasuk ...",
     "options": {
@@ -514,7 +514,7 @@ const QUIZ_DATA = [
     "id": 31,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Salah satu tujuan utama RUU Keamanan dan Ketahanan Siber adalah...",
     "options": {
@@ -531,7 +531,7 @@ const QUIZ_DATA = [
     "id": 32,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah organisasi mengalami kebocoran data setelah seorang pegawai membuka lampiran email yang terlihat berasal dari pihak terpercaya. Berdasarkan konsep keamanan siber, kejadian tersebut merupakan contoh dari ...",
     "options": {
@@ -548,7 +548,7 @@ const QUIZ_DATA = [
     "id": 33,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Seorang security engineer menemukan kerentanan kritis pada aplikasi pembayaran perusahaan. Manajemen meminta engineer tersebut menunda perbaikan karena aplikasi akan diluncurkan besok dan keterlambatan dapat menyebabkan kerugian bisnis. Tindakan yang paling sesuai dengan tanggung jawab etika profesional adalah ...",
     "options": {
@@ -565,7 +565,7 @@ const QUIZ_DATA = [
     "id": 34,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Penyimpanan daftar password curian dan informasi kartu kredit menggunakan komputer termasuk kategori ...",
     "options": {
@@ -582,7 +582,7 @@ const QUIZ_DATA = [
     "id": 35,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Code of Conduct bagi profesional komputer dibuat untuk...",
     "options": {
@@ -599,7 +599,7 @@ const QUIZ_DATA = [
     "id": 36,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah perusahaan memberikan pelatihan kepada administrator jaringan mengenai konfigurasi firewall dan pengamanan server. Aktivitas tersebut termasuk kategori ...",
     "options": {
@@ -616,7 +616,7 @@ const QUIZ_DATA = [
     "id": 37,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Seorang attacker masuk ke server perusahaan tanpa izin menggunakan akun yang diperoleh secara ilegal. Perbuatan tersebut sesuai dengan UU ITE Pasal ...",
     "options": {
@@ -633,7 +633,7 @@ const QUIZ_DATA = [
     "id": 38,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Serangan yang melakukan penyadapan komunikasi elektronik tanpa izin termasuk kategori ...",
     "options": {
@@ -650,7 +650,7 @@ const QUIZ_DATA = [
     "id": 39,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Dalam ethical hierarchy, ketika terjadi konflik antara aturan internal perusahaan dan prinsip moral yang lebih tinggi, seorang profesional sebaiknya ...",
     "options": {
@@ -667,7 +667,7 @@ const QUIZ_DATA = [
     "id": 40,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Dalam kategori computer crime menurut U.S. Department of Justice, komputer sebagai target berarti ...",
     "options": {
@@ -684,7 +684,7 @@ const QUIZ_DATA = [
     "id": 41,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Strategi yang PALING TIDAK SESUAI dengan secure coding practice adalah ...",
     "options": {
@@ -701,7 +701,7 @@ const QUIZ_DATA = [
     "id": 42,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Pernyataan yang paling tepat mengenai security testing perangkat lunak adalah ...",
     "options": {
@@ -718,7 +718,7 @@ const QUIZ_DATA = [
     "id": 43,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Prinsip utama yang digunakan dalam defensive programming adalah ...",
     "options": {
@@ -735,7 +735,7 @@ const QUIZ_DATA = [
     "id": 44,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Program menggunakan dynamically sized buffer. Ketika ukuran memori yang diminta melebihi memori yang tersedia, tindakan yang paling sesuai adalah ...",
     "options": {
@@ -752,7 +752,7 @@ const QUIZ_DATA = [
     "id": 45,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Tujuan utama praktik secure coding adalah ...",
     "options": {
@@ -769,7 +769,7 @@ const QUIZ_DATA = [
     "id": 46,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Mengapa penggunaan compiler atau interpreter yang terpercaya merupakan perhatian dalam secure programming?",
     "options": {
@@ -786,7 +786,7 @@ const QUIZ_DATA = [
     "id": 47,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Praktik yang paling tepat berkaitan dengan pemilihan fungsi dan runtime yang aman adalah ...",
     "options": {
@@ -803,7 +803,7 @@ const QUIZ_DATA = [
     "id": 48,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi menyimpan komentar dari pengguna A dan kemudian menampilkannya kepada pengguna B. Kondisi menjadi berbahaya apabila ...",
     "options": {
@@ -820,7 +820,7 @@ const QUIZ_DATA = [
     "id": 49,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Mengapa framework, library, atau component sebaiknya dibuat loosely coupled dengan aplikasi?",
     "options": {
@@ -837,7 +837,7 @@ const QUIZ_DATA = [
     "id": 50,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Bagaimana error message yang ditampilkan kepada pengguna sebaiknya dirancang?",
     "options": {
@@ -854,7 +854,7 @@ const QUIZ_DATA = [
     "id": 51,
     "week": "Week 4",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Defensive programming paling tepat didefinisikan sebagai proses untuk ...",
     "options": {
@@ -871,7 +871,7 @@ const QUIZ_DATA = [
     "id": 52,
     "week": "Week 4",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Dalam keamanan output program, \"assumption of common origin\" berarti pengguna cenderung menganggap bahwa ...",
     "options": {
@@ -888,7 +888,7 @@ const QUIZ_DATA = [
     "id": 53,
     "week": "Week 4",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Input biner dari paket jaringan tetap harus divalidasi terutama karena ...",
     "options": {
@@ -905,7 +905,7 @@ const QUIZ_DATA = [
     "id": 54,
     "week": "Week 4",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Perbedaan utama antara whitelisting dan blacklisting dalam validasi input adalah ...",
     "options": {
@@ -922,7 +922,7 @@ const QUIZ_DATA = [
     "id": 55,
     "week": "Week 4",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Mengapa input program perlu diperlakukan sebagai sumber risiko keamanan?",
     "options": {
@@ -939,7 +939,7 @@ const QUIZ_DATA = [
     "id": 56,
     "week": "Week 4",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Mengapa penggunaan compiler atau interpreter yang terpercaya merupakan perhatian dalam secure programming?",
     "options": {
@@ -956,7 +956,7 @@ const QUIZ_DATA = [
     "id": 57,
     "week": "Week 4",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Pernyataan yang paling tepat mengenai security testing perangkat lunak adalah ...",
     "options": {
@@ -973,7 +973,7 @@ const QUIZ_DATA = [
     "id": 58,
     "week": "Week 4",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Mengapa memberikan hak akses yang berlebihan kepada sebuah program berbahaya?",
     "options": {
@@ -990,7 +990,7 @@ const QUIZ_DATA = [
     "id": 59,
     "week": "Week 4",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Strategi yang PALING TIDAK SESUAI dengan secure coding practice adalah ...",
     "options": {
@@ -1007,7 +1007,7 @@ const QUIZ_DATA = [
     "id": 60,
     "week": "Week 4",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Manakah pasangan isu keamanan dan sumber permasalahannya yang paling tepat?",
     "options": {
@@ -1024,7 +1024,7 @@ const QUIZ_DATA = [
     "id": 61,
     "week": "Week 5",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Suatu organisasi ingin mengurangi risiko keamanan yang disebabkan oleh pustaka pihak ketiga. Pengembang diminta memiliki inventaris komponen dan memastikan kerentanan yang diketahui ditangani sesuai kebijakan. Chapter ASVS yang paling relevan adalah ....",
     "options": {
@@ -1041,7 +1041,7 @@ const QUIZ_DATA = [
     "id": 62,
     "week": "Week 5",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi mobile menampilkan OTP dalam notifikasi dan informasi tersebut masih dapat dilihat ketika perangkat terkunci. Kontrol MASVS yang paling langsung menangani masalah ini adalah ....",
     "options": {
@@ -1058,7 +1058,7 @@ const QUIZ_DATA = [
     "id": 63,
     "week": "Week 5",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Pada suatu aplikasi, pengguna dapat mengirimkan atribut isAdmin=true melalui API ketika memperbarui profil. Atribut tersebut kemudian tersimpan karena seluruh field input langsung diikat ke objek database. Risiko ini paling sesuai dicegah dengan ....",
     "options": {
@@ -1075,7 +1075,7 @@ const QUIZ_DATA = [
     "id": 64,
     "week": "Week 5",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi web menggunakan HTTPS, tetapi mengizinkan penggunaan algoritma kriptografi yang lemah untuk melindungi informasi sensitif. Kategori OWASP Top 10:2025 yang paling tepat adalah ....",
     "options": {
@@ -1092,7 +1092,7 @@ const QUIZ_DATA = [
     "id": 65,
     "week": "Week 5",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah organisasi telah mengimplementasikan kontrol keamanan berdasarkan OWASP ASVS, tetapi belum dapat membuktikan apakah kontrol tersebut bekerja dengan benar. Prinsip ASVS yang belum terpenuhi adalah ....",
     "options": {
@@ -1109,7 +1109,7 @@ const QUIZ_DATA = [
     "id": 66,
     "week": "Week 5",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi memiliki endpoint API yang menerima ID objek dari pengguna. Pengujian menemukan bahwa endpoint tersebut mengembalikan data tanpa memeriksa apakah objek benarbenar menjadi hak pengguna. Chapter ASVS yang paling relevan adalah ....",
     "options": {
@@ -1126,7 +1126,7 @@ const QUIZ_DATA = [
     "id": 67,
     "week": "Week 5",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah organisasi menyatakan aplikasi telah memenuhi ASVS Level 2. Pernyataan yang paling tepat mengenai cakupan persyaratannya adalah ....",
     "options": {
@@ -1143,7 +1143,7 @@ const QUIZ_DATA = [
     "id": 68,
     "week": "Week 5",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi mobile dapat dimodifikasi oleh penyerang untuk mengaktifkan fitur berbayar tanpa melakukan pembayaran. Tim keamanan ingin meningkatkan ketahanan aplikasi terhadap modifikasi tersebut. Kontrol yang paling relevan adalah ....",
     "options": {
@@ -1160,7 +1160,7 @@ const QUIZ_DATA = [
     "id": 69,
     "week": "Week 5",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Dalam implementasi ASVS, suatu organisasi telah menentukan level keamanan, tetapi setiap tim pengembang menerapkan kebijakan validasi dan kontrol akses yang berbeda. Langkah yang paling tepat adalah ....",
     "options": {
@@ -1177,7 +1177,7 @@ const QUIZ_DATA = [
     "id": 70,
     "week": "Week 5",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah bank mengembangkan layanan perbankan online yang menangani data keuangan sangat sensitif. Organisasi ingin menerapkan perlindungan berlapis dan tingkat assurance yang tinggi. Level ASVS yang paling tepat dipertimbangkan adalah ....",
     "options": {
@@ -1194,7 +1194,7 @@ const QUIZ_DATA = [
     "id": 71,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Pengembang menerapkan pembatasan waktu sesi ketika pengguna tidak aktif. Kontrol tersebut bertujuan mengurangi kemungkinan penyalahgunaan sesi yang masih berlaku. Chapter ASVS yang paling sesuai adalah ....",
     "options": {
@@ -1211,7 +1211,7 @@ const QUIZ_DATA = [
     "id": 72,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah sistem menerima permintaan transaksi dengan memeriksa saldo terlebih dahulu, kemudian mengurangi saldo dalam operasi terpisah. Dua permintaan bersamaan dapat melewati pemeriksaan sebelum saldo diperbarui. Prinsip keamanan yang paling tepat diterapkan adalah ....",
     "options": {
@@ -1228,7 +1228,7 @@ const QUIZ_DATA = [
     "id": 73,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Tim keamanan menemukan sebuah aplikasi memiliki rancangan proses bisnis yang memungkinkan transaksi penting dilewati tanpa pemeriksaan yang semestinya. Meskipun tidak ditemukan kesalahan sintaks pemrograman, kondisi tersebut termasuk ....",
     "options": {
@@ -1245,7 +1245,7 @@ const QUIZ_DATA = [
     "id": 74,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi mobile menyimpan token akses pada lokasi penyimpanan publik sehingga aplikasi lain dapat membacanya. Kontrol MASVS yang paling tepat digunakan sebagai acuan adalah ....",
     "options": {
@@ -1262,7 +1262,7 @@ const QUIZ_DATA = [
     "id": 75,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi mobile tidak memiliki mekanisme untuk mewajibkan pengguna memasang pembaruan meskipun versi lama mengandung kerentanan kritis. Kontrol MASVS yang paling relevan adalah ....",
     "options": {
@@ -1279,7 +1279,7 @@ const QUIZ_DATA = [
     "id": 76,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Tim pengembang menggunakan pustaka perangkat lunak dari repositori eksternal. Salah satu pustaka ternyata telah disusupi kode berbahaya sebelum didistribusikan. Kategori risiko OWASP Top 10:2025 yang paling tepat adalah ....",
     "options": {
@@ -1296,7 +1296,7 @@ const QUIZ_DATA = [
     "id": 77,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi web memungkinkan pengguna mengakses data milik pengguna lain dengan mengubah parameter ID pada URL, meskipun pengguna tersebut telah login menggunakan akun yang valid. Kategori OWASP Top 10:2025 yang paling sesuai adalah ....",
     "options": {
@@ -1313,7 +1313,7 @@ const QUIZ_DATA = [
     "id": 78,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah bank mengembangkan layanan perbankan online yang menangani data keuangan sangat sensitif. Organisasi ingin menerapkan perlindungan berlapis dan tingkat assurance yang tinggi. Level ASVS yang paling tepat dipertimbangkan adalah ....",
     "options": {
@@ -1330,7 +1330,7 @@ const QUIZ_DATA = [
     "id": 79,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah perangkat IoT kecil di sistem smart home tidak menyimpan informasi sensitif dan kompromi perangkat tidak memungkinkan penyerang berpindah ke sistem lain. Organisasi terutama ingin melindunginya dari serangan berbasis perangkat lunak. Level ISVS yang paling sesuai adalah ....",
     "options": {
@@ -1347,7 +1347,7 @@ const QUIZ_DATA = [
     "id": 80,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi menangkap exception dari sistem database, tetapi menampilkan pesan kesalahan yang mengandung struktur query dan informasi internal server kepada pengguna. Kategori OWASP Top 10:2025 yang paling relevan adalah ....",
     "options": {
@@ -1364,7 +1364,7 @@ const QUIZ_DATA = [
     "id": 81,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Penyerang berencana menggunakan brute-force attack terhadap algoritma symmetric encryption dengan panjang kunci 128 bit. Jika setiap kemungkinan kunci memiliki peluang yang sama, ratarata jumlah percobaan untuk menemukan kunci yang benar adalah ...",
     "options": {
@@ -1381,7 +1381,7 @@ const QUIZ_DATA = [
     "id": 82,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah perusahaan mengembangkan algoritma enkripsi sendiri dan merahasiakan seluruh mekanisme internalnya. Keamanan sistem tersebut sangat bergantung pada ketidaktahuan penyerang terhadap desain algoritma. Berdasarkan Kerckhoffs's Principle, kelemahan utama pendekatan tersebut adalah ...",
     "options": {
@@ -1398,7 +1398,7 @@ const QUIZ_DATA = [
     "id": 83,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Seorang mahasiswa membandingkan struktur internal DES dan AES. Berdasarkan prinsip perancangan algoritmanya, perbedaan utama antara keduanya adalah ...",
     "options": {
@@ -1415,7 +1415,7 @@ const QUIZ_DATA = [
     "id": 84,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Dua pihak menggunakan symmetric encryption untuk mengamankan komunikasi melalui jaringan publik. Agar komunikasi tersebut tetap terlindungi, dua persyaratan utama yang harus dipenuhi adalah ...",
     "options": {
@@ -1432,7 +1432,7 @@ const QUIZ_DATA = [
     "id": 85,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah perusahaan menemukan bahwa kunci enkripsi untuk komunikasi tertentu telah diketahui penyerang. Sebelumnya perusahaan menggunakan kunci tersebut dalam waktu lama untuk banyak transaksi. Strategi yang paling tepat untuk membatasi dampak kompromi serupa adalah ...",
     "options": {
@@ -1449,7 +1449,7 @@ const QUIZ_DATA = [
     "id": 86,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Dua organisasi ingin menggunakan symmetric encryption untuk komunikasi rahasia. Mereka belum pernah berbagi kunci sebelumnya dan tidak memiliki koneksi aman ke pihak ketiga. Permasalahan utama yang harus diselesaikan sebelum komunikasi berlangsung adalah ...",
     "options": {
@@ -1466,7 +1466,7 @@ const QUIZ_DATA = [
     "id": 87,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Alice dan Bob berbagi kunci rahasia untuk menghitung Message Authentication Code (MAC). Bob menerima pesan beserta MAC, kemudian menghitung kembali MAC menggunakan kunci yang sama. Jika hasil perhitungan sesuai dengan MAC yang diterima, kesimpulan yang paling tepat adalah ...",
     "options": {
@@ -1483,7 +1483,7 @@ const QUIZ_DATA = [
     "id": 88,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi mengenkripsi gambar menggunakan AES dalam mode ECB. Setelah dienkripsi, sebagian pola visual gambar masih dapat dikenali. Penyebab utama kondisi tersebut adalah ...",
     "options": {
@@ -1500,7 +1500,7 @@ const QUIZ_DATA = [
     "id": 89,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Seorang penyerang mengetahui nilai hash h dari suatu data, tetapi tidak mengetahui data asli x. Penyerang berusaha mencari sebuah input yang menghasilkan hash yang sama dengan h. Sifat keamanan hash yang secara khusus mempersulit serangan tersebut adalah ...",
     "options": {
@@ -1517,7 +1517,7 @@ const QUIZ_DATA = [
     "id": 90,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi mengenkripsi file menggunakan algoritma block cipher dengan ukuran blok 128 bit. File tersebut memiliki ukuran yang lebih besar daripada satu blok. Pernyataan yang paling tepat mengenai proses enkripsi adalah ...",
     "options": {
@@ -1534,7 +1534,7 @@ const QUIZ_DATA = [
     "id": 91,
     "week": "Week 6",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah perangkat mengirimkan data secara bertahap dalam unit-unit kecil. Mode operasi yang digunakan memanfaatkan ciphertext sebelumnya sebagai masukan algoritma enkripsi untuk menghasilkan output yang kemudian di-XOR dengan plaintext. Mode yang paling sesuai adalah ...",
     "options": {
@@ -1551,7 +1551,7 @@ const QUIZ_DATA = [
     "id": 92,
     "week": "Week 6",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi mengenkripsi gambar menggunakan AES dalam mode ECB. Setelah dienkripsi, sebagian pola visual gambar masih dapat dikenali. Penyebab utama kondisi tersebut adalah ...",
     "options": {
@@ -1568,7 +1568,7 @@ const QUIZ_DATA = [
     "id": 93,
     "week": "Week 6",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi komunikasi real-time mempertimbangkan penggunaan stream cipher daripada block cipher. Karakteristik utama stream cipher yang membedakannya dari block cipher adalah ...",
     "options": {
@@ -1585,7 +1585,7 @@ const QUIZ_DATA = [
     "id": 94,
     "week": "Week 6",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi mengenkripsi file menggunakan algoritma block cipher dengan ukuran blok 128 bit. File tersebut memiliki ukuran yang lebih besar daripada satu blok. Pernyataan yang paling tepat mengenai proses enkripsi adalah ...",
     "options": {
@@ -1602,7 +1602,7 @@ const QUIZ_DATA = [
     "id": 95,
     "week": "Week 6",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah perusahaan menemukan bahwa kunci enkripsi untuk komunikasi tertentu telah diketahui penyerang. Sebelumnya perusahaan menggunakan kunci tersebut dalam waktu lama untuk banyak transaksi. Strategi yang paling tepat untuk membatasi dampak kompromi serupa adalah ...",
     "options": {
@@ -1619,7 +1619,7 @@ const QUIZ_DATA = [
     "id": 96,
     "week": "Week 6",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah perangkat embedded tidak memiliki akselerasi AES berbasis perangkat keras dan membutuhkan mekanisme enkripsi yang sekaligus menyediakan autentikasi serta integritas data. Dari alternatif pengganti RC4 yang dibahas, pilihan yang paling sesuai adalah ...",
     "options": {
@@ -1636,7 +1636,7 @@ const QUIZ_DATA = [
     "id": 97,
     "week": "Week 6",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah perusahaan mengembangkan algoritma enkripsi sendiri dan merahasiakan seluruh mekanisme internalnya. Keamanan sistem tersebut sangat bergantung pada ketidaktahuan penyerang terhadap desain algoritma. Berdasarkan Kerckhoffs's Principle, kelemahan utama pendekatan tersebut adalah ...",
     "options": {
@@ -1653,7 +1653,7 @@ const QUIZ_DATA = [
     "id": 98,
     "week": "Week 6",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Dalam Feistel Cipher Structure, proses enkripsi menggunakan sejumlah subkey yang dihasilkan dari kunci utama. Karakteristik penting dari proses dekripsi pada struktur ini adalah ...",
     "options": {
@@ -1670,7 +1670,7 @@ const QUIZ_DATA = [
     "id": 99,
     "week": "Week 6",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah perusahaan menggunakan Key Distribution Center (KDC) untuk mengelola komunikasi aman antarpengguna. Setiap pengguna memiliki hubungan kunci dengan KDC, kemudian KDC mendistribusikan session key bagi pihak yang akan berkomunikasi. Keuntungan utama pendekatan ini adalah ...",
     "options": {
@@ -1687,7 +1687,7 @@ const QUIZ_DATA = [
     "id": 100,
     "week": "Week 6",
     "type": "Post Test",
-    "source": "Yoga",
+    "source": "Informan 1",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah sistem komunikasi satelit membutuhkan mode enkripsi yang menggunakan output enkripsi sebelumnya sebagai input pada proses berikutnya, bukan ciphertext sebelumnya. Berdasarkan mekanisme tersebut, mode yang paling tepat adalah ...",
     "options": {
@@ -1704,7 +1704,7 @@ const QUIZ_DATA = [
     "id": 101,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Countermeasure yang paling langsung untuk mengurangi specific account attack yang mencoba banyak password\nterhadap satu akun adalah ...",
     "options": {
@@ -1721,7 +1721,7 @@ const QUIZ_DATA = [
     "id": 102,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Sistem mengizinkan akses dokumen berdasarkan perbandingan antara security classification pada dokumen dan\nsecurity clearance pengguna. Model yang paling sesuai adalah ...",
     "options": {
@@ -1738,7 +1738,7 @@ const QUIZ_DATA = [
     "id": 103,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Pernyataan yang paling tepat mengenai hubungan authentication dan access control adalah ...",
     "options": {
@@ -1755,7 +1755,7 @@ const QUIZ_DATA = [
     "id": 104,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "pengambilan keputusan access control\nManakah yang termasuk contoh dynamic biometric?",
     "options": {
@@ -1772,7 +1772,7 @@ const QUIZ_DATA = [
     "id": 105,
     "week": "Week 2",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Sistem biometric menolak pengguna sah karena sampel fingerprint-nya tidak dianggap cukup mirip dengan template.\nKejadian ini disebut ...",
     "options": {
@@ -1789,7 +1789,7 @@ const QUIZ_DATA = [
     "id": 106,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi meminta password dan kode yang dihasilkan oleh authenticator application pada ponsel. Faktor\nkedua pada mekanisme tersebut termasuk ...",
     "options": {
@@ -1806,7 +1806,7 @@ const QUIZ_DATA = [
     "id": 107,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Dalam konteks access control, authorization terutama menjawab pertanyaan ...",
     "options": {
@@ -1823,7 +1823,7 @@ const QUIZ_DATA = [
     "id": 108,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah organisasi menetapkan bahwa pemilik file dapat menentukan pengguna lain yang boleh membaca file\nmiliknya. Model access control yang paling sesuai adalah ...",
     "options": {
@@ -1840,7 +1840,7 @@ const QUIZ_DATA = [
     "id": 109,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Seorang mahasiswa menjalankan program untuk membaca file tertentu. Dalam model access control, pihak aktif\nyang mencoba mengakses resource disebut ...",
     "options": {
@@ -1857,7 +1857,7 @@ const QUIZ_DATA = [
     "id": 110,
     "week": "Week 2",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Seorang pengguna memasukkan student123 untuk menyatakan siapa dirinya kepada sistem. Proses ini disebut ...",
     "options": {
@@ -1874,7 +1874,7 @@ const QUIZ_DATA = [
     "id": 111,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Program security awareness, training, and education bertujuan untuk ...",
     "options": {
@@ -1891,7 +1891,7 @@ const QUIZ_DATA = [
     "id": 112,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Membuat atau menyediakan tools yang digunakan untuk melakukan kejahatan elektronik termasuk ...",
     "options": {
@@ -1908,7 +1908,7 @@ const QUIZ_DATA = [
     "id": 113,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Ethics dalam konteks teknologi informasi berkaitan dengan ...",
     "options": {
@@ -1925,7 +1925,7 @@ const QUIZ_DATA = [
     "id": 114,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Pada kasus RSA Security tahun 2011, attacker berhasil memperoleh akses setelah karyawan membuka file Excel\nberisi malware yang dikirim melalui email. Faktor utama yang dimanfaatkan attacker adalah ...",
     "options": {
@@ -1942,7 +1942,7 @@ const QUIZ_DATA = [
     "id": 115,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Salah satu aspek yang perlu diperhatikan dalam usable security adalah ...",
     "options": {
@@ -1959,7 +1959,7 @@ const QUIZ_DATA = [
     "id": 116,
     "week": "Week 3",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Dalam perspektif human-centered security, faktor manusia dianggap penting karena ...",
     "options": {
@@ -1976,7 +1976,7 @@ const QUIZ_DATA = [
     "id": 117,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "UU No. 27 Tahun 2022 berkaitan dengan ...",
     "options": {
@@ -1993,7 +1993,7 @@ const QUIZ_DATA = [
     "id": 118,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Perbedaan utama social engineering dibandingkan serangan teknis adalah ...",
     "options": {
@@ -2010,7 +2010,7 @@ const QUIZ_DATA = [
     "id": 119,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Konsep usable security menekankan bahwa mekanisme keamanan harus ...",
     "options": {
@@ -2027,7 +2027,7 @@ const QUIZ_DATA = [
     "id": 120,
     "week": "Week 3",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Seorang pegawai mengetahui aturan keamanan tetapi sengaja mengabaikannya karena merasa proses keamanan\nmenghambat pekerjaannya. Pegawai tersebut termasuk kategori ...",
     "options": {
@@ -2044,7 +2044,7 @@ const QUIZ_DATA = [
     "id": 121,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Mengapa validation dinilai umumnya lebih aman dibandingkan sanitization?",
     "options": {
@@ -2061,7 +2061,7 @@ const QUIZ_DATA = [
     "id": 122,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Dalam konteks writing safe program code, salah satu pertanyaan penting terkait implementasi algoritma adalah ...",
     "options": {
@@ -2078,7 +2078,7 @@ const QUIZ_DATA = [
     "id": 123,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Pernyataan yang paling tepat mengenai penggunaan code analysis tools adalah ...",
     "options": {
@@ -2095,7 +2095,7 @@ const QUIZ_DATA = [
     "id": 124,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "awal dalam development cycle.\nPerhatikan dua proses berikut: (Mengubah `2018/01/30` menjadi format tanggal standar aplikasi -- Menolak `` karena\nbukan tanggal yang valid). Urutan istilah yang sesuai adalah ...",
     "options": {
@@ -2112,7 +2112,7 @@ const QUIZ_DATA = [
     "id": 125,
     "week": "Week 4",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Bagaimana seharusnya program memperlakukan environment variables dan command-line arguments?",
     "options": {
@@ -2129,7 +2129,7 @@ const QUIZ_DATA = [
     "id": 126,
     "week": "Week 4",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Mengapa Cross-Site Scripting (XSS) berkaitan erat dengan keamanan output aplikasi web?",
     "options": {
@@ -2146,7 +2146,7 @@ const QUIZ_DATA = [
     "id": 127,
     "week": "Week 5",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "kode dan sumber daya.\nSebuah aplikasi Android menggunakan algoritma enkripsi yang kuat, tetapi menyimpan kunci enkripsi secara\nlangsung di dalam source code aplikasi. Kontrol MASVS yang paling relevan adalah ....",
     "options": {
@@ -2163,7 +2163,7 @@ const QUIZ_DATA = [
     "id": 128,
     "week": "Week 5",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah perusahaan mengembangkan aplikasi mobile yang terhubung ke API berbasis web dan perangkat IoT.\nKombinasi standar OWASP yang paling sesuai adalah ....",
     "options": {
@@ -2180,7 +2180,7 @@ const QUIZ_DATA = [
     "id": 129,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi mengizinkan pengguna mengunggah arsip terkompresi. Tim keamanan menemukan arsip kecil dapat\nmenghasilkan data sangat besar setelah diekstraksi. Kontrol yang paling sesuai adalah ....",
     "options": {
@@ -2197,7 +2197,7 @@ const QUIZ_DATA = [
     "id": 130,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "tidak cukup kuat.\nSebuah aplikasi tidak mencatat percobaan login gagal dan tidak memberikan peringatan ketika terjadi aktivitas\nautentikasi mencurigakan secara berulang. Kategori OWASP Top 10:2025 yang paling sesuai adalah ....",
     "options": {
@@ -2214,7 +2214,7 @@ const QUIZ_DATA = [
     "id": 131,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "dan dapat diverifikasi.\nSebuah aplikasi mobile menggunakan HTTPS, tetapi tidak memvalidasi identitas server dengan benar sehingga\nkomunikasi dapat diarahkan ke server penyerang. Kontrol MASVS yang paling sesuai adalah ....",
     "options": {
@@ -2231,7 +2231,7 @@ const QUIZ_DATA = [
     "id": 132,
     "week": "Week 5",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah perangkat IoT menerima pembaruan firmware melalui jaringan. Untuk mencegah pemasangan firmware\npalsu yang dapat mengambil alih perangkat, persyaratan keamanan yang paling tepat adalah ....",
     "options": {
@@ -2248,7 +2248,7 @@ const QUIZ_DATA = [
     "id": 133,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "AES memproses data internal menggunakan struktur state berupa array 4 × 4 byte dengan susunan column-major.\nPernyataan yang tepat mengenai struktur tersebut adalah ...",
     "options": {
@@ -2265,7 +2265,7 @@ const QUIZ_DATA = [
     "id": 134,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah aplikasi telah mengenkripsi pesan agar tidak dapat dibaca pihak ketiga. Namun, penyerang masih berpotensi\nmemodifikasi atau mengirim ulang pesan tersebut. Mekanisme keamanan tambahan yang diperlukan adalah ...",
     "options": {
@@ -2282,7 +2282,7 @@ const QUIZ_DATA = [
     "id": 135,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah sistem menggunakan DES, Triple DES, dan AES untuk kebutuhan enkripsi berbeda. Kombinasi ukuran blok\ndan panjang kunci yang sesuai dengan karakteristik algoritma tersebut adalah ...",
     "options": {
@@ -2299,7 +2299,7 @@ const QUIZ_DATA = [
     "id": 136,
     "week": "Week 6",
     "type": "Pre Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah organisasi ingin meningkatkan keamanan algoritma enkripsi simetris terhadap brute-force attack dengan\nmemperbesar panjang kunci. Dampak utama dari peningkatan panjang kunci tersebut adalah ...",
     "options": {
@@ -2316,7 +2316,7 @@ const QUIZ_DATA = [
     "id": 137,
     "week": "Week 6",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Sebuah sistem lama masih menggunakan RC4 untuk mengamankan komunikasi TLS. Administrator merencanakan\npeningkatan keamanan sistem. Berdasarkan perkembangan standar kriptografi, tindakan yang paling tepat adalah ...",
     "options": {
@@ -2333,7 +2333,7 @@ const QUIZ_DATA = [
     "id": 138,
     "week": "Week 6",
     "type": "Post Test",
-    "source": "Kafi",
+    "source": "Informan 2",
     "mark": "1.00 out of 1.00",
     "question": "Dalam symmetric cryptography, operasi substitusi dan permutasi digunakan untuk mengubah representasi plaintext.\nMengapa transformasi tersebut harus dapat dibalik?",
     "options": {
