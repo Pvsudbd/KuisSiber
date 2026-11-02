@@ -614,6 +614,21 @@
                 </div>
 
                 <div class="form-row">
+                  <label for="filter-timer">Batas Waktu Pengerjaan:</label>
+                  <select id="filter-timer" class="form-control">
+                    <option value="auto">Batas Waktu Otomatis (1 Menit / Soal) - Ada Tekanan Waktu</option>
+                    <option value="none">Tanpa Batas Waktu (Santai / Belajar Bebas)</option>
+                  </select>
+                  <div class="timer-preview-hint" id="timer-preview-hint">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>Durasi: <strong id="calculated-time-text">10 Menit</strong> (otomatis terkunci 1 menit/soal)</span>
+                  </div>
+                </div>
+
+                <div class="form-row">
                   <label for="filter-feedback">Mode Ujian:</label>
                   <select id="filter-feedback" class="form-control">
                     <option value="exam">Mode Ujian (Hasil & Kunci Muncul di Akhir)</option>
@@ -661,7 +676,16 @@
                 <h3 id="quiz-topic-title">Keamanan Siber UTS</h3>
                 <span id="quiz-mode-tag">Simulasi Acak</span>
               </div>
-              <button class="btn-text-sm" id="btn-toggle-palette">Daftar Soal</button>
+              <div class="play-top-right">
+                <div class="quiz-timer-badge" id="quiz-timer-badge" title="Sisa Waktu Pengerjaan">
+                  <svg class="timer-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span id="quiz-timer-text">10:00</span>
+                </div>
+                <button class="btn-text-sm" id="btn-toggle-palette">Daftar Soal</button>
+              </div>
             </div>
 
             <!-- Progress Track -->
@@ -749,6 +773,10 @@
                 <div class="sum-box">
                   <span class="sum-num total" id="r-stat-total">10</span>
                   <span class="sum-lbl">Total</span>
+                </div>
+                <div class="sum-box">
+                  <span class="sum-num time" id="r-stat-time">--:--</span>
+                  <span class="sum-lbl">Waktu</span>
                 </div>
               </div>
 

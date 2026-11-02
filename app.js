@@ -19,7 +19,16 @@ window.App = (function () {
       week: 'all',
       type: 'all',
       count: 10,
+      timer: 'auto',
       feedback: 'exam'
+    },
+    // Timer State (Locked to 1 minute / question)
+    timer: {
+      mode: 'auto',
+      totalSeconds: 600,
+      remainingSeconds: 600,
+      elapsedSeconds: 0,
+      intervalId: null
     },
     // Search & Detail State
     searchQuery: '',
@@ -100,11 +109,16 @@ window.App = (function () {
   const filterWeek = document.getElementById('filter-week');
   const filterType = document.getElementById('filter-type');
   const filterCount = document.getElementById('filter-count');
+  const filterTimer = document.getElementById('filter-timer');
   const filterFeedback = document.getElementById('filter-feedback');
+  const timerPreviewHint = document.getElementById('timer-preview-hint');
+  const calculatedTimeText = document.getElementById('calculated-time-text');
 
   // Quiz Play Elements
   const quizTopicTitle = document.getElementById('quiz-topic-title');
   const quizModeTag = document.getElementById('quiz-mode-tag');
+  const quizTimerBadge = document.getElementById('quiz-timer-badge');
+  const quizTimerText = document.getElementById('quiz-timer-text');
   const quizProgressFill = document.getElementById('quiz-progress-fill');
   const btnQuitQuiz = document.getElementById('btn-quit-quiz');
   const btnTogglePalette = document.getElementById('btn-toggle-palette');
@@ -137,6 +151,7 @@ window.App = (function () {
   const rStatCorrect = document.getElementById('r-stat-correct');
   const rStatIncorrect = document.getElementById('r-stat-incorrect');
   const rStatTotal = document.getElementById('r-stat-total');
+  const rStatTime = document.getElementById('r-stat-time');
   const btnRetryQuiz = document.getElementById('btn-retry-quiz');
   const btnBackSetup = document.getElementById('btn-back-setup');
   const btnResultToDashboard = document.getElementById('btn-result-to-dashboard');
@@ -176,6 +191,11 @@ window.App = (function () {
   // NAVIGATION & VIEW CONTROLLER
   // ==========================================
   function switchView(viewId) {
+    // Stop quiz timer if leaving quiz play screen
+    if (state.currentView === 'view-quiz-play' && viewId !== 'view-quiz-play' && viewId !== 'view-quiz-result') {
+      stopQuizTimer();
+    }
+
     state.currentView = viewId;
 
     // Toggle panels
@@ -375,11 +395,111 @@ window.App = (function () {
   // ==========================================
   // QUIZ ENGINE (Simulasi Quiz Setup & Play)
   // ==========================================
+  // ==========================================
+  // QUIZ TIMER CONTROLLER (1 Menit / Soal)
+  // ==========================================
+  function formatTime(totalSeconds) {
+    const sec = Math.max(0, Math.floor(totalSeconds));
+    const m = Math.floor(sec / 60);
+    const s = sec % 60;
+    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  }
+
+  function getFilteredQuestionCount() {
+    if (!filterWeek || !filterType) return 10;
+    const week = filterWeek.value;
+    const type = filterType.value;
+    const pool = state.allQuestions.filter(q => {
+      const matchWeek = (week === 'all') || (q.week === week);
+      const matchType = (type === 'all') || (q.type === type);
+      return matchWeek && matchType;
+    });
+    return pool.length;
+  }
+
+  function updateTimerSetupHint() {
+    if (!filterCount || !filterTimer || !calculatedTimeText || !timerPreviewHint) return;
+    const mode = filterTimer.value;
+    if (mode === 'none') {
+      timerPreviewHint.classList.add('is-disabled');
+      calculatedTimeText.textContent = 'Tanpa Batas Waktu';
+      return;
+    }
+
+    timerPreviewHint.classList.remove('is-disabled');
+    let count = 10;
+    if (filterCount.value === 'all') {
+      count = Math.max(1, getFilteredQuestionCount());
+    } else {
+      count = parseInt(filterCount.value, 10) || 10;
+    }
+
+    // Waktu otomatis terkunci 1 menit per soal (tidak bisa diatur manual)
+    calculatedTimeText.textContent = `${count} Menit`;
+  }
+
+  function stopQuizTimer() {
+    if (state.timer.intervalId) {
+      clearInterval(state.timer.intervalId);
+      state.timer.intervalId = null;
+    }
+  }
+
+  function startQuizTimer(totalSeconds, mode = 'auto') {
+    stopQuizTimer();
+    state.timer.mode = mode;
+    state.timer.totalSeconds = totalSeconds;
+    state.timer.remainingSeconds = totalSeconds;
+    state.timer.elapsedSeconds = 0;
+
+    if (!quizTimerBadge || !quizTimerText) return;
+
+    if (mode === 'none') {
+      quizTimerBadge.classList.remove('hidden', 'warning', 'urgent');
+      quizTimerBadge.title = 'Waktu Berjalan (Tanpa Batas Waktu)';
+      quizTimerText.textContent = '00:00';
+      state.timer.intervalId = setInterval(() => {
+        state.timer.elapsedSeconds++;
+        quizTimerText.textContent = formatTime(state.timer.elapsedSeconds);
+      }, 1000);
+      return;
+    }
+
+    // Mode Tekanan Waktu (Countdown otomatis 1 menit/soal)
+    quizTimerBadge.classList.remove('hidden', 'warning', 'urgent');
+    quizTimerBadge.title = 'Sisa Waktu Pengerjaan (1 Menit/Soal)';
+    quizTimerText.textContent = formatTime(state.timer.remainingSeconds);
+
+    state.timer.intervalId = setInterval(() => {
+      state.timer.remainingSeconds--;
+      state.timer.elapsedSeconds++;
+
+      if (state.timer.remainingSeconds <= 0) {
+        stopQuizTimer();
+        quizTimerText.textContent = '00:00';
+        quizTimerBadge.classList.add('urgent');
+        showDownloadToast('⏱️ Waktu Habis! Kuis otomatis dikumpulkan dan dinilai.');
+        submitQuiz(true);
+        return;
+      }
+
+      quizTimerText.textContent = formatTime(state.timer.remainingSeconds);
+
+      // Tingkat ketegangan visual (Warning: <= 25% waktu, Urgent: <= 60 detik)
+      const isUrgent = (state.timer.remainingSeconds <= 60);
+      const isWarning = (!isUrgent && state.timer.remainingSeconds <= Math.min(120, totalSeconds * 0.25));
+
+      quizTimerBadge.classList.toggle('urgent', isUrgent);
+      quizTimerBadge.classList.toggle('warning', isWarning);
+    }, 1000);
+  }
+
   function quickStartQuiz(week, type) {
     startQuiz({
       week: week,
       type: type,
       count: 10,
+      timer: 'auto',
       feedback: 'exam'
     });
   }
@@ -410,13 +530,21 @@ window.App = (function () {
     state.currentIndex = 0;
     state.userAnswers = {};
 
+    const totalQ = state.quizQuestions.length;
+    // Waktu otomatis mengikuti jumlah soal: 1 soal = 1 menit
+    const totalMinutes = totalQ;
+    const totalSeconds = totalMinutes * 60;
+    const timerMode = config.timer || 'auto';
+
     const weekLabel = (config.week === 'all') ? 'Semua Pertemuan (Week 2 - 6)' : config.week;
     const typeLabel = (config.type === 'all') ? 'Pre & Post Test' : config.type;
+    const timeLabel = (timerMode === 'none') ? 'Tanpa Waktu' : `⏱️ ${totalMinutes} Menit`;
     quizTopicTitle.textContent = `${weekLabel} (${typeLabel})`;
-    quizModeTag.textContent = `${state.quizQuestions.length} Soal Diacak • Mode ${config.feedback === 'instant' ? 'Latihan' : 'Ujian'}`;
+    quizModeTag.textContent = `${totalQ} Soal Diacak • ${timeLabel} • Mode ${config.feedback === 'instant' ? 'Latihan' : 'Ujian'}`;
 
     buildPaletteGrid();
     renderCurrentQuestion();
+    startQuizTimer(totalSeconds, timerMode);
     switchView('view-quiz-play');
   }
 
@@ -551,16 +679,19 @@ window.App = (function () {
     }
   }
 
-  function submitQuiz() {
+  function submitQuiz(isTimeUp = false) {
     const total = state.quizQuestions.length;
     const answeredCount = Object.keys(state.userAnswers).length;
 
-    if (answeredCount < total) {
+    if (!isTimeUp && answeredCount < total) {
       const unanswered = total - answeredCount;
       if (!confirm(`Masih ada ${unanswered} soal yang belum dijawab. Yakin kumpulkan sekarang?`)) {
         return;
       }
     }
+
+    // Hentikan timer saat kuis selesai
+    stopQuizTimer();
 
     let correctCount = 0;
     state.quizQuestions.forEach((q, idx) => {
@@ -570,22 +701,29 @@ window.App = (function () {
     });
 
     const percent = Math.round((correctCount / total) * 100);
+    const timeSpentStr = formatTime(state.timer ? state.timer.elapsedSeconds : 0);
 
     resultScoreNum.textContent = `${correctCount}/${total}`;
     resultScorePct.textContent = `${percent}%`;
     rStatCorrect.textContent = correctCount;
     rStatIncorrect.textContent = (total - correctCount);
     rStatTotal.textContent = total;
+    if (rStatTime) {
+      rStatTime.textContent = timeSpentStr;
+    }
 
-    if (percent >= 80) {
+    if (isTimeUp) {
+      resultTitle.textContent = '⏱️ Waktu Habis!';
+      resultSubtitle.textContent = `Batas waktu pengerjaan (${formatTime(state.timer.totalSeconds)}) telah berakhir. Jawaban Anda telah dinilai otomatis.`;
+    } else if (percent >= 80) {
       resultTitle.textContent = 'Gacor gini kau, harvar calling calling';
-      resultSubtitle.textContent = 'Pemahaman materi keamanan siber kamu sudah sangat siap untuk UTS.';
+      resultSubtitle.textContent = `Pemahaman materi keamanan siber kamu sudah sangat siap untuk UTS. (Waktu: ${timeSpentStr})`;
     } else if (percent >= 60) {
       resultTitle.textContent = 'Kerja Bagus!';
-      resultSubtitle.textContent = 'Hasil kamu sudah baik. Cek pembahasan di bawah untuk memperbaiki bagian yang keliru.';
+      resultSubtitle.textContent = `Hasil kamu sudah baik. Cek pembahasan di bawah untuk memperbaiki bagian yang keliru. (Waktu: ${timeSpentStr})`;
     } else {
       resultTitle.textContent = 'Koplak gini!';
-      resultSubtitle.textContent = 'Yuk pelajari kembali kunci jawaban di bawah untuk memperdalam konsep UTS.';
+      resultSubtitle.textContent = `Yuk pelajari kembali kunci jawaban di bawah untuk memperdalam konsep UTS. (Waktu: ${timeSpentStr})`;
     }
 
     // Render Review List
@@ -807,9 +945,16 @@ window.App = (function () {
         week: filterWeek.value,
         type: filterType.value,
         count: filterCount.value,
+        timer: filterTimer ? filterTimer.value : 'auto',
         feedback: filterFeedback.value
       });
     });
+
+    // Dynamic timer duration preview listeners
+    if (filterCount) filterCount.addEventListener('change', updateTimerSetupHint);
+    if (filterWeek) filterWeek.addEventListener('change', updateTimerSetupHint);
+    if (filterType) filterType.addEventListener('change', updateTimerSetupHint);
+    if (filterTimer) filterTimer.addEventListener('change', updateTimerSetupHint);
 
     // Quiz Play Actions
     btnPrevQ.addEventListener('click', () => {
@@ -818,10 +963,11 @@ window.App = (function () {
     btnNextQ.addEventListener('click', () => {
       if (state.currentIndex < state.quizQuestions.length - 1) goToQuestion(state.currentIndex + 1);
     });
-    btnSubmitQuiz.addEventListener('click', submitQuiz);
+    btnSubmitQuiz.addEventListener('click', () => submitQuiz(false));
 
     btnQuitQuiz.addEventListener('click', () => {
       if (confirm('Yakin ingin membatalkan kuis dan kembali ke menu?')) {
+        stopQuizTimer();
         switchView('view-quiz-setup');
       }
     });
@@ -918,6 +1064,7 @@ window.App = (function () {
   // ==========================================
   function init() {
     initEvents();
+    updateTimerSetupHint();
 
     const savedTheme = localStorage.getItem('cyberquiz_theme');
     if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
