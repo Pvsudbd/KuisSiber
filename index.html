@@ -44,6 +44,14 @@
           </svg>
           <span class="nav-label">Simulasi Quiz</span>
         </button>
+        <button class="nav-item" id="nav-download-soal" type="button" title="Unduh Sumber Soal (MD / ZIP)">
+          <svg class="nav-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span class="nav-label">Download Sumber Soal</span>
+        </button>
       </nav>
 
       <div class="sidebar-footer">
@@ -128,6 +136,14 @@
             <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
           </svg>
           <span class="m-label">Simulasi Quiz</span>
+        </button>
+        <button class="mobile-nav-item" id="m-nav-download" type="button" title="Download Sumber Soal">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span class="m-label">Download</span>
         </button>
         <button class="mobile-nav-item" id="m-nav-theme">
           <svg id="m-theme-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -235,7 +251,7 @@
                   <div class="bar-fill" style="width: 100%;"></div>
                 </div>
                 <div class="card-meta-row">
-                  <span class="card-status-label">Nilai Sempurna</span>
+                  <span class="card-status-label">Harvard calling</span>
                   <span class="card-score">10.00 / 10.00 (100%)</span>
                 </div>
                 <div class="card-actions-row">
@@ -754,6 +770,206 @@
 
       </main>
     </div>
+  </div>
+
+  <!-- ==================== DOWNLOAD MODAL DIALOG ==================== -->
+  <div class="modal-backdrop" id="modal-download" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-dl-title">
+    <div class="modal-dialog">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon-badge">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </div>
+          <div>
+            <h3 class="modal-title" id="modal-dl-title">Download Sumber Soal</h3>
+            <p class="modal-subtitle">Pilih format berkas dan versi bank soal untuk belajar offline</p>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="btn-close-dl-modal" type="button" aria-label="Tutup Dialog">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        
+        <!-- Step 1: Format Selection (MD vs ZIP) -->
+        <div class="dl-step-section">
+          <div class="dl-step-label">
+            <span class="step-num">1</span>
+            <span>Pilih Format Berkas</span>
+          </div>
+          <div class="dl-options-grid">
+            <button type="button" class="dl-option-card active" data-format="md" id="opt-fmt-md">
+              <div class="dl-option-icon md-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <div class="dl-option-info">
+                <div class="dl-option-title-row">
+                  <span class="dl-option-name">Markdown (.md)</span>
+                </div>
+                <p class="dl-option-desc">Teks rapi & bersih, cocok untuk Obsidian, Notion, VS Code</p>
+              </div>
+              <div class="dl-check-indicator">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </button>
+
+            <button type="button" class="dl-option-card" data-format="zip" id="opt-fmt-zip">
+              <div class="dl-option-icon zip-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2"></path>
+                  <path d="M21 16v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2"></path>
+                  <rect x="3" y="8" width="18" height="8" rx="2"></rect>
+                </svg>
+              </div>
+              <div class="dl-option-info">
+                <div class="dl-option-title-row">
+                  <span class="dl-option-name">Arsip ZIP (.zip)</span>
+                </div>
+                <p class="dl-option-desc">Paket arsip dokumen PDF asli review kuis dari LMS</p>
+              </div>
+              <div class="dl-check-indicator">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Source Selection (Y vs K) -->
+        <div class="dl-step-section">
+          <div class="dl-step-label">
+            <span class="step-num">2</span>
+            <span>Pilih Versi Bank Soal</span>
+          </div>
+          <div class="dl-options-grid">
+            <button type="button" class="dl-option-card active" data-source="Y" id="opt-src-y">
+              <div class="dl-option-icon y-icon">
+                <span>Y</span>
+              </div>
+              <div class="dl-option-info">
+                <div class="dl-option-title-row">
+                  <span class="dl-option-name">Bank Soal Y</span>
+                  <span class="dl-mini-badge purple">100 Soal Master</span>
+                </div>
+                <p class="dl-option-desc">Versi lengkap Pre-Test & Post-Test W2 - W6 (100% Score)</p>
+              </div>
+              <div class="dl-check-indicator">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </button>
+
+            <button type="button" class="dl-option-card" data-source="K" id="opt-src-k">
+              <div class="dl-option-icon k-icon">
+                <span>K</span>
+              </div>
+              <div class="dl-option-info">
+                <div class="dl-option-title-row">
+                  <span class="dl-option-name">Bank Soal K</span>
+                  <span class="dl-mini-badge emerald">38 Soal Unik</span>
+                </div>
+                <p class="dl-option-desc">Soal eksklusif non-duplikat variasi kuis milik Kafi</p>
+              </div>
+              <div class="dl-check-indicator">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Selected File Preview Box -->
+        <div class="dl-preview-card" id="dl-preview-box">
+          <div class="dl-preview-left">
+            <div class="dl-preview-file-icon is-md" id="dl-preview-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <div class="dl-preview-details">
+              <div class="dl-preview-filename" id="dl-preview-filename">BankSoalY.md</div>
+              <div class="dl-preview-meta">
+                <span class="dl-meta-tag" id="dl-preview-size">86.9 KB</span>
+                <span class="dl-meta-dot">•</span>
+                <span class="dl-meta-desc" id="dl-preview-desc">Master Bank Soal Lengkap Yoga (100 Soal, W2-W6)</span>
+              </div>
+            </div>
+          </div>
+          <a href="Download/Md/BankSoalY.md" download="BankSoalY.md" class="btn btn-primary btn-dl-action" id="btn-main-download">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Unduh File</span>
+          </a>
+        </div>
+
+        <!-- Quick Direct Links (All 4 options) -->
+        <div class="dl-all-options">
+          <div class="dl-all-header">Akses Cepat (Unduh Langsung):</div>
+          <div class="dl-quick-grid">
+            <a href="Download/Md/BankSoalY.md" download="BankSoalY.md" class="quick-dl-btn" data-name="BankSoalY.md" title="Unduh BankSoalY.md (86.9 KB)">
+              <span class="quick-tag md">MD</span>
+              <span class="quick-name">BankSoalY.md</span>
+              <span class="quick-size">87 KB</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </a>
+            <a href="Download/Md/BankSoalK.md" download="BankSoalK.md" class="quick-dl-btn" data-name="BankSoalK.md" title="Unduh BankSoalK.md (32.4 KB)">
+              <span class="quick-tag md">MD</span>
+              <span class="quick-name">BankSoalK.md</span>
+              <span class="quick-size">32 KB</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </a>
+            <a href="Download/Zip/QuizY.zip" download="QuizY.zip" class="quick-dl-btn" data-name="QuizY.zip" title="Unduh QuizY.zip (1.18 MB)">
+              <span class="quick-tag zip">ZIP</span>
+              <span class="quick-name">QuizY.zip</span>
+              <span class="quick-size">1.18 MB</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </a>
+            <a href="Download/Zip/QuizK.zip" download="QuizK.zip" class="quick-dl-btn" data-name="QuizK.zip" title="Unduh QuizK.zip (1.43 MB)">
+              <span class="quick-tag zip">ZIP</span>
+              <span class="quick-name">QuizK.zip</span>
+              <span class="quick-size">1.43 MB</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Download Toast Notification -->
+  <div class="dl-toast" id="dl-toast" aria-live="polite">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="dl-toast-msg">Mengunduh berkas...</span>
   </div>
 
   <!-- Global Quiz Data -->

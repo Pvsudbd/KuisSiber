@@ -48,6 +48,23 @@ window.App = (function () {
   const mNavQuiz = document.getElementById('m-nav-quiz');
   const mNavTheme = document.getElementById('m-nav-theme');
 
+  // Download Modal Elements
+  const navDownloadSoal = document.getElementById('nav-download-soal');
+  const mNavDownload = document.getElementById('m-nav-download');
+  const modalDownload = document.getElementById('modal-download');
+  const btnCloseDlModal = document.getElementById('btn-close-dl-modal');
+  const optFmtMd = document.getElementById('opt-fmt-md');
+  const optFmtZip = document.getElementById('opt-fmt-zip');
+  const optSrcY = document.getElementById('opt-src-y');
+  const optSrcK = document.getElementById('opt-src-k');
+  const dlPreviewIcon = document.getElementById('dl-preview-icon');
+  const dlPreviewFilename = document.getElementById('dl-preview-filename');
+  const dlPreviewSize = document.getElementById('dl-preview-size');
+  const dlPreviewDesc = document.getElementById('dl-preview-desc');
+  const btnMainDownload = document.getElementById('btn-main-download');
+  const dlToast = document.getElementById('dl-toast');
+  const dlToastMsg = document.getElementById('dl-toast-msg');
+
   // Search Inputs (Top bar for PC & Mobile bar for Mobile)
   const topSearchInput = document.getElementById('global-search-input');
   const btnTopClearSearch = document.getElementById('btn-top-clear-search');
@@ -561,13 +578,13 @@ window.App = (function () {
     rStatTotal.textContent = total;
 
     if (percent >= 80) {
-      resultTitle.textContent = 'Nilai Sempurna! Sangat Mantap!';
+      resultTitle.textContent = 'Gacor gini kau, harvar calling calling';
       resultSubtitle.textContent = 'Pemahaman materi keamanan siber kamu sudah sangat siap untuk UTS.';
     } else if (percent >= 60) {
       resultTitle.textContent = 'Kerja Bagus!';
       resultSubtitle.textContent = 'Hasil kamu sudah baik. Cek pembahasan di bawah untuk memperbaiki bagian yang keliru.';
     } else {
-      resultTitle.textContent = 'Terus Latihan!';
+      resultTitle.textContent = 'Koplak gini!';
       resultSubtitle.textContent = 'Yuk pelajari kembali kunci jawaban di bawah untuk memperdalam konsep UTS.';
     }
 
@@ -630,6 +647,117 @@ window.App = (function () {
     if (topThemeIcon) topThemeIcon.innerHTML = svgPath;
     if (sidebarThemeIcon) sidebarThemeIcon.innerHTML = svgPath;
     if (mThemeIcon) mThemeIcon.innerHTML = svgPath;
+  }
+
+  // ==========================================
+  // DOWNLOAD SUMBER SOAL (MD / ZIP - Y / K)
+  // ==========================================
+  const downloadData = {
+    md_Y: {
+      filename: 'BankSoalY.md',
+      url: 'Download/Md/BankSoalY.md',
+      size: '86.9 KB',
+      format: 'Markdown (.md)',
+      desc: 'Master Bank Soal Lengkap Yoga (100 Soal, Week 2 - Week 6)',
+      type: 'md'
+    },
+    md_K: {
+      filename: 'BankSoalK.md',
+      url: 'Download/Md/BankSoalK.md',
+      size: '32.4 KB',
+      format: 'Markdown (.md)',
+      desc: 'Bank Soal Unik Kafi (38 Soal Baru Tanpa Duplikat)',
+      type: 'md'
+    },
+    zip_Y: {
+      filename: 'QuizY.zip',
+      url: 'Download/Zip/QuizY.zip',
+      size: '1.18 MB',
+      format: 'Arsip ZIP (.zip)',
+      desc: 'Paket Dokumen PDF Asli Review Kuis Versi Yoga',
+      type: 'zip'
+    },
+    zip_K: {
+      filename: 'QuizK.zip',
+      url: 'Download/Zip/QuizK.zip',
+      size: '1.43 MB',
+      format: 'Arsip ZIP (.zip)',
+      desc: 'Paket Dokumen PDF Asli Review Kuis Versi Kafi',
+      type: 'zip'
+    }
+  };
+
+  let dlSelectedFormat = 'md'; // 'md' | 'zip'
+  let dlSelectedSource = 'Y';  // 'Y' | 'K'
+  let dlToastTimer = null;
+
+  function showDownloadToast(message) {
+    if (!dlToast || !dlToastMsg) return;
+    dlToastMsg.textContent = message;
+    dlToast.classList.add('show');
+    if (dlToastTimer) clearTimeout(dlToastTimer);
+    dlToastTimer = setTimeout(() => {
+      dlToast.classList.remove('show');
+    }, 2800);
+  }
+
+  function updateDownloadModal() {
+    const key = `${dlSelectedFormat}_${dlSelectedSource}`;
+    const file = downloadData[key];
+    if (!file) return;
+
+    if (optFmtMd) optFmtMd.classList.toggle('active', dlSelectedFormat === 'md');
+    if (optFmtZip) optFmtZip.classList.toggle('active', dlSelectedFormat === 'zip');
+    if (optSrcY) optSrcY.classList.toggle('active', dlSelectedSource === 'Y');
+    if (optSrcK) optSrcK.classList.toggle('active', dlSelectedSource === 'K');
+
+    if (dlPreviewFilename) dlPreviewFilename.textContent = file.filename;
+    if (dlPreviewSize) dlPreviewSize.textContent = file.size;
+    if (dlPreviewDesc) dlPreviewDesc.textContent = file.desc;
+
+    if (btnMainDownload) {
+      btnMainDownload.href = file.url;
+      btnMainDownload.setAttribute('download', file.filename);
+      btnMainDownload.title = `Unduh ${file.filename} (${file.size})`;
+    }
+
+    if (dlPreviewIcon) {
+      dlPreviewIcon.className = `dl-preview-file-icon is-${file.type}`;
+      if (file.type === 'md') {
+        dlPreviewIcon.innerHTML = `
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+          </svg>
+        `;
+      } else {
+        dlPreviewIcon.innerHTML = `
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2"></path>
+            <path d="M21 16v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2"></path>
+            <rect x="3" y="8" width="18" height="8" rx="2"></rect>
+          </svg>
+        `;
+      }
+    }
+  }
+
+  function openDownloadModal() {
+    if (modalDownload) {
+      modalDownload.classList.add('open');
+      modalDownload.setAttribute('aria-hidden', 'false');
+      if (appSidebar) appSidebar.classList.remove('open');
+      updateDownloadModal();
+    }
+  }
+
+  function closeDownloadModal() {
+    if (modalDownload) {
+      modalDownload.classList.remove('open');
+      modalDownload.setAttribute('aria-hidden', 'true');
+    }
   }
 
   // ==========================================
@@ -712,8 +840,67 @@ window.App = (function () {
     btnBackSetup.addEventListener('click', () => switchView('view-quiz-setup'));
     btnResultToDashboard.addEventListener('click', () => switchView('view-dashboard'));
 
-    // Keyboard Shortcuts (A-E to answer, Left/Right arrow to navigate)
+    // Download Modal Listeners
+    if (navDownloadSoal) navDownloadSoal.addEventListener('click', openDownloadModal);
+    if (mNavDownload) mNavDownload.addEventListener('click', openDownloadModal);
+    if (btnCloseDlModal) btnCloseDlModal.addEventListener('click', closeDownloadModal);
+
+    if (modalDownload) {
+      modalDownload.addEventListener('click', (e) => {
+        if (e.target === modalDownload) closeDownloadModal();
+      });
+    }
+
+    if (optFmtMd) {
+      optFmtMd.addEventListener('click', () => {
+        dlSelectedFormat = 'md';
+        updateDownloadModal();
+      });
+    }
+
+    if (optFmtZip) {
+      optFmtZip.addEventListener('click', () => {
+        dlSelectedFormat = 'zip';
+        updateDownloadModal();
+      });
+    }
+
+    if (optSrcY) {
+      optSrcY.addEventListener('click', () => {
+        dlSelectedSource = 'Y';
+        updateDownloadModal();
+      });
+    }
+
+    if (optSrcK) {
+      optSrcK.addEventListener('click', () => {
+        dlSelectedSource = 'K';
+        updateDownloadModal();
+      });
+    }
+
+    if (btnMainDownload) {
+      btnMainDownload.addEventListener('click', () => {
+        const key = `${dlSelectedFormat}_${dlSelectedSource}`;
+        const file = downloadData[key];
+        if (file) showDownloadToast(`Mengunduh ${file.filename}...`);
+      });
+    }
+
+    // Quick download buttons
+    document.querySelectorAll('.quick-dl-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.getAttribute('data-name') || 'berkas';
+        showDownloadToast(`Mengunduh ${name}...`);
+      });
+    });
+
+    // Keyboard Shortcuts (A-E to answer, Left/Right arrow to navigate, ESC to close modal)
     document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modalDownload && modalDownload.classList.contains('open')) {
+        closeDownloadModal();
+        return;
+      }
       if (state.currentView !== 'view-quiz-play') return;
       const key = e.key.toLowerCase();
       if (['a', 'b', 'c', 'd', 'e'].includes(key)) {
