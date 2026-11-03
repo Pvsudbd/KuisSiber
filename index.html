@@ -27,6 +27,7 @@
           </svg>
           <span class="logo-text">CyberQuiz</span>
         </div>
+        <button class="btn-close-sidebar" id="btn-close-sidebar" aria-label="Tutup Menu">✕</button>
       </div>
 
       <nav class="sidebar-nav">
@@ -75,6 +76,9 @@
         </button>
       </div>
     </aside>
+    
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
     <!-- ==================== MAIN CONTENT WRAPPER ==================== -->
     <div class="main-wrapper">
@@ -216,7 +220,7 @@
               </div>
               <div class="card-info">
                 <h3 class="card-title">Super Master Quiz</h3>
-                <span class="card-author">Week 2 s.d. Week 6 (138 Soal Unik)</span>
+                <span class="card-author">Week 2 s.d. Week 6 (263 Soal Lengkap)</span>
                 <div class="card-progress-bar">
                   <div class="bar-fill" style="width: 100%;"></div>
                 </div>
@@ -638,16 +642,16 @@
 
                 <div class="setup-stats-mini">
                   <div class="mini-stat">
-                    <strong>138</strong>
+                    <strong>263</strong>
                     <span>Total Soal</span>
                   </div>
                   <div class="mini-stat">
-                    <strong>100</strong>
-                    <span>Soal informan 1</span>
+                    <strong>138</strong>
+                    <span>Soal LMS Asli</span>
                   </div>
                   <div class="mini-stat">
-                    <strong>38</strong>
-                    <span>Soal informan 2</span>
+                    <strong>125</strong>
+                    <span>Soal Tambahan</span>
                   </div>
                   <div class="mini-stat">
                     <strong>100%</strong>
@@ -735,10 +739,22 @@
 
             <!-- Sticky Bottom Navigation -->
             <div class="play-bottom-bar">
-              <button class="btn btn-secondary" id="btn-prev-q">← Sebelumnya</button>
+              <button class="btn btn-secondary play-nav-btn" id="btn-prev-q" title="Soal Sebelumnya">
+                <span class="nav-arrow">←</span>
+                <span class="nav-btn-text-full">Sebelumnya</span>
+                <span class="nav-btn-text-short">Prev</span>
+              </button>
               <span class="play-count-text" id="quiz-counter-text">1 dari 10</span>
-              <button class="btn btn-primary" id="btn-next-q">Berikutnya →</button>
-              <button class="btn btn-success hidden" id="btn-submit-quiz">✓ Selesai & Nilai</button>
+              <button class="btn btn-primary play-nav-btn" id="btn-next-q" title="Soal Berikutnya">
+                <span class="nav-btn-text-full">Berikutnya</span>
+                <span class="nav-btn-text-short">Lanjut</span>
+                <span class="nav-arrow">→</span>
+              </button>
+              <button class="btn btn-success play-nav-btn hidden" id="btn-submit-quiz" title="Kumpulkan dan Lihat Nilai">
+                <span class="nav-icon">✓</span>
+                <span class="nav-btn-text-full">Selesai & Nilai</span>
+                <span class="nav-btn-text-short">Selesai</span>
+              </button>
             </div>
 
           </div>
@@ -970,6 +986,12 @@
               <span class="quick-tag md">MD</span>
               <span class="quick-name">BankSoalK.md</span>
               <span class="quick-size">32 KB</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </a>
+            <a href="Download/Md/BankSoalTambahan.md" download="BankSoalTambahan.md" class="quick-dl-btn" data-name="BankSoalTambahan.md" title="Unduh BankSoalTambahan.md (98.8 KB)">
+              <span class="quick-tag md">MD</span>
+              <span class="quick-name">SoalTambahan.md</span>
+              <span class="quick-size">99 KB</span>
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
             </a>
             <a href="Download/Zip/QuizY.zip" download="QuizY.zip" class="quick-dl-btn" data-name="QuizY.zip" title="Unduh QuizY.zip (1.18 MB)">

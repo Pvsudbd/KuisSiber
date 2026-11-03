@@ -51,6 +51,8 @@ window.App = (function () {
   // Sidebar & Nav Elements
   const appSidebar = document.getElementById('app-sidebar');
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+  const btnCloseSidebar = document.getElementById('btn-close-sidebar');
   const navBankSoal = document.getElementById('nav-bank-soal');
   const navSimulasiQuiz = document.getElementById('nav-simulasi-quiz');
   const mNavBank = document.getElementById('m-nav-bank');
@@ -217,8 +219,12 @@ window.App = (function () {
     navSimulasiQuiz.classList.toggle('active', isQuiz);
     mNavQuiz.classList.toggle('active', isQuiz);
 
-    // Close mobile drawer if open
+    // Toggle quiz-playing mode on body (controls mobile bottom bar visibility)
+    document.body.classList.toggle('quiz-playing', viewId === 'view-quiz-play');
+
+    // Close mobile drawer and backdrop if open
     if (appSidebar) appSidebar.classList.remove('open');
+    if (sidebarBackdrop) sidebarBackdrop.classList.remove('active');
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -676,6 +682,7 @@ window.App = (function () {
     if (index >= 0 && index < state.quizQuestions.length) {
       state.currentIndex = index;
       renderCurrentQuestion();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
 
@@ -908,10 +915,23 @@ window.App = (function () {
     mNavBank.addEventListener('click', () => switchView('view-dashboard'));
     mNavQuiz.addEventListener('click', () => switchView('view-quiz-setup'));
 
-    // Mobile sidebar toggle
+    // Mobile sidebar toggle & close
     if (mobileMenuBtn) {
       mobileMenuBtn.addEventListener('click', () => {
-        appSidebar.classList.toggle('open');
+        const isOpen = appSidebar.classList.toggle('open');
+        if (sidebarBackdrop) sidebarBackdrop.classList.toggle('active', isOpen);
+      });
+    }
+    if (btnCloseSidebar) {
+      btnCloseSidebar.addEventListener('click', () => {
+        appSidebar.classList.remove('open');
+        if (sidebarBackdrop) sidebarBackdrop.classList.remove('active');
+      });
+    }
+    if (sidebarBackdrop) {
+      sidebarBackdrop.addEventListener('click', () => {
+        appSidebar.classList.remove('open');
+        sidebarBackdrop.classList.remove('active');
       });
     }
 
