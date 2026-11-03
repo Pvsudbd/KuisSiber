@@ -1,1893 +1,1676 @@
-# 📚 Bank Soal Tambahan UTS Keamanan Siber (125 Soal Pendalaman)
+# Bank Soal Tambahan Keamanan Siber (UTS Preparation)
 
-Kumpulan 125 soal latihan tambahan bermutu tinggi untuk persiapan UTS Keamanan Siber (Week 2 s.d. Week 6).
-Setiap bab berisi minimal 25 soal baru (Pre-Test & Post-Test) dengan cakupan materi lengkap sesuai silabus perkuliahan.
+Kumpulan 125 soal latihan tingkat lanjut (Hard / High-Order Thinking) untuk persiapan UTS Keamanan Siber.
+Materi berfokus pada mekanisme teknis informatika (protokol, memori, arsitektur OS, web security, kriptografi, dan digital forensics).
 
-### 📊 Ringkasan Soal per Bab
-- **Week 2 (Authentication & Access Control):** 25 Soal (13 Pre Test, 12 Post Test)
-- **Week 3 (Cyber Law, Ethics & Computer Crime):** 25 Soal (13 Pre Test, 12 Post Test)
-- **Week 4 (Software Security, Secure Coding & Testing):** 25 Soal (13 Pre Test, 12 Post Test)
-- **Week 5 (Web Application Security & OWASP ASVS):** 25 Soal (13 Pre Test, 12 Post Test)
-- **Week 6 (Cryptography, Cipher & Hash):** 25 Soal (13 Pre Test, 12 Post Test)
-- **Total Soal Tambahan:** **125 Soal Baru**
-
 ---
 
-## 📑 Daftar Isi
-- [Week 2 - Authentication & Access Control](#week-2---authentication--access-control)
-- [Week 3 - Cyber Law, Ethics & Computer Crime](#week-3---cyber-law-ethics--computer-crime)
-- [Week 4 - Software Security, Secure Coding & Testing](#week-4---software-security-secure-coding--testing)
-- [Week 5 - Web Application Security & OWASP ASVS](#week-5---web-application-security--owasp-asvs)
-- [Week 6 - Cryptography, Cipher & Hash](#week-6---cryptography-cipher--hash)
 
----
+# Week 2
 
-## 📌 Week 2 - Authentication & Access Control
 
-### Soal 1 (Pre Test)
-**Pertanyaan:**  
-Seorang pengguna mengautentikasi diri dengan menempelkan kartu pintar (smart card) pada card reader dan memasukkan PIN 6-digit. Faktor autentikasi yang digunakan pada skenario ini adalah ...
+## Pre Test
 
-**Pilihan Jawaban:**
-- **A.** Something you know dan something you are
-- **B.** Something you have dan something you know *(Kunci Jawaban)*
-- **C.** Something you have dan something you are
-- **D.** Dua faktor dari kategori something you know
-- **E.** Something you are dan somewhere you are
+### Soal 139
+Pada sistem biometrik, jika administrator mengubah threshold verifikasi (t) ke nilai yang lebih tinggi untuk memperketat keamanan, dampak statistik yang pasti terjadi pada False Acceptance Rate (FAR) dan False Rejection Rate (FRR) adalah ...
 
-> **Kunci Jawaban Benar:** **B. Something you have dan something you know**
+- **A**. FAR dan FRR keduanya menurun secara simultan mendekati nilai Equal Error Rate.
+- **B**. FAR mengalami penurunan signifikan, namun FRR mengalami peningkatan secara komprehensif.
+- **C**. FRR mengalami penurunan signifikan, namun FAR mengalami peningkatan sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.
+- **D**. FAR dan FRR keduanya meningkat karena sensitivitas sensor biometrik dinaikkan.
+- **E**. Nilai FAR dan FRR tidak berubah karena nilai EER bersifat konstan pada perangkat.
 
+> **Kunci Jawaban:** B. FAR mengalami penurunan signifikan, namun FRR mengalami peningkatan secara komprehensif.
+
 ---
 
-### Soal 2 (Pre Test)
-**Pertanyaan:**  
-Pada sistem biometrik, titik potong pada kurva di mana False Acceptance Rate (FAR) sama persis dengan False Rejection Rate (FRR) disebut ...
+### Soal 140
+Dalam protokol Time-based One-Time Password (TOTP - RFC 6238), apa parameter inti yang membedakannya secara fundamental dari HMAC-based One-Time Password (HOTP - RFC 4226)?
 
-**Pilihan Jawaban:**
-- **A.** Receiver Operating Characteristic (ROC)
-- **B.** Equal Error Rate (EER) atau Crossover Error Rate (CER) *(Kunci Jawaban)*
-- **C.** Threshold of Detection (ToD)
-- **D.** Biometric Accuracy Index (BAI)
-- **E.** Zero Tolerance Boundary (ZTB)
+- **A**. TOTP mengenkripsi shared secret dengan kunci privat asimetris, sedangkan HOTP mengandalkan fungsi hash MD5 tanpa shared secret sama sekali.
+- **B**. TOTP menghitung kode menggunakan Unix epoch time dibagi time-step window sebagai moving factor, sedangkan HOTP memakai counter inkremental secara terperinci.
+- **C**. HOTP menghasilkan token dinamis yang kedaluwarsa tiap 30 detik, sedangkan token TOTP valid permanen hingga counter server diperbarui pengguna.
+- **D**. HOTP mewajibkan komunikasi online real-time dua arah dengan server, sedangkan TOTP berjalan sepenuhnya asinkron tanpa sinkronisasi waktu.
+- **E**. TOTP menggunakan algoritma simetris AES-CBC, sedangkan HOTP menggunakan fungsi derivasi kunci PBKDF2 dengan salt acak 128 bit.
 
-> **Kunci Jawaban Benar:** **B. Equal Error Rate (EER) atau Crossover Error Rate (CER)**
+> **Kunci Jawaban:** B. TOTP menghitung kode menggunakan Unix epoch time dibagi time-step window sebagai moving factor, sedangkan HOTP memakai counter inkremental secara terperinci.
 
 ---
 
-### Soal 3 (Pre Test)
-**Pertanyaan:**  
-Mengapa penggunaan salt yang unik dan acak untuk setiap password sangat penting sebelum nilai hash disimpan di database?
+### Soal 141
+Sebuah sistem pengawasan militer mengadopsi model kontrol akses Mandatory Access Control (MAC) berbasis Bell-LaPadula. Manakah skenario transfer informasi yang DILARANG oleh aturan '* -property' (Star Property) pada model ini?
 
-**Pilihan Jawaban:**
-- **A.** Membuat algoritma enkripsi simetris password menjadi tidak dapat didekripsi.
-- **B.** Mencegah serangan precomputed dictionary attack seperti Rainbow Tables dan membedakan hash dari dua password yang sama. *(Kunci Jawaban)*
-- **C.** Mempercepat proses komputasi verifikasi password di sisi server aplikasi.
-- **D.** Mengubah fungsi hash satu arah menjadi fungsi enkripsi asimetris.
-- **E.** Menghilangkan kebutuhan pengguna untuk mengingat password yang panjang.
+- **A**. Subjek dengan izin Top Secret membaca dokumen yang berlabel status Secret yang diverifikasi melalui ticket granting service terpusat.
+- **B**. Subjek dengan izin Confidential menulis log data ke berkas berlabel Top Secret yang diverifikasi melalui ticket granting service terpusat.
+- **C**. Subjek dengan izin Secret membaca berkas internal yang berlabel status Secret.
+- **D**. Subjek dengan izin Unclassified membaca dokumen berlabel status Unclassified sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.
+- **E**. Subjek dengan izin Secret menulis data ke dokumen berlabel status Unclassified.
 
-> **Kunci Jawaban Benar:** **B. Mencegah serangan precomputed dictionary attack seperti Rainbow Tables dan membedakan hash dari dua password yang sama.**
+> **Kunci Jawaban:** E. Subjek dengan izin Secret menulis data ke dokumen berlabel status Unclassified.
 
 ---
 
-### Soal 4 (Pre Test)
-**Pertanyaan:**  
-Manakah algoritma hashing password berikut yang sengaja dirancang memiliki parameter memory-hard dan time-cost tinggi untuk mempersulit brute-force berbasis GPU/ASIC?
+### Soal 142
+Berbeda dengan Bell-LaPadula yang memprioritaskan kerahasiaan (confidentiality), model integritas Biba menerapkan aturan 'Simple Integrity Axiom'. Aturan ini menetapkan bahwa ...
 
-**Pilihan Jawaban:**
-- **A.** MD5
-- **B.** SHA-256 murni
-- **C.** Argon2 *(Kunci Jawaban)*
-- **D.** CRC32
-- **E.** RC4
+- **A**. Subjek tidak diizinkan membaca objek yang memiliki tingkat integritas lebih rendah (no read-down) secara terperinci.
+- **B**. Subjek tidak diizinkan menulis ke objek yang memiliki tingkat integritas lebih tinggi (no write-up).
+- **C**. Subjek tidak diizinkan membaca objek yang memiliki label klasifikasi lebih tinggi (no read-up).
+- **D**. Subjek tidak diizinkan menulis ke objek yang memiliki label klasifikasi lebih rendah (no write-down).
+- **E**. Subjek memiliki hak penuh memodifikasi data apa pun selama terdaftar dalam grup akses owner.
 
-> **Kunci Jawaban Benar:** **C. Argon2**
+> **Kunci Jawaban:** A. Subjek tidak diizinkan membaca objek yang memiliki tingkat integritas lebih rendah (no read-down) secara terperinci.
 
 ---
 
-### Soal 5 (Pre Test)
-**Pertanyaan:**  
-Protokol Challenge-Handshake Authentication Protocol (CHAP) lebih aman dibandingkan Password Authentication Protocol (PAP) karena ...
+### Soal 143
+Perhatikan skenario berikut: Dokter diperbolehkan membaca rekam medis pasien hanya jika berada di jaringan rumah sakit, saat jam dinas, dan status darurat aktif. Model kontrol akses yang paling tepat mengimplementasikan kebijakan tersebut adalah ...
 
-**Pilihan Jawaban:**
-- **A.** Password pengguna ditransmisikan dalam format plaintext terkompresi.
-- **B.** Password asli tidak pernah dikirimkan melalui jaringan; server mengirimkan nonce/challenge dan klien merespons dengan hash password + challenge. *(Kunci Jawaban)*
-- **C.** CHAP tidak memerlukan database password di sisi server.
-- **D.** CHAP selalu menggunakan enkripsi RSA 4096-bit pada setiap transmisi paket.
-- **E.** Klien menentukan sendiri kunci rahasia tanpa persetujuan server.
+- **A**. Discretionary Access Control (DAC) berbasis ACL statis yang dikelola oleh pasien yang diverifikasi melalui ticket granting service terpusat.
+- **B**. Role-Based Access Control (RBAC) murni berbasis hierarki peran tanpa evaluasi konteks lingkungan.
+- **C**. Mandatory Access Control (MAC) berbasis label tingkat keamanan militer multi-level.
+- **D**. Identity-Based Access Control (IBAC) berbasis daftar pemetaan identitas tunggal pengguna.
+- **E**. Attribute-Based Access Control (ABAC) yang mengevaluasi subjek, objek, aksi, dan atribut lingkungan.
 
-> **Kunci Jawaban Benar:** **B. Password asli tidak pernah dikirimkan melalui jaringan; server mengirimkan nonce/challenge dan klien merespons dengan hash password + challenge.**
+> **Kunci Jawaban:** E. Attribute-Based Access Control (ABAC) yang mengevaluasi subjek, objek, aksi, dan atribut lingkungan.
 
 ---
 
-### Soal 6 (Pre Test)
-**Pertanyaan:**  
-Dalam model Discretionary Access Control (DAC), siapa yang memiliki wewenang untuk memberikan atau mencabut hak akses atas suatu objek data?
+### Soal 144
+Pada autentikasi Kerberos v5, entitas manakah yang bertanggung jawab menerbitkan Ticket-Granting Ticket (TGT) setelah pengguna berhasil memverifikasi kredensial awalnya?
 
-**Pilihan Jawaban:**
-- **A.** Hanya Administrator Sistem Pusat melalui kebijakan global.
-- **B.** Pemilik (owner) dari objek data tersebut. *(Kunci Jawaban)*
-- **C.** Sistem operasi secara otomatis berdasarkan security label militer.
-- **D.** Pengguna tamu yang sedang aktif dalam sesi sistem.
-- **E.** Entitas Certificate Authority (CA) pihak ketiga.
+- **A**. Ticket Granting Service (TGS) setelah memeriksa authenticator yang dienkripsi session key.
+- **B**. Security Account Manager (SAM) lokal pada workstation client sebelum request dikirim berdasarkan kebijakan kontrol akses formal yang terdaftar.
+- **C**. Target Application Server setelah menerima Service Ticket yang sah dari client pada infrastruktur autentikasi enterprise berskala besar.
+- **D**. Key Distribution Center (KDC) proxy server melalui inspeksi sertifikat TLS publik client.
+- **E**. Authentication Service (AS) yang memverifikasi kredensial awal terhadap database KDC.
 
-> **Kunci Jawaban Benar:** **B. Pemilik (owner) dari objek data tersebut.**
+> **Kunci Jawaban:** E. Authentication Service (AS) yang memverifikasi kredensial awal terhadap database KDC.
 
 ---
 
-### Soal 7 (Pre Test)
-**Pertanyaan:**  
-Model Mandatory Access Control (MAC) mengandalkan mekanisme otorisasi yang didasarkan pada ...
+### Soal 145
+Dalam arsitektur Linux Pluggable Authentication Modules (PAM), jika suatu modul autentikasi dikonfigurasi dengan control flag 'required' dan menghasilkan evaluasi gagal (failure), perilaku PAM selanjutnya adalah ...
 
-**Pilihan Jawaban:**
-- **A.** Tingkat izin keamanan (clearance) subjek dan label klasifikasi sensitivitas objek yang ditetapkan secara ketat oleh otoritas keamanan. *(Kunci Jawaban)*
-- **B.** Keinginan pemilik berkas untuk membagikan file ke teman satu grup.
-- **C.** Daftar kontak yang disimpan dalam address book pengguna.
-- **D.** Waktu login pengguna di workstation lokal.
-- **E.** Jumlah kuota bandwidth yang dialokasikan kepada pengguna.
+- **A**. Tetap melanjutkan eksekusi modul PAM berikutnya di stack, namun hasil autentikasi akhir tetap pasti gagal secara terperinci.
+- **B**. Segera menghentikan proses evaluasi seluruh stack PAM dan langsung mengembalikan status gagal ke aplikasi.
+- **C**. Mengabaikan kegagalan modul tersebut jika terdapat modul bertipe 'optional' yang sukses di bawahnya.
+- **D**. Mengulang proses evaluasi modul tersebut sebanyak 3 kali sebelum memutuskan status akses pengguna.
+- **E**. Meminta pengguna memasukkan kembali password cadangan melalui jalur fallback modul 'sufficient'.
 
-> **Kunci Jawaban Benar:** **A. Tingkat izin keamanan (clearance) subjek dan label klasifikasi sensitivitas objek yang ditetapkan secara ketat oleh otoritas keamanan.**
+> **Kunci Jawaban:** A. Tetap melanjutkan eksekusi modul PAM berikutnya di stack, namun hasil autentikasi akhir tetap pasti gagal secara terperinci.
 
 ---
 
-### Soal 8 (Pre Test)
-**Pertanyaan:**  
-Prinsip Simple Security Property pada model keamanan Bell-LaPadula dirumuskan sebagai ...
+### Soal 146
+Jika pada stack Linux PAM suatu modul bertipe 'sufficient' berhasil dievaluasi (success) dan belum ada modul 'required' sebelumnya yang gagal, apa yang terjadi?
 
-**Pilihan Jawaban:**
-- **A.** No Read Down (subjek tidak boleh membaca data pada tingkat lebih rendah).
-- **B.** No Read Up (subjek pada tingkat keamanan tertentu tidak boleh membaca objek dengan klasifikasi lebih tinggi). *(Kunci Jawaban)*
-- **C.** No Write Up (subjek tidak boleh menulis ke tingkat lebih tinggi).
-- **D.** Read and Write bebas pada semua level asalkan satu departemen.
-- **E.** Hanya subjek dengan root access yang boleh membaca data rahasia.
+- **A**. PAM mengabaikan keberhasilan tersebut hingga semua modul bertipe optional memberikan respon sukses.
+- **B**. PAM mewajibkan modul berikutnya diuji ulang menggunakan algoritma enkripsi password yang berbeda.
+- **C**. PAM membatalkan sesi login karena modul sufficient memerlukan konfirmasi dari modul requisite yang diverifikasi melalui ticket granting service terpusat.
+- **D**. PAM langsung mengembalikan status sukses ke aplikasi tanpa mengeksekusi modul-modul di bawahnya secara komprehensif.
+- **E**. PAM beralih ke mode otentikasi interaktif untuk meminta kredensial faktor kedua (MFA).
 
-> **Kunci Jawaban Benar:** **B. No Read Up (subjek pada tingkat keamanan tertentu tidak boleh membaca objek dengan klasifikasi lebih tinggi).**
+> **Kunci Jawaban:** D. PAM langsung mengembalikan status sukses ke aplikasi tanpa mengeksekusi modul-modul di bawahnya secara komprehensif.
 
 ---
 
-### Soal 9 (Pre Test)
-**Pertanyaan:**  
-Perbedaan mendasar antara model Bell-LaPadula dan model Biba adalah bahwa model Biba dirancang secara khusus untuk menjaga aspek ...
+### Soal 147
+Pada protokol FIDO2 / WebAuthn, mengapa mekanisme autentikasi menggunakan security key perangkat keras (hardware token) kebal terhadap serangan Phishing dan Adversary-in-the-Middle (AiTM)?
 
-**Pilihan Jawaban:**
-- **A.** Kerahasiaan (Confidentiality) data militer.
-- **B.** Integritas (Integrity) data agar informasi tidak terkontaminasi oleh sumber yang tidak tepercaya. *(Kunci Jawaban)*
-- **C.** Ketersediaan (Availability) jaringan dari serangan DDoS.
-- **D.** Kecepatan throughput komputasi pada CPU multi-core.
-- **E.** Kompresi data sebelum ditransmisikan.
+- **A**. Kunci publik disimpan pada token fisik dan didekripsi menggunakan biometric PIN pengguna.
+- **B**. Data kredensial pengguna di-hash berulang kali menggunakan PBKDF2 dengan salt rahasia dari browser.
+- **C**. Server autentikasi menyimpan master secret simetris yang disinkronisasi setiap 60 detik via satelit.
+- **D**. Browser mengirimkan rekaman sidik jari mentah ke server autentikasi melalui tunnel TLS terenkripsi.
+- **E**. Private key tidak pernah keluar dari authenticator, dan challenge ditandatangani bersama origin domain (Relying Party ID).
 
-> **Kunci Jawaban Benar:** **B. Integritas (Integrity) data agar informasi tidak terkontaminasi oleh sumber yang tidak tepercaya.**
+> **Kunci Jawaban:** E. Private key tidak pernah keluar dari authenticator, dan challenge ditandatangani bersama origin domain (Relying Party ID).
 
 ---
 
-### Soal 10 (Pre Test)
-**Pertanyaan:**  
-Pada Role-Based Access Control (RBAC), hak akses (permissions) diasosiasikan langsung kepada ...
+### Soal 148
+Manakah di antara pasangan faktor berikut yang memenuhi kualifikasi True Two-Factor Authentication (2FA) menurut klasifikasi standar NIST SP 800-63B?
 
-**Pilihan Jawaban:**
-- **A.** Identitas nama individu masing-masing karyawan secara mandiri.
-- **B.** Peran atau fungsi jabatan (Role), di mana pengguna kemudian ditugaskan ke dalam peran tersebut. *(Kunci Jawaban)*
-- **C.** Alamat IP dan MAC address perangkat keras yang digunakan.
-- **D.** Nama komputer server database.
-- **E.** Waktu kadaluarsa token OAuth.
+- **A**. Password statis 12 karakter dan PIN numerik 6 digit pada layar login perbankan sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.
+- **B**. Jawaban pertanyaan keamanan masa kecil dan kata sandi email pemulihan akun.
+- **C**. Password akun sistem dan token OTP dari authenticator app pada smartphone pengguna.
+- **D**. Pemindaian sidik jari optik dan pengenalan wajah 3D pada sensor smartphone.
+- **E**. Kartu magnetik akses pintu kantor dan lencana RFID badge yang dikalungkan.
 
-> **Kunci Jawaban Benar:** **B. Peran atau fungsi jabatan (Role), di mana pengguna kemudian ditugaskan ke dalam peran tersebut.**
+> **Kunci Jawaban:** C. Password akun sistem dan token OTP dari authenticator app pada smartphone pengguna.
 
 ---
 
-### Soal 11 (Pre Test)
-**Pertanyaan:**  
-Model Attribute-Based Access Control (ABAC) mengevaluasi kebijakan akses berdasarkan kombinasi atribut subjek, sumber daya, tindakan, dan ...
+### Soal 149
+Pada sistem file Linux konvensional berbasis Discretionary Access Control (DAC), jika direktori memiliki izin octal 1777 (sticky bit aktif), dampak langsung terhadap hak pengguna non-root adalah ...
 
-**Pilihan Jawaban:**
-- **A.** Kondisi lingkungan (environment conditions seperti waktu akses, lokasi, dan status jaringan). *(Kunci Jawaban)*
-- **B.** Nomor seri kartu identitas fisik pengguna.
-- **C.** Hash MD5 dari password database administrator.
-- **D.** Panjang kabel jaringan Ethernet.
-- **E.** Merek monitor yang digunakan klien.
+- **A**. Hanya user pembuat direktori yang berhak menulis file baru, sedangkan user lain hanya bisa mengeksekusi berdasarkan kebijakan kontrol akses formal yang terdaftar.
+- **B**. Semua pengguna dapat membaca dan memodifikasi file, namun file hanya dapat dihapus oleh pemilik file atau root.
+- **C**. File di dalam direktori dieksekusi dengan hak akses pemilik direktori (setuid privilege) guna mencegah serangan replay token otentikasi jaringan.
+- **D**. File dienkripsi secara transparan menggunakan kunci grup pemilik direktori (setgid privilege) sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.
+- **E**. Pengguna biasa dilarang melihat daftar nama file di dalam direktori tanpa izin dari administrator pada infrastruktur autentikasi enterprise berskala besar.
 
-> **Kunci Jawaban Benar:** **A. Kondisi lingkungan (environment conditions seperti waktu akses, lokasi, dan status jaringan).**
+> **Kunci Jawaban:** B. Semua pengguna dapat membaca dan memodifikasi file, namun file hanya dapat dihapus oleh pemilik file atau root.
 
 ---
 
-### Soal 12 (Pre Test)
-**Pertanyaan:**  
-Dalam arsitektur protokol Kerberos, komponen yang bertugas mengeluarkan Ticket Granting Ticket (TGT) kepada klien setelah autentikasi awal berhasil adalah ...
+### Soal 150
+Dalam penyerangan Active Directory, teknik peretasan 'Pass-the-Hash' (PtH) memungkinkan penyerang mengotentikasi dirinya ke server target tanpa mengetahui password teks asli karena ...
 
-**Pilihan Jawaban:**
-- **A.** Ticket Granting Server (TGS)
-- **B.** Authentication Server (AS) *(Kunci Jawaban)*
-- **C.** Resource Server (RS)
-- **D.** Service Provider (SP)
-- **E.** Certificate Revocation List (CRL)
+- **A**. Protokol autentikasi NTLM memvalidasi response otentikasi yang dihitung langsung dari NTLM hash password secara komprehensif.
+- **B**. NTLM hash dapat di-crack menjadi cleartext password secara deterministik dalam waktu kurang dari satu detik.
+- **C**. Server domain controller menyimpan private key RSA pengguna dalam bentuk plaintext di memori LSASS yang diverifikasi melalui ticket granting service terpusat.
+- **D**. Penyerang menyusupkan Ticket-Granting Ticket (TGT) palsu yang dibuat tanpa menggunakan session key KDC.
+- **E**. Protokol Kerberos secara otomatis menurunkan tingkat proteksi ke LM hash jika terjadi kegagalan transmisi.
 
-> **Kunci Jawaban Benar:** **B. Authentication Server (AS)**
+> **Kunci Jawaban:** A. Protokol autentikasi NTLM memvalidasi response otentikasi yang dihitung langsung dari NTLM hash password secara komprehensif.
 
 ---
 
-### Soal 13 (Pre Test)
-**Pertanyaan:**  
-Mengapa protokol Kerberos sangat bergantung pada sinkronisasi waktu (NTP) antar komputer dengan toleransi drift waktu biasanya maksimal 5 menit?
+### Soal 151
+Model kontrol akses Role-Based Access Control (RBAC) sering menerapkan aturan Separation of Duties (SoD). Apa tujuan fundamental dari implementasi Static SoD (SSOD)?
 
-**Pilihan Jawaban:**
-- **A.** Untuk menghitung biaya sewa bandwidth jaringan secara presisi.
-- **B.** Untuk memvalidasi timestamp tiket guna mencegah serangan replay (replay attack). *(Kunci Jawaban)*
-- **C.** Agar file log server tidak terhapus otomatis oleh sistem operasi.
-- **D.** Untuk memastikan CPU tidak mengalami overheat saat enkripsi data.
-- **E.** Agar proses handshake TLS tidak memerlukan sertifikat X.509.
+- **A**. Mencegah pengguna mengaktifkan dua peran yang saling bertentangan secara bersamaan dalam satu sesi aktif sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.
+- **B**. Membatasi hak akses pengguna berdasarkan alamat IP dan jadwal jam operasional kerja kantor sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.
+- **C**. Mengharuskan otorisasi supervisor secara real-time setiap kali seorang user mengeksekusi transaksi finansial berdasarkan kebijakan kontrol akses formal yang terdaftar.
+- **D**. Mencegah pengguna yang sama ditugaskan ke dua peran yang saling berkonflik kepentingan sejak tahap alokasi hak.
+- **E**. Menghapus peran pengguna secara otomatis setelah masa kerja kontrak pegawai berakhir pada database sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.
 
-> **Kunci Jawaban Benar:** **B. Untuk memvalidasi timestamp tiket guna mencegah serangan replay (replay attack).**
+> **Kunci Jawaban:** D. Mencegah pengguna yang sama ditugaskan ke dua peran yang saling berkonflik kepentingan sejak tahap alokasi hak.
 
 ---
+
 
-### Soal 14 (Post Test)
-**Pertanyaan:**  
-Dalam federated identity menggunakan SAML 2.0, entitas yang bertugas memverifikasi identitas pengguna dan menerbitkan SAML Assertion bertanda tangan digital disebut ...
+## Post Test
 
-**Pilihan Jawaban:**
-- **A.** Service Provider (SP)
-- **B.** Identity Provider (IdP) *(Kunci Jawaban)*
-- **C.** Relying Party (RP)
-- **D.** Authorization Server (AS)
-- **E.** API Gateway
+### Soal 152
+Serangan 'Golden Ticket' pada domain Microsoft Active Directory melibatkan pemalsuan Ticket-Granting Ticket (TGT) Kerberos secara penuh. Kunci kriptografi krusial apa yang wajib diperoleh penyerang agar dapat menciptakan tiket tersebut?
 
-> **Kunci Jawaban Benar:** **B. Identity Provider (IdP)**
+- **A**. Hash NTLM dari akun admin lokal pada workstation target yang diekstrak dari registry SAM.
+- **B**. Kunci privat sertifikat SSL/TLS domain controller yang tersimpan di Active Directory Certificate Services.
+- **C**. Password hash dari akun Domain Admin saat ini yang tersimpan di memori LSASS server aplikasi.
+- **D**. Hash NTLM atau kunci AES dari akun layanan khusus 'krbtgt' pada domain controller.
+- **E**. Master session key publik yang dibagikan oleh Time Stamping Authority eksternal.
 
+> **Kunci Jawaban:** D. Hash NTLM atau kunci AES dari akun layanan khusus 'krbtgt' pada domain controller.
+
 ---
 
-### Soal 15 (Post Test)
-**Pertanyaan:**  
-Pada alur OAuth 2.0 Authorization Code Grant, apa tujuan utama penggunaan parameter 'state' yang dikirimkan klien saat mengarahkan pengguna ke Authorization Server?
+### Soal 153
+Apa perbedaan fungsional utama antara serangan Golden Ticket dan Silver Ticket dalam domain lingkungan Kerberos?
 
-**Pilihan Jawaban:**
-- **A.** Menyimpan data password pengguna dalam format base64.
-- **B.** Mencegah serangan Cross-Site Request Forgery (CSRF) pada proses pertukaran kode otorisasi. *(Kunci Jawaban)*
-- **C.** Mempercepat proses parsing JSON pada token response.
-- **D.** Menentukan hak akses scope pengguna secara dinamis tanpa persetujuan server.
-- **E.** Mengenkripsi payload access token agar tidak terbaca oleh klien.
+- **A**. Golden Ticket hanya memberi hak user biasa, sedangkan Silver Ticket memberikan hak domain controller forest-wide pada infrastruktur autentikasi enterprise berskala besar.
+- **B**. Golden Ticket memalsukan TGT menggunakan kunci krbtgt, sedangkan Silver Ticket memalsukan TGS menggunakan hash akun layanan spesifik.
+- **C**. Silver Ticket berkomunikasi langsung dengan KDC, sedangkan Golden Ticket tidak memerlukan komunikasi dengan KDC sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.
+- **D**. Silver Ticket menggunakan enkripsi kurva eliptik ECC, sedangkan Golden Ticket mengandalkan cipher simetris DES usang.
+- **E**. Golden Ticket dibuat menggunakan akun Administrator lokal, sedangkan Silver Ticket dibuat via akun guest domain.
 
-> **Kunci Jawaban Benar:** **B. Mencegah serangan Cross-Site Request Forgery (CSRF) pada proses pertukaran kode otorisasi.**
+> **Kunci Jawaban:** B. Golden Ticket memalsukan TGT menggunakan kunci krbtgt, sedangkan Silver Ticket memalsukan TGS menggunakan hash akun layanan spesifik.
 
 ---
 
-### Soal 16 (Post Test)
-**Pertanyaan:**  
-OpenID Connect (OIDC) dibangun di atas protokol OAuth 2.0 untuk melengkapi fungsi yang sebelumnya tidak disediakan oleh OAuth 2.0 murni, yaitu fungsi ...
+### Soal 154
+Dalam federasi identitas berbasis OpenID Connect (OIDC) dan OAuth 2.0, token manakah yang secara spesifik dirancang untuk membuktikan otentisitas identitas pengguna ke Client Application?
 
-**Pilihan Jawaban:**
-- **A.** Otorisasi delegasi hak akses sumber daya API
-- **B.** Autentikasi identitas pengguna (federated authentication) melalui ID Token berbentuk JWT *(Kunci Jawaban)*
-- **C.** Routing paket data pada layer transport TCP
-- **D.** Kompresi citra biometric sidik jari
-- **E.** Enkripsi media penyimpanan harddisk lokal
+- **A**. ID Token dalam format JSON Web Token (JWT) yang ditandatangani secara kriptografis oleh Identity Provider.
+- **B**. Refresh Token berumur panjang yang disimpan pada secure storage browser untuk rotasi sesi yang diverifikasi melalui ticket granting service terpusat.
+- **C**. Access Token berbentuk opaque string yang dikirim ke Resource Server pada header Authorization sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.
+- **D**. Authorization Code acak sekali pakai yang ditukarkan melalui front-channel browser redirection guna mencegah serangan replay token otentikasi jaringan.
+- **E**. SAML Artifact ticket yang dipetakan ke dalam database session back-channel Identity Provider.
 
-> **Kunci Jawaban Benar:** **B. Autentikasi identitas pengguna (federated authentication) melalui ID Token berbentuk JWT**
+> **Kunci Jawaban:** A. ID Token dalam format JSON Web Token (JWT) yang ditandatangani secara kriptografis oleh Identity Provider.
 
 ---
 
-### Soal 17 (Post Test)
-**Pertanyaan:**  
-JSON Web Token (JWT) terdiri dari tiga bagian utama yang dipisahkan oleh karakter titik (.), yaitu ...
+### Soal 155
+Mengapa ekstensi PKCE (Proof Key for Code Exchange - RFC 7636) diwajibkan pada alur Authorization Code OAuth 2.0 untuk aplikasi mobile atau Single-Page Application (SPA)?
 
-**Pilihan Jawaban:**
-- **A.** Header, Payload, dan Signature *(Kunci Jawaban)*
-- **B.** Username, Password, dan Salt
-- **C.** Metadata, Hash, dan Private Key
-- **D.** Issuer, Subject, dan Expiration
-- **E.** IV, Ciphertext, dan MAC
+- **A**. Untuk memverifikasi keaslian sidik jari biometrik perangkat sebelum kode otorisasi dikirimkan server.
+- **B**. Untuk mengenkripsi seluruh muatan Access Token menggunakan cipher simetris AES-GCM 256-bit di sisi browser.
+- **C**. Untuk menggantikan fungsi sertifikat SSL/TLS pada komunikasi jaringan antara client dan Authorization Server.
+- **D**. Untuk mencegah intersepsi Authorization Code oleh aplikasi berbahaya lokal yang mendaftarkan custom URI scheme yang sama.
+- **E**. Untuk menonaktifkan mekanisme CORS (Cross-Origin Resource Sharing) pada browser modern pengguna.
 
-> **Kunci Jawaban Benar:** **A. Header, Payload, dan Signature**
+> **Kunci Jawaban:** D. Untuk mencegah intersepsi Authorization Code oleh aplikasi berbahaya lokal yang mendaftarkan custom URI scheme yang sama.
 
 ---
 
-### Soal 18 (Post Test)
-**Pertanyaan:**  
-Kerentanan kritis pada implementasi JWT di mana penyerang dapat memodifikasi payload dan meminta server memverifikasi token tanpa memeriksa tanda tangan terjadi apabila server menerima nilai header ...
+### Soal 156
+Pada kurva Receiver Operating Characteristic (ROC) sistem biometrik, titik potong di mana nilai False Acceptance Rate (FAR) persis sama dengan False Rejection Rate (FRR) disebut ...
 
-**Pilihan Jawaban:**
-- **A.** "alg": "RS256"
-- **B.** "alg": "none" *(Kunci Jawaban)*
-- **C.** "typ": "JWT"
-- **D.** "alg": "HS512"
-- **E.** "enc": "A128GCM"
+- **A**. Area Under Curve (AUC) optimum pada infrastruktur autentikasi enterprise berskala besar.
+- **B**. Equal Error Rate (EER) atau Crossover Error Rate (CER).
+- **C**. True Positive Saturation Point (TPSP) sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.
+- **D**. Biometric Calibration Boundary (BCB).
+- **E**. Zero False Rejection Threshold (ZFRT).
 
-> **Kunci Jawaban Benar:** **B. "alg": "none"**
+> **Kunci Jawaban:** B. Equal Error Rate (EER) atau Crossover Error Rate (CER).
 
 ---
 
-### Soal 19 (Post Test)
-**Pertanyaan:**  
-Pada serangan Session Fixation, penyerang memanfaatkan celah keamanan di mana ...
+### Soal 157
+Dua sistem biometrik diuji di laboratorium: Sistem X memiliki EER sebesar 0.05%, sedangkan Sistem Y memiliki EER sebesar 2.1%. Kesimpulan performa akurasi yang paling valid adalah ...
 
-**Pilihan Jawaban:**
-- **A.** Sistem aplikasi mempertahankan session identifier yang sama persis sebelum dan sesudah pengguna berhasil login. *(Kunci Jawaban)*
-- **B.** Penyerang memecahkan kunci enkripsi SSL server menggunakan quantum computing.
-- **C.** Pengguna memilih password yang sama untuk lima akun website berbeda.
-- **D.** Server database mengalami crash akibat buffer overflow pada driver SQL.
-- **E.** Session cookie kadaluarsa terlalu cepat dalam hitungan detik.
+- **A**. Sistem Y memiliki akurasi keseluruhan yang jauh lebih tinggi daripada Sistem X guna mencegah serangan replay token otentikasi jaringan.
+- **B**. Kedua sistem memiliki akurasi identik karena nilai EER tidak berkorelasi dengan akurasi pengenalan.
+- **C**. Sistem X membutuhkan waktu komputasi pencocokan template yang 40 kali lebih lambat dibanding Sistem Y.
+- **D**. Sistem Y lebih cocok diterapkan di fasilitas militer berkategori keamanan tinggi dibanding Sistem X.
+- **E**. Sistem X memiliki tingkat akurasi dan kinerja pembeda biometrik yang lebih unggul dibandingkan Sistem Y.
 
-> **Kunci Jawaban Benar:** **A. Sistem aplikasi mempertahankan session identifier yang sama persis sebelum dan sesudah pengguna berhasil login.**
+> **Kunci Jawaban:** E. Sistem X memiliki tingkat akurasi dan kinerja pembeda biometrik yang lebih unggul dibandingkan Sistem Y.
 
 ---
 
-### Soal 20 (Post Test)
-**Pertanyaan:**  
-Mitigasi paling efektif pada aplikasi web untuk mencegah pencurian session cookie melalui serangan Cross-Site Scripting (XSS) adalah ...
+### Soal 158
+Dalam model kontrol akses berbasis Brewer-Nash (sering disebut Chinese Wall Model), aturan keamanan diformulasikan secara khusus dengan tujuan utama untuk ...
 
-**Pilihan Jawaban:**
-- **A.** Menambahkan flag HttpOnly pada cookie sesi. *(Kunci Jawaban)*
-- **B.** Menyimpan session identifier di dalam LocalStorage browser.
-- **C.** Mengurangi panjang session identifier menjadi hanya 4 karakter.
-- **D.** Menonaktifkan protokol HTTPS pada web server.
-- **E.** Mengirimkan session token melalui URL query string.
+- **A**. Mencegah timbulnya konflik kepentingan (conflict of interest) pada konsultan yang menangani perusahaan pesaing.
+- **B**. Mencegah kebocoran data rahasia pertahanan negara ke domain sipil berkategori unclassified berdasarkan kebijakan kontrol akses formal yang terdaftar.
+- **C**. Menjaga integritas data transaksi perbankan agar tidak dimodifikasi oleh entitas luar tanpa otorisasi pada infrastruktur autentikasi enterprise berskala besar.
+- **D**. Menyediakan mekanisme delegasi wewenang administratif root secara transparan kepada user biasa guna mencegah serangan replay token otentikasi jaringan.
+- **E**. Mengisolasi malware worm agar tidak menyebar antar-subnet jaringan lokal yang berbeda VLAN yang diverifikasi melalui ticket granting service terpusat.
 
-> **Kunci Jawaban Benar:** **A. Menambahkan flag HttpOnly pada cookie sesi.**
+> **Kunci Jawaban:** A. Mencegah timbulnya konflik kepentingan (conflict of interest) pada konsultan yang menangani perusahaan pesaing.
 
 ---
 
-### Soal 21 (Post Test)
-**Pertanyaan:**  
-Atribut cookie 'SameSite=Strict' memberikan perlindungan keamanan yang kuat terhadap serangan ...
+### Soal 159
+Pada sistem Linux dengan kontrol akses Discretionary Access Control (DAC), jika suatu executable binary memiliki bit 'Setuid' (SUID) aktif (izin octal 4755) dan dimiliki oleh root, maka saat dieksekusi oleh user 'alice' ...
 
-**Pilihan Jawaban:**
-- **A.** SQL Injection
-- **B.** Cross-Site Request Forgery (CSRF) *(Kunci Jawaban)*
-- **C.** Denial of Service (DoS)
-- **D.** Directory Traversal
-- **E.** Man-in-the-Middle (MitM)
+- **A**. File binary tersebut disalin ke direktori /root/ sebelum proses eksekusi dimulai kernel.
+- **B**. Program menolak eksekusi kecuali password akun root dimasukkan alice di command line.
+- **C**. Program berjalan dengan Effective User ID (EUID) milik root, bukan EUID milik alice secara komprehensif.
+- **D**. Program berjalan dengan Real User ID root namun hak akses dibatasi sandbox SELinux.
+- **E**. Sistem operasi mencatat peringatan pelanggaran hak akses ke file audit log /var/log/secure.
 
-> **Kunci Jawaban Benar:** **B. Cross-Site Request Forgery (CSRF)**
+> **Kunci Jawaban:** C. Program berjalan dengan Effective User ID (EUID) milik root, bukan EUID milik alice secara komprehensif.
 
 ---
 
-### Soal 22 (Post Test)
-**Pertanyaan:**  
-Perbedaan mendasar antara Access Token dan Refresh Token pada protokol OAuth 2.0 adalah ...
+### Soal 160
+Serangan 'Kerberoasting' pada Active Directory menargetkan komponen tiket layanan Kerberos (TGS). Mengapa penyerang dapat melakukan cracking password secara offline tanpa memicu lockout akun?
 
-**Pilihan Jawaban:**
-- **A.** Access token berumur pendek untuk mengakses resource API, sedangkan refresh token berumur lebih panjang dan digunakan untuk mendapatkan access token baru. *(Kunci Jawaban)*
-- **B.** Access token disimpan di server, sedangkan refresh token disimpan di DNS publik.
-- **C.** Refresh token dikirimkan pada setiap HTTP request header ke Resource Server.
-- **D.** Access token tidak memiliki masa kedaluwarsa selamanya.
-- **E.** Refresh token hanya boleh menggunakan algoritma enkripsi simetris DES.
+- **A**. Penyerang menyadap private key domain controller melalui kelemahan pada protokol pertukaran kunci Diffie-Hellman.
+- **B**. Server KDC mengirimkan salinan plaintext password akun layanan di dalam field PAC tiket layanan berdasarkan kebijakan kontrol akses formal yang terdaftar.
+- **C**. Tiket TGS dienkripsi menggunakan NTLM hash akun layanan (SPN), sehingga penyerang dapat mengekstrak dan men-crack tiket di mesin lokalnya.
+- **D**. KDC tidak mencatat request tiket TGS pada Event Viewer keamanan Active Directory.
+- **E**. Akun layanan Active Directory tidak dilindungi fungsi hash melainkan pengacakan XOR sederhana.
 
-> **Kunci Jawaban Benar:** **A. Access token berumur pendek untuk mengakses resource API, sedangkan refresh token berumur lebih panjang dan digunakan untuk mendapatkan access token baru.**
+> **Kunci Jawaban:** C. Tiket TGS dienkripsi menggunakan NTLM hash akun layanan (SPN), sehingga penyerang dapat mengekstrak dan men-crack tiket di mesin lokalnya.
 
 ---
 
-### Soal 23 (Post Test)
-**Pertanyaan:**  
-Prinsip Separation of Duties (Pemisahan Tugas) dalam sistem Access Control bertujuan untuk ...
+### Soal 161
+Dalam federasi identitas SAML 2.0 (Security Assertion Markup Language), apa fungsi dari elemen '<SubjectConfirmationData>' pada assertion XML?
 
-**Pilihan Jawaban:**
-- **A.** Memastikan semua karyawan memiliki wewenang setara dengan sistem administrator.
-- **B.** Mencegah kecurangan atau penyalahgunaan wewenang dengan mensyaratkan keterlibatan lebih dari satu individu untuk menyelesaikan tugas kritis. *(Kunci Jawaban)*
-- **C.** Membagi beban kerja komputasi jaringan secara merata ke seluruh server.
-- **D.** Memisahkan partisi harddisk sistem operasi dari partisi data pengguna.
-- **E.** Memaksa setiap pengguna mengganti password setiap 24 jam sekali.
+- **A**. Menyimpan salinan password terenkripsi pengguna untuk verifikasi login ganda di Service Provider.
+- **B**. Menyediakan private key Identity Provider untuk mendekripsi payload sesi database pengguna sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.
+- **C**. Membatasi validitas assertion berdasarkan rentang waktu, alamat IP, dan URL penerima yang sah.
+- **D**. Menentukan daftar hak akses tabel SQL yang boleh dikueri oleh Service Provider guna mencegah serangan replay token otentikasi jaringan.
+- **E**. Mengonversi token SAML menjadi format JSON Web Token (JWT) secara otomatis.
 
-> **Kunci Jawaban Benar:** **B. Mencegah kecurangan atau penyalahgunaan wewenang dengan mensyaratkan keterlibatan lebih dari satu individu untuk menyelesaikan tugas kritis.**
+> **Kunci Jawaban:** C. Membatasi validitas assertion berdasarkan rentang waktu, alamat IP, dan URL penerima yang sah.
 
 ---
 
-### Soal 24 (Post Test)
-**Pertanyaan:**  
-Ketika merancang sistem autentikasi berbasis biometric wajah, manajemen memutuskan untuk memprioritaskan keamanan fisik fasilitas berisiko tinggi di atas kenyamanan pengguna. Penyesuaian threshold matching score (t) yang tepat adalah ...
+### Soal 162
+Pada model kontrol akses Clark-Wilson, integritas data transaksi bisnis dijamin melalui pemisahan data menjadi Constrained Data Items (CDI) dan Unconstrained Data Items (UDI). Mekanisme apa yang wajib digunakan untuk memanipulasi CDI?
 
-**Pilihan Jawaban:**
-- **A.** Menurunkan nilai threshold t agar pengguna dapat masuk lebih cepat tanpa antrean.
-- **B.** Menaikkan nilai threshold t untuk meminimalkan False Acceptance Rate (FAR), meskipun False Rejection Rate (FRR) meningkat. *(Kunci Jawaban)*
-- **C.** Menonaktifkan threshold dan menerima seluruh citra wajah yang terdeteksi kamera.
-- **D.** Menyetel threshold ke nilai nol mutlak.
-- **E.** Mengganti kamera beresolusi tinggi dengan sensor suhu inframerah sederhana.
+- **A**. Perintah sistem operasi langsung melalui shell root tanpa proses validasi perantara pada infrastruktur autentikasi enterprise berskala besar.
+- **B**. Fungsi enkripsi asimetris RSA 4096-bit yang dijalankan di level kernel driver.
+- **C**. Transformation Procedures (TP) yang tersertifikasi dan Integrity Verification Procedures (IVP).
+- **D**. Akses kontrol ACL berbasis daftar nama pengguna (UID) di sistem berkas lokal.
+- **E**. Protokol transmisi data UDP tanpa handshake untuk menghindari overhead latensi.
 
-> **Kunci Jawaban Benar:** **B. Menaikkan nilai threshold t untuk meminimalkan False Acceptance Rate (FAR), meskipun False Rejection Rate (FRR) meningkat.**
+> **Kunci Jawaban:** C. Transformation Procedures (TP) yang tersertifikasi dan Integrity Verification Procedures (IVP).
 
 ---
 
-### Soal 25 (Post Test)
-**Pertanyaan:**  
-Apa kelemahan utama dari mekanisme autentikasi berbasis SMS OTP (One-Time Password) dibandingkan Time-based One-Time Password (TOTP) berbasis aplikasi authenticator?
+### Soal 163
+Dalam arsitektur XACML untuk kontrol akses Attribute-Based Access Control (ABAC), entitas arsitektur yang bertugas mengevaluasi kebijakan akses dan membuat keputusan otorisasi (Permit / Deny) adalah ...
 
-**Pilihan Jawaban:**
-- **A.** SMS OTP membutuhkan perangkat hardware token khusus yang mahal.
-- **B.** SMS rentan terhadap intersepsi jaringan seluler (SS7 vulnerability) dan serangan SIM Swapping oleh penyerang. *(Kunci Jawaban)*
-- **C.** SMS OTP hanya dapat digunakan pada komputer desktop tanpa koneksi internet.
-- **D.** Aplikasi authenticator selalu mengirimkan kode OTP secara plaintext ke server telekomunikasi.
-- **E.** SMS OTP tidak memiliki batas waktu kedaluwarsa.
+- **A**. Policy Enforcement Point (PEP) yang mencegat permintaan akses dari subjek guna mencegah serangan replay token otentikasi jaringan.
+- **B**. Policy Information Point (PIP) yang mengambil atribut subjek dan objek dari database eksternal.
+- **C**. Policy Administration Point (PAP) yang mengelola siklus pembuatan berkas kebijakan berdasarkan kebijakan kontrol akses formal yang terdaftar.
+- **D**. Policy Decision Point (PDP) yang menerima atribut dan mengevaluasi aturan kebijakan.
+- **E**. Policy Retrieval Authority (PRA) yang menyinkronkan token autentikasi client guna mencegah serangan replay token otentikasi jaringan.
 
-> **Kunci Jawaban Benar:** **B. SMS rentan terhadap intersepsi jaringan seluler (SS7 vulnerability) dan serangan SIM Swapping oleh penyerang.**
+> **Kunci Jawaban:** D. Policy Decision Point (PDP) yang menerima atribut dan mengevaluasi aturan kebijakan.
 
 ---
+
+
+# Week 3
+
 
-## 📌 Week 3 - Cyber Law, Ethics & Computer Crime
+## Pre Test
 
-### Soal 1 (Pre Test)
-**Pertanyaan:**  
-Seorang security researcher menemukan zero-day vulnerability pada portal perbankan nasional. Menurut etika profesional Coordinated Vulnerability Disclosure (Responsible Disclosure), langkah pertama yang wajib diambil oleh researcher tersebut adalah ...
+### Soal 164
+Berdasarkan pedoman urutan volatilitas bukti digital (RFC 3227 - Order of Volatility), manakah urutan akuisisi bukti yang paling tepat dari yang paling volatil ke yang paling stabil?
 
-**Pilihan Jawaban:**
-- **A.** Menjual exploit tersebut di pasar gelap dark web untuk mendapatkan keuntungan finansial.
-- **B.** Mempublikasikan detail exploit secara publik di media sosial sebelum vendor sempat mengetahuinya.
-- **C.** Melaporkan temuan secara tertutup kepada pihak pengembang/vendor terkait dan memberikan waktu yang wajar untuk patch sebelum pengungkapan publik. *(Kunci Jawaban)*
-- **D.** Menggunakan kerentanan tersebut untuk mengekstrak saldo nasabah demi membuktikan dampak risiko.
-- **E.** Menghapus seluruh database server agar kerentanan tidak dieksploitasi pihak lain.
+- **A**. Registers & cache CPU, Physical memory (RAM), Routing table & kernel statistics, Disk storage, Optical media.
+- **B**. Routing table & ARP cache, Registers & cache CPU, Physical memory (RAM), Non-volatile storage, Remote logging.
+- **C**. Physical memory (RAM), Registers & cache CPU, Network state & process table, Storage disk, Remote logging data.
+- **D**. Registers & cache CPU, Routing table & ARP cache, Physical memory (RAM), Temporary file systems, Optical media secara terperinci.
+- **E**. Temporary file systems, Physical memory (RAM), Registers & cache CPU, Routing table & ARP cache, Backup tapes.
 
-> **Kunci Jawaban Benar:** **C. Melaporkan temuan secara tertutup kepada pihak pengembang/vendor terkait dan memberikan waktu yang wajar untuk patch sebelum pengungkapan publik.**
+> **Kunci Jawaban:** D. Registers & cache CPU, Routing table & ARP cache, Physical memory (RAM), Temporary file systems, Optical media secara terperinci.
 
 ---
 
-### Soal 2 (Pre Test)
-**Pertanyaan:**  
-Berdasarkan prinsip Data Minimization dalam regulasi perlindungan data pribadi (UU PDP dan GDPR), sebuah aplikasi toko online wajib ...
+### Soal 165
+Mengapa penggunaan hardware write-blocker merupakan standar wajib saat melakukan forensik bit-stream image terhadap media penyimpanan barang bukti digital?
 
-**Pilihan Jawaban:**
-- **A.** Mengumpulkan seluruh data pribadi pengguna termasuk rekam medis dan data biometrik untuk cadangan masa depan.
-- **B.** Hanya mengumpulkan dan memproses data pribadi yang benar-benar relevan, memadai, dan terbatas pada tujuan transaksi yang telah disepakati. *(Kunci Jawaban)*
-- **C.** Menjual data pelanggan kepada pihak ketiga tanpa memerlukan persetujuan pemilik data.
-- **D.** Menyimpan data log percakapan telepon pengguna selama minimal 50 tahun.
-- **E.** Menonaktifkan enkripsi database agar data mudah diaudit oleh publik.
+- **A**. Mencegah sistem operasi forensik menulis metadata mount, update timestamp berkas, atau cache ke media bukti.
+- **B**. Mempercepat transfer data transfer bus SATA hingga dua kali lipat dibanding pembacaan port USB standar berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.
+- **C**. Mendekripsi partisi BitLocker atau LUKS pada disk target secara otomatis sebelum proses hashing dimulai.
+- **D**. Menghapus cluster bad sector pada hard disk sehingga proses bit-by-bit imaging tidak mengalami freezing.
+- **E**. Mengompresi raw disk image ke format E01 secara real-time guna menghemat ruang penyimpanan host forensik.
 
-> **Kunci Jawaban Benar:** **B. Hanya mengumpulkan dan memproses data pribadi yang benar-benar relevan, memadai, dan terbatas pada tujuan transaksi yang telah disepakati.**
+> **Kunci Jawaban:** A. Mencegah sistem operasi forensik menulis metadata mount, update timestamp berkas, atau cache ke media bukti.
 
 ---
 
-### Soal 3 (Pre Test)
-**Pertanyaan:**  
-Dalam UU ITE (Undang-Undang Informasi dan Transaksi Elektronik), tindakan mengakses komputer atau sistem elektronik milik orang lain dengan cara melanggar, menerobos, melampaui, atau menjebol sistem pengamanan diatur secara spesifik dalam ...
+### Soal 166
+Dalam konteks hukum siber Indonesia (UU ITE), tindakan seorang penyerang yang menembus firewall dan sistem autentikasi server perbankan secara ilegal diatur dalam ...
 
-- **A**. Pasal 27 ayat (1) (Larangan mendistribusikan konten elektronik berkonten asusila/pornografi)
-- **B**. Pasal 28 ayat (2) (Larangan menyebarkan ujaran kebencian berbasis SARA)
-- **C**. Pasal 30 ayat (3) (Illegal access dengan melanggar, menerobos, melampaui, atau menjebol sistem pengamanan/cracking)
-- **D**. Pasal 35 (Manipulasi atau pemalsuan dokumen elektronik/electronic forgery)
-- **E**. Pasal 45 (Ketentuan sanksi pidana penjara dan denda)
+- **A**. Pasal 27 ayat (3) terkait penghinaan dan pencemaran nama baik melalui media transmisi elektronik umum dalam kerangka pembuktian tindak pidana siber menurut undang-undang.
+- **B**. Pasal 31 ayat (2) terkait intersepsi atau penyadapan transmisi informasi elektronik pada jaringan privat sesuai dengan prosedur standar ISO/IEC 27037 bukti digital.
+- **C**. Pasal 30 ayat (3) terkait akses ilegal dengan melanggar, menerobos, melampaui, atau menjebol sistem pengamanan.
+- **D**. Pasal 32 ayat (1) terkait pengubahan, perusakan, atau pemindahan dokumen elektronik milik pihak berwenang dalam kerangka pembuktian tindak pidana siber menurut undang-undang.
+- **E**. Pasal 33 terkait gangguan terhadap sistem elektronik yang berakibat sistem tidak bekerja sebagaimana mestinya guna memastikan integritas rantai keabsahan bukti chain of custody.
 
-> **Kunci Jawaban:** `C` - Pasal 30 ayat (3) (Illegal access dengan melanggar, menerobos, melampaui, atau menjebol sistem pengamanan/cracking)
+> **Kunci Jawaban:** C. Pasal 30 ayat (3) terkait akses ilegal dengan melanggar, menerobos, melampaui, atau menjebol sistem pengamanan.
 
-### Soal 4 (Pre Test)
-**Pertanyaan:**  
-Seseorang memasang packet sniffer pada jaringan Wi-Fi privat perusahaan tanpa izin untuk menangkap transmisi data sensitif yang tidak bersifat publik. Tindakan penyadapan ini diatur dan dilarang dalam UU ITE pada ...
+---
+
+### Soal 167
+Aksi pemasangan software packet sniffer di switch internal untuk menyadap kredensial login dan pesan confidential tanpa izin secara spesifik melanggar UU ITE ...
+
+- **A**. Pasal 30 ayat (1) mengenai pengaksesan komputer pihak lain tanpa hak secara umum tanpa menjebol proteksi berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.
+- **B**. Pasal 35 mengenai manipulasi atau penciptaan dokumen elektronik seolah-olah merupakan data yang otentik.
+- **C**. Pasal 32 ayat (2) mengenai pemindahan dokumen elektronik rahasia ke sistem elektronik yang tidak berhak.
+- **D**. Pasal 34 ayat (1) mengenai pemanfaatan sandi lewat (password) atau kode akses untuk keuntungan finansial.
+- **E**. Pasal 31 ayat (1) mengenai intersepsi atau penyadapan informasi/dokumen elektronik dalam sistem tertutup secara komprehensif.
+
+> **Kunci Jawaban:** E. Pasal 31 ayat (1) mengenai intersepsi atau penyadapan informasi/dokumen elektronik dalam sistem tertutup secara komprehensif.
 
-- **A**. Pasal 31 ayat (1) (Interception/penyadapan transmisi informasi elektronik pada sistem privat tanpa hak/sniffing)
-- **B**. Pasal 30 ayat (1) (Akses tanpa hak ke komputer atau sistem elektronik)
-- **C**. Pasal 33 (Tindakan yang berakibat terganggunya kinerja sistem elektronik/serangan DoS)
-- **D**. Pasal 35 (Pemalsuan data atau manipulasi dokumen elektronik)
-- **E**. Pasal 36 (Pemberatan hukuman apabila kejahatan siber mengakibatkan kerugian materiil bagi pihak lain)
+---
 
-> **Kunci Jawaban:** `A` - Pasal 31 ayat (1) (Interception/penyadapan transmisi informasi elektronik pada sistem privat tanpa hak/sniffing)
+### Soal 168
+Seorang insinyur perangkat lunak dengan sengaja mengubah nilai saldo di basis data aplikasi keuangan tanpa otorisasi. Dalam UU ITE, delik pidana ini diatur pada ...
 
-### Soal 5 (Pre Test)
-**Pertanyaan:**  
-Seorang mantan karyawan yang kecewa sengaja menghapus tabel database nasabah dan mengubah record saldo rekening. Tindakan pengubahan, perusakan, dan penghapusan informasi elektronik milik orang lain ini melanggar UU ITE ...
+- **A**. Pasal 30 ayat (2) terkait perolehan informasi elektronik dari komputer pihak lain dengan tujuan menguntungkan diri.
+- **B**. Pasal 31 ayat (1) terkait intersepsi paket transmisi data keuangan antar server basis data dan server aplikasi.
+- **C**. Pasal 28 ayat (1) terkait penyebaran informasi palsu dan menyesatkan yang mengakibatkan kerugian konsumen e-commerce.
+- **D**. Pasal 33 terkait tindakan mengganggu integritas perangkat keras server hingga menimbulkan kegagalan daya guna memastikan integritas rantai keabsahan bukti chain of custody.
+- **E**. Pasal 32 ayat (1) terkait pengubahan, penambahan, pengurangan, transmisi, atau perusakan dokumen elektronik secara komprehensif.
 
-- **A**. Pasal 27 ayat (3) (Pencemaran nama baik dan penghinaan melalui media sosial)
-- **B**. Pasal 32 ayat (1) (Data interference: mengubah, menambah, mengurangi, merusak, atau menghapus informasi/dokumen elektronik orang lain)
-- **C**. Pasal 31 ayat (2) (Penyadapan transmisi data dari satu komputer ke komputer lain)
-- **D**. Pasal 34 (Penyediaan atau penjualan alat dan perangkat lunak peretas)
-- **E**. Pasal 30 ayat (1) (Mengakses sistem komputer tanpa mengubah isi data)
+> **Kunci Jawaban:** E. Pasal 32 ayat (1) terkait pengubahan, penambahan, pengurangan, transmisi, atau perusakan dokumen elektronik secara komprehensif.
 
-> **Kunci Jawaban:** `B` - Pasal 32 ayat (1) (Data interference: mengubah, menambah, mengurangi, merusak, atau menghapus informasi/dokumen elektronik orang lain)
+---
 
-### Soal 6 (Pre Test)
-**Pertanyaan:**  
-Tindakan melancarkan serangan Distributed Denial of Service (DDoS) yang menyebabkan server layanan publik lumpuh dan tidak dapat diakses masyarakat termasuk pelanggaran UU ITE ...
+### Soal 169
+Penyerangan Distributed Denial of Service (DDoS) yang membanjiri bandwidth server instansi publik hingga layanan mati total dijerat dengan ketentuan UU ITE ...
 
-**Pilihan Jawaban:**
-- **A.** Pasal 33 (Tindakan yang berakibat terganggunya Sistem Elektronik dan/atau mengakibatkan Sistem Elektronik menjadi tidak bekerja sebagaimana mestinya) *(Kunci Jawaban)*
-- **B.** Pasal 27 ayat (2) tentang perjudian online
-- **C.** Pasal 31 ayat (1) tentang penyadapan
-- **D.** Pasal 35 tentang manipulasi dokumen
-- **E.** Pasal 30 ayat (1) tentang browsing biasa
+- **A**. Pasal 33 tentang perbuatan apa pun yang berakibat terganggunya sistem elektronik menjadi tidak bekerja sebagaimana mestinya.
+- **B**. Pasal 31 ayat (2) tentang intersepsi komunikasi data yang tidak diperuntukkan bagi umum dalam lalu lintas internet sesuai dengan prosedur standar ISO/IEC 27037 bukti digital.
+- **C**. Pasal 32 ayat (3) tentang pemindahan dokumen elektronik yang mengakibatkan terbukanya data rahasia institusi sesuai dengan prosedur standar ISO/IEC 27037 bukti digital.
+- **D**. Pasal 30 ayat (3) tentang penerobosan perimeter sistem keamanan jaringan komputer milik lembaga publik berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.
+- **E**. Pasal 35 tentang pemalsuan tanda tangan elektronik pejabat berwenang dalam sistem dokumen administrasi negara.
 
-> **Kunci Jawaban Benar:** **A. Pasal 33 (Tindakan yang berakibat terganggunya Sistem Elektronik dan/atau mengakibatkan Sistem Elektronik menjadi tidak bekerja sebagaimana mestinya)**
+> **Kunci Jawaban:** A. Pasal 33 tentang perbuatan apa pun yang berakibat terganggunya sistem elektronik menjadi tidak bekerja sebagaimana mestinya.
 
 ---
 
-### Soal 7 (Pre Test)
-**Pertanyaan:**  
-Seseorang memproduksi dan memperjualbelikan software peretas (exploit kit) yang dirancang khusus untuk memfasilitasi pembobolan sistem perbankan. Tindakan penyediaan perangkat keras atau lunak untuk memfasilitasi kejahatan komputer ini diatur dalam UU ITE ...
+### Soal 170
+Dalam Budapest Convention on Cybercrime (ETS No. 185), pasal berapakah yang secara spesifik mewajibkan penandatangan mengkriminalisasi tindakan 'Data Interference'?
 
-- **A**. Pasal 30 ayat (2) (Akses ilegal untuk memperoleh informasi/dokumen elektronik)
-- **B**. Pasal 34 ayat (1) (Misuse of devices: memproduksi, menjual, menyebarkan, atau memiliki perangkat keras/lunak yang dirancang untuk memfasilitasi peretasan)
-- **C**. Pasal 31 ayat (1) (Penyadapan transmisi data jaringan privat)
-- **D**. Pasal 28 ayat (1) (Penyebaran berita bohong yang merugikan konsumen transaksi elektronik)
-- **E**. Pasal 29 (Pengiriman informasi elektronik yang berisi ancaman kekerasan pribadi)
+- **A**. Article 2 (Illegal access to computer systems without right) guna memastikan integritas rantai keabsahan bukti chain of custody.
+- **B**. Article 3 (Illegal interception of non-public transmissions) sesuai dengan prosedur standar ISO/IEC 27037 bukti digital.
+- **C**. Article 4 (Data interference involving damaging or altering data).
+- **D**. Article 5 (System interference hindering functioning of systems).
+- **E**. Article 6 (Misuse of devices designed for committing offenses).
+
+> **Kunci Jawaban:** C. Article 4 (Data interference involving damaging or altering data).
+
+---
 
-> **Kunci Jawaban:** `B` - Pasal 34 ayat (1) (Misuse of devices: memproduksi, menjual, menyebarkan, atau memiliki perangkat keras/lunak yang dirancang untuk memfasilitasi peretasan)
+### Soal 171
+Berdasarkan UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP), manakah di antara opsi berikut yang seluruhnya termasuk dalam kategori 'Data Pribadi Spesifik'?
 
-### Soal 8 (Pre Test)
-**Pertanyaan:**  
-Membuat sertifikat digital palsu atau memanipulasi dokumen elektronik rekening bank agar tampak seolah-olah merupakan data yang otentik (Electronic Forgery) dilarang dalam UU ITE pada ...
+- **A**. Nama lengkap, jenis kelamin, alamat rumah tinggal, dan nomor telepon seluler pribadi.
+- **B**. Data kesehatan, informasi biometrik, data genetika, dan catatan kejahatan seseorang secara komprehensif.
+- **C**. Kewarganegaraan, agama, status perkawinan terdaftar, dan riwayat pekerjaan formal sesuai dengan prosedur standar ISO/IEC 27037 bukti digital.
+- **D**. Alamat IP publik, preferensi peramban web, riwayat browsing internet, dan cookie web.
+- **E**. Nomor induk kependudukan (NIK), tempat tanggal lahir, nama ibu kandung, dan golongan darah.
 
-- **A**. Pasal 35 (Electronic forgery: memanipulasi, menciptakan, atau mengubah dokumen elektronik agar seolah-olah otentik)
-- **B**. Pasal 30 (Illegal access ke dalam jaringan komputer tanpa hak)
-- **C**. Pasal 31 (Interception atau penyadapan kabel/gelombang radio transmisi)
-- **D**. Pasal 32 (Perusakan atau penghapusan data database perusahaan)
-- **E**. Pasal 33 (Serangan siber yang mengakibatkan lumpuhnya layanan server)
+> **Kunci Jawaban:** B. Data kesehatan, informasi biometrik, data genetika, dan catatan kejahatan seseorang secara komprehensif.
 
-> **Kunci Jawaban:** `A` - Pasal 35 (Electronic forgery: memanipulasi, menciptakan, atau mengubah dokumen elektronik agar seolah-olah otentik)
+---
 
-### Soal 9 (Pre Test)
-**Pertanyaan:**  
-Budapest Convention on Cybercrime (Convention ETS 185) merupakan instrumen internasional penting yang bertujuan untuk ...
+### Soal 172
+Dalam Chain of Custody forensik digital, tindakan yang wajib dicatat secara mendetail saat serah terima barang bukti flashdisk mencakup ...
 
-**Pilihan Jawaban:**
-- **A.** Mewajibkan seluruh negara memblokir akses internet secara sepihak.
-- **B.** Mengharmonisasikan hukum pidana siber nasional, meningkatkan kemampuan investigasi, dan memfasilitasi kerjasama peradilan internasional lintas batas. *(Kunci Jawaban)*
-- **C.** Menetapkan tarif pajak standar untuk transaksi e-commerce global.
-- **D.** Melarang riset kriptografi sumber terbuka di perguruan tinggi.
-- **E.** Menghapus wewenang aparat penegak hukum lokal dalam menyita barang bukti digital.
+- **A**. Pernyataan pengakuan bersalah yang ditandatangani oleh tersangka di hadapan saksi ahli forensik digital.
+- **B**. Daftar seluruh password akun pengguna yang tersimpan di dalam perangkat beserta nomor PIN perbankan pemilik.
+- **C**. Estimasi nilai rupiah perangkat di pasaran perangkat keras bekas saat barang bukti tersebut disita penyidik.
+- **D**. Konfigurasi detail register prosesor dan suhu operasional perangkat sebelum dimasukkan ke dalam kantong antistatis.
+- **E**. Nilai hash cryptographic (MD5/SHA-256), nomor seri perangkat, identitas pemeriksa, dan tanggal waktu perpindahan fisik.
 
-> **Kunci Jawaban Benar:** **B. Mengharmonisasikan hukum pidana siber nasional, meningkatkan kemampuan investigasi, dan memfasilitasi kerjasama peradilan internasional lintas batas.**
+> **Kunci Jawaban:** E. Nilai hash cryptographic (MD5/SHA-256), nomor seri perangkat, identitas pemeriksa, dan tanggal waktu perpindahan fisik.
 
 ---
 
-### Soal 10 (Pre Test)
-**Pertanyaan:**  
-Dalam hukum forensik digital, dokumentasi kronologis ketat mengenai siapa yang menyita, menerima, memindahkan, menganalisis, dan menyimpan barang bukti digital disebut ...
+### Soal 173
+Ketika menangani insiden komputer menyala yang menjalankan enkripsi disk BitLocker aktif dan malware RAM-resident, mengapa 'Live Acquisition' lebih diprioritaskan daripada langsung mencabut kabel daya?
 
-**Pilihan Jawaban:**
-- **A.** Order of Volatility
-- **B.** Chain of Custody *(Kunci Jawaban)*
-- **C.** Incident Response Plan
-- **D.** Electronic Discovery Protocol
-- **E.** Forensic Audit Log
+- **A**. Pencabutan daya langsung dapat merusak struktur fisik sirkuit motherboard dan power supply server target.
+- **B**. Kunci enkripsi memori (FVEK) dan artefak malware dalam RAM akan lenyap seketika daya listrik terputus secara komprehensif.
+- **C**. Sistem operasi modern akan memformat ulang media penyimpanan jika komputer dimatikan secara mendadak berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.
+- **D**. Live acquisition menghasilkan ukuran berkas citra bukti digital yang jauh lebih kecil daripada cold acquisition.
+- **E**. Sertifikat digital forensik hanya sah secara hukum jika diambil ketika sistem operasi dalam status running.
 
-> **Kunci Jawaban Benar:** **B. Chain of Custody**
+> **Kunci Jawaban:** B. Kunci enkripsi memori (FVEK) dan artefak malware dalam RAM akan lenyap seketika daya listrik terputus secara komprehensif.
 
 ---
 
-### Soal 11 (Pre Test)
-**Pertanyaan:**  
-Mengapa penyidik forensik digital wajib menggunakan perangkat hardware write-blocker saat menghubungkan media penyimpanan bukti asli ke komputer workstation analisis?
+### Soal 174
+Teknik anti-forensik 'Timestomping' sering digunakan pelaku kejahatan siber untuk mengelabui analis timeline forensik. Pada sistem berkas NTFS, teknik ini bekerja dengan cara ...
 
-**Pilihan Jawaban:**
-- **A.** Agar kecepatan transfer data harddisk meningkat dua kali lipat.
-- **B.** Untuk mencegah sistem operasi workstation mengubah, menulis, atau memodifikasi metadata/isi berkas pada media bukti asli secara tidak sengaja. *(Kunci Jawaban)*
-- **C.** Untuk menghapus malware yang mungkin aktif pada harddisk bukti secara otomatis.
-- **D.** Agar partisi harddisk yang terenkripsi langsung terdekripsi tanpa kata sandi.
-- **E.** Untuk mengompresi ukuran disk image menjadi format zip.
+- **A**. Memanipulasi timestamp berkas pada atribut $STANDARD_INFORMATION tanpa menyelaraskan atribut $FILE_NAME secara komprehensif.
+- **B**. Mengubah frekuensi kristal clock pada CMOS hardware BIOS agar waktu sistem berjalan mundur secara konstan.
+- **C**. Menghapus berkas log Event Viewer Application dan Security secara berkala menggunakan skrip batch terjadwal.
+- **D**. Mengenkripsi seluruh sektor metadata Master File Table ($MFT) dengan algoritma asimetris RSA 2048-bit dalam kerangka pembuktian tindak pidana siber menurut undang-undang.
+- **E**. Menyematkan payload malware ke dalam slack space cluster disk yang tidak terpetakan oleh sistem operasi.
 
-> **Kunci Jawaban Benar:** **B. Untuk mencegah sistem operasi workstation mengubah, menulis, atau memodifikasi metadata/isi berkas pada media bukti asli secara tidak sengaja.**
+> **Kunci Jawaban:** A. Memanipulasi timestamp berkas pada atribut $STANDARD_INFORMATION tanpa menyelaraskan atribut $FILE_NAME secara komprehensif.
 
 ---
 
-### Soal 12 (Pre Test)
-**Pertanyaan:**  
-Bagaimana seorang ahli forensik membuktikan di depan pengadilan bahwa salinan bit-stream image identik secara sempurna dengan harddisk bukti asli di tempat kejadian perkara (TKP)?
+### Soal 175
+Dalam analisis dump memori RAM menggunakan Volatility Framework, mengapa plugin 'psscan' mampu menemukan proses malware tersembunyi yang gagal dideteksi oleh plugin 'pslist'?
 
-**Pilihan Jawaban:**
-- **A.** Dengan membandingkan jumlah folder pada Windows Explorer.
-- **B.** Dengan menunjukkan bahwa nilai cryptographic hash (misalnya SHA-256) dari media asli sama persis dengan nilai hash salinan image sebelum dan sesudah analisis. *(Kunci Jawaban)*
-- **C.** Dengan mencetak isi seluruh file di atas kertas bermaterai.
-- **D.** Dengan mengonfirmasi pengakuan lisan dari tersangka peretasan.
-- **E.** Dengan memeriksa tanggal pembuatan casing komputer.
+- **A**. psscan membaca berkas prefetch di hard disk, sedangkan pslist hanya memeriksa cache CPU prosesor host dalam kerangka pembuktian tindak pidana siber menurut undang-undang.
+- **B**. pslist hanya dapat berjalan pada sistem operasi Linux, sedangkan psscan didesain eksklusif untuk kernel Windows.
+- **C**. psscan melakukan scanning pola pool tag memori, sedangkan pslist hanya menelusuri linked-list EPROCESS aktif.
+- **D**. pslist memerlukan privilege root untuk membaca memori, sedangkan psscan dapat berjalan di unprivileged mode.
+- **E**. psscan menggunakan algoritma deobfuskasi XOR dinamis untuk membongkar injeksi shellcode pada stack memori.
 
-> **Kunci Jawaban Benar:** **B. Dengan menunjukkan bahwa nilai cryptographic hash (misalnya SHA-256) dari media asli sama persis dengan nilai hash salinan image sebelum dan sesudah analisis.**
+> **Kunci Jawaban:** C. psscan melakukan scanning pola pool tag memori, sedangkan pslist hanya menelusuri linked-list EPROCESS aktif.
 
 ---
 
-### Soal 13 (Pre Test)
-**Pertanyaan:**  
-Berdasarkan standar RFC 3227 mengenai urutan volatilitas data (Order of Volatility), manakah sumber data yang paling mudah hilang / mudah menguap dan wajib diakuisisi pertama kali?
+### Soal 176
+Artefak Windows Registry manakah yang paling krusial dianalisis penyidik untuk merekonstruksi riwayat mounting perangkat USB flashdisk eksternal pada komputer tersangka?
 
-**Pilihan Jawaban:**
-- **A.** Data pada harddisk magnetik lokal
-- **B.** Media pita cadangan (backup tape)
-- **C.** Isi register CPU, cache memori, dan memori fisik (RAM) *(Kunci Jawaban)*
-- **D.** Dokumen cetak pada lemari arsip
-- **E.** Kabel jaringan serat optik
+- **A**. SYSTEM\CurrentControlSet\Enum\USBSTOR dan berkas setupapi.dev.log.
+- **B**. SAM\Domains\Account\Users dan berkas Ntds.dit direktori domain controller.
+- **C**. SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce startup keys dalam kerangka pembuktian tindak pidana siber menurut undang-undang.
+- **D**. SECURITY\Policy\Secrets dan berkas master key Credential Manager berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.
+- **E**. SOFTWARE\Policies\Microsoft\Windows Defender\Exclusions keys guna memastikan integritas rantai keabsahan bukti chain of custody.
 
-> **Kunci Jawaban Benar:** **C. Isi register CPU, cache memori, dan memori fisik (RAM)**
+> **Kunci Jawaban:** A. SYSTEM\CurrentControlSet\Enum\USBSTOR dan berkas setupapi.dev.log.
 
 ---
+
 
-### Soal 14 (Post Test)
-**Pertanyaan:**  
-Pada penanganan insiden ransomware yang sedang aktif menginfeksi sebuah server, mengapa mematikan daya secara mendadak (hard power-off) sering kali tidak disarankan sebelum live memory capture dilakukan?
+## Post Test
 
-**Pilihan Jawaban:**
-- **A.** Mematikan server akan merusak fisik monitor dan keyboard.
-- **B.** Daya yang hilang akan melenyapkan isi RAM yang berpotensi menyimpan kunci enkripsi ransomware, proses malware aktif, dan koneksi jaringan memori. *(Kunci Jawaban)*
-- **C.** Ransomware akan langsung menyebar ke seluruh internet secara otomatis.
-- **D.** Sistem operasi tidak akan bisa diinstal ulang selamanya.
-- **E.** Harddisk akan kehilangan partisi booting secara permanen.
+### Soal 177
+Pada sistem operasi Windows, analisis terhadap artefak Prefetch (.pf) memberikan nilai bukti digital yang sangat kuat karena mampu membuktikan ...
 
-> **Kunci Jawaban Benar:** **B. Daya yang hilang akan melenyapkan isi RAM yang berpotensi menyimpan kunci enkripsi ransomware, proses malware aktif, dan koneksi jaringan memori.**
+- **A**. Daftar alamat URL website perbankan yang diakses pengguna melalui browser mode incognito dalam kerangka pembuktian tindak pidana siber menurut undang-undang.
+- **B**. Isi plaintext percakapan instan yang terjadi sebelum prosesor mengalami crash blue screen.
+- **C**. Kunci simetris AES yang digunakan ransomware untuk mengenkripsi volume partisi sekunder.
+- **D**. Eksekusi suatu executable, waktu eksekusi terakhir, run count, serta DLL yang dimuat ke memori.
+- **E**. Daftar kata sandi Wi-Fi SSID publik yang pernah terhubung ke adapter nirkabel laptop target.
 
+> **Kunci Jawaban:** D. Eksekusi suatu executable, waktu eksekusi terakhir, run count, serta DLL yang dimuat ke memori.
+
 ---
 
-### Soal 15 (Post Test)
-**Pertanyaan:**  
-Teknik anti-forensik di mana penyerang dengan sengaja memanipulasi timestamp MAC (Modified, Accessed, Created) pada file system untuk mengaburkan kronologi insiden disebut ...
+### Soal 178
+Metode pemulihan berkas 'File Carving' dalam investigasi disk forensik bekerja berdasarkan prinsip apa ketika tabel sistem berkas (seperti FAT/MFT) telah rusak atau terhapus?
 
-**Pilihan Jawaban:**
-- **A.** Data Degaussing
-- **B.** Timestomping *(Kunci Jawaban)*
-- **C.** Buffer Overflow
-- **D.** Memory Injection
-- **E.** Traffic Sniffing
+- **A**. Melakukan rekonstruksi struktur pohon direktori berdasarkan sisa cache metadata pada RAM prosesor berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.
+- **B**. Mendekompilasi file sistem operasi menggunakan teknik reverse engineering machine code berbasis AI.
+- **C**. Mengirimkan kueri recovery data ke server bayangan Volume Shadow Copy Service melalui jaringan dalam kerangka pembuktian tindak pidana siber menurut undang-undang.
+- **D**. Mengidentifikasi magic bytes signature (header dan footer spesifik format berkas) pada raw unallocated cluster.
+- **E**. Menghitung nilai parity cluster RAID menggunakan algoritma Reed-Solomon untuk membangkitkan berkas.
 
-> **Kunci Jawaban Benar:** **B. Timestomping**
+> **Kunci Jawaban:** D. Mengidentifikasi magic bytes signature (header dan footer spesifik format berkas) pada raw unallocated cluster.
 
 ---
 
-### Soal 16 (Post Test)
-**Pertanyaan:**  
-Serangan Business Email Compromise (BEC) umumnya menargetkan divisi keuangan perusahaan dengan modus ...
+### Soal 179
+Dalam steganografi gambar digital, metode Least Significant Bit (LSB) embedding menyembunyikan payload rahasia dengan cara mengubah ...
 
-**Pilihan Jawaban:**
-- **A.** Menginfeksi komputer dengan worm jaringan yang menggandakan diri.
-- **B.** Memalsukan email identitas eksekutif/vendor rekanan tepercaya untuk menginstruksikan transfer dana ke rekening penipu melalui rekayasa sosial. *(Kunci Jawaban)*
-- **C.** Melakukan serangan brute-force terhadap password BIOS server.
-- **D.** Memutuskan kabel optik bawah laut antarnegara.
-- **E.** Mengubah tampilan visual halaman depan website perusahaan (web defacement).
+- **A**. Bit paling rendah dari nilai byte warna piksel sehingga perubahan visual tidak kasat mata bagi mata manusia.
+- **B**. Metadata Exif kamera seperti focal length, aperture, dan koordinat GPS penangkapan foto guna memastikan integritas rantai keabsahan bukti chain of custody.
+- **C**. Algoritma kompresi Huffman dari lossless format PNG menjadi lossy compression format JPEG secara dinamis guna memastikan integritas rantai keabsahan bukti chain of custody.
+- **D**. Resolusi lebar dan tinggi gambar di header IHDR tanpa mengubah payload matriks piksel sebenarnya dalam kerangka pembuktian tindak pidana siber menurut undang-undang.
+- **E**. Tabel kuantisasi Discrete Cosine Transform (DCT) pada kanal chrominance secara acak merata yang dicatat dalam berkas berita acara pemeriksaan forensik.
 
-> **Kunci Jawaban Benar:** **B. Memalsukan email identitas eksekutif/vendor rekanan tepercaya untuk menginstruksikan transfer dana ke rekening penipu melalui rekayasa sosial.**
+> **Kunci Jawaban:** A. Bit paling rendah dari nilai byte warna piksel sehingga perubahan visual tidak kasat mata bagi mata manusia.
 
 ---
 
-### Soal 17 (Post Test)
-**Pertanyaan:**  
-Serangan phishing yang ditargetkan secara spesifik kepada individu berpangkat tinggi seperti CEO, CFO, atau pejabat pemerintah dengan informasi personal yang sangat mendalam disebut ...
+### Soal 180
+Pada sistem berkas NTFS, berkas teks berukuran sangat kecil (< 700 byte) sering kali dikategorikan sebagai 'Resident File'. Karakteristik unik berkas resident ini adalah ...
 
-**Pilihan Jawaban:**
-- **A.** Bulk Spamming
-- **B.** Whaling *(Kunci Jawaban)*
-- **C.** Phreaking
-- **D.** Adware Infiltration
-- **E.** Denial of Service
+- **A**. Datanya selalu dikompresi menggunakan algoritma LZX dan hanya bisa dibaca oleh pengguna berhak istimewa root.
+- **B**. Datanya disimpan langsung di dalam record Master File Table ($MFT) itu sendiri tanpa alokasi cluster eksternal.
+- **C**. Datanya tidak akan pernah terhapus meskipun sistem berkas diformat ulang menggunakan perintah quick format.
+- **D**. Datanya disimpan secara eksklusif di dalam NVRAM motherboard dan tidak tertulis di media piringan disk.
+- **E**. Datanya secara otomatis diduplikasi ke sektor bad block untuk mencegah kehilangan data akibat kegagalan baca.
 
-> **Kunci Jawaban Benar:** **B. Whaling**
+> **Kunci Jawaban:** B. Datanya disimpan langsung di dalam record Master File Table ($MFT) itu sendiri tanpa alokasi cluster eksternal.
 
 ---
 
-### Soal 18 (Post Test)
-**Pertanyaan:**  
-Perbedaan lisensi perangkat lunak Copyleft (seperti GNU GPL) dengan lisensi Permissive (seperti MIT atau Apache 2.0) adalah ...
+### Soal 181
+Dalam forensik perangkat bergerak (mobile forensics), perbedaan mendasar antara 'Logical Extraction' dan 'Physical Extraction' adalah ...
 
-**Pilihan Jawaban:**
-- **A.** Lisensi GPL melarang siapa pun mengunduh kode sumber.
-- **B.** Lisensi GPL mewajibkan setiap karya turunan untuk tetap dirilis dengan lisensi open source yang sama (GPL), sedangkan MIT mengizinkan integrasi ke software komersial berpemilik. *(Kunci Jawaban)*
-- **C.** Lisensi MIT melarang penggunaan perangkat lunak untuk keperluan komersial.
-- **D.** Lisensi GPL memungut royalti sebesar 10% dari setiap penjualan.
-- **E.** Lisensi MIT hanya berlaku untuk aplikasi berbasis mobile Android.
+- **A**. Logical mengekstrak salinan bit-by-bit flash memory mentah, sedangkan Physical hanya mengambil file via backup API guna memastikan integritas rantai keabsahan bukti chain of custody.
+- **B**. Logical mampu memulihkan seluruh berkas yang terhapus dari unallocated space, sedangkan Physical tidak bisa memulihkannya.
+- **C**. Logical memerlukan solder chip-off pada papan PCB ponsel, sedangkan Physical cukup menggunakan kabel data USB biasa guna memastikan integritas rantai keabsahan bukti chain of custody.
+- **D**. Logical hanya mengambil data struktur logis melalui API OS, sedangkan Physical mengambil bit-by-bit raw flash memory secara komprehensif.
+- **E**. Logical hanya dapat diterapkan pada sistem operasi iOS, sedangkan Physical hanya dapat dieksekusi pada ponsel Android.
 
-> **Kunci Jawaban Benar:** **B. Lisensi GPL mewajibkan setiap karya turunan untuk tetap dirilis dengan lisensi open source yang sama (GPL), sedangkan MIT mengizinkan integrasi ke software komersial berpemilik.**
+> **Kunci Jawaban:** D. Logical hanya mengambil data struktur logis melalui API OS, sedangkan Physical mengambil bit-by-bit raw flash memory secara komprehensif.
 
 ---
 
-### Soal 19 (Post Test)
-**Pertanyaan:**  
-Dalam konteks etika dan legalitas Penetration Testing, dokumen krusial yang mendefinisikan batasan sistem target, jadwal waktu pengujian, teknik yang diizinkan, dan kontak darurat disebut ...
+### Soal 182
+Seorang individu memproduksi, memperjualbelikan, dan mendistribusikan software keylogger serta tool exploit kit untuk membobol sistem pihak lain. Pasal UU ITE yang mengatur larangan ini adalah ...
 
-**Pilihan Jawaban:**
-- **A.** Certificate of Authenticity (CoA)
-- **B.** Rules of Engagement (RoE) / Scope of Work *(Kunci Jawaban)*
-- **C.** End-User License Agreement (EULA)
-- **D.** Privacy Policy Statement
-- **E.** Hardware Warranty Agreement
+- **A**. Pasal 30 ayat (1) mengenai tindakan mengakses komputer tanpa izin demi memperoleh hiburan semata yang dicatat dalam berkas berita acara pemeriksaan forensik.
+- **B**. Pasal 32 ayat (2) mengenai pengiriman data elektronik rahasia ke server luar negeri tanpa sertifikasi keamanan yang dicatat dalam berkas berita acara pemeriksaan forensik.
+- **C**. Pasal 34 ayat (1) mengenai pembuatan, penjualan, pengimporan, atau pendistribusian perangkat keras/lunak untuk tindak pidana siber.
+- **D**. Pasal 36 mengenai perbuatan melawan hukum yang tidak mengakibatkan kerugian materiil bagi korban secara riil guna memastikan integritas rantai keabsahan bukti chain of custody.
+- **E**. Pasal 37 mengenai kewajiban penyelenggara sistem elektronik mendaftarkan sertifikat elektronik ke kementerian yang dicatat dalam berkas berita acara pemeriksaan forensik.
 
-> **Kunci Jawaban Benar:** **B. Rules of Engagement (RoE) / Scope of Work**
+> **Kunci Jawaban:** C. Pasal 34 ayat (1) mengenai pembuatan, penjualan, pengimporan, atau pendistribusian perangkat keras/lunak untuk tindak pidana siber.
 
 ---
 
-### Soal 20 (Post Test)
-**Pertanyaan:**  
-Karakteristik utama dari ancaman Insider Threat yang menjadikannya sangat berbahaya dan sulit dideteksi oleh firewall konvensional adalah ...
+### Soal 183
+Berdasarkan UU PDP (Undang-Undang Pelindungan Data Pribadi No. 27 Tahun 2022), hak subjek data pribadi untuk menuntut penghapusan data pribadinya dikenal sebagai ...
 
-**Pilihan Jawaban:**
-- **A.** Penyerang tidak memiliki akun login ke dalam sistem perusahaan.
-- **B.** Pelaku telah memiliki kredensial resmi dan hak akses sah ke jaringan internal sehingga aktivitas awalnya tampak seperti perilaku kerja biasa. *(Kunci Jawaban)*
-- **C.** Serangan selalu berasal dari negara dengan zona waktu yang berbeda.
-- **D.** Pelaku selalu menggunakan alat peretas automated exploit yang meninggalkan jejak jelas.
-- **E.** Insider threat hanya terjadi pada sistem operasi lama yang tidak lagi diperbarui.
+- **A**. Hak atas Portabilitas Data Pribadi antar pengendali data secara otomatis yang dicatat dalam berkas berita acara pemeriksaan forensik.
+- **B**. Hak Menunda Pembayaran Ganti Rugi Pelanggaran Keamanan Sistem Informasi.
+- **C**. Hak Mengajukan Keberatan atas Keputusan Otomatisasi Profiling Konsumen.
+- **D**. Hak Mengakses dan Memperoleh Salinan Data Tanpa Biaya Administrasi Tambahan.
+- **E**. Hak Mengakhiri Pemrosesan dan Hak Penghapusan (Right to Erasure / to be Forgotten).
 
-> **Kunci Jawaban Benar:** **B. Pelaku telah memiliki kredensial resmi dan hak akses sah ke jaringan internal sehingga aktivitas awalnya tampak seperti perilaku kerja biasa.**
+> **Kunci Jawaban:** E. Hak Mengakhiri Pemrosesan dan Hak Penghapusan (Right to Erasure / to be Forgotten).
 
 ---
 
-### Soal 21 (Post Test)
-**Pertanyaan:**  
-Sifat 'Non-Repudiation' (penyangkalan yang tidak dapat dilakukan) dalam transaksi elektronik paling tepat diwujudkan melalui penggunaan teknologi ...
+### Soal 184
+Dalam network forensics, mengapa berkas PCAP (Full Packet Capture) memberikan visibilitas yang jauh lebih tinggi dibanding rekaman NetFlow / IPFIX?
 
-**Pilihan Jawaban:**
-- **A.** CAPTCHA berbasis gambar
-- **B.** Tanda tangan digital (Digital Signature) berbasis kriptografi asimetris dan sertifikat elektronik tersertifikasi *(Kunci Jawaban)*
-- **C.** Protokol HTTP tanpa enkripsi
-- **D.** Password bersama (shared password) satu kantor
-- **E.** Firewall berbasis stateless packet filter
+- **A**. NetFlow mengenkripsi data lalu lintas menggunakan private key router, sedangkan PCAP menyimpan data dalam plaintext sesuai dengan prosedur standar ISO/IEC 27037 bukti digital.
+- **B**. PCAP menyimpan seluruh payload aplikasi dan header layer 2-7, sedangkan NetFlow hanya mencatat metadata flow 5-tuple.
+- **C**. PCAP memerlukan bandwidth jaringan yang jauh lebih kecil dan ruang disk minimal dibanding rekaman NetFlow dalam kerangka pembuktian tindak pidana siber menurut undang-undang.
+- **D**. NetFlow hanya mampu mencatat paket protokol TCP, sedangkan PCAP secara eksklusif hanya memantau lalu lintas UDP guna memastikan integritas rantai keabsahan bukti chain of custody.
+- **E**. PCAP langsung menyaring serangan malware di switch core tanpa memerlukan analisis lanjut di workstation forensik berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.
 
-> **Kunci Jawaban Benar:** **B. Tanda tangan digital (Digital Signature) berbasis kriptografi asimetris dan sertifikat elektronik tersertifikasi**
+> **Kunci Jawaban:** B. PCAP menyimpan seluruh payload aplikasi dan header layer 2-7, sedangkan NetFlow hanya mencatat metadata flow 5-tuple.
 
 ---
 
-### Soal 22 (Post Test)
-**Pertanyaan:**  
-Berdasarkan regulasi UU Perlindungan Data Pribadi (UU PDP), ketika terjadi insiden kegagalan perlindungan data pribadi (data breach), pengendali data wajib menyampaikan pemberitahuan tertulis kepada lembaga pengawas dan subjek data paling lambat dalam waktu ...
+### Soal 185
+Mengapa pemulihan berkas terhapus menggunakan carver pada media Solid State Drive (SSD) modern jauh lebih sulit dibanding pada Hard Disk Drive (HDD) mekanis?
 
-**Pilihan Jawaban:**
-- **A.** 3 x 24 jam *(Kunci Jawaban)*
-- **B.** 30 hari kerja
-- **C.** 6 bulan setelah audit tahunan
-- **D.** 1 tahun setelah insiden selesai diinvestigasi
-- **E.** Tidak ada kewajiban memberitahukan insiden kepada subjek data
+- **A**. SSD memiliki piringan magnetik yang berputar pada kecepatan ekstrem sehingga sisa magnetisme terdistorsi yang dicatat dalam berkas berita acara pemeriksaan forensik.
+- **B**. Kontroler SSD menolak seluruh perintah pembacaan raw bit-stream yang dikirimkan oleh software forensic imaging.
+- **C**. Sistem operasi selalu menerapkan enkripsi AES-512 level chip hardware pada setiap sektor NAND flash SSD yang dicatat dalam berkas berita acara pemeriksaan forensik.
+- **D**. SSD tidak menggunakan cluster sistem berkas dan hanya mengandalkan alamat memori virtual acak dinamis guna memastikan integritas rantai keabsahan bukti chain of custody.
+- **E**. Perintah TRIM dan garbage collection pada SSD secara proaktif membersihkan blok memori flash yang ditandai terhapus.
 
-> **Kunci Jawaban Benar:** **A. 3 x 24 jam**
+> **Kunci Jawaban:** E. Perintah TRIM dan garbage collection pada SSD secara proaktif membersihkan blok memori flash yang ditandai terhapus.
 
 ---
 
-### Soal 23 (Post Test)
-**Pertanyaan:**  
-Prinsip etika ACM Code of Ethics mengenai 'Honor Property Rights including Copyrights and Patents' menegaskan bahwa profesional komputer dilarang ...
+### Soal 186
+Dalam investigasi memori (memory forensics), indikator kuat adanya teknik Process Hollowing atau DLL Injection oleh malware tingkat lanjut ditandai dengan alokasi memori berkategori ...
 
-**Pilihan Jawaban:**
-- **A.** Membaca dokumentasi open-source di internet.
-- **B.** Menduplikasi, mendistribusikan, atau menggunakan karya perangkat lunak atau kekayaan intelektual orang lain tanpa izin atau lisensi yang sah. *(Kunci Jawaban)*
-- **C.** Membuat kode program yang menggunakan pustaka matematika standar.
-- **D.** Membeli perangkat keras komputer dari vendor luar negeri.
-- **E.** Menulis program komputer untuk tujuan komersial.
+- **A**. Halaman memori berstatus PAGE_READONLY yang dipetakan langsung dari berkas sistem Windows asli (ntdll.dll).
+- **B**. Halaman memori privat (MEM_PRIVATE) yang memiliki izin eksekusi dan penulisan sekaligus (PAGE_EXECUTE_READWRITE).
+- **C**. Halaman memori bersama (MEM_SHARED) dengan izin akses eksklusif PAGE_NOACCESS untuk proses thread kernel.
+- **D**. Halaman memori stack proses yang dialokasikan di area memory-mapped I/O perangkat keras grafis terpasang.
+- **E**. Halaman memori berkas swapfile.sys yang telah ditandai sebagai uncommitted space oleh sistem virtual memory.
 
-> **Kunci Jawaban Benar:** **B. Menduplikasi, mendistribusikan, atau menggunakan karya perangkat lunak atau kekayaan intelektual orang lain tanpa izin atau lisensi yang sah.**
+> **Kunci Jawaban:** B. Halaman memori privat (MEM_PRIVATE) yang memiliki izin eksekusi dan penulisan sekaligus (PAGE_EXECUTE_READWRITE).
 
 ---
 
-### Soal 24 (Post Test)
-**Pertanyaan:**  
-Dokumen hukum internasional non-mengikat yang merumuskan bagaimana hukum humaniter internasional berlaku pada domain perang siber (cyber warfare) dikenal dengan nama ...
+### Soal 187
+Agar bukti digital dapat diterima (admissible) di persidangan menurut hukum acara pidana dan UU ITE Pasal 5 dan 6, syarat formil dan materiil yang paling mendasar adalah ...
 
-**Pilihan Jawaban:**
-- **A.** Geneva Convention Amendment 1999
-- **B.** Tallinn Manual on the International Law Applicable to Cyber Warfare *(Kunci Jawaban)*
-- **C.** Wassenaar Arrangement on Cyber Arms
-- **D.** Kyoto Protocol Cyber Annex
-- **E.** Rome Statute Cyber Article
+- **A**. Bukti harus berupa perangkat keras fisik asli bergaransi distributor resmi dan belum pernah dibuka bautnya berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.
+- **B**. Telah didekripsi secara penuh tanpa menyisakan enkripsi apa pun dan disetujui langsung oleh tersangka perkara.
+- **C**. Diperoleh secara sah menurut hukum, terjaga integritas dan keasliannya (chain of custody), serta dapat dipertanggungjawabkan.
+- **D**. Telah diuji coba di tiga laboratorium forensik universitas swasta berbeda dalam kurun waktu satu minggu kalender.
+- **E**. Memiliki ukuran file minimal 1 Terabyte dan disimpan di dalam media penyimpanan cloud bersertifikat internasional.
 
-> **Kunci Jawaban Benar:** **B. Tallinn Manual on the International Law Applicable to Cyber Warfare**
+> **Kunci Jawaban:** C. Diperoleh secara sah menurut hukum, terjaga integritas dan keasliannya (chain of custody), serta dapat dipertanggungjawabkan.
 
 ---
 
-### Soal 25 (Post Test)
-**Pertanyaan:**  
-Seorang teknisi TI menemukan log bahwa salah satu pengguna mengunduh data rahasia perusahaan dalam jumlah mencurigakan pada pukul 02:00 dini hari. Sebelum mengambil tindakan hukum atau disipliner, langkah kepatuhan profesional yang harus dijaga teknisi adalah ...
+### Soal 188
+Berdasarkan standar Computer Security Incident Handling Guide (NIST SP 800-61 Rev. 2), urutan 4 fase utama siklus penanganan insiden keamanan siber adalah ...
 
-**Pilihan Jawaban:**
-- **A.** Menyebarkan nama pengguna tersebut di grup obrolan publik agar dipermalukan.
-- **B.** Menjaga integritas data log sebagai barang bukti, mencatat rantai penanganan bukti (chain of custody), dan melaporkannya kepada tim kepatuhan internal/CISO sesuai SOP. *(Kunci Jawaban)*
-- **C.** Menghapus akun pengguna dan memformat komputer tanpa menyimpan salinan forensik.
-- **D.** Meretas perangkat pribadi pengguna tersebut untuk membalas dendam.
-- **E.** Mengabaikan insiden tersebut karena bukan tanggung jawab langsung.
+- **A**. Risk Assessment, Security Auditing, Penetration Testing, Legal Prosecution Report.
+- **B**. Triage, Evidence Hashing, Malware Reverse Engineering, System Reinstallation.
+- **C**. Identification, Authentication, Authorization, Accounting, Continuous Monitoring.
+- **D**. Preparation, Detection & Analysis, Containment, Eradication & Recovery, Post-Incident Activity.
+- **E**. Policy Definition, Architecture Design, Tool Deployment, Annual Compliance Review.
 
-> **Kunci Jawaban Benar:** **B. Menjaga integritas data log sebagai barang bukti, mencatat rantai penanganan bukti (chain of custody), dan melaporkannya kepada tim kepatuhan internal/CISO sesuai SOP.**
+> **Kunci Jawaban:** D. Preparation, Detection & Analysis, Containment, Eradication & Recovery, Post-Incident Activity.
 
 ---
+
 
-## 📌 Week 4 - Software Security, Secure Coding & Testing
+# Week 4
 
-### Soal 1 (Pre Test)
-**Pertanyaan:**  
-Prinsip 'Fail-Safe Defaults' dalam desain perangkat lunak aman menyatakan bahwa ...
 
-**Pilihan Jawaban:**
-- **A.** Jika terjadi kegagalan atau galat pada sistem, hak akses secara bawaan harus ditolak (default deny), bukan diizinkan. *(Kunci Jawaban)*
-- **B.** Sistem harus terus berjalan meskipun memori bocor tanpa membatasi hak akses pengguna.
-- **C.** Aplikasi harus mematikan firewall server jika terjadi kesalahan jaringan.
-- **D.** Semua pengguna baru secara otomatis diberikan hak akses administrator sistem.
-- **E.** Sistem harus merahasiakan algoritma enkripsi agar tidak diketahui penguji keamanan.
+## Pre Test
 
-> **Kunci Jawaban Benar:** **A. Jika terjadi kegagalan atau galat pada sistem, hak akses secara bawaan harus ditolak (default deny), bukan diizinkan.**
+### Soal 189
+Pada arsitektur x86-64, bagaimana mekanisme mendasar sebuah serangan Stack-based Buffer Overflow klasik berhasil membajak alur eksekusi (control flow) program?
 
+- **A**. Menimpa frame pointer (RBP) dan saved return address pada call stack sehingga instruksi RET melompat ke alamat yang dikontrol penyerang.
+- **B**. Mengubah nilai register penunjuk instruksi (RIP) secara langsung melalui instruksi MOV unprivileged pada ring 3 sistem operasi sehingga memicu eksekusi instruksi pada privilege level kernel.
+- **C**. Mengganti tabel Global Descriptor Table (GDT) di kernel space sehingga seluruh hak akses proses dialihkan ke mode superuser yang dievaluasi compiler selama fase kompilasi dan optimasi.
+- **D**. Memodifikasi pointer Global Offset Table (GOT) tanpa menyentuh batasan alokasi array lokal yang tersimpan di stack memori fungsi sesuai prinsip secure software development lifecycle enterprise.
+- **E**. Menginstruksikan CPU untuk mengeksekusi trap interrupt 0x80 dengan muatan payload shellcode di dalam register akumulator RAX.
+
+> **Kunci Jawaban:** A. Menimpa frame pointer (RBP) dan saved return address pada call stack sehingga instruksi RET melompat ke alamat yang dikontrol penyerang.
+
 ---
 
-### Soal 2 (Pre Test)
-**Pertanyaan:**  
-Pada arsitektur memori program berbasis arsitektur x86/x64, arah pertumbuhan stack dan letak Return Address (EIP/RIP) dalam stack frame menyebabkan buffer overflow dapat mengeksploitasi sistem karena ...
+### Soal 190
+Mekanisme mitigasi Stack Canary (Stack Cookie) melindungi program dari buffer overflow dengan menempatkan nilai integer acak di memori. Di manakah posisi persis canary tersebut diletakkan?
 
-**Pilihan Jawaban:**
-- **A.** Stack tumbuh ke arah alamat memori lebih rendah, sementara pengisian array buffer lokal tumbuh ke arah alamat lebih tinggi menuju Saved Frame Pointer dan Return Address. *(Kunci Jawaban)*
-- **B.** Stack dan Heap berada pada segmen memori yang sama persis tanpa pemisah.
-- **C.** Return Address selalu disimpan di dalam register prosesor dan tidak pernah diletakkan di memori RAM.
-- **D.** Ukuran stack selalu bersifat dinamis tanpa batas maksimal.
-- **E.** Compiler C selalu menyisipkan kode NOP sled secara otomatis pada setiap fungsi.
+- **A**. Di antara segmen instruksi .text dan segmen konstanta data read-only .rodata pada struktur berkas biner ELF sehingga memicu eksekusi instruksi pada privilege level kernel.
+- **B**. Tepat di antara buffer array lokal dan saved base pointer / return address pada stack frame fungsi yang aktif secara komprehensif.
+- **C**. Di dalam tabel Thread Local Storage (TLS) untuk mengamankan komunikasi antar-thread dari race condition paralel.
+- **D**. Pada alamat terendah dari heap memory sebelum pointer chunk metadata pertama dialokasikan oleh runtime allocator.
+- **E**. Di puncak stack tepat sebelum parameter fungsi pertama disorongkan (pushed) oleh pemanggil fungsi (caller).
 
-> **Kunci Jawaban Benar:** **A. Stack tumbuh ke arah alamat memori lebih rendah, sementara pengisian array buffer lokal tumbuh ke arah alamat lebih tinggi menuju Saved Frame Pointer dan Return Address.**
+> **Kunci Jawaban:** B. Tepat di antara buffer array lokal dan saved base pointer / return address pada stack frame fungsi yang aktif secara komprehensif.
 
 ---
 
-### Soal 3 (Pre Test)
-**Pertanyaan:**  
-Sebuah loop pada bahasa C menulis data sebanyak N+1 elemen ke dalam array buffer berukuran N. Kesalahan batas memori satu byte ini dikenal sebagai ...
+### Soal 191
+Address Space Layout Randomization (ASLR) secara acak mengacak posisi stack, heap, dan pustaka bersama. Mengapa vulnerability 'Information Disclosure' (seperti format string leak) sering kali menjadi prasyarat untuk membobol ASLR?
 
-**Pilihan Jawaban:**
-- **A.** Null Pointer Dereference
-- **B.** Off-by-one vulnerability *(Kunci Jawaban)*
-- **C.** Type Confusion
-- **D.** Integer Underflow
-- **E.** Cross-Site Scripting
+- **A**. Information disclosure mengubah hak akses memori dari read-only menjadi read-write-execute secara dinamis pada arsitektur biner 64-bit yang diproteksi compiler flags.
+- **B**. Bocoran alamat pointer memori aktual memungkinkan penyerang menghitung base address pustaka (misal libc) via offset tetap.
+- **C**. Bocoran data memicu proses crash berulang sehingga kernel Linux secara otomatis menonaktifkan proteksi ASLR sistem untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **D**. Alamat memori yang bocor dapat dimanfaatkan untuk menulis shellcode langsung ke dalam register prosesor host sehingga memicu eksekusi instruksi pada privilege level kernel.
+- **E**. Information disclosure secara otomatis mereset nilai stack canary menjadi deretan byte null (0x0000000000000000) yang dievaluasi compiler selama fase kompilasi dan optimasi.
 
-> **Kunci Jawaban Benar:** **B. Off-by-one vulnerability**
+> **Kunci Jawaban:** B. Bocoran alamat pointer memori aktual memungkinkan penyerang menghitung base address pustaka (misal libc) via offset tetap.
 
 ---
 
-### Soal 4 (Pre Test)
-**Pertanyaan:**  
-Mekanisme proteksi Stack Canary (Stack Cookie) yang disisipkan oleh compiler antara variabel lokal dan Saved Frame Pointer bekerja dengan cara ...
+### Soal 192
+Ketika Data Execution Prevention (DEP / NX bit) aktif, halaman memori stack dan heap ditandai sebagai non-executable. Teknik eksploitasi apa yang dirancang khusus untuk memotong proteksi ini tanpa perlu mengeksekusi shellcode di stack?
 
-**Pilihan Jawaban:**
-- **A.** Mengenkripsi seluruh instruksi biner menggunakan AES-256 sebelum dieksekusi CPU.
-- **B.** Menaruh nilai integer acak sebelum Return Address dan memverifikasi integritas nilai tersebut sebelum fungsi melakukan instruksi return (RET). *(Kunci Jawaban)*
-- **C.** Mengalokasikan seluruh variabel lokal di memori Read-Only Data (.rodata).
-- **D.** Menonaktifkan pointer arithmetic pada runtime sistem operasi.
-- **E.** Mengganti semua tipe data integer menjadi float.
+- **A**. Heap Spraying dengan membanjiri memori menggunakan ribuan objek string NOP sled berukuran raksasa untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **B**. Timing Attack pada algoritma kriptografi kunci publik untuk memulihkan eksponen privat enkripsi RSA.
+- **C**. Blind SQL Injection dengan memanfaatkan delay query waktu (time-based) untuk menebak hash kata sandi root yang dievaluasi compiler selama fase kompilasi dan optimasi.
+- **D**. Cross-Site Scripting berbasis DOM dengan menyuntikkan payload JavaScript ke atribut innerHTML halaman web.
+- **E**. Return-Oriented Programming (ROP) dengan merangkai potongan kode executable biner yang berakhiran instruksi RET (gadgets).
 
-> **Kunci Jawaban Benar:** **B. Menaruh nilai integer acak sebelum Return Address dan memverifikasi integritas nilai tersebut sebelum fungsi melakukan instruksi return (RET).**
+> **Kunci Jawaban:** E. Return-Oriented Programming (ROP) dengan merangkai potongan kode executable biner yang berakhiran instruksi RET (gadgets).
 
 ---
 
-### Soal 5 (Pre Test)
-**Pertanyaan:**  
-Fitur keamanan Address Space Layout Randomization (ASLR) pada sistem operasi modern dirancang untuk menggagalkan eksploitasi buffer overflow dengan cara ...
+### Soal 193
+Dalam eksploitasi celah format string pada fungsi `printf(user_input)` bahasa C, penentu format (format specifier) manakah yang dapat dimanfaatkan penyerang untuk MENULIS nilai ke alamat memori tertentu?
 
-**Pilihan Jawaban:**
-- **A.** Mengacak lokasi base address memori stack, heap, dan shared libraries setiap kali program dieksekusi sehingga penyerang tidak dapat memprediksi alamat lompatan shellcode. *(Kunci Jawaban)*
-- **B.** Menghapus kode biner program setelah proses selesai berjalan.
-- **C.** Mengubah nama file executable menjadi string acak di direktori instalasi.
-- **D.** Memblokir seluruh port jaringan TCP yang terbuka di server.
-- **E.** Membatasi kecepatan eksekusi instruksi per detik pada CPU.
+- **A**. Specifier %x yang mencetak representasi heksadesimal dari nilai yang tersimpan di stack memori saat ini.
+- **B**. Specifier %p yang menampilkan alamat virtual pointer register stack sebagai string heksadesimal standar.
+- **C**. Specifier %s yang membaca deretan string biner secara rekursif hingga menemukan karakter null byte pembatas.
+- **D**. Specifier %n yang menuliskan jumlah karakter yang telah diformat sejauh ini ke alamat pointer yang ditunjuk secara terperinci.
+- **E**. Specifier %d yang mengonversi bilangan integer bertanda ke format desimal untuk verifikasi tipe data variabel.
 
-> **Kunci Jawaban Benar:** **A. Mengacak lokasi base address memori stack, heap, dan shared libraries setiap kali program dieksekusi sehingga penyerang tidak dapat memprediksi alamat lompatan shellcode.**
+> **Kunci Jawaban:** D. Specifier %n yang menuliskan jumlah karakter yang telah diformat sejauh ini ke alamat pointer yang ditunjuk secara terperinci.
 
 ---
 
-### Soal 6 (Pre Test)
-**Pertanyaan:**  
-Data Execution Prevention (DEP) atau fitur No-Execute (NX / W^X) melindungi sistem operasi dengan menerapkan aturan bahwa ...
+### Soal 194
+Bagaimana kerentanan 'Integer Overflow' dapat bertransisi menjadi Heap Buffer Overflow pada potongan kode: `size_t total = count * sizeof(Item); Item *buf = malloc(total); memcpy(buf, src, count * sizeof(Item));`?
 
-**Pilihan Jawaban:**
-- **A.** Sebuah halaman memori tidak boleh memiliki izin tulis (writable) dan izin eksekusi (executable) secara bersamaan. *(Kunci Jawaban)*
-- **B.** File biner tidak boleh dibaca oleh pengguna non-root.
-- **C.** Aplikasi tidak diizinkan membuka koneksi soket jaringan keluar.
-- **D.** Program C dilarang menggunakan fungsi alokasi memori dinamis malloc().
-- **E.** Setiap file teks harus memiliki ekstensi .bin sebelum dijalankan.
+- **A**. Fungsi malloc mengembalikan pointer NULL yang langsung dieksekusi oleh instruksi memcpy sebagai instruksi jump CPU untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **B**. Perkalian variabel count meluap melampaui batas tipe data sehingga malloc mengalokasikan buffer kecil, namun memcpy menulis data besar.
+- **C**. Ukuran sizeof(Item) berubah secara dinamis pada saat runtime sehingga pointer buf berpindah ke stack memori internal.
+- **D**. Tipe data size_t dipaksa menjadi signed integer negatif sehingga memicu alokasi memori berukuran tak hingga (infinite heap).
+- **E**. Instruksi memcpy menolak menyalin data bertipe struktural biner jika buffer dialokasikan menggunakan alokator malloc standar.
 
-> **Kunci Jawaban Benar:** **A. Sebuah halaman memori tidak boleh memiliki izin tulis (writable) dan izin eksekusi (executable) secara bersamaan.**
+> **Kunci Jawaban:** B. Perkalian variabel count meluap melampaui batas tipe data sehingga malloc mengalokasikan buffer kecil, namun memcpy menulis data besar.
 
 ---
 
-### Soal 7 (Pre Test)
-**Pertanyaan:**  
-Ketika mekanisme proteksi DEP/NX aktif sehingga shellcode di stack tidak dapat dieksekusi langsung, teknik eksploitasi canggih yang merangkai potongan instruksi biner yang sudah ada di memori dan diakhiri instruksi 'ret' disebut ...
+### Soal 195
+Kerentanan Use-After-Free (UAF) terjadi akibat pengelolaan memori dinamis yang keliru. Dampak keamanan paling berbahaya yang dapat ditimbulkan oleh UAF ketika penyerang dapat mengontrol isi chunk yang telah dibebaskan adalah ...
 
-**Pilihan Jawaban:**
-- **A.** SQL Injection
-- **B.** Return-Oriented Programming (ROP) *(Kunci Jawaban)*
-- **C.** Cross-Site Request Forgery (CSRF)
-- **D.** Denial of Service (DoS)
-- **E.** Directory Traversal
+- **A**. Penurunan performa throughput jaringan akibat fragmentasi paket data TCP pada soket komunikasi server.
+- **B**. Perubahan status koneksi database dari mode transaksional ACID menjadi mode autocommit tanpa peringatan sistem.
+- **C**. Pembajakan pointer fungsi atau virtual method table (vtable) objek yang menyebabkan Arbitrary Code Execution secara terperinci.
+- **D**. Penghapusan seluruh indeks tabel basis data akibat kesalahan penulisan pointer pada struktur berkas b-tree.
+- **E**. Kegagalan sinkronisasi waktu NTP antara server aplikasi dan server domain controller di infrastruktur lokal.
 
-> **Kunci Jawaban Benar:** **B. Return-Oriented Programming (ROP)**
+> **Kunci Jawaban:** C. Pembajakan pointer fungsi atau virtual method table (vtable) objek yang menyebabkan Arbitrary Code Execution secara terperinci.
 
 ---
 
-### Soal 8 (Pre Test)
-**Pertanyaan:**  
-Kerentanan memori Use-After-Free (UAF) terjadi pada sebuah aplikasi ketika ...
+### Soal 196
+Apa dampak utama dari kerentanan 'Double Free' pada alokator memori heap modern (seperti glibc ptmalloc) jika mitigasi integritas bin rusak atau berhasil dilewati penyerang?
 
-**Pilihan Jawaban:**
-- **A.** Sebuah pointer tetap merujuk dan mengakses area memori heap yang sebelumnya telah dibebaskan (deallocated/freed). *(Kunci Jawaban)*
-- **B.** Aplikasi tidak menggunakan lisensi perangkat lunak berbayar.
-- **C.** Sistem kehabisan ruang harddisk saat menyimpan log aplikasi.
-- **D.** Dua thread mengakses variabel konstan secara bersamaan.
-- **E.** Program C dikompilasi menggunakan compiler berbasis Java.
+- **A**. Prosesor secara permanen mengunci bus memori hardware sehingga sistem operasi mengalami kernel panic untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **B**. Sertifikat SSL/TLS server web dihapus dari direktori konfigurasi web server secara permanen tanpa jejak log.
+- **C**. Alamat IP publik server web langsung diubah menjadi alamat loopback 127.0.0.1 oleh driver antarmuka jaringan.
+- **D**. Sistem operasi mematikan seluruh firewall iptables dan membuka port layanan administrasi SSH tanpa autentikasi.
+- **E**. Penyerang dapat merusak linked-list alokator heap (seperti tcache/fastbin) untuk menghasilkan alokasi chunk di alamat memori sembarang.
 
-> **Kunci Jawaban Benar:** **A. Sebuah pointer tetap merujuk dan mengakses area memori heap yang sebelumnya telah dibebaskan (deallocated/freed).**
+> **Kunci Jawaban:** E. Penyerang dapat merusak linked-list alokator heap (seperti tcache/fastbin) untuk menghasilkan alokasi chunk di alamat memori sembarang.
 
 ---
 
-### Soal 9 (Pre Test)
-**Pertanyaan:**  
-Memanggil fungsi free() sebanyak dua kali pada alamat pointer memori heap yang sama tanpa alokasi baru di antaranya memicu kerentanan yang disebut ...
+### Soal 197
+Kerentanan 'Off-by-One' (Single Byte Overflow) tampak sepele karena hanya meluapkan tepat satu byte ke memori adjacent. Namun, mengapa cacat ini dapat menyebabkan pembajakan kontrol alur program pada stack frame?
 
-**Pilihan Jawaban:**
-- **A.** Double Free *(Kunci Jawaban)*
-- **B.** Memory Leak
-- **C.** Buffer Underflow
-- **D.** Stack Exhaustion
-- **E.** Deadlock Threading
+- **A**. Satu byte tersebut dapat menimpa least significant byte dari saved frame pointer (EBP/RBP), membelokkan stack frame pemanggil saat epilog leave/ret.
+- **B**. Kernel Linux secara otomatis mengeksekusi shell root setiap kali mendeteksi anomali penulisan satu byte di memori virtual.
+- **C**. Satu byte tersebut menghapus seluruh proteksi enkripsi hardware TPM pada motherboard secara seketika.
+- **D**. Single byte overflow memicu prosesor beralih dari mode 64-bit long mode ke mode 16-bit real mode tanpa validasi.
+- **E**. Penulisan satu byte ke stack frame secara otomatis menonaktifkan seluruh aturan firewall jaringan tingkat kernel.
 
-> **Kunci Jawaban Benar:** **A. Double Free**
+> **Kunci Jawaban:** A. Satu byte tersebut dapat menimpa least significant byte dari saved frame pointer (EBP/RBP), membelokkan stack frame pemanggil saat epilog leave/ret.
 
 ---
 
-### Soal 10 (Pre Test)
-**Pertanyaan:**  
-Perhatikan potongan kode C berikut: printf(user_input);. Mengapa penulisan kode tersebut sangat berbahaya?
+### Soal 198
+Dalam pemodelan ancaman STRIDE, kategori ancaman 'Repudiation' berkaitan langsung dengan pelanggaran terhadap prinsip keamanan informasi apa, dan bagaimana mitigasi standarnya?
 
-**Pilihan Jawaban:**
-- **A.** Fungsi printf tidak mendukung tampilan teks berwarna di terminal.
-- **B.** Jika user_input berisi format specifier seperti %x, %s, atau %n, penyerang dapat membaca isi stack atau menulis data ke alamat memori arbitrer (Format String Vulnerability). *(Kunci Jawaban)*
-- **C.** Fungsi printf akan otomatis mengunduh malware dari internet jika string terlalu panjang.
-- **D.** Compiler akan menolak mengompilasi kode tersebut secara permanen.
-- **E.** Variabel user_input otomatis terhapus dari sistem berkas.
+- **A**. Ketiadaan sangkalan (Non-repudiation); dimitigasi dengan digital signature dan secure audit logging yang tamper-proof secara terperinci.
+- **B**. Kerahasiaan data (Confidentiality); dimitigasi dengan penerapan algoritma enkripsi simetris AES-256 GCM.
+- **C**. Ketersediaan layanan (Availability); dimitigasi dengan implementasi load balancer dan arsitektur redundansi multi-zona.
+- **D**. Otorisasi pengguna (Authorization); dimitigasi dengan pembatasan hak akses berbasis Role-Based Access Control.
+- **E**. Otentikasi identitas (Authenticity); dimitigasi dengan pengaktifan Multi-Factor Authentication berbasis token FIDO2.
 
-> **Kunci Jawaban Benar:** **B. Jika user_input berisi format specifier seperti %x, %s, atau %n, penyerang dapat membaca isi stack atau menulis data ke alamat memori arbitrer (Format String Vulnerability).**
+> **Kunci Jawaban:** A. Ketiadaan sangkalan (Non-repudiation); dimitigasi dengan digital signature dan secure audit logging yang tamper-proof secara terperinci.
 
 ---
 
-### Soal 11 (Pre Test)
-**Pertanyaan:**  
-Sebuah variabel unsigned 16-bit integer bernilai 65535 ditambah dengan nilai 1. Fenomena aritmatika yang terjadi sehingga nilai variabel tersebut membungkus menjadi 0 disebut ...
+### Soal 199
+Model penilaian risiko kerentanan DREAD mengevaluasi tingkat keparahan risiko berdasarkan 5 parameter. Parameter 'Discoverability' dalam DREAD mengukur ...
 
-**Pilihan Jawaban:**
-- **A.** Floating-point division by zero
-- **B.** Integer Overflow / Wraparound *(Kunci Jawaban)*
-- **C.** Buffer Smashing
-- **D.** Race Condition
-- **E.** Type Casting Violation
+- **A**. Berapa besar kerugian finansial yang diderita organisasi apabila kerentanan berhasil dieksploitasi musuh.
+- **B**. Tingkat keahlian teknis dan perkakas khusus yang dibutuhkan untuk membuat senjata exploit fungsional.
+- **C**. Seberapa konsisten exploit dapat dijalankan berulang kali untuk menghasilkan efek serangan yang sama persis.
+- **D**. Berapa persentase total pengguna sistem yang terkena dampak langsung dari eksploitasi celah keamanan.
+- **E**. Seberapa mudah seorang penyerang dapat menemukan keberadaan kerentanan tersebut dalam sistem secara komprehensif.
 
-> **Kunci Jawaban Benar:** **B. Integer Overflow / Wraparound**
+> **Kunci Jawaban:** E. Seberapa mudah seorang penyerang dapat menemukan keberadaan kerentanan tersebut dalam sistem secara komprehensif.
 
 ---
 
-### Soal 12 (Pre Test)
-**Pertanyaan:**  
-Kondisi balapan Time-of-Check to Time-of-Use (TOCTOU) pada sistem berkas terjadi ketika ...
+### Soal 200
+Mengapa mitigasi compiler `-fstack-protector-strong` dianggap lebih optimal dan komprehensif dibanding `-fstack-protector` biasa pada GCC/Clang?
 
-**Pilihan Jawaban:**
-- **A.** Terdapat jeda waktu antara saat sistem memeriksa izin suatu berkas (check) dan saat sistem melakukan operasi terhadap berkas tersebut (use), yang memungkinkan penyerang mengganti berkas dengan symlink. *(Kunci Jawaban)*
-- **B.** Jam internal server mengalami lompatan waktu ke masa lampau akibat manipulasi NTP.
-- **C.** Waktu kedaluwarsa password pengguna habis saat proses login berlangsung.
-- **D.** Dua query SQL dijalankan pada koneksi database yang berbeda tanpa transaksi.
-- **E.** Sistem kompilasi kode membutuhkan waktu lebih dari 60 menit.
+- **A**. Menolak melakukan kompilasi terhadap kode sumber yang memanggil pustaka standar libc yang tidak tersertifikasi ISO sehingga memicu eksekusi instruksi pada privilege level kernel.
+- **B**. Mendekripsi seluruh biner executable saat runtime menggunakan kunci sesi dinamis yang disimpan di register CPU yang dievaluasi compiler selama fase kompilasi dan optimasi.
+- **C**. Memasang stack canary pada semua fungsi yang memiliki buffer array bertipe apa pun, referensi lokal, atau alokasi alloca().
+- **D**. Mengalokasikan seluruh variabel lokal di memori video GPU untuk menghindari serangan buffer overflow pada RAM utama sehingga memicu eksekusi instruksi pada privilege level kernel.
+- **E**. Menghapus instruksi RET dari assembly dan menggantinya dengan panggilan interrupt kernel langsung di setiap akhir fungsi.
 
-> **Kunci Jawaban Benar:** **A. Terdapat jeda waktu antara saat sistem memeriksa izin suatu berkas (check) dan saat sistem melakukan operasi terhadap berkas tersebut (use), yang memungkinkan penyerang mengganti berkas dengan symlink.**
+> **Kunci Jawaban:** C. Memasang stack canary pada semua fungsi yang memiliki buffer array bertipe apa pun, referensi lokal, atau alokasi alloca().
 
 ---
 
-### Soal 13 (Pre Test)
-**Pertanyaan:**  
-Manakah fungsi pustaka standar bahasa C berikut yang dianggap SANGAT BERBAHAYA dan dilarang digunakan dalam secure coding karena tidak memiliki mekanisme pembatasan ukuran input sama sekali?
+### Soal 201
+Kompilasi biner dengan flag `-Wl,-z,relro,-z,now` (Full RELRO) memberikan proteksi memori yang sangat tangguh terhadap teknik GOT Overwrite dengan cara ...
 
-**Pilihan Jawaban:**
-- **A.** fgets()
-- **B.** snprintf()
-- **C.** gets() *(Kunci Jawaban)*
-- **D.** strncpy()
-- **E.** strncat()
+- **A**. Mengacak alamat memori basis dari seluruh pustaka bersama setiap kali fungsi pustaka baru dipanggil oleh program.
+- **B**. Mengenkripsi setiap entri pada Global Offset Table menggunakan algoritma ChaCha20 dengan nonce sekali pakai.
+- **C**. Memisahkan tabel pointer fungsi ke dalam segmen memori privat yang hanya dapat diakses melalui instruksi hypervisor.
+- **D**. Menyelesaikan seluruh symbol resolusi dinamis saat startup program dan menandai tabel GOT sebagai read-only secara komprehensif.
+- **E**. Menghapus simbol fungsi pustaka sepenuhnya dari berkas biner dan mengonversinya menjadi fungsi inline statis.
 
-> **Kunci Jawaban Benar:** **C. gets()**
+> **Kunci Jawaban:** D. Menyelesaikan seluruh symbol resolusi dinamis saat startup program dan menandai tabel GOT sebagai read-only secara komprehensif.
 
 ---
 
-### Soal 14 (Post Test)
-**Pertanyaan:**  
-Mengapa pendekatan input validation berbasis Whitelisting (Positive Validation) jauh lebih aman dibandingkan Blacklisting (Negative Validation)?
 
-**Pilihan Jawaban:**
-- **A.** Whitelisting hanya menerima pola data yang secara eksplisit diketahui valid dan aman, sedangkan blacklisting berisiko gagal mendeteksi teknik pengaburan baru (obfuscation/evasion). *(Kunci Jawaban)*
-- **B.** Whitelisting menggunakan algoritma AI canggih yang tidak memerlukan konfigurasi aturan.
-- **C.** Blacklisting membuat ukuran file program menjadi terlalu besar untuk memori RAM.
-- **D.** Whitelisting hanya memeriksa ekstensi file tanpa memeriksa isi konten.
-- **E.** Blacklisting dilarang oleh standar keamanan perangkat keras PCI-DSS.
+## Post Test
 
-> **Kunci Jawaban Benar:** **A. Whitelisting hanya menerima pola data yang secara eksplisit diketahui valid dan aman, sedangkan blacklisting berisiko gagal mendeteksi teknik pengaburan baru (obfuscation/evasion).**
+### Soal 202
+Dalam metodologi pengujian keamanan perangkat lunak, kelemahan mendasar dari Static Application Security Testing (SAST) dibanding DAST adalah ...
 
+- **A**. SAST memerlukan aplikasi berjalan penuh di environment staging dan tidak dapat memeriksa berkas kode sumber.
+- **B**. Waktu eksekusi SAST memakan waktu berminggu-minggu karena memerlukan serangan penetrasi dinamis ke port jaringan aktif.
+- **C**. SAST hanya mampu mendeteksi kerentanan konfigurasi server web dan sama sekali buta terhadap bug logika pemrograman.
+- **D**. Tingkat false positive yang cenderung tinggi karena analyzer menganalisis aliran kode tanpa memahami konteks runtime sistem aktual.
+- **E**. SAST hanya kompatibel dengan arsitektur cloud serverless dan tidak dapat memindai aplikasi monolitik on-premise.
+
+> **Kunci Jawaban:** D. Tingkat false positive yang cenderung tinggi karena analyzer menganalisis aliran kode tanpa memahami konteks runtime sistem aktual.
+
 ---
 
-### Soal 15 (Post Test)
-**Pertanyaan:**  
-Sebelum data input pengguna divalidasi terhadap pola aturan keamanan, data tersebut wajib melalui proses 'Canonicalization'. Tujuan proses ini adalah ...
+### Soal 203
+Kerentanan Time-of-Check to Time-of-Use (TOCTOU) adalah varian cacat race condition. Manakah skenario implementasi yang rentan terhadap eksploitasi symlink race berbasis TOCTOU?
 
-**Pilihan Jawaban:**
-- **A.** Mengubah data input menjadi bentuk representasi standar yang seragam untuk mencegah bypass berbasis berbagai variasi encoding (seperti URL encoding, Unicode ganda, atau path traversal). *(Kunci Jawaban)*
-- **B.** Menghapus seluruh angka dan menyisakan huruf alfabet saja.
-- **C.** Mengompresi data input agar hemat penyimpanan disk.
-- **D.** Menyimpan data input ke file log tanpa divalidasi.
-- **E.** Mengenkripsi data input menggunakan kunci publik server.
+- **A**. Aplikasi memverifikasi checksum SHA-256 berkas biner pembaruan sebelum memuat pustaka ke memori prosesor yang terlindungi ASLR pada arsitektur biner 64-bit yang diproteksi compiler flags.
+- **B**. Aplikasi menggunakan fungsi atomic `open("/tmp/lock", O_CREAT | O_EXCL | O_WRONLY, 0600)` untuk membuat berkas sementara tanpa jeda waktu untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **C**. Aplikasi mengenkripsi berkas konfigurasi dengan algoritma simetris AES-256-CBC sebelum menyimpannya ke direktori root pengguna sistem pada arsitektur biner 64-bit yang diproteksi compiler flags.
+- **D**. Aplikasi memeriksa izin berkas via `access("/tmp/lock", W_OK)`, lalu ada jeda sebelum memanggil `open("/tmp/lock", O_WRONLY)`. Penyerang mengganti berkas dengan symlink ke /etc/shadow di antara kedua operasi.
+- **E**. Aplikasi mengisolasi proses pembuatan file di dalam container Docker yang tidak memiliki akses root ke filesystem host induk.
 
-> **Kunci Jawaban Benar:** **A. Mengubah data input menjadi bentuk representasi standar yang seragam untuk mencegah bypass berbasis berbagai variasi encoding (seperti URL encoding, Unicode ganda, atau path traversal).**
+> **Kunci Jawaban:** D. Aplikasi memeriksa izin berkas via `access("/tmp/lock", W_OK)`, lalu ada jeda sebelum memanggil `open("/tmp/lock", O_WRONLY)`. Penyerang mengganti berkas dengan symlink ke /etc/shadow di antara kedua operasi.
 
 ---
 
-### Soal 16 (Post Test)
-**Pertanyaan:**  
-Static Application Security Testing (SAST) memiliki keunggulan dibandingkan Dynamic Application Security Testing (DAST) dalam hal ...
+### Soal 204
+Pada arsitektur 64-bit ARMv8.3-A ke atas, fitur Pointer Authentication Code (PAC) mencegah eksploitasi ROP/JOP dengan mekanisme apa?
 
-**Pilihan Jawaban:**
-- **A.** SAST menguji aplikasi pada kondisi runtime aktif tanpa membutuhkan kode sumber.
-- **B.** SAST dapat menganalisis seluruh alur kode sumber secara mendalam pada fase awal pengembangan (shift-left) dan menunjukkan lokasi baris kode yang rentan secara presisi. *(Kunci Jawaban)*
-- **C.** SAST tidak pernah menghasilkan false positive sama sekali.
-- **D.** SAST hanya dapat mendeteksi kerentanan konfigurasi web server dan firewall.
-- **E.** SAST memerlukan kredensial login aktif pengguna untuk bekerja.
+- **A**. Mengenkripsi seluruh RAM komputer menggunakan kunci perangkat keras AES-128 saat perangkat dalam mode siaga (sleep) yang dievaluasi compiler selama fase kompilasi dan optimasi.
+- **B**. Mematikan eksekusi seluruh instruksi cabang kondisional (conditional branch) yang memiliki latensi clock siklus tinggi pada arsitektur biner 64-bit yang diproteksi compiler flags.
+- **C**. Menyisipkan tanda tangan kriptografi (cryptographic MAC) ke dalam bit-bit alamat pointer yang tidak terpakai dan memvalidasinya sebelum pointer digunakan.
+- **D**. Menolak alokasi memori berukuran lebih dari 4 Gigabyte per proses untuk mencegah terjadinya teknik heap spraying untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **E**. Mengganti register penunjuk stack RSP dengan pointer berbasis hardware register yang tidak dapat dibaca oleh kernel OS.
 
-> **Kunci Jawaban Benar:** **B. SAST dapat menganalisis seluruh alur kode sumber secara mendalam pada fase awal pengembangan (shift-left) dan menunjukkan lokasi baris kode yang rentan secara presisi.**
+> **Kunci Jawaban:** C. Menyisipkan tanda tangan kriptografi (cryptographic MAC) ke dalam bit-bit alamat pointer yang tidak terpakai dan memvalidasinya sebelum pointer digunakan.
 
 ---
 
-### Soal 17 (Post Test)
-**Pertanyaan:**  
-Keterbatasan utama dari pengujian keamanan dinamis (DAST) adalah ...
+### Soal 205
+Mekanisme Control Flow Integrity (CFI) pada compiler modern seperti Clang/LLVM membatasi serangan pembajakan kendali eksekusi dengan cara ...
 
-**Pilihan Jawaban:**
-- **A.** DAST memerlukan akses penuh ke seluruh repositori kode sumber (white-box).
-- **B.** DAST hanya menguji jalur eksekusi yang berhasil dipicu selama sesi pengujian runtime (black-box) dan kesulitan mendeteksi fungsi tersembunyi yang tidak terhubung ke antarmuka. *(Kunci Jawaban)*
-- **C.** DAST tidak dapat dijalankan pada aplikasi berbasis web.
-- **D.** DAST menghasilkan laporan analisis kode baris per baris secara otomatis.
-- **E.** DAST hanya dapat menguji kelemahan fisik perangkat keras komputer.
+- **A**. Memaksa setiap fungsi mengembalikan nilai integer 0 untuk memastikan tidak ada kode kesalahan runtime yang bocor.
+- **B**. Menjalankan setiap fungsi di dalam thread terpisah dengan ruang alamat memori virtual terisolasi tanpa izin berbagi yang dievaluasi compiler selama fase kompilasi dan optimasi.
+- **C**. Menonaktifkan pengoptimalan kompilasi loop unrolling agar alur instruksi mesin mudah dipindai oleh antivirus host sesuai prinsip secure software development lifecycle enterprise.
+- **D**. Menyandikan setiap opcode instruksi x86 assembly ke format bytecode Java sebelum dieksekusi oleh unit prosesor pada arsitektur biner 64-bit yang diproteksi compiler flags.
+- **E**. Memastikan target pemanggilan fungsi tak langsung (indirect call/jump) hanya boleh melompat ke daftar fungsi sah yang telah ditentukan saat kompilasi.
 
-> **Kunci Jawaban Benar:** **B. DAST hanya menguji jalur eksekusi yang berhasil dipicu selama sesi pengujian runtime (black-box) dan kesulitan mendeteksi fungsi tersembunyi yang tidak terhubung ke antarmuka.**
+> **Kunci Jawaban:** E. Memastikan target pemanggilan fungsi tak langsung (indirect call/jump) hanya boleh melompat ke daftar fungsi sah yang telah ditentukan saat kompilasi.
 
 ---
 
-### Soal 18 (Post Test)
-**Pertanyaan:**  
-Teknik pengujian Interactive Application Security Testing (IAST) bekerja dengan cara ...
+### Soal 206
+Dalam pengujian perangkat lunak berbasis Fuzzing, mengapa 'Coverage-guided Fuzzing' (seperti AFL atau libFuzzer) jauh lebih efektif dibanding fuzzer acak (blackbox random dumb fuzzing)?
 
-**Pilihan Jawaban:**
-- **A.** Memasang sensor/agent instrumentasi di dalam runtime aplikasi untuk memantau aliran data dan perilaku kode saat pengujian fungsional berlangsung. *(Kunci Jawaban)*
-- **B.** Mengirimkan formulir kuesioner wawancara keamanan kepada seluruh programmer.
-- **C.** Melakukan brute-force dictionary attack terhadap port SSH server.
-- **D.** Menguji daya tahan fisik server terhadap guncangan gempa bumi.
-- **E.** Membongkar chip mikrokontroler hardware menggunakan mikroskop elektron.
+- **A**. Menggunakan instrumentasi biner untuk melacak branch coverage kode baru yang terjamah oleh mutasi input dan memprioritaskannya di corpus uji.
+- **B**. Fuzzer ini membaca dokumentasi manual perangkat lunak menggunakan natural language processing untuk merumuskan kasus uji sehingga memicu eksekusi instruksi pada privilege level kernel.
+- **C**. Menjalankan proses dekompilasi otomatis ke bahasa C++ tingkat tinggi untuk memperbaiki bug secara langsung di repositori Git untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **D**. Secara otomatis membongkar enkripsi HTTPS pada lalu lintas jaringan tanpa membutuhkan sertifikat root CA lokal untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **E**. Hanya menguji fungsi-fungsi yang menggunakan kata kunci public pada antarmuka pemrograman aplikasi (API) pada arsitektur biner 64-bit yang diproteksi compiler flags.
 
-> **Kunci Jawaban Benar:** **A. Memasang sensor/agent instrumentasi di dalam runtime aplikasi untuk memantau aliran data dan perilaku kode saat pengujian fungsional berlangsung.**
+> **Kunci Jawaban:** A. Menggunakan instrumentasi biner untuk melacak branch coverage kode baru yang terjamah oleh mutasi input dan memprioritaskannya di corpus uji.
 
 ---
 
-### Soal 19 (Post Test)
-**Pertanyaan:**  
-Metode pengujian Fuzzing (Fuzz Testing) bertujuan menemukan cacat software (seperti crash atau buffer overflow) dengan mekanisme ...
+### Soal 207
+Mengapa bahasa pemrograman modern seperti Rust mampu menjamin keamanan memori (memory safety) tanpa memerlukan Garbage Collector (GC) runtime seperti Java/Go?
 
-**Pilihan Jawaban:**
-- **A.** Menganalisis dokumentasi manual penggunaan sistem secara teliti.
-- **B.** Mengirimkan volume besar data input acak, malformed, atau semi-terstruktur yang tidak terduga ke dalam program dan memantau terjadinya anomali. *(Kunci Jawaban)*
-- **C.** Mengecek apakah tampilan UI tombol telah simetris di berbagai browser.
-- **D.** Mengaudit laporan keuangan perusahaan pengembang software.
-- **E.** Memeriksa ejaan tata bahasa pada komentar kode sumber.
+- **A**. Rust melarang penggunaan alokasi memori dinamis di heap dan hanya mengizinkan variabel statis di stack frame untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **B**. Setiap pointer dalam kode Rust dienkripsi menggunakan algoritma RSA 1024-bit sebelum disimpan di register prosesor untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **C**. Kompiler Rust secara otomatis menyuntikkan mesin virtual JVM mini ke dalam setiap berkas biner executable yang dihasilkan pada arsitektur biner 64-bit yang diproteksi compiler flags.
+- **D**. Menerapkan sistem kepemilikan (ownership), peminjaman (borrowing), dan masa hidup (lifetimes) yang divalidasi ketat saat kompilasi oleh borrow checker.
+- **E**. Rust mengeksekusi semua operasi aritmatika di dalam lingkungan sandbox WebAssembly sebelum menyentuh perangkat keras sesuai prinsip secure software development lifecycle enterprise.
 
-> **Kunci Jawaban Benar:** **B. Mengirimkan volume besar data input acak, malformed, atau semi-terstruktur yang tidak terduga ke dalam program dan memantau terjadinya anomali.**
+> **Kunci Jawaban:** D. Menerapkan sistem kepemilikan (ownership), peminjaman (borrowing), dan masa hidup (lifetimes) yang divalidasi ketat saat kompilasi oleh borrow checker.
 
 ---
 
-### Soal 20 (Post Test)
-**Pertanyaan:**  
-Dalam pemodelan ancaman (Threat Modeling) STRIDE, huruf 'T' mewakili ancaman 'Tampering' yang didefinisikan sebagai ...
+### Soal 208
+Dari perspektif arsitektur Unix, mengapa pemanggilan perintah eksternal menggunakan `execve()` jauh lebih aman dari Command Injection dibanding pemanggilan fungsi `system()`?
 
-**Pilihan Jawaban:**
-- **A.** Tindakan menyamar sebagai pengguna yang sah (Spoofing).
-- **B.** Modifikasi atau manipulasi data yang tidak sah baik saat diam maupun saat transit di jaringan. *(Kunci Jawaban)*
-- **C.** Penyangkalan keterlibatan dalam suatu transaksi (Repudiation).
-- **D.** Pembocoran informasi rahasia kepada pihak tidak berhak (Information Disclosure).
-- **E.** Melumpuhkan ketersediaan layanan sistem (Denial of Service).
+- **A**. execve() mengenkripsi seluruh argumen baris perintah menggunakan protokol TLS sebelum mengirimkannya ke kernel Linux sehingga memicu eksekusi instruksi pada privilege level kernel.
+- **B**. system() hanya dapat berjalan pada hak akses pengguna biasa, sedangkan execve() selalu mewajibkan hak akses administrator root untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **C**. execve() meneruskan argumen langsung sebagai array terpisah ke kernel tanpa melalui perantara shell (/bin/sh) yang menafsirkan metakarakter.
+- **D**. execve() secara otomatis menolak eksekusi jika input pengguna mengandung spasi atau karakter tanda baca apa pun sesuai prinsip secure software development lifecycle enterprise.
+- **E**. system() memuat biner ke memori virtual tanpa membersihkan cache instruksi prosesor terlebih dahulu yang dievaluasi compiler selama fase kompilasi dan optimasi.
 
-> **Kunci Jawaban Benar:** **B. Modifikasi atau manipulasi data yang tidak sah baik saat diam maupun saat transit di jaringan.**
+> **Kunci Jawaban:** C. execve() meneruskan argumen langsung sebagai array terpisah ke kernel tanpa melalui perantara shell (/bin/sh) yang menafsirkan metakarakter.
 
 ---
 
-### Soal 21 (Post Test)
-**Pertanyaan:**  
-Dalam STRIDE, ancaman 'Elevation of Privilege' mengacu pada situasi di mana ...
+### Soal 209
+Kerentanan Insecure Deserialization pada aplikasi Java (seperti eksploitasi Apache Commons Collections) dapat berujung pada Remote Code Execution (RCE) karena ...
 
-**Pilihan Jawaban:**
-- **A.** Penyerang berhasil memperoleh tingkat hak akses yang lebih tinggi daripada yang semestinya diizinkan (misalnya dari user biasa menjadi root/admin). *(Kunci Jawaban)*
-- **B.** Pengguna menghapus log audit untuk menyembunyikan jejak transaksi.
-- **C.** Aplikasi menampilkan error stack trace lengkap ke layar browser.
-- **D.** Server kehabisan kapasitas memori RAM akibat memory leak.
-- **E.** Pengguna lupa kata sandi dan meminta reset password melalui email.
+- **A**. Fungsi deserialisasi membuka port remote debugging 5005 pada antarmuka jaringan publik tanpa autentikasi kata sandi untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **B**. Proses deserialisasi objek membangkitkan metode magic (seperti `readObject()`) yang mengeksekusi rantai kelas berbahaya (gadget chain) di classpath.
+- **C**. Data yang diserialisasi selalu dikonversi menjadi skrip shell Bash mentah yang langsung dieksekusi di terminal server hosting pada arsitektur biner 64-bit yang diproteksi compiler flags.
+- **D**. Objek Java yang diserialisasi secara otomatis menimpa berkas konfigurasi web server Tomcat di direktori sistem.
+- **E**. Algoritma serialisasi Java mematikan proteksi sandbox Security Manager sistem operasi secara permanen saat parsing stream.
 
-> **Kunci Jawaban Benar:** **A. Penyerang berhasil memperoleh tingkat hak akses yang lebih tinggi daripada yang semestinya diizinkan (misalnya dari user biasa menjadi root/admin).**
+> **Kunci Jawaban:** B. Proses deserialisasi objek membangkitkan metode magic (seperti `readObject()`) yang mengeksekusi rantai kelas berbahaya (gadget chain) di classpath.
 
 ---
 
-### Soal 22 (Post Test)
-**Pertanyaan:**  
-Mengapa bahasa pemrograman modern seperti Rust dianggap kebal terhadap sebagian besar bug memori (memory-safety) dibandingkan C/C++?
+### Soal 210
+Apa keunggulan keamanan utama dari mengompilasi program dengan opsi Position Independent Executable (`-fPIE -pie`) pada sistem operasi berbasis Linux?
 
-**Pilihan Jawaban:**
-- **A.** Rust tidak menggunakan memori RAM sama sekali saat mengeksekusi program.
-- **B.** Rust menerapkan sistem Ownership, Borrowing, dan Lifetimes yang ketat pada saat compile-time tanpa memerlukan garbage collector runtime. *(Kunci Jawaban)*
-- **C.** Rust secara otomatis mengenkripsi seluruh variabel menggunakan kunci AES.
-- **D.** Program Rust hanya dapat dijalankan di dalam virtual machine terisolasi.
-- **E.** Rust tidak mengizinkan pembuatan fungsi atau loop perulangan.
+- **A**. Memungkinkan segmen kode biner utama (.text) dimuat pada alamat virtual acak oleh ASLR, bukan pada alamat tetap secara komprehensif.
+- **B**. Mencegah program memuat pustaka pihak ketiga yang tidak memiliki tanda tangan digital resmi dari pengembang distro.
+- **C**. Memaksa sistem operasi mengeksekusi program di dalam ruang isolasi kernel chroot secara transparan.
+- **D**. Menonaktifkan fasilitas debugging gdb dan ptrace sehingga aplikasi tidak dapat dianalisis secara reverse engineering.
+- **E**. Menghapus seluruh simbol string dan nama variabel dari berkas biner berekstensi ELF secara permanen.
 
-> **Kunci Jawaban Benar:** **B. Rust menerapkan sistem Ownership, Borrowing, dan Lifetimes yang ketat pada saat compile-time tanpa memerlukan garbage collector runtime.**
+> **Kunci Jawaban:** A. Memungkinkan segmen kode biner utama (.text) dimuat pada alamat virtual acak oleh ASLR, bukan pada alamat tetap secara komprehensif.
 
 ---
 
-### Soal 23 (Post Test)
-**Pertanyaan:**  
-Praktik penanganan kesalahan (error handling) yang BURUK dan membahayakan keamanan aplikasi web adalah ...
+### Soal 211
+Cacat keamanan 'Uninitialized Memory Disclosure' (seperti yang mendasari kerentanan Heartbleed) terjadi ketika program ...
 
-**Pilihan Jawaban:**
-- **A.** Mencatat detail error lengkap ke file log internal yang hanya bisa diakses administrator berwenang.
-- **B.** Menampilkan pesan galat generik yang sopan kepada pengguna akhir seperti 'Terjadi kesalahan sistem, silakan hubungi tim dukungan'.
-- **C.** Mengekspos stack trace mentah, nama tabel database, versi framework, dan potongan query SQL secara langsung ke layar pengguna saat terjadi exception. *(Kunci Jawaban)*
-- **D.** Menutup koneksi database dan merilis sumber daya secara aman pada blok finally/catch.
-- **E.** Mengirimkan notifikasi alert otomatis ke dashboard SIEM saat terjadi unhandled exception berulang.
+- **A**. Mengizinkan penyerang mengeksekusi instruksi perakitan mesin langsung pada register status prosesor kontroler host yang dievaluasi compiler selama fase kompilasi dan optimasi.
+- **B**. Menulis data melampaui batas akhir partisi disk fisik tempat sistem berkas swap memory dialokasikan yang dievaluasi compiler selama fase kompilasi dan optimasi.
+- **C**. Mengalokasikan ruang memori berukuran nol byte yang menyebabkan kegagalan segmentasi memori pada pustaka glibc untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **D**. Memanggil pointer fungsi sebelum tabel metode virtual selesai diinisialisasi oleh konstruktor objek pemrograman sesuai prinsip secure software development lifecycle enterprise.
+- **E**. Mengembalikan buffer memori yang belum dibersihkan (zeroed) ke pengguna, sehingga data sensitif dari operasi sebelumnya terbaca.
 
-> **Kunci Jawaban Benar:** **C. Mengekspos stack trace mentah, nama tabel database, versi framework, dan potongan query SQL secara langsung ke layar pengguna saat terjadi exception.**
+> **Kunci Jawaban:** E. Mengembalikan buffer memori yang belum dibersihkan (zeroed) ke pengguna, sehingga data sensitif dari operasi sebelumnya terbaca.
 
 ---
 
-### Soal 24 (Post Test)
-**Pertanyaan:**  
-Dalam penulisan kode C yang aman, fungsi strncpy(dest, src, n) sering digunakan untuk menggantikan strcpy. Namun, kelemahan yang tetap harus diwaspadai dari strncpy adalah ...
+### Soal 212
+Dalam paradigma DevSecOps dan Secure Software Development Lifecycle (SSDLC), aktivitas 'Software Bill of Materials' (SBOM) dan Software Composition Analysis (SCA) bertujuan untuk ...
 
-**Pilihan Jawaban:**
-- **A.** Fungsi tersebut tidak menjamin null-terminator ('\0') ditambahkan pada string tujuan jika panjang src melebihi atau sama dengan n. *(Kunci Jawaban)*
-- **B.** Fungsi tersebut menghapus isi string sumber secara permanen.
-- **C.** strncpy hanya dapat memproses karakter angka numerik.
-- **D.** Fungsi tersebut berjalan sepuluh kali lebih lambat daripada operasi disk IO.
-- **E.** strncpy secara otomatis memicu buffer overflow pada compiler modern.
+- **A**. Memverifikasi apakah sintaksis penulisan kode sumber telah mematuhi pedoman indentasi dan penamaan variabel resmi sesuai prinsip secure software development lifecycle enterprise.
+- **B**. Mengukur kecepatan respons antarmuka pengguna terhadap beban kueri basis data pada kondisi lalu lintas puncak server untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **C**. Menginventarisasi seluruh pustaka open-source pihak ketiga (dependensi) serta mendeteksi kerentanan yang tercatat di database CVE.
+- **D**. Memastikan bahwa seluruh pengembang perangkat lunak memiliki sertifikat keahlian keamanan siber tingkat internasional.
+- **E**. Menggantikan peran pengujian penetrasi manual (pentest) secara penuh menggunakan algoritma kecerdasan buatan terapan.
 
-> **Kunci Jawaban Benar:** **A. Fungsi tersebut tidak menjamin null-terminator ('\0') ditambahkan pada string tujuan jika panjang src melebihi atau sama dengan n.**
+> **Kunci Jawaban:** C. Menginventarisasi seluruh pustaka open-source pihak ketiga (dependensi) serta mendeteksi kerentanan yang tercatat di database CVE.
 
 ---
 
-### Soal 25 (Post Test)
-**Pertanyaan:**  
-Prinsip 'Complete Mediation' dalam arsitektur software security mengharuskan bahwa ...
+### Soal 213
+Kerentanan 'Type Confusion' pada mesin peramban web modern (seperti V8 pada Chrome atau SpiderMonkey pada Firefox) sering dimanfaatkan oleh exploit karena ...
 
-**Pilihan Jawaban:**
-- **A.** Setiap permintaan akses ke setiap objek harus diperiksa dan divalidasi keabsahannya setiap saat, tanpa mengandalkan hasil pemeriksaan sebelumnya yang di-cache secara membabi buta. *(Kunci Jawaban)*
-- **B.** Pengguna hanya perlu diautentikasi sekali seumur hidup pada saat pendaftaran akun.
-- **C.** Sistem keamanan harus memediasi perselisihan hukum antara pengguna dan penyedia layanan.
-- **D.** Semua berkas konfigurasi harus disimpan dalam satu file terpusat tanpa enkripsi.
-- **E.** Hak akses administratif harus diberikan secara penuh kepada seluruh developer.
+- **A**. Membuat peramban salah mengidentifikasi protokol komunikasi dari HTTPS menjadi HTTP biasa pada port 80 jaringan untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.
+- **B**. Menyebabkan compiler Just-In-Time (JIT) mengoptimalkan kode dengan asumsi objek bertipe X, padahal objek sebenarnya bertipe Y, menghasilkan memory out-of-bounds.
+- **C**. Menghapus cookie sesi otentikasi pengguna secara acak sehingga pengguna dipaksa melakukan login ulang berkali-kali yang dievaluasi compiler selama fase kompilasi dan optimasi.
+- **D**. Mengubah font teks halaman web dari format TrueType menjadi format bitmap raster yang merusak tampilan dokumen CSS.
+- **E**. Mencegah peramban memuat elemen skrip JavaScript eksternal yang dihosting di jaringan Content Delivery Network.
 
-> **Kunci Jawaban Benar:** **A. Setiap permintaan akses ke setiap objek harus diperiksa dan divalidasi keabsahannya setiap saat, tanpa mengandalkan hasil pemeriksaan sebelumnya yang di-cache secara membabi buta.**
+> **Kunci Jawaban:** B. Menyebabkan compiler Just-In-Time (JIT) mengoptimalkan kode dengan asumsi objek bertipe X, padahal objek sebenarnya bertipe Y, menghasilkan memory out-of-bounds.
 
 ---
+
 
-## 📌 Week 5 - Web Application Security & OWASP ASVS
+# Week 5
 
-### Soal 1 (Pre Test)
-**Pertanyaan:**  
-Metode pertahanan paling efektif dan mutlak untuk mencegah kerentanan SQL Injection pada kode backend aplikasi web adalah ...
 
-**Pilihan Jawaban:**
-- **A.** Menggunakan Parameterized Queries (Prepared Statements) yang memisahkan kode query SQL dari data input pengguna. *(Kunci Jawaban)*
-- **B.** Menyaring karakter petik tunggal (') menggunakan fungsi regex buatan sendiri (blacklisting).
-- **C.** Menyimpan seluruh data input dalam format huruf kapital (uppercase).
-- **D.** Mengganti web server Apache dengan Nginx.
-- **E.** Menambahkan firewall hardware di depan router utama.
+## Pre Test
 
-> **Kunci Jawaban Benar:** **A. Menggunakan Parameterized Queries (Prepared Statements) yang memisahkan kode query SQL dari data input pengguna.**
+### Soal 214
+Dalam pengujian penetrasi web, ketika aplikasi tidak menampilkan data hasil kueri maupun pesan error basis data, teknik SQL Injection apa yang paling efektif untuk mengekstrak data karakter per karakter?
 
+- **A**. Union-based SQL Injection dengan mencocokkan jumlah kolom menggunakan klausa ORDER BY secara berurutan yang dievaluasi secara asinkron pada runtime sisi klien.
+- **B**. Error-based SQL Injection dengan memicu kegagalan konversi tipe data numerik menggunakan fungsi CAST() atau CONVERT().
+- **C**. Time-based Blind SQL Injection dengan menyuntikkan fungsi penundaan waktu seperti pg_sleep() atau WAITFOR DELAY secara komprehensif.
+- **D**. Second-order SQL Injection dengan menyimpan payload di tabel profil pengguna dan menunggu sesi administrator aktif.
+- **E**. Out-of-band SQL Injection dengan memaksa basis data mengirimkan kueri DNS lookup ke server eksternal milik penyerang.
+
+> **Kunci Jawaban:** C. Time-based Blind SQL Injection dengan menyuntikkan fungsi penundaan waktu seperti pg_sleep() atau WAITFOR DELAY secara komprehensif.
+
 ---
 
-### Soal 2 (Pre Test)
-**Pertanyaan:**  
-Seorang penyerang menyisipkan payload JavaScript berbahaya ke dalam kolom komentar blog. Setiap kali pengguna lain membuka artikel blog tersebut, script penyerang dieksekusi di browser korban dan mencuri session cookie. Jenis serangan XSS ini adalah ...
+### Soal 215
+Mengapa penggunaan Parameterized Queries (Prepared Statements) mampu mengeliminasi celah SQL Injection secara tuntas pada level arsitektur basis data?
 
-**Pilihan Jawaban:**
-- **A.** Reflected XSS
-- **B.** Stored (Persistent) XSS *(Kunci Jawaban)*
-- **C.** DOM-based XSS
-- **D.** Self-XSS
-- **E.** Blind SQL Injection
+- **A**. Driver basis data mengompresi teks kueri menggunakan algoritma gzip sehingga metakarakter SQL tidak terbaca mesin yang dievaluasi secara asinkron pada runtime sisi klien.
+- **B**. Prepared statements menolak kueri yang dieksekusi lebih dari satu kali dalam kurun waktu 100 milidetik oleh client yang sama.
+- **C**. Sistem basis data secara otomatis mengonversi seluruh input teks pengguna menjadi tipe data integer acak sebelum eksekusi sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.
+- **D**. Koneksi basis data dipaksa berjalan melalui terowongan VPN terenkripsi IPsec dengan autentikasi sertifikat digital X.509.
+- **E**. Struktur logika kueri dikompilasi terlebih dahulu ke Abstract Syntax Tree, dan data input hanya diperlakukan sebagai nilai parameter murni.
 
-> **Kunci Jawaban Benar:** **B. Stored (Persistent) XSS**
+> **Kunci Jawaban:** E. Struktur logika kueri dikompilasi terlebih dahulu ke Abstract Syntax Tree, dan data input hanya diperlakukan sebagai nilai parameter murni.
 
 ---
 
-### Soal 3 (Pre Test)
-**Pertanyaan:**  
-Mengapa mitigasi Cross-Site Scripting (XSS) mensyaratkan 'Context-Aware Output Encoding' (misalnya HTML Body Encoding berbeda dengan JavaScript Context Encoding)?
+### Soal 216
+Manakah skenario alur serangan di bawah ini yang merepresentasikan kerentanan 'Second-Order SQL Injection'?
 
-**Pilihan Jawaban:**
-- **A.** Karena parser browser menafsirkan karakter khusus secara berbeda bergantung pada konteks sintaksis tempat data dirender (HTML tag, atribut, script block, atau URL). *(Kunci Jawaban)*
-- **B.** Agar ukuran dokumen HTML menjadi lebih kecil saat ditransmisikan melalui jaringan.
-- **C.** Karena encoding hanya berlaku untuk browser berbasis Chromium.
-- **D.** Untuk mempercepat waktu render CSS pada perangkat mobile.
-- **E.** Agar aplikasi web tidak memerlukan sertifikat SSL/TLS.
+- **A**. Payload SQL berbahaya disimpan dengan aman di database saat registrasi, namun dieksekusi tanpa sanitasi oleh proses background terpisah.
+- **B**. Penyerang menyuntikkan payload SQL melalui header HTTP Referer yang langsung menghasilkan error pada halaman login seketika.
+- **C**. Penyerang membobol dua server web yang berbeda secara simultan menggunakan satu skrip exploit otomatis berbasis Python.
+- **D**. Eksekusi injeksi SQL yang memerlukan dua parameter HTTP POST berbeda yang dikirimkan secara paralel dalam satu koneksi TCP.
+- **E**. Penyerang menyuntikkan perintah SQL yang menginstruksikan database server untuk menginfeksi server sekunder dalam cluster replica.
 
-> **Kunci Jawaban Benar:** **A. Karena parser browser menafsirkan karakter khusus secara berbeda bergantung pada konteks sintaksis tempat data dirender (HTML tag, atribut, script block, atau URL).**
+> **Kunci Jawaban:** A. Payload SQL berbahaya disimpan dengan aman di database saat registrasi, namun dieksekusi tanpa sanitasi oleh proses background terpisah.
 
 ---
 
-### Soal 4 (Pre Test)
-**Pertanyaan:**  
-Header keamanan Content Security Policy (CSP) dengan direktif 'script-src 'self'' memberikan perlindungan bagi browser pengguna dengan cara ...
+### Soal 217
+Apa perbedaan esensial dari DOM-based Cross-Site Scripting (DOM XSS) jika dibandingkan dengan Stored XSS maupun Reflected XSS?
 
-**Pilihan Jawaban:**
-- **A.** Melarang eksekusi skrip JavaScript yang berasal dari domain eksternal pihak ketiga serta memblokir inline script yang tidak memiliki nonce/hash valid. *(Kunci Jawaban)*
-- **B.** Mengenkripsi seluruh file JavaScript di server menggunakan AES.
-- **C.** Menonaktifkan fitur JavaScript sepenuhnya pada komputer klien.
-- **D.** Menghapus cookie sesi browser setiap 5 menit secara otomatis.
-- **E.** Mengalihkan seluruh traffic HTTP ke protokol FTP.
+- **A**. Payload DOM XSS hanya dapat dieksekusi apabila browser target membuka halaman web menggunakan koneksi HTTP unencrypted berdasarkan spesifikasi dokumen standar World Wide Web Consortium.
+- **B**. Payload dieksekusi sepenuhnya di sisi peramban klien saat membaca source yang tidak aman dan menuliskannya ke sink tanpa keterlibatan server.
+- **C**. DOM XSS selalu menghasilkan berkas cookie sesi yang memiliki atribut HttpOnly dan Secure secara otomatis di penyimpanan browser yang dievaluasi secara asinkron pada runtime sisi klien.
+- **D**. Payload DOM XSS disimpan secara permanen di database PostgreSQL server dan dikirimkan ulang ke setiap pengunjung halaman pada endpoint RESTful API yang memproses pertukaran data.
+- **E**. DOM XSS hanya menyerang server backend yang dibangun menggunakan arsitektur microservices berbasis Node.js Express guna memitigasi risiko pembajakan sesi otentikasi pengguna.
 
-> **Kunci Jawaban Benar:** **A. Melarang eksekusi skrip JavaScript yang berasal dari domain eksternal pihak ketiga serta memblokir inline script yang tidak memiliki nonce/hash valid.**
+> **Kunci Jawaban:** B. Payload dieksekusi sepenuhnya di sisi peramban klien saat membaca source yang tidak aman dan menuliskannya ke sink tanpa keterlibatan server.
 
 ---
 
-### Soal 5 (Pre Test)
-**Pertanyaan:**  
-Serangan Cross-Site Request Forgery (CSRF) memanfaatkan karakteristik bawaan web browser, yaitu ...
+### Soal 218
+Dalam konfigurasi Content Security Policy (CSP), mengapa keberadaan arahan 'unsafe-inline' pada header `script-src` sangat berbahaya bagi pertahanan XSS?
 
-**Pilihan Jawaban:**
-- **A.** Browser secara otomatis menyertakan kredensial autentikasi (seperti session cookie) saat mengirimkan request HTTP lintas domain ke situs target yang sedang aktif login. *(Kunci Jawaban)*
-- **B.** Browser dapat mengeksekusi shellcode biner langsung pada kernel sistem operasi.
-- **C.** Browser menyimpan password plaintext di dalam file konfigurasi Windows.
-- **D.** Browser selalu menonaktifkan validasi sertifikat HTTPS pada form POST.
-- **E.** Browser membagikan riwayat pencarian kepada semua tab yang terbuka.
+- **A**. Memaksa peramban untuk mengizinkan transfer berkas biner executable melalui koneksi WebSocket tanpa enkripsi TLS yang dievaluasi secara asinkron pada runtime sisi klien.
+- **B**. Mengizinkan peramban mengeksekusi tag <script> inline dan event handler atribut (seperti onerror/onload) yang disuntikkan penyerang.
+- **C**. Menonaktifkan seluruh sistem proteksi memori Address Space Layout Randomization pada sistem operasi komputer pengguna berdasarkan spesifikasi dokumen standar World Wide Web Consortium.
+- **D**. Membuka seluruh port firewall internal pada server web sehingga dapat diakses secara publik melalui jaringan internet.
+- **E**. Menghapus tanda tangan digital pada sertifikat HTTPS server web sehingga peramban menampilkan peringatan keamanan merah.
 
-> **Kunci Jawaban Benar:** **A. Browser secara otomatis menyertakan kredensial autentikasi (seperti session cookie) saat mengirimkan request HTTP lintas domain ke situs target yang sedang aktif login.**
+> **Kunci Jawaban:** B. Mengizinkan peramban mengeksekusi tag <script> inline dan event handler atribut (seperti onerror/onload) yang disuntikkan penyerang.
 
 ---
 
-### Soal 6 (Pre Test)
-**Pertanyaan:**  
-Mekanisme pertahanan paling standar untuk mencegah serangan CSRF pada formulir HTML aplikasi web adalah ...
+### Soal 219
+Pemasangan atribut 'HttpOnly' pada header `Set-Cookie` sesi pengguna secara khusus dirancang untuk menangkal serangan ...
 
-**Pilihan Jawaban:**
-- **A.** Penggunaan Anti-CSRF Token (Synchronizer Token Pattern) yang unik, tidak dapat ditebak, dan terikat pada sesi pengguna aktif. *(Kunci Jawaban)*
-- **B.** Mengganti metode HTTP POST menjadi GET pada seluruh formulir.
-- **C.** Menyembunyikan formulir menggunakan styling CSS display:none.
-- **D.** Memperpanjang masa kedaluwarsa sesi menjadi 30 hari.
-- **E.** Menghapus atribut action pada tag form HTML.
+- **A**. SQL Injection yang mencoba mengekstrak data kredensial login melalui pesan kesalahan sintaksis basis data berdasarkan spesifikasi dokumen standar World Wide Web Consortium.
+- **B**. Distributed Denial of Service (DDoS) yang membanjiri antrean permintaan server aplikasi dengan paket TCP SYN flood.
+- **C**. Man-in-the-Middle (MitM) yang menyadap lalu lintas komunikasi data pada jaringan nirkabel publik tanpa kata sandi.
+- **D**. Pencurian cookie sesi melalui skrip jahat JavaScript sisi klien (XSS) yang membaca properti document.cookie.
+- **E**. Server-Side Request Forgery (SSRF) yang memanipulasi permintaan HTTP internal ke metadata instance cloud AWS.
 
-> **Kunci Jawaban Benar:** **A. Penggunaan Anti-CSRF Token (Synchronizer Token Pattern) yang unik, tidak dapat ditebak, dan terikat pada sesi pengguna aktif.**
+> **Kunci Jawaban:** D. Pencurian cookie sesi melalui skrip jahat JavaScript sisi klien (XSS) yang membaca properti document.cookie.
 
 ---
 
-### Soal 7 (Pre Test)
-**Pertanyaan:**  
-Pada kerentanan Server-Side Request Forgery (SSRF), penyerang memanipulasi aplikasi web backend untuk ...
+### Soal 220
+Pada penanganan Cross-Site Request Forgery (CSRF), bagaimana perilaku pengiriman cookie pada peramban jika atribut cookie disetel ke `SameSite=Lax`?
 
-**Pilihan Jawaban:**
-- **A.** Membuat server backend mengirimkan permintaan HTTP yang tidak sah ke layanan internal yang dilindungi firewall (misalnya layanan metadata cloud 169.254.169.254 atau database lokal). *(Kunci Jawaban)*
-- **B.** Menjalankan script berbahaya di browser pengguna lain secara acak.
-- **C.** Mengubah warna tema antarmuka website menjadi gelap.
-- **D.** Mematikan koneksi internet pengguna rumahan.
-- **E.** Mencuri keyboard fisik di kantor perusahaan.
+- **A**. Cookie dikirimkan pada semua permintaan lintas domain tanpa terkecuali, termasuk AJAX POST dan iframe tersemat guna memitigasi risiko pembajakan sesi otentikasi pengguna.
+- **B**. Cookie ditahan pada permintaan sub-request lintas domain (seperti gambar/POST), namun tetap disertakan pada navigasi top-level GET yang aman.
+- **C**. Cookie tidak akan pernah dikirimkan pada permintaan apa pun yang berasal dari tautan di luar domain utama aplikasi pada endpoint RESTful API yang memproses pertukaran data.
+- **D**. Cookie hanya dikirimkan jika alamat IP klien terdaftar di dalam whitelist firewall Content Delivery Network server sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.
+- **E**. Cookie dihapus secara permanen dari penyimpanan peramban seketika tab halaman web ditutup oleh pengguna sistem.
 
-> **Kunci Jawaban Benar:** **A. Membuat server backend mengirimkan permintaan HTTP yang tidak sah ke layanan internal yang dilindungi firewall (misalnya layanan metadata cloud 169.254.169.254 atau database lokal).**
+> **Kunci Jawaban:** B. Cookie ditahan pada permintaan sub-request lintas domain (seperti gambar/POST), namun tetap disertakan pada navigasi top-level GET yang aman.
 
 ---
 
-### Soal 8 (Pre Test)
-**Pertanyaan:**  
-Seorang pengguna biasa dapat melihat tagihan medis pasien lain dengan cara mengganti parameter ID pada URL dari '/invoice?id=1001' menjadi '/invoice?id=1002' karena server tidak memverifikasi kepemilikan data. Kerentanan ini diklasifikasikan sebagai ...
+### Soal 221
+Mengapa implementasi Anti-CSRF Token berbasis 'Synchronizer Token Pattern' efektif mematahkan serangan pemalsuan permintaan antar-situs?
 
-**Pilihan Jawaban:**
-- **A.** Insecure Direct Object Reference (IDOR) / Broken Object Level Authorization (BOLA) *(Kunci Jawaban)*
-- **B.** Cross-Site Scripting (XSS)
-- **C.** Buffer Overflow
-- **D.** Denial of Service (DoS)
-- **E.** Weak Password Hashing
+- **A**. Token dienkripsi menggunakan kunci privat peramban klien sehingga server dapat memverifikasi identitas perangkat keras pengguna pada endpoint RESTful API yang memproses pertukaran data.
+- **B**. Server menolak permintaan jika alamat MAC antarmuka jaringan penyerang tidak sesuai dengan alamat MAC pengguna terdaftar.
+- **C**. Token secara otomatis memutus koneksi internet penyerang jika terdeteksi pengiriman permintaan dari domain yang berbeda.
+- **D**. Penyerang dari situs eksternal terhalang oleh Same-Origin Policy untuk membaca token rahasia unik sesi yang disisipkan dalam form/header.
+- **E**. Setiap formulir HTML secara otomatis mewajibkan pengguna memasukkan kode CAPTCHA audio sebelum permintaan dikirimkan.
 
-> **Kunci Jawaban Benar:** **A. Insecure Direct Object Reference (IDOR) / Broken Object Level Authorization (BOLA)**
+> **Kunci Jawaban:** D. Penyerang dari situs eksternal terhalang oleh Same-Origin Policy untuk membaca token rahasia unik sesi yang disisipkan dalam form/header.
 
 ---
 
-### Soal 9 (Pre Test)
-**Pertanyaan:**  
-Header keamanan 'Strict-Transport-Security' (HSTS) pada respons HTTP berfungsi untuk ...
+### Soal 222
+Pada arsitektur cloud AWS, payload SSRF (Server-Side Request Forgery) yang menyasar alamat `http://169.254.169.254/latest/meta-data/iam/security-credentials/` bertujuan untuk ...
 
-**Pilihan Jawaban:**
-- **A.** Memaksa browser agar selalu berkomunikasi dengan situs tersebut hanya menggunakan protokol aman HTTPS dan menolak downgrade ke HTTP biasa. *(Kunci Jawaban)*
-- **B.** Menutup port 80 pada firewall perangkat router klien.
-- **C.** Menghapus cache DNS lokal setiap kali browser ditutup.
-- **D.** Mengizinkan koneksi HTTP tanpa enkripsi untuk file gambar.
-- **E.** Mengirimkan log error aplikasi ke server Google.
+- **A**. Mematikan instans virtual EC2 secara paksa sehingga memicu kondisi Denial of Service pada kluster produksi berdasarkan spesifikasi dokumen standar World Wide Web Consortium.
+- **B**. Mengubah aturan konfigurasi Virtual Private Cloud (VPC) agar seluruh port firewall terbuka ke publik secara bebas berdasarkan spesifikasi dokumen standar World Wide Web Consortium.
+- **C**. Mencuri kredensial token keamanan sementara IAM role yang melekat pada instance guna membajak infrastruktur cloud.
+- **D**. Mendekripsi seluruh snapshot volume Amazon EBS yang terpasang pada instans server basis data terisolasi berdasarkan spesifikasi dokumen standar World Wide Web Consortium.
+- **E**. Mengirimkan email spam massal menggunakan layanan Amazon Simple Email Service melalui akun administrator.
 
-> **Kunci Jawaban Benar:** **A. Memaksa browser agar selalu berkomunikasi dengan situs tersebut hanya menggunakan protokol aman HTTPS dan menolak downgrade ke HTTP biasa.**
+> **Kunci Jawaban:** C. Mencuri kredensial token keamanan sementara IAM role yang melekat pada instance guna membajak infrastruktur cloud.
 
 ---
 
-### Soal 10 (Pre Test)
-**Pertanyaan:**  
-Konfigurasi Cross-Origin Resource Sharing (CORS) yang sangat berbahaya dan membuka celah pencurian data sensitif antar-origin terjadi ketika server merespons dengan kombinasi header ...
+### Soal 223
+Teknik 'DNS Rebinding' digunakan penyerang untuk melewati proteksi validasi IP internal pada kerentanan SSRF dengan cara ...
 
-**Pilihan Jawaban:**
-- **A.** Access-Control-Allow-Origin: * dan Access-Control-Allow-Credentials: true *(Kunci Jawaban)*
-- **B.** Access-Control-Allow-Origin: null dan Access-Control-Max-Age: 0
-- **C.** Access-Control-Allow-Methods: GET dan Access-Control-Allow-Headers: Content-Type
-- **D.** Content-Type: application/json dan X-Frame-Options: SAMEORIGIN
-- **E.** Strict-Transport-Security: max-age=31536000
+- **A**. Mengirimkan jutaan permintaan kueri DNS berukuran besar untuk membanjiri kapasitas bandwidth DNS resolver lokal target sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.
+- **B**. Menyediakan server DNS khusus yang mengembalikan IP publik saat validasi awal, lalu mengembalikan IP privat 127.0.0.1 saat permintaan fetch data.
+- **C**. Memalsukan tanda tangan kriptografi DNSSEC pada rekaman zona domain publik menggunakan kunci privat curian pada endpoint RESTful API yang memproses pertukaran data.
+- **D**. Mengubah alamat MAC gateway lokal pada tabel ARP cache router perantara menggunakan serangan ARP poisoning.
+- **E**. Mengonfigurasi rekaman DNS TXT agar berisi skrip JavaScript berbahaya yang dieksekusi di peramban pengguna web.
 
-> **Kunci Jawaban Benar:** **A. Access-Control-Allow-Origin: * dan Access-Control-Allow-Credentials: true**
+> **Kunci Jawaban:** B. Menyediakan server DNS khusus yang mengembalikan IP publik saat validasi awal, lalu mengembalikan IP privat 127.0.0.1 saat permintaan fetch data.
 
 ---
 
-### Soal 11 (Pre Test)
-**Pertanyaan:**  
-Kerentanan XML External Entity (XXE) Injection terjadi ketika parser XML pada aplikasi web dikonfigurasi untuk ...
+### Soal 224
+Konfigurasi Cross-Origin Resource Sharing (CORS) yang sangat rentan terjadi ketika server merespons permintaan lintas domain dengan header ...
 
-**Pilihan Jawaban:**
-- **A.** Mengizinkan resolusi external Document Type Definition (DTD) dan entitas eksternal, sehingga penyerang dapat membaca berkas lokal server (misal /etc/passwd) atau memicu SSRF. *(Kunci Jawaban)*
-- **B.** Menolak parsing dokumen XML yang memiliki spasi ganda.
-- **C.** Mengompresi format XML menjadi format binary JSON.
-- **D.** Menyimpan data XML ke dalam file gambar format PNG.
-- **E.** Mengharuskan dokumen XML ditandatangani oleh sertifikat SSL berbayar.
+- **A**. Access-Control-Allow-Origin yang merefleksikan nilai Origin penyerang secara dinamis disertai Access-Control-Allow-Credentials: true.
+- **B**. Access-Control-Allow-Origin: null dan Access-Control-Allow-Methods: GET secara ketat tanpa cookie.
+- **C**. Access-Control-Allow-Origin: * pada endpoint publik yang hanya menyajikan data katalog produk tanpa autentikasi.
+- **D**. Access-Control-Max-Age: 86400 yang menginstruksikan peramban untuk menyimpan cache respons preflight selama 24 jam.
+- **E**. Access-Control-Allow-Headers: Content-Type, Authorization pada permintaan API yang telah terverifikasi token JWT.
 
-> **Kunci Jawaban Benar:** **A. Mengizinkan resolusi external Document Type Definition (DTD) dan entitas eksternal, sehingga penyerang dapat membaca berkas lokal server (misal /etc/passwd) atau memicu SSRF.**
+> **Kunci Jawaban:** A. Access-Control-Allow-Origin yang merefleksikan nilai Origin penyerang secara dinamis disertai Access-Control-Allow-Credentials: true.
 
 ---
 
-### Soal 12 (Pre Test)
-**Pertanyaan:**  
-Pada fitur upload file di aplikasi web, praktik keamanan yang PALING EFEKTIF untuk mencegah eksekusi webshell berbahaya adalah ...
+### Soal 225
+Celah keamanan Insecure Direct Object References (IDOR / BOLA) pada endpoint REST API `GET /api/v1/invoices/1042` terjadi terutama disebabkan oleh ...
 
-**Pilihan Jawaban:**
-- **A.** Menyimpan file yang diunggah di luar web root direktori publik, mengganti nama file dengan nama acak/UUID unik, dan menonaktifkan izin eksekusi script pada folder penyimpanan. *(Kunci Jawaban)*
-- **B.** Hanya memeriksa MIME-type yang dikirimkan oleh browser klien (Content-Type header).
-- **C.** Hanya memeriksa ekstensi file menggunakan huruf kecil (misal .jpg).
-- **D.** Menyimpan file di folder yang sama dengan file index.php aplikasi.
-- **E.** Membatasi ukuran file maksimal 10 megabyte tanpa memeriksa isi berkas.
+- **A**. Penggunaan protokol HTTP versi 1.1 yang belum mendukung multiplexing stream seperti pada protokol HTTP/2 sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.
+- **B**. Penyimpanan kunci privat enkripsi data transaksi pada sistem berkas yang memiliki izin akses berkas 0644.
+- **C**. Ukuran payload respons JSON yang melebihi batas buffer transfer maksimum yang diizinkan oleh reverse proxy server.
+- **D**. Ketidakmampuan database engine memproses kueri SELECT yang menggunakan klausa WHERE berbasis primary key integer.
+- **E**. Kegagalan backend memverifikasi kepemilikan objek (apakah invoice 1042 benar milik pengguna yang sedang terautentikasi).
 
-> **Kunci Jawaban Benar:** **A. Menyimpan file yang diunggah di luar web root direktori publik, mengganti nama file dengan nama acak/UUID unik, dan menonaktifkan izin eksekusi script pada folder penyimpanan.**
+> **Kunci Jawaban:** E. Kegagalan backend memverifikasi kepemilikan objek (apakah invoice 1042 benar milik pengguna yang sedang terautentikasi).
 
 ---
 
-### Soal 13 (Pre Test)
-**Pertanyaan:**  
-Dalam standar OWASP ASVS (Application Security Verification Standard), aplikasi yang mengelola transaksi keuangan penting, data bisnis bernilai tinggi, atau informasi kesehatan pribadi (B2B) wajib memenuhi minimal verifikasi pada ...
+### Soal 226
+Eksploitasi Server-Side Template Injection (SSTI) pada mesin template Python (seperti Jinja2) sering kali mampu dieskalasi hingga Remote Code Execution (RCE) melalui teknik ...
 
-**Pilihan Jawaban:**
-- **A.** Level 1 (Opportunistic)
-- **B.** Level 2 (Standard) *(Kunci Jawaban)*
-- **C.** Level 3 (Advanced)
-- **D.** Level 0 (Basic Entry)
-- **E.** Level 4 (Military Grade)
+- **A**. Penyuntikan berkas binary shellcode x86 mentah ke dalam tag penutup template web tanpa encoding base64 yang dievaluasi secara asinkron pada runtime sisi klien.
+- **B**. Pengiriman payload berukuran sangat besar yang memicu kondisi buffer overflow pada parser sintaksis template engine yang dievaluasi secara asinkron pada runtime sisi klien.
+- **C**. Penelusuran hirarki kelas bawaan objek via atribut `__class__.__mro__` untuk menemukan modul `subprocess.Popen` atau `os`.
+- **D**. Pemanipulasian alamat IP resolver DNS pada konfigurasi jaringan server melalui injeksi variabel template string sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.
+- **E**. Penggantian berkas sertifikat HTTPS server secara otomatis menggunakan fungsi bawaan template rendering engine sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.
 
-> **Kunci Jawaban Benar:** **B. Level 2 (Standard)**
+> **Kunci Jawaban:** C. Penelusuran hirarki kelas bawaan objek via atribut `__class__.__mro__` untuk menemukan modul `subprocess.Popen` atau `os`.
 
 ---
+
+
+## Post Test
 
-### Soal 14 (Post Test)
-**Pertanyaan:**  
-Karakteristik utama yang membedakan OWASP ASVS Level 1 dengan Level 2 dan Level 3 adalah bahwa ASVS Level 1 ...
+### Soal 227
+Kerentanan XML External Entity (XXE) Injection pada parser XML yang tidak terkonfigurasi dengan aman memungkinkan penyerang membaca berkas sensitif server melalui definisi entitas ...
 
-**Pilihan Jawaban:**
-- **A.** Dapat diverifikasi secara penuh menggunakan teknik pengujian black-box tanpa mengharuskan akses ke kode sumber aplikasi atau wawancara arsitektur mendalam. *(Kunci Jawaban)*
-- **B.** Hanya berlaku untuk aplikasi yang dibangun menggunakan bahasa pemrograman Java.
-- **C.** Tidak memiliki persyaratan kontrol autentikasi dan otorisasi sama sekali.
-- **D.** Mengharuskan audit forensik militer di laboratorium bersertifikasi internasional.
-- **E.** Hanya dapat diaudit oleh lembaga penegak hukum pemerintah.
+- **A**. <!ENTITY xxe SYSTEM "file:///etc/passwd"> yang merujuk pada URI sistem berkas lokal melalui Document Type Definition (DTD).
+- **B**. <!ELEMENT note (to,from,heading,body)> yang mendefinisikan struktur skema dokumen berkas XML internal berdasarkan spesifikasi dokumen standar World Wide Web Consortium.
+- **C**. <?xml version="1.0" encoding="UTF-8"?> yang menentukan set karakter dan format serialisasi payload data yang dievaluasi secara asinkron pada runtime sisi klien.
+- **D**. <!ATTLIST payment status CDATA #REQUIRED> yang mewajibkan atribut status pada setiap elemen transaksi keuangan pada endpoint RESTful API yang memproses pertukaran data.
+- **E**. <![CDATA[SELECT * FROM users WHERE role='admin']]> yang membungkus teks kueri agar tidak diparsing oleh parser XML.
 
-> **Kunci Jawaban Benar:** **A. Dapat diverifikasi secara penuh menggunakan teknik pengujian black-box tanpa mengharuskan akses ke kode sumber aplikasi atau wawancara arsitektur mendalam.**
+> **Kunci Jawaban:** A. <!ENTITY xxe SYSTEM "file:///etc/passwd"> yang merujuk pada URI sistem berkas lokal melalui Document Type Definition (DTD).
 
 ---
 
-### Soal 15 (Post Test)
-**Pertanyaan:**  
-Berdasarkan Chapter V2 (Authentication) pada OWASP ASVS v4, rekomendasi modern mengenai kebijakan kata sandi pengguna adalah ...
+### Soal 228
+Pada implementasi token JSON Web Token (JWT), serangan 'Algorithm Confusion' (RS256 ke HS256) terjadi ketika penyerang ...
 
-**Pilihan Jawaban:**
-- **A.** Mewajibkan penggantian password berkala setiap 30 hari dan memaksa kombinasi karakter aneh yang rumit.
-- **B.** Mengizinkan panjang password minimal 12 karakter (dan mendukung hingga minimal 64 karakter), serta memverifikasi password terhadap daftar password yang pernah bocor (breached passwords list). *(Kunci Jawaban)*
-- **C.** Membatasi panjang password maksimal hanya 8 karakter demi efisiensi hashing.
-- **D.** Mengharuskan password berisi nomor induk kependudukan (NIK) pengguna.
-- **E.** Mengirimkan password baru dalam format plaintext melalui pesan SMS berkala.
+- **A**. Mengubah header token menjadi HS256 dan menandatanganinya menggunakan kunci publik RSA server yang diperlakukan sebagai HMAC shared secret.
+- **B**. Mengganti payload JSON token dengan kode skrip bash yang langsung dieksekusi saat proses deserialisasi header.
+- **C**. Menghapus tanda tangan kriptografi token dan mengatur field klausa expiration time menjadi nilai tak terhingga.
+- **D**. Memanfaatkan tabrakan hash pada fungsi MD5 untuk menghasilkan token duplikat yang memiliki nilai hash identik.
+- **E**. Mengirimkan token dengan ukuran string lebih dari 65536 byte untuk memicu kegagalan alokasi memori stack backend.
 
-> **Kunci Jawaban Benar:** **B. Mengizinkan panjang password minimal 12 karakter (dan mendukung hingga minimal 64 karakter), serta memverifikasi password terhadap daftar password yang pernah bocor (breached passwords list).**
+> **Kunci Jawaban:** A. Mengubah header token menjadi HS256 dan menandatanganinya menggunakan kunci publik RSA server yang diperlakukan sebagai HMAC shared secret.
 
 ---
 
-### Soal 16 (Post Test)
-**Pertanyaan:**  
-Berdasarkan Chapter V3 (Session Management) pada OWASP ASVS, nilai entropi minimum yang diwajibkan untuk pembuatan session identifier adalah ...
+### Soal 229
+Berdasarkan standar OWASP Application Security Verification Standard (ASVS 4.0), tingkatan 'Level 2' diverifikasi secara khusus untuk kategori aplikasi ...
 
-**Pilihan Jawaban:**
-- **A.** 16 bit
-- **B.** 32 bit
-- **C.** 64 bit
-- **D.** Minimal 128 bit pseudorandom entropy *(Kunci Jawaban)*
-- **E.** 1024 bit
+- **A**. Aplikasi publik sederhana yang hanya memuat konten informasi statis tanpa adanya fungsi transaksi atau autentikasi data.
+- **B**. Aplikasi open-source komunitas nirlaba yang tidak memerlukan audit keamanan kode sumber secara independen.
+- **C**. Infrastruktur militer dan sistem kendali kritis (critical infrastructure) yang kegagalannya dapat mengancam keselamatan jiwa.
+- **D**. Aplikasi bisnis umum (business-to-business) yang memproses transaksi bernilai penting, data pribadi, atau alur kerja bisnis korporat.
+- **E**. Prototipe perangkat lunak internal yang masih dalam fase perancangan ide dan belum terhubung ke jaringan internet.
 
-> **Kunci Jawaban Benar:** **D. Minimal 128 bit pseudorandom entropy**
+> **Kunci Jawaban:** D. Aplikasi bisnis umum (business-to-business) yang memproses transaksi bernilai penting, data pribadi, atau alur kerja bisnis korporat.
 
 ---
 
-### Soal 17 (Post Test)
-**Pertanyaan:**  
-Pada Chapter V4 (Access Control) OWASP ASVS, prinsip utama yang harus diimplementasikan pada mekanisme otorisasi server adalah ...
+### Soal 230
+Ancaman 'Subdomain Takeover' terjadi ketika sebuah organisasi memiliki konfigurasi DNS yang mengandung ...
 
-**Pilihan Jawaban:**
-- **A.** Otorisasi hanya perlu diperiksa sekali pada halaman beranda utama aplikasi.
-- **B.** Penerapan prinsip 'Deny by Default', di mana seluruh akses ditolak secara bawaan kecuali diberikan izin secara eksplisit, dan penegakan otorisasi wajib dilakukan di sisi server. *(Kunci Jawaban)*
-- **C.** Otorisasi dapat dipercayakan sepenuhnya kepada logika JavaScript di sisi browser klien.
-- **D.** Hak akses pengguna disimpan di dalam URL parameter tanpa enkripsi.
-- **E.** Administrator sistem boleh mengabaikan logging akses data sensitif.
+- **A**. Rekaman DNS A yang mengarah ke beberapa alamat IP publik internal dalam konfigurasi round-robin load balancing.
+- **B**. Rekaman NS cadangan yang dihosting di penyedia layanan registrasi domain yang sama dengan domain utama institusi.
+- **C**. Rekaman MX yang menunjuk ke server penyedia email korporat dengan sertifikat TLS yang kedaluwarsa satu hari.
+- **D**. Rekaman TXT SPF yang memiliki entri konfigurasi mekanisme pengecekan softfail (~all) alih-alih hardfail (-all).
+- **E**. Rekaman CNAME yang mengarah ke layanan cloud pihak ketiga yang layanannya telah dinonaktifkan (dangling DNS pointer).
 
-> **Kunci Jawaban Benar:** **B. Penerapan prinsip 'Deny by Default', di mana seluruh akses ditolak secara bawaan kecuali diberikan izin secara eksplisit, dan penegakan otorisasi wajib dilakukan di sisi server.**
+> **Kunci Jawaban:** E. Rekaman CNAME yang mengarah ke layanan cloud pihak ketiga yang layanannya telah dinonaktifkan (dangling DNS pointer).
 
 ---
 
-### Soal 18 (Post Test)
-**Pertanyaan:**  
-Untuk mencegah browser menyimpan halaman yang berisi informasi rahasia perbankan ke dalam web cache lokal (Chapter V8 Data Protection), header respons HTTP yang wajib disertakan adalah ...
+### Soal 231
+Pada arsitektur GraphQL API, mengapa serangan DoS berbasis kueri bersarang (Recursive / Deeply Nested Query) sangat berbahaya bagi performa backend server?
 
-**Pilihan Jawaban:**
-- **A.** Cache-Control: no-store, max-age=0 dan Pragma: no-cache *(Kunci Jawaban)*
-- **B.** Cache-Control: public, max-age=86400
-- **C.** Accept-Encoding: gzip, deflate
-- **D.** Connection: keep-alive
-- **E.** Content-Encoding: br
+- **A**. Kueri rekursif secara otomatis menghapus seluruh indeks relasi tabel foreign key pada basis data relasional server guna memitigasi risiko pembajakan sesi otentikasi pengguna.
+- **B**. Kueri bersarang menyebabkan compiler bahasa server memuat ulang seluruh dependensi npm package ke memori virtual.
+- **C**. GraphQL parser akan mematikan koneksi soket jaringan TLS setiap kali membaca kueri yang memiliki kedalaman lebih dari dua tingkat pada endpoint RESTful API yang memproses pertukaran data.
+- **D**. Relasi sirkular antar tipe data (misal author->posts->author) dapat dieksploitasi untuk memicu beban pemrosesan dan kueri database eksponensial.
+- **E**. Format kueri GraphQL mengubah izin sistem berkas server aplikasi menjadi mode baca-tulis publik untuk seluruh proses.
 
-> **Kunci Jawaban Benar:** **A. Cache-Control: no-store, max-age=0 dan Pragma: no-cache**
+> **Kunci Jawaban:** D. Relasi sirkular antar tipe data (misal author->posts->author) dapat dieksploitasi untuk memicu beban pemrosesan dan kueri database eksponensial.
 
 ---
 
-### Soal 19 (Post Test)
-**Pertanyaan:**  
-Kerentanan 'Mass Assignment' (atau Over-Posting) pada framework web modern terjadi ketika ...
+### Soal 232
+Kerentanan HTTP Request Smuggling (HRS) varian 'CL.TE' terjadi karena desinkronisasi penafsiran batas permintaan HTTP antara front-end proxy dan back-end server, di mana ...
 
-**Pilihan Jawaban:**
-- **A.** Framework secara otomatis mengikat (bind) seluruh parameter input HTTP request langsung ke atribut objek data/model tanpa membatasi field sensitif (misal field role='admin'). *(Kunci Jawaban)*
-- **B.** Pengguna mengirimkan email ke 10.000 alamat sekaligus.
-- **C.** Aplikasi tidak mendukung database relasional MySQL.
-- **D.** Dua pengguna menggunakan satu akun secara bersamaan dari lokasi berbeda.
-- **E.** Server web kehabisan soket TCP akibat serangan SYN flood.
+- **A**. Front-end memblokir seluruh header Content-Type, sedangkan back-end mewajibkan header Content-Type bertipe multipart/form-data.
+- **B**. Front-end memproses header Transfer-Encoding, sedangkan back-end server memproses header Content-Length.
+- **C**. Front-end memproses header Content-Length, sedangkan back-end server memproses header Transfer-Encoding: chunked secara komprehensif.
+- **D**. Front-end menolak koneksi HTTP/1.1, sedangkan back-end server hanya mendukung koneksi HTTP/0.9 versi lawas.
+- **E**. Front-end mengenkripsi isi payload HTTP, sedangkan back-end server mengharapkan payload dikirim dalam teks biasa.
 
-> **Kunci Jawaban Benar:** **A. Framework secara otomatis mengikat (bind) seluruh parameter input HTTP request langsung ke atribut objek data/model tanpa membatasi field sensitif (misal field role='admin').**
+> **Kunci Jawaban:** C. Front-end memproses header Content-Length, sedangkan back-end server memproses header Transfer-Encoding: chunked secara komprehensif.
 
 ---
 
-### Soal 20 (Post Test)
-**Pertanyaan:**  
-Header 'X-Content-Type-Options: nosniff' memiliki fungsi krusial untuk mencegah serangan ...
+### Soal 233
+Cross-Site WebSocket Hijacking (CSWSH) dapat terjadi pada aplikasi yang mengandalkan komunikasi dua arah WebSocket jika server aplikasi ...
 
-**Pilihan Jawaban:**
-- **A.** MIME-type Confusion / MIME Sniffing, di mana browser mengeksekusi file non-eksekusi (seperti file teks atau gambar yang disusupi skrip) sebagai JavaScript. *(Kunci Jawaban)*
-- **B.** Brute-force password SSH
-- **C.** Man-in-the-Middle pada router Wi-Fi
-- **D.** Buffer overflow pada compiler C++
-- **E.** Denial of Service pada server DNS
+- **A**. Tidak membatasi laju pengiriman frame data WebSocket per detik menggunakan algoritma token bucket yang dievaluasi secara asinkron pada runtime sisi klien.
+- **B**. Mengizinkan pengiriman frame data biner di samping frame data berbasis teks berformat serialisasi JSON berdasarkan spesifikasi dokumen standar World Wide Web Consortium.
+- **C**. Menggunakan port transmisi default 80 alih-alih port terenkripsi TLS 443 pada koneksi internet publik yang dievaluasi secara asinkron pada runtime sisi klien.
+- **D**. Hanya mengandalkan cookie sesi bawaan peramban tanpa memvalidasi header Origin atau token anti-CSRF saat proses handshake HTTP upgrade.
+- **E**. Tidak mengimplementasikan mekanisme deteksi heartbeat (ping/pong frame) secara berkala pada koneksi aktif.
 
-> **Kunci Jawaban Benar:** **A. MIME-type Confusion / MIME Sniffing, di mana browser mengeksekusi file non-eksekusi (seperti file teks atau gambar yang disusupi skrip) sebagai JavaScript.**
+> **Kunci Jawaban:** D. Hanya mengandalkan cookie sesi bawaan peramban tanpa memvalidasi header Origin atau token anti-CSRF saat proses handshake HTTP upgrade.
 
 ---
 
-### Soal 21 (Post Test)
-**Pertanyaan:**  
-Header 'X-Frame-Options: DENY' (atau CSP frame-ancestors 'none') digunakan untuk melindungi pengguna aplikasi web dari serangan ...
+### Soal 234
+Ketika aplikasi web melakukan filter sederhana dengan menghapus string `../` dari input nama berkas, penyerang dapat melewati filter Path Traversal ini menggunakan teknik ...
 
-**Pilihan Jawaban:**
-- **A.** SQL Injection
-- **B.** Clickjacking (UI Redressing), di mana situs korban dimuat dalam iframe transparan di atas halaman penyerang untuk memanipulasi klik pengguna. *(Kunci Jawaban)*
-- **C.** Session Fixation
-- **D.** Format String Attack
-- **E.** Buffer Overflow
+- **A**. Mengirimkan input yang terdiri dari karakter spasi dan baris baru (CRLF) pada parameter kueri URL aplikasi yang dievaluasi secara asinkron pada runtime sisi klien.
+- **B**. Menyisipkan urutan bertingkat seperti `....//` atau melakukan URL double-encoding seperti `%252e%252e%252f` secara komprehensif.
+- **C**. Mengompresi berkas target ke dalam format arsip tar.gz sebelum mengirimkan permintaan unduh berkas ke server.
+- **D**. Menambahkan ekstensi berkas palsu seperti `.jpg` pada akhir permintaan HTTP POST yang dikirimkan klien.
+- **E**. Mengubah metode permintaan HTTP dari GET menjadi OPTIONS untuk meminta daftar opsi metode yang diizinkan.
 
-> **Kunci Jawaban Benar:** **B. Clickjacking (UI Redressing), di mana situs korban dimuat dalam iframe transparan di atas halaman penyerang untuk memanipulasi klik pengguna.**
+> **Kunci Jawaban:** B. Menyisipkan urutan bertingkat seperti `....//` atau melakukan URL double-encoding seperti `%252e%252e%252f` secara komprehensif.
 
 ---
 
-### Soal 22 (Post Test)
-**Pertanyaan:**  
-Pada OWASP MASVS (Mobile Application Security Verification Standard), kontrol MASVS-STORAGE mensyaratkan penyimpanan data kredensial dan kunci kriptografi pada perangkat mobile harus menggunakan ...
+### Soal 235
+Kerentanan Mass Assignment (Over-Posting) pada framework web modern (seperti Ruby on Rails, ASP.NET, atau Spring) terjadi ketika ...
 
-**Pilihan Jawaban:**
-- **A.** Mekanisme penyimpanan aman berbasis perangkat keras (Hardware-backed Keystore pada Android atau Keychain pada iOS). *(Kunci Jawaban)*
-- **B.** Penyimpanan berkas teks biasa pada SD Card eksternal yang dapat diakses publik.
-- **C.** SharedPreferences atau NSUserDefaults tanpa enkripsi.
-- **D.** Komentar hardcoded di dalam source code file Java/Swift.
-- **E.** File database SQLite lokal yang dapat dibaca semua aplikasi lain.
+- **A**. Aplikasi mengizinkan pengiriman ribuan permintaan pendaftaran akun pengguna dalam rentang waktu satu detik yang dievaluasi secara asinkron pada runtime sisi klien.
+- **B**. Database administrator memberikan hak akses DBA kepada pengguna biasa pada skema tabel data transaksional sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.
+- **C**. Server web mengalami kehabisan memori akibat proses parsing berkas unggahan berukuran lebih dari 100 Megabyte guna memitigasi risiko pembajakan sesi otentikasi pengguna.
+- **D**. Pengembang lupa memasang sertifikat enkripsi SSL pada antarmuka manajemen basis data relasional server produksi sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.
+- **E**. Framework secara otomatis memetakan seluruh parameter HTTP request ke properti model database tanpa daftar putih atribut yang diizinkan.
 
-> **Kunci Jawaban Benar:** **A. Mekanisme penyimpanan aman berbasis perangkat keras (Hardware-backed Keystore pada Android atau Keychain pada iOS).**
+> **Kunci Jawaban:** E. Framework secara otomatis memetakan seluruh parameter HTTP request ke properti model database tanpa daftar putih atribut yang diizinkan.
 
 ---
 
-### Soal 23 (Post Test)
-**Pertanyaan:**  
-Sebuah aplikasi web memuat data input serialized objek dari cookie pengguna tanpa verifikasi tanda tangan kriptografi (HMAC). Bahaya terbesar dari kerentanan Insecure Deserialization ini adalah ...
+### Soal 236
+Dalam arsitektur API Gateway modern, algoritma 'Token Bucket' diterapkan untuk mitigasi serangan brute-force dan DoS dengan cara kerja ...
 
-**Pilihan Jawaban:**
-- **A.** Penyerang dapat merekayasa serialized object berbahaya (gadget chain) yang mengeksekusi kode perintah sistem operasi secara Remote Code Execution (RCE). *(Kunci Jawaban)*
-- **B.** Tampilan website menjadi tidak responsif pada layar ponsel.
-- **C.** Ukuran font tulisan paragraf artikel membesar sendiri.
-- **D.** Waktu loading halaman web bertambah sekitar 10 milidetik.
-- **E.** Browser menampilkan notifikasi bahwa halaman belum diterjemahkan.
+- **A**. Menyimpan seluruh payload permintaan ke dalam antrean disk lokal hingga ruang penyimpanan server habis total guna memitigasi risiko pembajakan sesi otentikasi pengguna.
+- **B**. Mengirimkan email peringatan ke administrator setiap kali ada permintaan HTTP yang mengembalikan status kode 404.
+- **C**. Memblokir secara permanen seluruh alamat IP yang melakukan permintaan lebih dari satu kali dalam satu hari kerja.
+- **D**. Mewajibkan klien melakukan proses kalkulasi Proof-of-Work berbasis penambangan kripto sebelum permintaan diproses.
+- **E**. Mengisi token ke wadah dengan laju konstan; setiap permintaan memakan token, dan permintaan ditolak/dibatasi jika wadah kosong.
 
-> **Kunci Jawaban Benar:** **A. Penyerang dapat merekayasa serialized object berbahaya (gadget chain) yang mengeksekusi kode perintah sistem operasi secara Remote Code Execution (RCE).**
+> **Kunci Jawaban:** E. Mengisi token ke wadah dengan laju konstan; setiap permintaan memakan token, dan permintaan ditolak/dibatasi jika wadah kosong.
 
 ---
 
-### Soal 24 (Post Test)
-**Pertanyaan:**  
-Perbedaan mendasar antara Blind SQL Injection (Time-based / Boolean-based) dan In-Band SQL Injection (Union-based) adalah ...
+### Soal 237
+Mengapa kerentanan Open Redirect (URL Redirection) pada alur otentikasi OAuth 2.0 dapat berakibat fatal bagi keamanan akun pengguna?
 
-**Pilihan Jawaban:**
-- **A.** Blind SQLi tidak menampilkan data hasil query atau pesan error database secara langsung pada respon HTTP, sehingga penyerang harus merekonstruksi data karakter demi karakter berdasarkan respons boolean atau jeda waktu. *(Kunci Jawaban)*
-- **B.** Blind SQLi hanya dapat dilakukan pada server web berbasis Microsoft IIS.
-- **C.** In-Band SQLi tidak memerlukan koneksi internet untuk mengekstrak data.
-- **D.** Blind SQLi selalu terdeteksi dan diblokir oleh antivirus komputer pengguna.
-- **E.** In-Band SQLi tidak pernah merusak integritas database server.
+- **A**. Mengubah algoritma enkripsi password database dari Argon2id menjadi fungsi hash MD5 tanpa salt secara otomatis berdasarkan spesifikasi dokumen standar World Wide Web Consortium.
+- **B**. Mengakibatkan server otentikasi menghapus seluruh tabel basis data pengguna akibat kegagalan resolusi URL redirect berdasarkan spesifikasi dokumen standar World Wide Web Consortium.
+- **C**. Penyerang dapat memanipulasi parameter redirect_uri yang tidak divalidasi ketat untuk mencuri authorization code atau token akses korban.
+- **D**. Memicu kebocoran kunci privat TLS server otentikasi ke peramban pengguna melalui pesan error redirection pada endpoint RESTful API yang memproses pertukaran data.
+- **E**. Menonaktifkan proteksi firewall Web Application Firewall (WAF) pada seluruh endpoint API penyedia identitas.
 
-> **Kunci Jawaban Benar:** **A. Blind SQLi tidak menampilkan data hasil query atau pesan error database secara langsung pada respon HTTP, sehingga penyerang harus merekonstruksi data karakter demi karakter berdasarkan respons boolean atau jeda waktu.**
+> **Kunci Jawaban:** C. Penyerang dapat memanipulasi parameter redirect_uri yang tidak divalidasi ketat untuk mencuri authorization code atau token akses korban.
 
 ---
 
-### Soal 25 (Post Test)
-**Pertanyaan:**  
-Kategori OWASP Top 10 'Vulnerable and Outdated Components' (A06) paling efektif dimitigasi dalam siklus CI/CD pipeline modern menggunakan perkakas ...
+### Soal 238
+Header `Strict-Transport-Security` (HSTS) dengan arahan `max-age=31536000; includeSubDomains; preload` secara proaktif melindungi pengguna dari ...
 
-**Pilihan Jawaban:**
-- **A.** Software Composition Analysis (SCA) seperti Dependency-Check, Snyk, atau npm audit yang memindai kerentanan CVE pada library pihak ketiga. *(Kunci Jawaban)*
-- **B.** Aplikasi defragmentasi harddisk terjadwal.
-- **C.** Pemeriksa ejaan kata (spell checker) pada file markdown.
-- **D.** Perangkat penstabil tegangan listrik (UPS) server.
-- **E.** Generator gambar AI untuk thumbnail artikel.
+- **A**. Serangan SSL Stripping yang menurunkan koneksi aman HTTPS menjadi HTTP biasa saat inisiasi koneksi pertama kali.
+- **B**. Serangan SQL Injection berbasis kueri bertingkat pada halaman formulir pencarian data transaksi guna memitigasi risiko pembajakan sesi otentikasi pengguna.
+- **C**. Serangan brute-force pada formulir otentikasi pengguna melalui jaringan botnet terdistribusi global yang dievaluasi secara asinkron pada runtime sisi klien.
+- **D**. Serangan eksfiltrasi data melalui rekaman kueri DNS terowongan (DNS Tunneling data exfiltration) sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.
+- **E**. Serangan perusakan integritas data pada cache memori sistem Redis yang tidak dilindungi kata sandi sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.
 
-> **Kunci Jawaban Benar:** **A. Software Composition Analysis (SCA) seperti Dependency-Check, Snyk, atau npm audit yang memindai kerentanan CVE pada library pihak ketiga.**
+> **Kunci Jawaban:** A. Serangan SSL Stripping yang menurunkan koneksi aman HTTPS menjadi HTTP biasa saat inisiasi koneksi pertama kali.
 
 ---
 
-## 📌 Week 6 - Cryptography, Cipher & Hash
 
-### Soal 1 (Pre Test)
-**Pertanyaan:**  
-Prinsip dasar Shannon mengenai 'Confusion' dan 'Diffusion' dalam perancangan algoritma block cipher bertujuan untuk ...
+# Week 6
 
-**Pilihan Jawaban:**
-- **A.** Confusion membuat hubungan antara kunci dan ciphertext serumit mungkin, sedangkan Diffusion menyebarkan pengaruh satu bit plaintext ke banyak bit ciphertext. *(Kunci Jawaban)*
-- **B.** Confusion mempercepat proses komputasi CPU, sedangkan Diffusion mengompresi ukuran data.
-- **C.** Confusion mengubah ciphertext menjadi plaintext tanpa memerlukan kunci rahasia.
-- **D.** Diffusion mengganti seluruh karakter alfabet dengan angka acak.
-- **E.** Confusion hanya berlaku untuk enkripsi asimetris, sedangkan Diffusion untuk fungsi hash.
 
-> **Kunci Jawaban Benar:** **A. Confusion membuat hubungan antara kunci dan ciphertext serumit mungkin, sedangkan Diffusion menyebarkan pengaruh satu bit plaintext ke banyak bit ciphertext.**
+## Pre Test
 
+### Soal 239
+Dalam protokol komunikasi aman modern (seperti TLS 1.3 dan PGP), mengapa arsitektur Hybrid Cryptosystem selalu dipilih daripada hanya mengandalkan kriptografi kunci publik murni?
+
+- **A**. Kriptografi asimetris tidak dapat memproses data bertipe teks biner dan hanya kompatibel dengan deretan karakter ASCII murni yang diverifikasi menggunakan kode autentikasi pesan kriptografis.
+- **B**. Kriptografi asimetris memiliki komputasi matematika yang sangat lambat, sehingga hanya digunakan untuk pertukaran kunci simetris cepat.
+- **C**. Kriptografi simetris tidak memerlukan kunci rahasia apa pun sehingga data dapat didekripsi secara langsung oleh siapa saja berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **D**. Algoritma asimetris telah dilarang penggunaannya oleh standar keamanan NIST karena rentan terhadap serangan brute-force sederhana sesuai dengan rekomendasi panjang kunci NIST SP 800-57.
+- **E**. Kriptografi simetris menghasilkan ukuran ciphertext yang membengkak hingga sepuluh kali lipat dibanding ukuran plaintext aslinya.
+
+> **Kunci Jawaban:** B. Kriptografi asimetris memiliki komputasi matematika yang sangat lambat, sehingga hanya digunakan untuk pertukaran kunci simetris cepat.
+
 ---
 
-### Soal 2 (Pre Test)
-**Pertanyaan:**  
-Dalam perancangan algoritma Advanced Encryption Standard (AES), tahapan transformasi non-linear yang bertanggung jawab menyediakan sifat 'Confusion' adalah ...
+### Soal 240
+Mengapa mode operasi Electronic Codebook (ECB) dianggap sangat tidak aman untuk mengenkripsi data gambar atau dokumen yang memiliki pola berulang?
 
-**Pilihan Jawaban:**
-- **A.** ShiftRows
-- **B.** SubBytes (menggunakan S-box berbasis invers perkalian Galois Field GF(2^8)) *(Kunci Jawaban)*
-- **C.** MixColumns
-- **D.** AddRoundKey
-- **E.** Key Expansion
+- **A**. Blok plaintext yang identik akan selalu menghasilkan blok ciphertext yang identik, sehingga pola data asli tetap terpancar jelas.
+- **B**. ECB membatasi panjang pesan maksimum hanya sampai 128 byte dan secara otomatis menolak pesan berukuran besar pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.
+- **C**. ECB mewajibkan pertukaran kunci privat melalui jaringan internet tanpa adanya enkripsi saluran sama sekali berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **D**. ECB menggunakan fungsi hash satu arah yang tidak memungkinkan proses dekripsi kembali ke plaintext asli.
+- **E**. ECB menyisipkan alamat IP pengguna ke dalam header setiap blok ciphertext yang dihasilkan saat enkripsi.
 
-> **Kunci Jawaban Benar:** **B. SubBytes (menggunakan S-box berbasis invers perkalian Galois Field GF(2^8))**
+> **Kunci Jawaban:** A. Blok plaintext yang identik akan selalu menghasilkan blok ciphertext yang identik, sehingga pola data asli tetap terpancar jelas.
 
 ---
 
-### Soal 3 (Pre Test)
-**Pertanyaan:**  
-Mengapa penggunaan algoritma Double-DES (enkripsi DES dua kali berturut-turut dengan dua kunci berbeda K1 dan K2) TIDAK memberikan keamanan 112 bit sebagaimana yang diharapkan?
+### Soal 241
+Pada mode operasi Cipher Block Chaining (CBC), apa dampak matematis pada plaintext berikutnya jika seorang penyerang membalikkan 1 bit pada blok ciphertext $C_i$ saat transmisi data?
 
-**Pilihan Jawaban:**
-- **A.** Double-DES rentan terhadap serangan Meet-in-the-Middle Attack yang mereduksi kompleksitas pencarian kunci menjadi sekitar 2^57 operasi. *(Kunci Jawaban)*
-- **B.** Kunci kedua otomatis terhapus oleh prosesor saat enkripsi tahap pertama selesai.
-- **C.** Dua kunci DES selalu menghasilkan nilai ciphertext yang identik dengan plaintext.
-- **D.** Double-DES hanya dapat mengenkripsi file dengan ukuran kurang dari 8 byte.
-- **E.** Algoritma DES tidak mendukung operasi perulangan round.
+- **A**. Blok plaintext $P_i$ rusak total menjadi data acak, dan bit yang bersesuaian pada blok plaintext $P_{i+1}$ ikut terbalik persis.
+- **B**. Seluruh blok ciphertext setelahnya secara instan berubah menjadi deretan nilai null byte (0x00) secara serentak.
+- **C**. Kunci enkripsi AES server seketika bocor ke penyerang melalui perbedaan waktu pemrosesan bit transmisi.
+- **D**. Dekripsi blok $P_i$ dan seluruh blok setelahnya tetap berhasil sempurna tanpa adanya distorsi satu bit pun.
+- **E**. Sistem operasi penerima data langsung mengalami kernel panic akibat pelanggaran batasan memori buffer.
 
-> **Kunci Jawaban Benar:** **A. Double-DES rentan terhadap serangan Meet-in-the-Middle Attack yang mereduksi kompleksitas pencarian kunci menjadi sekitar 2^57 operasi.**
+> **Kunci Jawaban:** A. Blok plaintext $P_i$ rusak total menjadi data acak, dan bit yang bersesuaian pada blok plaintext $P_{i+1}$ ikut terbalik persis.
 
 ---
 
-### Soal 4 (Pre Test)
-**Pertanyaan:**  
-Kelemahan paling fatal dari mode operasi Electronic Codebook (ECB) pada enkripsi berkas yang menjadikannya tidak aman untuk data lebih dari satu blok adalah ...
+### Soal 242
+Kerentanan Padding Oracle Attack (seperti serangan POODLE pada mode CBC dengan PKCS#7 padding) memungkinkan penyerang memulihkan seluruh plaintext tanpa mengetahui kunci enkripsi karena ...
 
-**Pilihan Jawaban:**
-- **A.** ECB berjalan sangat lambat dibandingkan mode operasi lainnya.
-- **B.** ECB bersifat deterministik di mana blok plaintext yang identik akan selalu menghasilkan blok ciphertext yang identik, sehingga membocorkan pola struktur data asli. *(Kunci Jawaban)*
-- **C.** ECB memerlukan kunci yang berbeda untuk setiap blok data.
-- **D.** ECB hanya dapat digunakan untuk mendekripsi data tetapi tidak dapat mengenkripsi.
-- **E.** Ciphertext yang dihasilkan ECB memiliki ukuran 10 kali lebih besar dari plaintext.
+- **A**. Server membocorkan kunci privat master melalui respon kode status HTTP 500 saat validasi sertifikat SSL gagal berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **B**. Penyerang dapat memaksa prosesor server beralih ke mode komputasi 8-bit yang mudah dibobol secara exhaustive search.
+- **C**. Algoritma CBC secara otomatis menyisipkan kata sandi login pengguna ke dalam byte padding terakhir dari pesan pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.
+- **D**. Panjang blok enkripsi CBC selalu berkurang setengahnya setiap kali terjadi kegagalan transmisi paket data TCP.
+- **E**. Server membedakan respons antara kesalahan format padding PKCS#7 dan kesalahan integritas payload, menjadi oracle validasi byte.
 
-> **Kunci Jawaban Benar:** **B. ECB bersifat deterministik di mana blok plaintext yang identik akan selalu menghasilkan blok ciphertext yang identik, sehingga membocorkan pola struktur data asli.**
+> **Kunci Jawaban:** E. Server membedakan respons antara kesalahan format padding PKCS#7 dan kesalahan integritas payload, menjadi oracle validasi byte.
 
 ---
 
-### Soal 5 (Pre Test)
-**Pertanyaan:**  
-Pada mode operasi Cipher Block Chaining (CBC), apa peran utama dari Initialization Vector (IV) yang di-XOR dengan blok plaintext pertama?
+### Soal 243
+Dalam mode operasi Counter (CTR) maupun Galois/Counter Mode (GCM), mengapa penggunaan ulang Initialization Vector (IV / Nonce) dengan kunci yang sama berakibat fatal bagi kerahasiaan?
 
-**Pilihan Jawaban:**
-- **A.** Memastikan bahwa dua plaintext identik yang dienkripsi dengan kunci yang sama menghasilkan ciphertext yang sepenuhnya berbeda dan tidak dapat diprediksi. *(Kunci Jawaban)*
-- **B.** Menyimpan nilai hash dari seluruh file untuk verifikasi tanda tangan digital.
-- **C.** Mengompresi blok pertama agar muat dalam register CPU 32-bit.
-- **D.** Menggantikan kebutuhan kunci simetris rahasia.
-- **E.** Menghapus padding PKCS#7 secara otomatis saat dekripsi.
+- **A**. Keystream yang dihasilkan identik, sehingga operasi XOR dua ciphertext ($C_1 \oplus C_2$) membuka XOR kedua plaintext ($P_1 \oplus P_2$).
+- **B**. Penggunaan ulang IV menyebabkan server web langsung mematikan protokol TLS dan beralih ke transmisi telnet pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.
+- **C**. Alamat memori heap kernel server akan terhapus secara otomatis oleh pengendali hardware disk penyimpanan.
+- **D**. Sertifikat digital root CA peramban klien langsung masuk ke dalam daftar pencabutan sertifikat global.
+- **E**. Kunci AES secara otomatis direset kembali ke nilai default pabrik (seluruh byte bernilai 0x00).
 
-> **Kunci Jawaban Benar:** **A. Memastikan bahwa dua plaintext identik yang dienkripsi dengan kunci yang sama menghasilkan ciphertext yang sepenuhnya berbeda dan tidak dapat diprediksi.**
+> **Kunci Jawaban:** A. Keystream yang dihasilkan identik, sehingga operasi XOR dua ciphertext ($C_1 \oplus C_2$) membuka XOR kedua plaintext ($P_1 \oplus P_2$).
 
 ---
 
-### Soal 6 (Pre Test)
-**Pertanyaan:**  
-Serangan Padding Oracle Attack pada implementasi enkripsi mode CBC memanfaatkan kerentanan di mana ...
+### Soal 244
+Skema Authenticated Encryption with Associated Data (AEAD), seperti AES-GCM atau ChaCha20-Poly1305, memberikan keunggulan keamanan mutlak dibanding skema enkripsi konvensional karena ...
 
-**Pilihan Jawaban:**
-- **A.** Server membocorkan informasi melalui pesan error yang membedakan kegagalan padding PKCS#7 yang tidak valid dengan kegagalan dekripsi lainnya, sehingga penyerang dapat mendekripsi ciphertext blok demi blok. *(Kunci Jawaban)*
-- **B.** Penyerang memecahkan kunci AES-256 menggunakan serangan brute-force dalam hitungan menit.
-- **C.** Server web tidak memperbarui sertifikat SSL yang sudah kadaluarsa.
-- **D.** Pengguna menggunakan IV bernilai nol untuk seluruh komunikasi.
-- **E.** Sistem operasi menonaktifkan fitur firewall pada port database.
+- **A**. AEAD menjamin kecepatan transmisi hingga seratus gigabit per detik tanpa memerlukan perangkat keras tambahan sesuai dengan rekomendasi panjang kunci NIST SP 800-57.
+- **B**. Mampu mengenkripsi data secara permanen sehingga data tersebut tidak dapat didekripsi oleh siapa pun di masa depan.
+- **C**. Menghilangkan kebutuhan akan pertukaran kunci rahasia antara pihak pengirim dan penerima data informasi.
+- **D**. Menyediakan jaminan kerahasiaan sekaligus integritas dan autentikasi data (melalui auth tag) secara simultan dalam satu primitif.
+- **E**. Mengizinkan penggunaan kunci enkripsi yang memiliki panjang fleksibel mulai dari 1 bit hingga tak terhingga.
 
-> **Kunci Jawaban Benar:** **A. Server membocorkan informasi melalui pesan error yang membedakan kegagalan padding PKCS#7 yang tidak valid dengan kegagalan dekripsi lainnya, sehingga penyerang dapat mendekripsi ciphertext blok demi blok.**
+> **Kunci Jawaban:** D. Menyediakan jaminan kerahasiaan sekaligus integritas dan autentikasi data (melalui auth tag) secara simultan dalam satu primitif.
 
 ---
 
-### Soal 7 (Pre Test)
-**Pertanyaan:**  
-Mode operasi Counter (CTR) mengubah block cipher menjadi stream cipher dengan mengenkripsi kombinasi nonce dan counter. Aturan keamanan MUTLAK yang tidak boleh dilanggar pada mode CTR adalah ...
+### Soal 245
+Dalam struktur algoritma Advanced Encryption Standard (AES), tahapan transformasi manakah yang bertanggung jawab menghadirkan sifat non-linearitas (confusion) yang kuat terhadap kriptoanalisis?
 
-**Pilihan Jawaban:**
-- **A.** Kunci dan nonce tidak boleh digunakan kembali untuk mengenkripsi dua pesan yang berbeda (keberulangan keystream membocorkan plaintext melalui operasi XOR). *(Kunci Jawaban)*
-- **B.** Ukuran plaintext harus selalu kelipatan tepat 128 bit.
-- **C.** Proses enkripsi tidak boleh dijalankan secara paralel pada multi-core CPU.
-- **D.** Counter harus selalu bernilai bilangan prima negatif.
-- **E.** Kunci harus diganti setiap kali satu byte data selesai diproses.
+- **A**. Transformasi ShiftRows yang menggeser byte pada tiap baris matriks state secara siklik ke arah kiri yang diverifikasi menggunakan kode autentikasi pesan kriptografis.
+- **B**. Transformasi MixColumns yang mengalikan tiap kolom state dengan polinomial matriks konstan yang dapat dibalik sesuai dengan rekomendasi panjang kunci NIST SP 800-57.
+- **C**. Transformasi SubBytes yang mengganti setiap byte state menggunakan kotak substitusi (S-Box) berbasis invers Galois Field GF(2^8).
+- **D**. Transformasi AddRoundKey yang melakukan operasi bitwise XOR antara matriks state dengan subkunci ronde saat ini.
+- **E**. Transformasi KeyExpansion yang menggandakan panjang kunci master menggunakan deret bilangan Fibonacci.
 
-> **Kunci Jawaban Benar:** **A. Kunci dan nonce tidak boleh digunakan kembali untuk mengenkripsi dua pesan yang berbeda (keberulangan keystream membocorkan plaintext melalui operasi XOR).**
+> **Kunci Jawaban:** C. Transformasi SubBytes yang mengganti setiap byte state menggunakan kotak substitusi (S-Box) berbasis invers Galois Field GF(2^8).
 
 ---
 
-### Soal 8 (Pre Test)
-**Pertanyaan:**  
-Mengapa mode Galois/Counter Mode (GCM) menjadi standar mode enkripsi simetris paling direkomendasikan pada protokol modern seperti TLS 1.3?
+### Soal 246
+Mengapa skema 2DES (Double DES dengan dua kunci independen 56-bit) tidak memberikan keamanan $2^{112}$ bit, melainkan hanya setara $2^{57}$ operasi?
 
-**Pilihan Jawaban:**
-- **A.** GCM menyediakan Authenticated Encryption with Associated Data (AEAD) yang menjamin kerahasiaan (confidentiality) sekaligus keaslian dan integritas data (authenticity/integrity) dengan performa tinggi. *(Kunci Jawaban)*
-- **B.** GCM tidak memerlukan kunci rahasia sama sekali dalam operasinya.
-- **C.** GCM kebal terhadap serangan komputer kuantum selamanya.
-- **D.** GCM menggantikan kebutuhan algoritma asimetris RSA pada pertukaran kunci.
-- **E.** GCM secara otomatis menghapus malware dari file yang dienkripsi.
+- **A**. Adanya kelemahan pada generator bilangan acak semu sistem operasi yang menghasilkan kunci kembar.
+- **B**. Kunci kedua selalu dapat diturunkan dari kunci pertama melalui fungsi permutasi terbalik (IP-1).
+- **C**. Panjang blok DES yang berukuran 64-bit memicu tabrakan ciphertext secara instan akibat Sweet32 attack.
+- **D**. Tabel permutasi ekspansi (E-box) pada putaran Feistel DES dapat diselesaikan menggunakan eliminasi Gauss.
+- **E**. Rentan terhadap serangan Meet-in-the-Middle yang mencocokkan hasil enkripsi maju dan dekripsi mundur di tabel memori tengah.
 
-> **Kunci Jawaban Benar:** **A. GCM menyediakan Authenticated Encryption with Associated Data (AEAD) yang menjamin kerahasiaan (confidentiality) sekaligus keaslian dan integritas data (authenticity/integrity) dengan performa tinggi.**
+> **Kunci Jawaban:** E. Rentan terhadap serangan Meet-in-the-Middle yang mencocokkan hasil enkripsi maju dan dekripsi mundur di tabel memori tengah.
 
 ---
 
-### Soal 9 (Pre Test)
-**Pertanyaan:**  
-Properti 'Collision Resistance' pada fungsi cryptographic hash menjamin bahwa ...
+### Soal 247
+Pada algoritma kriptografi kunci publik RSA, jika dipilih dua bilangan prima $p=61$ dan $q=53$, nilai dari fungsi totien Euler $\phi(n)$ yang digunakan untuk menghitung pasangan kunci privat adalah ...
 
-**Pilihan Jawaban:**
-- **A.** Secara komputasi sangat sulit untuk menemukan dua pesan berbeda sembarang m1 dan m2 sehingga H(m1) = H(m2). *(Kunci Jawaban)*
-- **B.** Sangat mudah untuk merekonstruksi pesan asli m jika diberikan nilai hash H(m).
-- **C.** Nilai hash selalu bertambah panjang jika ukuran file bertambah besar.
-- **D.** Fungsi hash dapat didekripsi menggunakan private key pemilik data.
-- **E.** Dua file berbeda akan selalu menghasilkan nilai hash yang sama pada tanggal ganjil.
+- **A**. Nilai 3233 yang merupakan hasil perkalian skalar langsung antara bilangan prima $p$ dan bilangan prima $q$ berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **B**. Nilai 65537 yang merupakan nilai konstanta eksponen publik Fermat keempat paling umum digunakan di dunia.
+- **C**. Nilai 114 yang merupakan hasil penjumlahan langsung dari parameter $p$ dan parameter prima $q$ yang diverifikasi menggunakan kode autentikasi pesan kriptografis.
+- **D**. Nilai 1560 yang didapatkan dari pembagian nilai modulus sistem dengan bilangan bulat terkecil dua pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.
+- **E**. Nilai 3120 yang dihitung dari rumus matematis totien Euler $\phi(n) = (p - 1) \times (q - 1) = 60 \times 52$.
 
-> **Kunci Jawaban Benar:** **A. Secara komputasi sangat sulit untuk menemukan dua pesan berbeda sembarang m1 dan m2 sehingga H(m1) = H(m2).**
+> **Kunci Jawaban:** E. Nilai 3120 yang dihitung dari rumus matematis totien Euler $\phi(n) = (p - 1) \times (q - 1) = 60 \times 52$.
 
 ---
 
-### Soal 10 (Pre Test)
-**Pertanyaan:**  
-Berdasarkan fenomena Birthday Paradox (Birthday Attack), untuk menemukan tabrakan (collision) pada fungsi hash dengan panjang output n bit, kompleksitas rata-rata operasi yang dibutuhkan penyerang adalah sekitar ...
+### Soal 248
+Mengapa penggunaan enkripsi RSA tanpa padding ('Textbook RSA' di mana $C = M^e \pmod n$) sangat berbahaya dan dilarang dalam sistem keamanan nyata?
 
-**Pilihan Jawaban:**
-- **A.** 2^n operasi
-- **B.** 2^(n/2) operasi *(Kunci Jawaban)*
-- **C.** n^2 operasi
-- **D.** 2^(n/4) operasi
-- **E.** n/2 operasi
+- **A**. Textbook RSA hanya dapat dijalankan pada prosesor komputer bertipe arsitektur kuantum superkonduktor yang diverifikasi menggunakan kode autentikasi pesan kriptografis.
+- **B**. Ukuran kunci publik RSA secara otomatis bocor ke jaringan publik setiap kali proses enkripsi pesan berlangsung sesuai dengan rekomendasi panjang kunci NIST SP 800-57.
+- **C**. Memiliki sifat multiplikatif homogen (malleable), sehingga penyerang dapat memanipulasi ciphertext untuk mengubah isi plaintext secara terprediksi.
+- **D**. Fungsi modular eksponensiasi textbook RSA selalu menghasilkan nilai ciphertext negatif pada bilangan ganjil yang diverifikasi menggunakan kode autentikasi pesan kriptografis.
+- **E**. Mewajibkan pihak penerima membagikan kunci privat dekripsinya kepada publik sebelum pesan dapat dibaca guna menjamin properti kerahasiaan dan integritas pesan data.
 
-> **Kunci Jawaban Benar:** **B. 2^(n/2) operasi**
+> **Kunci Jawaban:** C. Memiliki sifat multiplikatif homogen (malleable), sehingga penyerang dapat memanipulasi ciphertext untuk mengubah isi plaintext secara terprediksi.
 
 ---
 
-### Soal 11 (Pre Test)
-**Pertanyaan:**  
-Mengapa konstruksi naif MAC berbasis hash H(k || m) pada algoritma keluarga Merkle-Damgård (seperti MD5 dan SHA-256) rentan terhadap serangan Length Extension Attack?
+### Soal 249
+Dalam protokol pertukaran kunci Diffie-Hellman Ephemeral (DHE / ECDHE), properti 'Perfect Forward Secrecy' (PFS) berhasil dicapai karena ...
 
-**Pilihan Jawaban:**
-- **A.** Karena output hash H(k || m) mewakili internal state akhir fungsi hash, penyerang dapat melanjutkan komputasi hash untuk pesan tambahan m' tanpa perlu mengetahui nilai secret key k. *(Kunci Jawaban)*
-- **B.** Karena kunci rahasia k otomatis tertulis di dalam file log sistem operasi.
-- **C.** Karena ukuran output SHA-256 terlalu pendek untuk standar keamanan modern.
-- **D.** Karena algoritma MD5 menggunakan kunci asimetris publik.
-- **E.** Karena penyerang dapat membalikkan fungsi hash satu arah menggunakan tabel pembagian matematika.
+- **A**. Data dienkripsi menggunakan tiga lapisan algoritma simetris yang berbeda secara paralel di saluran jaringan berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **B**. Kunci sesi diturunkan dari pasangan kunci sementara yang dibuang setelah sesi berakhir, sehingga pembobolan kunci privat server di masa depan tidak bisa mendekripsi rekaman lalu lintas masa lalu.
+- **C**. Server dan klien tidak pernah melakukan pertukaran parameter angka apa pun melalui jaringan internet publik guna menjamin properti kerahasiaan dan integritas pesan data.
+- **D**. Sertifikat digital X.509 diperbarui secara otomatis setiap lima detik melalui koneksi satelit GPS terisolasi pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.
+- **E**. Kunci sesi disimpan secara permanen di dalam modul keamanan perangkat keras TPM motherboard pengguna yang diverifikasi menggunakan kode autentikasi pesan kriptografis.
 
-> **Kunci Jawaban Benar:** **A. Karena output hash H(k || m) mewakili internal state akhir fungsi hash, penyerang dapat melanjutkan komputasi hash untuk pesan tambahan m' tanpa perlu mengetahui nilai secret key k.**
+> **Kunci Jawaban:** B. Kunci sesi diturunkan dari pasangan kunci sementara yang dibuang setelah sesi berakhir, sehingga pembobolan kunci privat server di masa depan tidak bisa mendekripsi rekaman lalu lintas masa lalu.
 
 ---
 
-### Soal 12 (Pre Test)
-**Pertanyaan:**  
-Konstruksi Hash-based Message Authentication Code (HMAC) dirumuskan sebagai H((K XOR opad) || H((K XOR ipad) || m)). Tujuan penggunaan dua putaran hash bersarang dengan bantalan opad dan ipad ini adalah ...
+### Soal 250
+Properti 'Collision Resistance' pada fungsi hash kriptografis menyatakan bahwa secara komputasi tidak layak (computationally infeasible) untuk ...
 
-**Pilihan Jawaban:**
-- **A.** Mencegah serangan Length Extension Attack dan membuktikan keaslian serta integritas pesan menggunakan kunci rahasia bersama. *(Kunci Jawaban)*
-- **B.** Membuat fungsi hash dapat berjalan tanpa membutuhkan memori RAM.
-- **C.** Mengompresi pesan m agar ukuran filenya menjadi separuh ukuran asli.
-- **D.** Mengubah algoritma simetris menjadi algoritma tanda tangan digital publik.
-- **E.** Menghilangkan kebutuhan inisialisasi kunci pada pihak penerima.
+- **A**. Menemukan nilai input $m$ apa pun yang menghasilkan nilai hash keluaran $H(m)$ bernilai genap pada indeks bit awal berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **B**. Mengompresi pesan berukuran 512 bit menjadi nilai hash keluaran yang berukuran tepat 256 bit secara efisien.
+- **C**. Mendekripsi nilai hash kembali menjadi pesan aslinya tanpa menggunakan kunci privat asimetris penerima data berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **D**. Menghitung nilai hash suatu berkas yang memiliki ukuran fisik lebih besar daripada 4 Gigabyte pada sistem FAT32 sesuai dengan rekomendasi panjang kunci NIST SP 800-57.
+- **E**. Menemukan dua pesan berbeda sembarang $m_1$ dan $m_2$ ($m_1 \neq m_2$) sehingga menghasilkan nilai hash yang identik $H(m_1) = H(m_2)$.
 
-> **Kunci Jawaban Benar:** **A. Mencegah serangan Length Extension Attack dan membuktikan keaslian serta integritas pesan menggunakan kunci rahasia bersama.**
+> **Kunci Jawaban:** E. Menemukan dua pesan berbeda sembarang $m_1$ dan $m_2$ ($m_1 \neq m_2$) sehingga menghasilkan nilai hash yang identik $H(m_1) = H(m_2)$.
 
 ---
 
-### Soal 13 (Pre Test)
-**Pertanyaan:**  
-Keamanan algoritma kriptografi asimetris RSA secara fundamental didasarkan pada kesulitan komputasi matematika dalam menyelesaikan masalah ...
+### Soal 251
+Mengapa konstruksi otentikasi pesan sederhana seperti `Hash(Secret || Message)` sangat rentan terhadap serangan 'Length Extension Attack' pada fungsi hash berbasis Merkle-Damgård (seperti SHA-256)?
 
-**Pilihan Jawaban:**
-- **A.** Faktorisasi bilangan bulat besar yang merupakan hasil kali dua bilangan prima acak besar (Integer Factorization Problem). *(Kunci Jawaban)*
-- **B.** Penyelesaian persamaan diferensial linier orde tiga.
-- **C.** Pencarian akar kuadrat bilangan negatif pada domain riil.
-- **D.** Pengurutan array bilangan acak berukuran gigabyte.
-- **E.** Perhitungan logaritma natural pada CPU grafis.
+- **A**. Struktur Merkle-Damgård membocorkan kunci rahasia secara otomatis di setiap akhir putaran pemrosesan blok pesan berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **B**. Fungsi kompresi Merkle-Damgård menolak memproses padding bit jika pesan dikirimkan melalui protokol HTTP sesuai dengan rekomendasi panjang kunci NIST SP 800-57.
+- **C**. Algoritma SHA-256 memotong panjang pesan secara otomatis menjadi 128 bit jika pesan diawali dengan kata rahasia pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.
+- **D**. Keluaran hash merepresentasikan state internal akhir kompresi, memungkinkan penyerang menambahkan data baru dan melanjutkan komputasi hash tanpa tahu Secret.
+- **E**. Penyerang dapat membalikkan fungsi kompresi menggunakan tabel pelangi (rainbow table) publik dalam hitungan detik.
 
-> **Kunci Jawaban Benar:** **A. Faktorisasi bilangan bulat besar yang merupakan hasil kali dua bilangan prima acak besar (Integer Factorization Problem).**
+> **Kunci Jawaban:** D. Keluaran hash merepresentasikan state internal akhir kompresi, memungkinkan penyerang menambahkan data baru dan melanjutkan komputasi hash tanpa tahu Secret.
 
 ---
+
+
+## Post Test
 
-### Soal 14 (Post Test)
-**Pertanyaan:**  
-Pada algoritma RSA, mengapa skema padding probabilistik seperti Optimal Asymmetric Encryption Padding (OAEP) wajib digunakan alih-alih Textbook RSA?
+### Soal 252
+Mengapa fungsi hashing cepat seperti SHA-256 atau MD5 sangat dilarang digunakan untuk penyimpanan kata sandi (password storage), dan harus digantikan oleh Argon2id atau bcrypt?
 
-**Pilihan Jawaban:**
-- **A.** Textbook RSA bersifat deterministik dan memiliki sifat homomorfik perkalian yang memungkinkan penyerang memanipulasi ciphertext tanpa mengetahui plaintext asli (malleability). *(Kunci Jawaban)*
-- **B.** OAEP memperkecil ukuran ciphertext menjadi 16 byte.
-- **C.** Textbook RSA hanya dapat digunakan pada prosesor 8-bit.
-- **D.** OAEP menghapus kebutuhan kunci privat dalam proses dekripsi.
-- **E.** Textbook RSA tidak mendukung enkripsi karakter teks alfabet.
+- **A**. SHA-256 menghasilkan nilai hash yang memiliki panjang karakter berbeda-beda pada setiap sistem operasi pengguna berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **B**. Algoritma Argon2id tidak membutuhkan salt unik dan dapat memulihkan kata sandi asli jika pengguna lupa login sesuai dengan rekomendasi panjang kunci NIST SP 800-57.
+- **C**. Fungsi cepat memungkinkan penyerang menguji miliaran tebakan per detik menggunakan GPU/ASIC; fungsi KDF menerapkan parameter work factor (waktu dan memori besar) untuk memperlambat cracking.
+- **D**. SHA-256 hanya dapat berjalan pada prosesor 32-bit dan tidak mendukung komputasi pada arsitektur modern 64-bit.
+- **E**. Sistem operasi Linux secara otomatis menolak menyimpan nilai hash SHA-256 pada berkas konfigurasi /etc/shadow.
 
-> **Kunci Jawaban Benar:** **A. Textbook RSA bersifat deterministik dan memiliki sifat homomorfik perkalian yang memungkinkan penyerang memanipulasi ciphertext tanpa mengetahui plaintext asli (malleability).**
+> **Kunci Jawaban:** C. Fungsi cepat memungkinkan penyerang menguji miliaran tebakan per detik menggunakan GPU/ASIC; fungsi KDF menerapkan parameter work factor (waktu dan memori besar) untuk memperlambat cracking.
 
 ---
 
-### Soal 15 (Post Test)
-**Pertanyaan:**  
-Protokol pertukaran kunci Diffie-Hellman (DH) memungkinkan dua pihak membangun kunci rahasia bersama melalui saluran komunikasi publik yang tidak aman berdasarkan kesulitan komputasi ...
+### Soal 253
+Apa perbedaan fundamental antara tanda tangan digital (Digital Signature berbasis RSA/ECDSA) dan kode otentikasi pesan (HMAC) dalam konteks hukum dan jaminan keamanan?
 
-**Pilihan Jawaban:**
-- **A.** Discrete Logarithm Problem (Masalah Logaritma Diskrit pada grup siklik berhingga). *(Kunci Jawaban)*
-- **B.** Invers matriks 2x2 modular.
-- **C.** Penjumlahan deret aritmatika Gauss.
-- **D.** Pencarian nilai determinan matriks bujur sangkar.
-- **E.** Kompresi data lossy format JPEG.
+- **A**. HMAC memerlukan sepasang kunci publik dan privat, sedangkan Digital Signature hanya memakai kunci simetris tunggal yang diverifikasi menggunakan kode autentikasi pesan kriptografis.
+- **B**. Digital Signature tidak memerlukan fungsi hash apa pun dan langsung mengomputasi data teks biner plaintext.
+- **C**. HMAC menjamin kerahasiaan isi pesan (enkripsi), sedangkan Digital Signature hanya mengompresi ukuran pesan fisik.
+- **D**. Digital Signature memberikan jaminan Non-Repudiation karena dibuat dengan private key unik, sedangkan HMAC memakai shared secret yang diketahui kedua pihak sehingga bukti dapat disangkal.
+- **E**. HMAC telah dinyatakan usang oleh standar internasional dan tidak boleh diimplementasikan pada protokol TLS.
 
-> **Kunci Jawaban Benar:** **A. Discrete Logarithm Problem (Masalah Logaritma Diskrit pada grup siklik berhingga).**
+> **Kunci Jawaban:** D. Digital Signature memberikan jaminan Non-Repudiation karena dibuat dengan private key unik, sedangkan HMAC memakai shared secret yang diketahui kedua pihak sehingga bukti dapat disangkal.
 
 ---
 
-### Soal 16 (Post Test)
-**Pertanyaan:**  
-Kelemahan paling mendasar dari protokol Diffie-Hellman standar (unauthenticated DH) jika tidak dikombinasikan dengan mekanisme autentikasi adalah kerentanannya terhadap serangan ...
+### Soal 254
+Dalam arsitektur Public Key Infrastructure (PKI), mekanisme 'OCSP Stapling' diperkenalkan untuk mengatasi kelemahan privasi dan performa pada pemeriksaan status sertifikat X.509 konvensional dengan cara ...
 
-**Pilihan Jawaban:**
-- **A.** Man-in-the-Middle (MitM) Attack, di mana penyerang secara aktif mencegat dan menegosiasikan kunci terpisah dengan masing-masing pihak tanpa terdeteksi. *(Kunci Jawaban)*
-- **B.** Buffer Overflow pada compiler C
-- **C.** SQL Injection pada server basis data
-- **D.** Cross-Site Scripting (XSS)
-- **E.** Directory Traversal pada web server
+- **A**. Mewajibkan klien mengunduh seluruh daftar berkas CRL berukuran puluhan megabyte setiap kali membuka peramban pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.
+- **B**. Memaksa peramban mengabaikan tanggal kedaluwarsa sertifikat jika nama domain server cocok dengan header HTTP berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **C**. Menghapus seluruh otoritas Root CA komersial dan menggantinya dengan sertifikat self-signed lokal institusi berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **D**. Server web secara berkala meminta respons status OCSP bertanda tangan CA lalu menyematkannya (staple) langsung ke klien saat TLS handshake, menghemat kueri klien ke CA.
+- **E**. Mengenkripsi sertifikat digital klien menggunakan algoritma kuantum sebelum diteruskan ke server aplikasi.
 
-> **Kunci Jawaban Benar:** **A. Man-in-the-Middle (MitM) Attack, di mana penyerang secara aktif mencegat dan menegosiasikan kunci terpisah dengan masing-masing pihak tanpa terdeteksi.**
+> **Kunci Jawaban:** D. Server web secara berkala meminta respons status OCSP bertanda tangan CA lalu menyematkannya (staple) langsung ke klien saat TLS handshake, menghemat kueri klien ke CA.
 
 ---
 
-### Soal 17 (Post Test)
-**Pertanyaan:**  
-Sifat 'Perfect Forward Secrecy' (PFS) pada protokol keamanan TLS menjamin bahwa ...
+### Soal 255
+Mengapa Elliptic Curve Cryptography (ECC, seperti kurva secp256r1 atau Curve25519) lebih unggul diaplikasikan pada perangkat mobile dan IoT dibanding RSA konvensional?
 
-**Pilihan Jawaban:**
-- **A.** Jika private key jangka panjang server terkompromi/bocor di masa depan, penyerang tetap tidak dapat mendekripsi rekaman traffic sesi komunikasi masa lalu yang menggunakan kunci sesi ephemeral (seperti ECDHE). *(Kunci Jawaban)*
-- **B.** Data pengguna akan dienkripsi ulang setiap 24 jam secara otomatis di harddisk server.
-- **C.** Website tidak akan pernah mengalami downtime meskipun server terbakar.
-- **D.** Pengguna tidak perlu menggunakan password saat login ke aplikasi perbankan.
-- **E.** Koneksi internet klien akan selalu memiliki kecepatan bandwidth maksimum tanpa batas.
+- **A**. ECC tidak membutuhkan pemrosesan aritmatika modular sama sekali pada unit arithmetic logic unit (ALU) prosesor.
+- **B**. Kunci privat kurva eliptik dapat dibagikan secara bebas kepada publik tanpa mengurangi kerahasiaan pesan.
+- **C**. Algoritma kurva eliptik sepenuhnya kebal terhadap segala jenis serangan algoritma Shor pada komputer kuantum.
+- **D**. ECC memungkinkan proses dekripsi dilakukan tanpa memerlukan kunci privat oleh penerima data terdaftar.
+- **E**. Memberikan tingkat kekuatan keamanan setara RSA 3072-bit hanya dengan panjang kunci 256-bit, memangkas komputasi, konsumsi daya baterai, dan ukuran bandwidth.
 
-> **Kunci Jawaban Benar:** **A. Jika private key jangka panjang server terkompromi/bocor di masa depan, penyerang tetap tidak dapat mendekripsi rekaman traffic sesi komunikasi masa lalu yang menggunakan kunci sesi ephemeral (seperti ECDHE).**
+> **Kunci Jawaban:** E. Memberikan tingkat kekuatan keamanan setara RSA 3072-bit hanya dengan panjang kunci 256-bit, memangkas komputasi, konsumsi daya baterai, dan ukuran bandwidth.
 
 ---
 
-### Soal 18 (Post Test)
-**Pertanyaan:**  
-Keunggulan utama Elliptic Curve Cryptography (ECC) dibandingkan RSA adalah ...
+### Soal 256
+Pembaruan arsitektur keamanan pada standar TLS 1.3 (RFC 8446) dibandingkan TLS 1.2 secara radikal meningkatkan keamanan dengan langkah tegas berupa ...
 
-**Pilihan Jawaban:**
-- **A.** ECC menawarkan tingkat kekuatan keamanan kriptografi yang setara dengan RSA namun dengan ukuran kunci yang jauh lebih pendek (misalnya kunci ECC 256-bit setara dengan RSA 3072-bit), sehingga menghemat bandwidth dan daya komputasi. *(Kunci Jawaban)*
-- **B.** ECC tidak memerlukan operasi matematika modular sama sekali.
-- **C.** ECC dapat didekripsi oleh siapa saja tanpa membutuhkan kunci privat.
-- **D.** Kunci ECC dapat disimpan dalam format plaintext di repositori publik GitHub tanpa risiko.
-- **E.** ECC merupakan algoritma enkripsi simetris tercepat di dunia.
+- **A**. Menghapus protokol transmisi TCP dan menggantikannya secara eksklusif dengan protokol User Datagram Protocol (UDP) berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **B**. Menghapus pertukaran kunci RSA statis dan seluruh cipher non-AEAD (seperti CBC mode), mewajibkan cipher AEAD dan pertukaran ephemeral DH (PFS).
+- **C**. Mewajibkan penggunaan panjang kunci simetris minimal 4096 bit pada seluruh cipher suite yang terdaftar aktif berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **D**. Menonaktifkan enkripsi pada fase transmisi data aplikasi untuk memprioritaskan latensi nol (0-RTT performance) guna menjamin properti kerahasiaan dan integritas pesan data.
+- **E**. Mengizinkan penggunaan fungsi hash MD5 untuk verifikasi integritas pesan handshake pada jaringan berkecepatan tinggi berdasarkan prinsip matematika komputasi kurva eliptik modern.
 
-> **Kunci Jawaban Benar:** **A. ECC menawarkan tingkat kekuatan keamanan kriptografi yang setara dengan RSA namun dengan ukuran kunci yang jauh lebih pendek (misalnya kunci ECC 256-bit setara dengan RSA 3072-bit), sehingga menghemat bandwidth dan daya komputasi.**
+> **Kunci Jawaban:** B. Menghapus pertukaran kunci RSA statis dan seluruh cipher non-AEAD (seperti CBC mode), mewajibkan cipher AEAD dan pertukaran ephemeral DH (PFS).
 
 ---
 
-### Soal 19 (Post Test)
-**Pertanyaan:**  
-Pada mekanisme pembuatan Tanda Tangan Digital (Digital Signature), operasi kriptografi yang dilakukan oleh pengirim pesan adalah ...
+### Soal 257
+Mengapa algoritma pertukaran kunci Diffie-Hellman murni (tanpa tanda tangan digital atau sertifikat) sangat rentan terhadap serangan Man-in-the-Middle (MitM)?
 
-**Pilihan Jawaban:**
-- **A.** Mendekripsi seluruh file dokumen menggunakan public key penerima.
-- **B.** Menghitung nilai cryptographic hash (digest) dari pesan, lalu mengenkripsi nilai digest tersebut menggunakan private key milik pengirim. *(Kunci Jawaban)*
-- **C.** Mengenkripsi pesan menggunakan kunci simetris rahasia milik penerima pesan.
-- **D.** Mengirimkan password akun pengirim ke server verifikasi pihak ketiga.
-- **E.** Menandatangani dokumen secara fisik di atas kertas lalu memindainya menjadi file PDF.
+- **A**. Diffie-Hellman hanya dapat dijalankan pada perangkat keras yang memiliki modul pemrosesan grafis dedicated.
+- **B**. Protokol dasar DH tidak menyediakan mekanisme autentikasi entitas, sehingga penyerang di tengah dapat melakukan dua negosiasi kunci terpisah secara transparan.
+- **C**. Nilai bilangan prima modulus yang dipilih selalu dibatasi bernilai kurang dari angka seratus oleh spesifikasi RFC.
+- **D**. Diffie-Hellman mewajibkan pengiriman nilai kunci privat master dalam bentuk teks biasa (plaintext) di jaringan.
+- **E**. Penyerang dapat dengan mudah menebak nilai pangkat rahasia menggunakan operasi logaritma biasa kalkulator saku.
 
-> **Kunci Jawaban Benar:** **B. Menghitung nilai cryptographic hash (digest) dari pesan, lalu mengenkripsi nilai digest tersebut menggunakan private key milik pengirim.**
+> **Kunci Jawaban:** B. Protokol dasar DH tidak menyediakan mekanisme autentikasi entitas, sehingga penyerang di tengah dapat melakukan dua negosiasi kunci terpisah secara transparan.
 
 ---
 
-### Soal 20 (Post Test)
-**Pertanyaan:**  
-Bagaimana pihak penerima memverifikasi keabsahan tanda tangan digital pada sebuah dokumen elektronik?
+### Soal 258
+Dalam konteks Post-Quantum Cryptography (PQC), mengapa algoritma kriptografi asimetris seperti RSA dan ECC terancam punah jika komputer kuantum skala besar terwujud?
 
-**Pilihan Jawaban:**
-- **A.** Mendekripsi tanda tangan digital menggunakan public key pengirim untuk memperoleh digest asli, lalu membandingkannya dengan digest yang dihitung sendiri dari dokumen yang diterima. *(Kunci Jawaban)*
-- **B.** Membuka file dokumen menggunakan program pengolah kata Microsoft Word.
-- **C.** Menelepon pengirim untuk menanyakan apakah dokumen tersebut benar dikirimkan.
-- **D.** Memeriksa apakah ukuran file dokumen merupakan bilangan bulat genap.
-- **E.** Mengirimkan dokumen ke kantor pos terdekat untuk distempel manual.
+- **A**. Algoritma Grover dapat memecahkan faktorisasi prima RSA dalam kompleksitas waktu konstan $O(1)$ siklus kuantum pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.
+- **B**. Algoritma kuantum Shor mampu menyelesaikan masalah faktorisasi prima (RSA) dan logaritma diskret kurva eliptik (ECC) dalam waktu polinomial.
+- **C**. Komputer kuantum secara instan membalikkan arah aliran daya listrik pada kabel serat optik bawah laut global pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.
+- **D**. Sistem operasi kuantum menolak mengeksekusi fungsi matematika yang melibatkan operasi pembagian bilangan bulat.
+- **E**. Enkripsi kunci publik menghasilkan interferensi gelombang elektromagnetik yang menghancurkan status superposisi qubit.
 
-> **Kunci Jawaban Benar:** **A. Mendekripsi tanda tangan digital menggunakan public key pengirim untuk memperoleh digest asli, lalu membandingkannya dengan digest yang dihitung sendiri dari dokumen yang diterima.**
+> **Kunci Jawaban:** B. Algoritma kuantum Shor mampu menyelesaikan masalah faktorisasi prima (RSA) dan logaritma diskret kurva eliptik (ECC) dalam waktu polinomial.
 
 ---
 
-### Soal 21 (Post Test)
-**Pertanyaan:**  
-Tiga layanan keamanan informasi yang diwujudkan secara simultan oleh tanda tangan digital adalah ...
+### Soal 259
+Untuk mencegah serangan Side-Channel berbasis analisis waktu (Timing Attack) saat membandingkan hash atau MAC autentikasi pada kode program, praktik terbaik yang wajib diterapkan adalah ...
 
-**Pilihan Jawaban:**
-- **A.** Otentikasi Pengirim (Authenticity), Integritas Pesan (Integrity), dan Anti-Penyangkalan (Non-Repudiation). *(Kunci Jawaban)*
-- **B.** Kerahasiaan Mutlak (Confidentiality), Kompresi Data, dan Kecepatan Transmisi.
-- **C.** Ketersediaan Jaringan (Availability), Alokasi Bandwidth, dan Load Balancing.
-- **D.** Pencegahan Virus, Pemulihan Bencana, dan Redundansi Penyimpanan.
-- **E.** Enkripsi Hardware, Proteksi BIOS, dan Pembersihan Disk.
+- **A**. Menggunakan operator pembanding standar `==` yang langsung mengembalikan nilai false saat karakter pertama tidak cocok pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.
+- **B**. Menambahkan jeda waktu acak (random sleep) antara 1 hingga 10 detik sebelum memanggil fungsi perbandingan bawaan bahasa.
+- **C**. Menggunakan fungsi perbandingan dengan waktu konstan (constant-time comparison) yang selalu memeriksa seluruh byte tanpa keluar lebih awal.
+- **D**. Mengalokasikan kedua string variabel pembanding pada memori video GPU sebelum melakukan perbandingan karakter.
+- **E**. Mengonversi kedua nilai hash menjadi bilangan floating-point ganda sebelum melakukan operasi pengurangan skalar.
 
-> **Kunci Jawaban Benar:** **A. Otentikasi Pengirim (Authenticity), Integritas Pesan (Integrity), dan Anti-Penyangkalan (Non-Repudiation).**
+> **Kunci Jawaban:** C. Menggunakan fungsi perbandingan dengan waktu konstan (constant-time comparison) yang selalu memeriksa seluruh byte tanpa keluar lebih awal.
 
 ---
 
-### Soal 22 (Post Test)
-**Pertanyaan:**  
-Dalam infrastruktur Public Key Infrastructure (PKI), fungsi utama dari Certificate Authority (CA) adalah ...
+### Soal 260
+Mengapa penggunaan fungsi pembangkit bilangan acak bawaan seperti `rand()` atau `Math.random()` sangat berbahaya jika digunakan untuk menghasilkan token sesi atau kunci kriptografi?
 
-**Pilihan Jawaban:**
-- **A.** Bertindak sebagai pihak ketiga tepercaya (trusted third party) yang memverifikasi identitas pemilik kunci dan menerbitkan sertifikat digital X.509 bertanda tangan digital yang mengikat identitas dengan public key pemilik. *(Kunci Jawaban)*
-- **B.** Menyimpan seluruh private key pengguna di server publik agar tidak hilang.
-- **C.** Memungut pajak internet tahunan atas kepemilikan nama domain website.
-- **D.** Menerjemahkan nama domain URL menjadi alamat IP numerik (DNS).
-- **E.** Memperbaiki kerusakan fisik kabel fiber optik jaringan internet.
+- **A**. Fungsi-fungsi tersebut menghasilkan keluaran bilangan bertipe string yang tidak dapat dienkripsi oleh pustaka OpenSSL.
+- **B**. Standar keamanan W3C melarang penggunaan bilangan desimal acak dalam pembuatan cookie peramban internet klien.
+- **C**. Penggunaan fungsi tersebut memicu pemakaian CPU hingga 100 persen dan menyebabkan server web mengalami crash permanen.
+- **D**. Fungsi PRNG non-kriptografis memiliki entropi rendah dan algoritma deterministik (seperti Linear Congruential Generator) yang mudah ditebak state berikutnya.
+- **E**. Fungsi Math.random() selalu mengirimkan nilai seed acak ke server peramban eksternal melalui koneksi telemetry.
 
-> **Kunci Jawaban Benar:** **A. Bertindak sebagai pihak ketiga tepercaya (trusted third party) yang memverifikasi identitas pemilik kunci dan menerbitkan sertifikat digital X.509 bertanda tangan digital yang mengikat identitas dengan public key pemilik.**
+> **Kunci Jawaban:** D. Fungsi PRNG non-kriptografis memiliki entropi rendah dan algoritma deterministik (seperti Linear Congruential Generator) yang mudah ditebak state berikutnya.
 
 ---
 
-### Soal 23 (Post Test)
-**Pertanyaan:**  
-Mekanisme Online Certificate Status Protocol (OCSP) Stapling dirancang untuk meningkatkan efisiensi dan privasi pengecekan status pencabutan sertifikat SSL/TLS dengan cara ...
+### Soal 261
+Berdasarkan prinsip Birthday Paradox, berapa perkiraan jumlah percobaan hash acak yang dibutuhkan seorang penyerang untuk menemukan tabrakan (collision) pada fungsi hash dengan panjang digest $n$ bit?
 
-**Pilihan Jawaban:**
-- **A.** Server web secara berkala meminta bukti validitas sertifikat bertanda tangan waktu dari CA (OCSP response) dan menyertakannya langsung kepada klien selama proses TLS handshake. *(Kunci Jawaban)*
-- **B.** Mengharuskan klien mengunduh file daftar CRL berukuran ratusan megabyte setiap kali membuka website.
-- **C.** Menghapus kebutuhan sertifikat SSL sehingga browser tidak pernah menampilkan error koneksi.
-- **D.** Menyimpan seluruh histori browsing pengguna di server CA pusat.
-- **E.** Mengizinkan server menggunakan sertifikat yang sudah kadaluarsa hingga 5 tahun.
+- **A**. Hanya dibutuhkan sekitar $2^{n/2}$ operasi percobaan hash, mereduksi ruang pencarian eksponensial menjadi setengah pangkatnya.
+- **B**. Dibutuhkan sekitar $2^n$ operasi hash penuh untuk menemukan tabrakan secara deterministik pada ruang pencarian guna menjamin properti kerahasiaan dan integritas pesan data.
+- **C**. Dibutuhkan sekitar $n^2$ operasi perhitungan matematis sederhana pada register unit floating point CPU host.
+- **D**. Hanya membutuhkan $n \times 2$ operasi hash berkat pengoptimalan memori paralel arsitektur grafis GPU modern.
+- **E**. Dibutuhkan tepat $\log_2(n)$ siklus detak instruksi perakitan mesin mikroprosesor pada arsitektur x86.
 
-> **Kunci Jawaban Benar:** **A. Server web secara berkala meminta bukti validitas sertifikat bertanda tangan waktu dari CA (OCSP response) dan menyertakannya langsung kepada klien selama proses TLS handshake.**
+> **Kunci Jawaban:** A. Hanya dibutuhkan sekitar $2^{n/2}$ operasi percobaan hash, mereduksi ruang pencarian eksponensial menjadi setengah pangkatnya.
 
 ---
 
-### Soal 24 (Post Test)
-**Pertanyaan:**  
-Jika suatu organisasi memiliki 100 karyawan yang saling ingin berkomunikasi secara rahasia sepasang-demi-sepasang menggunakan kriptografi simetris murni, jumlah pasangan kunci rahasia berbeda yang harus didistribusikan dan dikelola adalah ...
+### Soal 262
+Prinsip dasar protokol kriptografi Zero-Knowledge Proof (ZKP, seperti zk-SNARKs) memungkinkan sebuah pihak pembukti (prover) untuk meyakinkan pihak pemverifikasi (verifier) bahwa ...
 
-**Pilihan Jawaban:**
-- **A.** N(N-1)/2 = 100 x 99 / 2 = 4.950 kunci rahasia *(Kunci Jawaban)*
-- **B.** 100 kunci
-- **C.** 200 kunci
-- **D.** 1 kunci master bersama
-- **E.** 10.000 kunci
+- **A**. Pihak pembukti telah berhasil meretas basis data pihak pemverifikasi tanpa meninggalkan berkas jejak audit di log sistem yang diverifikasi menggunakan kode autentikasi pesan kriptografis.
+- **B**. Seluruh data transaksi perbankan pengguna disiarkan ke seluruh node jaringan blockchain secara publik tanpa enkripsi guna menjamin properti kerahasiaan dan integritas pesan data.
+- **C**. Sebuah pernyataan matematis adalah benar tanpa membocorkan informasi atau rahasia apa pun selain kebenaran pernyataan tersebut.
+- **D**. Kunci privat enkripsi data telah dimusnahkan secara fisik dari media penyimpanan cold storage menggunakan demagnetizer pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.
+- **E**. Sistem operasi server telah diperbarui dengan patch keamanan kernel terbaru dari vendor perangkat lunak resmi berdasarkan prinsip matematika komputasi kurva eliptik modern.
 
-> **Kunci Jawaban Benar:** **A. N(N-1)/2 = 100 x 99 / 2 = 4.950 kunci rahasia**
+> **Kunci Jawaban:** C. Sebuah pernyataan matematis adalah benar tanpa membocorkan informasi atau rahasia apa pun selain kebenaran pernyataan tersebut.
 
 ---
 
-### Soal 25 (Post Test)
-**Pertanyaan:**  
-Bagaimana sistem Hybrid Cryptography (seperti pada protokol HTTPS/TLS) menggabungkan keunggulan kriptografi asimetris dan simetris secara harmonis?
+### Soal 263
+Pada sistem berkas terenkripsi tingkat partisi (Full Disk Encryption seperti LUKS atau BitLocker), peran Master Key (Volume Encryption Key) yang dibungkus oleh User Key (Key Encryption Key) bertujuan untuk ...
 
-**Pilihan Jawaban:**
-- **A.** Kriptografi asimetris (RSA/ECDHE) digunakan pada fase awal handshake untuk mengotentikasi server dan mempertukarkan kunci sesi (session key) secara aman, kemudian seluruh data komunikasi bervolume besar dienkripsi menggunakan kriptografi simetris (AES-GCM) yang jauh lebih cepat dan efisien. *(Kunci Jawaban)*
-- **B.** Kriptografi simetris digunakan untuk menandatangani dokumen, sedangkan kriptografi asimetris untuk mengenkripsi harddisk.
-- **C.** Data teks dienkripsi dengan kriptografi simetris, sedangkan gambar dan video dienkripsi dengan asimetris.
-- **D.** Kriptografi asimetris dijalankan hanya saat komputer dalam mode hemat daya (sleep).
-- **E.** Kedua algoritma dijalankan bergantian setiap 10 detik secara berulang.
+- **A**. Memungkinkan pengguna mengganti password otentikasi tanpa harus melakukan enkripsi ulang seluruh volume disk yang memakan waktu berjam-jam.
+- **B**. Menghindari proses penulisan data ke dalam sektor piringan disk fisik sehingga memperpanjang usia pakai memori NAND berdasarkan prinsip matematika komputasi kurva eliptik modern.
+- **C**. Menyediakan pintu belakang (backdoor) darurat bagi penegak hukum untuk memulihkan data tanpa persetujuan pemilik sah pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.
+- **D**. Meningkatkan kecepatan putaran spindle motor hard disk mekanis hingga mencapai kecepatan lima belas ribu RPM yang diverifikasi menggunakan kode autentikasi pesan kriptografis.
+- **E**. Membagi setiap berkas dokumen pengguna menjadi pecahan data terenkripsi yang disebar ke beberapa server cloud publik berdasarkan prinsip matematika komputasi kurva eliptik modern.
 
-> **Kunci Jawaban Benar:** **A. Kriptografi asimetris (RSA/ECDHE) digunakan pada fase awal handshake untuk mengotentikasi server dan mempertukarkan kunci sesi (session key) secara aman, kemudian seluruh data komunikasi bervolume besar dienkripsi menggunakan kriptografi simetris (AES-GCM) yang jauh lebih cepat dan efisien.**
+> **Kunci Jawaban:** A. Memungkinkan pengguna mengganti password otentikasi tanpa harus melakukan enkripsi ulang seluruh volume disk yang memakan waktu berjam-jam.
 
 ---

@@ -1,4 +1,3 @@
-// Auto-generated Quiz Data (Informan 1 + Informan 2 Unik + Bank Soal Tambahan)
 const QUIZ_DATA = [
   {
     "id": 1,
@@ -2347,2128 +2346,1878 @@ const QUIZ_DATA = [
     "correct_answer": "Agar plaintext asli dapat diperoleh kembali tanpa kehilangan informasi saat dekripsi."
   },
   {
+    "id": 139,
     "week": "Week 2",
     "type": "Pre Test",
-    "question": "Seorang pengguna mengautentikasi diri dengan menempelkan kartu pintar (smart card) pada card reader dan memasukkan PIN 6-digit. Faktor autentikasi yang digunakan pada skenario ini adalah ...",
+    "question": "Pada sistem biometrik, jika administrator mengubah threshold verifikasi (t) ke nilai yang lebih tinggi untuk memperketat keamanan, dampak statistik yang pasti terjadi pada False Acceptance Rate (FAR) dan False Rejection Rate (FRR) adalah ...",
     "options": {
-      "a": "Something you know dan something you are",
-      "b": "Something you have dan something you know",
-      "c": "Something you have dan something you are",
-      "d": "Dua faktor dari kategori something you know",
-      "e": "Something you are dan somewhere you are"
+      "a": "FAR dan FRR keduanya menurun secara simultan mendekati nilai Equal Error Rate.",
+      "b": "FAR mengalami penurunan signifikan, namun FRR mengalami peningkatan secara komprehensif.",
+      "c": "FRR mengalami penurunan signifikan, namun FAR mengalami peningkatan sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.",
+      "d": "FAR dan FRR keduanya meningkat karena sensitivitas sensor biometrik dinaikkan.",
+      "e": "Nilai FAR dan FRR tidak berubah karena nilai EER bersifat konstan pada perangkat."
     },
     "correct_letter": "b",
-    "correct_answer": "Something you have dan something you know",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 139
+    "correct_answer": "FAR mengalami penurunan signifikan, namun FRR mengalami peningkatan secara komprehensif."
   },
   {
+    "id": 140,
     "week": "Week 2",
     "type": "Pre Test",
-    "question": "Pada sistem biometrik, titik potong pada kurva di mana False Acceptance Rate (FAR) sama persis dengan False Rejection Rate (FRR) disebut ...",
+    "question": "Dalam protokol Time-based One-Time Password (TOTP - RFC 6238), apa parameter inti yang membedakannya secara fundamental dari HMAC-based One-Time Password (HOTP - RFC 4226)?",
     "options": {
-      "a": "Receiver Operating Characteristic (ROC)",
-      "b": "Equal Error Rate (EER) atau Crossover Error Rate (CER)",
-      "c": "Threshold of Detection (ToD)",
-      "d": "Biometric Accuracy Index (BAI)",
-      "e": "Zero Tolerance Boundary (ZTB)"
+      "a": "TOTP mengenkripsi shared secret dengan kunci privat asimetris, sedangkan HOTP mengandalkan fungsi hash MD5 tanpa shared secret sama sekali.",
+      "b": "TOTP menghitung kode menggunakan Unix epoch time dibagi time-step window sebagai moving factor, sedangkan HOTP memakai counter inkremental secara terperinci.",
+      "c": "HOTP menghasilkan token dinamis yang kedaluwarsa tiap 30 detik, sedangkan token TOTP valid permanen hingga counter server diperbarui pengguna.",
+      "d": "HOTP mewajibkan komunikasi online real-time dua arah dengan server, sedangkan TOTP berjalan sepenuhnya asinkron tanpa sinkronisasi waktu.",
+      "e": "TOTP menggunakan algoritma simetris AES-CBC, sedangkan HOTP menggunakan fungsi derivasi kunci PBKDF2 dengan salt acak 128 bit."
     },
     "correct_letter": "b",
-    "correct_answer": "Equal Error Rate (EER) atau Crossover Error Rate (CER)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 140
+    "correct_answer": "TOTP menghitung kode menggunakan Unix epoch time dibagi time-step window sebagai moving factor, sedangkan HOTP memakai counter inkremental secara terperinci."
   },
   {
+    "id": 141,
     "week": "Week 2",
     "type": "Pre Test",
-    "question": "Mengapa penggunaan salt yang unik dan acak untuk setiap password sangat penting sebelum nilai hash disimpan di database?",
+    "question": "Sebuah sistem pengawasan militer mengadopsi model kontrol akses Mandatory Access Control (MAC) berbasis Bell-LaPadula. Manakah skenario transfer informasi yang DILARANG oleh aturan '* -property' (Star Property) pada model ini?",
     "options": {
-      "a": "Membuat algoritma enkripsi simetris password menjadi tidak dapat didekripsi.",
-      "b": "Mencegah serangan precomputed dictionary attack seperti Rainbow Tables dan membedakan hash dari dua password yang sama.",
-      "c": "Mempercepat proses komputasi verifikasi password di sisi server aplikasi.",
-      "d": "Mengubah fungsi hash satu arah menjadi fungsi enkripsi asimetris.",
-      "e": "Menghilangkan kebutuhan pengguna untuk mengingat password yang panjang."
+      "a": "Subjek dengan izin Top Secret membaca dokumen yang berlabel status Secret yang diverifikasi melalui ticket granting service terpusat.",
+      "b": "Subjek dengan izin Confidential menulis log data ke berkas berlabel Top Secret yang diverifikasi melalui ticket granting service terpusat.",
+      "c": "Subjek dengan izin Secret membaca berkas internal yang berlabel status Secret.",
+      "d": "Subjek dengan izin Unclassified membaca dokumen berlabel status Unclassified sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.",
+      "e": "Subjek dengan izin Secret menulis data ke dokumen berlabel status Unclassified."
     },
-    "correct_letter": "b",
-    "correct_answer": "Mencegah serangan precomputed dictionary attack seperti Rainbow Tables dan membedakan hash dari dua password yang sama.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 141
+    "correct_letter": "e",
+    "correct_answer": "Subjek dengan izin Secret menulis data ke dokumen berlabel status Unclassified."
   },
   {
+    "id": 142,
     "week": "Week 2",
     "type": "Pre Test",
-    "question": "Manakah algoritma hashing password berikut yang sengaja dirancang memiliki parameter memory-hard dan time-cost tinggi untuk mempersulit brute-force berbasis GPU/ASIC?",
+    "question": "Berbeda dengan Bell-LaPadula yang memprioritaskan kerahasiaan (confidentiality), model integritas Biba menerapkan aturan 'Simple Integrity Axiom'. Aturan ini menetapkan bahwa ...",
     "options": {
-      "a": "MD5",
-      "b": "SHA-256 murni",
-      "c": "Argon2",
-      "d": "CRC32",
-      "e": "RC4"
+      "a": "Subjek tidak diizinkan membaca objek yang memiliki tingkat integritas lebih rendah (no read-down) secara terperinci.",
+      "b": "Subjek tidak diizinkan menulis ke objek yang memiliki tingkat integritas lebih tinggi (no write-up).",
+      "c": "Subjek tidak diizinkan membaca objek yang memiliki label klasifikasi lebih tinggi (no read-up).",
+      "d": "Subjek tidak diizinkan menulis ke objek yang memiliki label klasifikasi lebih rendah (no write-down).",
+      "e": "Subjek memiliki hak penuh memodifikasi data apa pun selama terdaftar dalam grup akses owner."
     },
-    "correct_letter": "c",
-    "correct_answer": "Argon2",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 142
+    "correct_letter": "a",
+    "correct_answer": "Subjek tidak diizinkan membaca objek yang memiliki tingkat integritas lebih rendah (no read-down) secara terperinci."
   },
   {
+    "id": 143,
     "week": "Week 2",
     "type": "Pre Test",
-    "question": "Protokol Challenge-Handshake Authentication Protocol (CHAP) lebih aman dibandingkan Password Authentication Protocol (PAP) karena ...",
+    "question": "Perhatikan skenario berikut: Dokter diperbolehkan membaca rekam medis pasien hanya jika berada di jaringan rumah sakit, saat jam dinas, dan status darurat aktif. Model kontrol akses yang paling tepat mengimplementasikan kebijakan tersebut adalah ...",
     "options": {
-      "a": "Password pengguna ditransmisikan dalam format plaintext terkompresi.",
-      "b": "Password asli tidak pernah dikirimkan melalui jaringan; server mengirimkan nonce/challenge dan klien merespons dengan hash password + challenge.",
-      "c": "CHAP tidak memerlukan database password di sisi server.",
-      "d": "CHAP selalu menggunakan enkripsi RSA 4096-bit pada setiap transmisi paket.",
-      "e": "Klien menentukan sendiri kunci rahasia tanpa persetujuan server."
+      "a": "Discretionary Access Control (DAC) berbasis ACL statis yang dikelola oleh pasien yang diverifikasi melalui ticket granting service terpusat.",
+      "b": "Role-Based Access Control (RBAC) murni berbasis hierarki peran tanpa evaluasi konteks lingkungan.",
+      "c": "Mandatory Access Control (MAC) berbasis label tingkat keamanan militer multi-level.",
+      "d": "Identity-Based Access Control (IBAC) berbasis daftar pemetaan identitas tunggal pengguna.",
+      "e": "Attribute-Based Access Control (ABAC) yang mengevaluasi subjek, objek, aksi, dan atribut lingkungan."
     },
-    "correct_letter": "b",
-    "correct_answer": "Password asli tidak pernah dikirimkan melalui jaringan; server mengirimkan nonce/challenge dan klien merespons dengan hash password + challenge.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 143
+    "correct_letter": "e",
+    "correct_answer": "Attribute-Based Access Control (ABAC) yang mengevaluasi subjek, objek, aksi, dan atribut lingkungan."
   },
   {
+    "id": 144,
     "week": "Week 2",
     "type": "Pre Test",
-    "question": "Dalam model Discretionary Access Control (DAC), siapa yang memiliki wewenang untuk memberikan atau mencabut hak akses atas suatu objek data?",
+    "question": "Pada autentikasi Kerberos v5, entitas manakah yang bertanggung jawab menerbitkan Ticket-Granting Ticket (TGT) setelah pengguna berhasil memverifikasi kredensial awalnya?",
     "options": {
-      "a": "Hanya Administrator Sistem Pusat melalui kebijakan global.",
-      "b": "Pemilik (owner) dari objek data tersebut.",
-      "c": "Sistem operasi secara otomatis berdasarkan security label militer.",
-      "d": "Pengguna tamu yang sedang aktif dalam sesi sistem.",
-      "e": "Entitas Certificate Authority (CA) pihak ketiga."
+      "a": "Ticket Granting Service (TGS) setelah memeriksa authenticator yang dienkripsi session key.",
+      "b": "Security Account Manager (SAM) lokal pada workstation client sebelum request dikirim berdasarkan kebijakan kontrol akses formal yang terdaftar.",
+      "c": "Target Application Server setelah menerima Service Ticket yang sah dari client pada infrastruktur autentikasi enterprise berskala besar.",
+      "d": "Key Distribution Center (KDC) proxy server melalui inspeksi sertifikat TLS publik client.",
+      "e": "Authentication Service (AS) yang memverifikasi kredensial awal terhadap database KDC."
     },
-    "correct_letter": "b",
-    "correct_answer": "Pemilik (owner) dari objek data tersebut.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 144
+    "correct_letter": "e",
+    "correct_answer": "Authentication Service (AS) yang memverifikasi kredensial awal terhadap database KDC."
   },
   {
+    "id": 145,
     "week": "Week 2",
     "type": "Pre Test",
-    "question": "Model Mandatory Access Control (MAC) mengandalkan mekanisme otorisasi yang didasarkan pada ...",
+    "question": "Dalam arsitektur Linux Pluggable Authentication Modules (PAM), jika suatu modul autentikasi dikonfigurasi dengan control flag 'required' dan menghasilkan evaluasi gagal (failure), perilaku PAM selanjutnya adalah ...",
     "options": {
-      "a": "Tingkat izin keamanan (clearance) subjek dan label klasifikasi sensitivitas objek yang ditetapkan secara ketat oleh otoritas keamanan.",
-      "b": "Keinginan pemilik berkas untuk membagikan file ke teman satu grup.",
-      "c": "Daftar kontak yang disimpan dalam address book pengguna.",
-      "d": "Waktu login pengguna di workstation lokal.",
-      "e": "Jumlah kuota bandwidth yang dialokasikan kepada pengguna."
+      "a": "Tetap melanjutkan eksekusi modul PAM berikutnya di stack, namun hasil autentikasi akhir tetap pasti gagal secara terperinci.",
+      "b": "Segera menghentikan proses evaluasi seluruh stack PAM dan langsung mengembalikan status gagal ke aplikasi.",
+      "c": "Mengabaikan kegagalan modul tersebut jika terdapat modul bertipe 'optional' yang sukses di bawahnya.",
+      "d": "Mengulang proses evaluasi modul tersebut sebanyak 3 kali sebelum memutuskan status akses pengguna.",
+      "e": "Meminta pengguna memasukkan kembali password cadangan melalui jalur fallback modul 'sufficient'."
     },
     "correct_letter": "a",
-    "correct_answer": "Tingkat izin keamanan (clearance) subjek dan label klasifikasi sensitivitas objek yang ditetapkan secara ketat oleh otoritas keamanan.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 145
+    "correct_answer": "Tetap melanjutkan eksekusi modul PAM berikutnya di stack, namun hasil autentikasi akhir tetap pasti gagal secara terperinci."
   },
   {
+    "id": 146,
     "week": "Week 2",
     "type": "Pre Test",
-    "question": "Prinsip Simple Security Property pada model keamanan Bell-LaPadula dirumuskan sebagai ...",
-    "options": {
-      "a": "No Read Down (subjek tidak boleh membaca data pada tingkat lebih rendah).",
-      "b": "No Read Up (subjek pada tingkat keamanan tertentu tidak boleh membaca objek dengan klasifikasi lebih tinggi).",
-      "c": "No Write Up (subjek tidak boleh menulis ke tingkat lebih tinggi).",
-      "d": "Read and Write bebas pada semua level asalkan satu departemen.",
-      "e": "Hanya subjek dengan root access yang boleh membaca data rahasia."
-    },
-    "correct_letter": "b",
-    "correct_answer": "No Read Up (subjek pada tingkat keamanan tertentu tidak boleh membaca objek dengan klasifikasi lebih tinggi).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 146
-  },
-  {
-    "week": "Week 2",
-    "type": "Pre Test",
-    "question": "Perbedaan mendasar antara model Bell-LaPadula dan model Biba adalah bahwa model Biba dirancang secara khusus untuk menjaga aspek ...",
-    "options": {
-      "a": "Kerahasiaan (Confidentiality) data militer.",
-      "b": "Integritas (Integrity) data agar informasi tidak terkontaminasi oleh sumber yang tidak tepercaya.",
-      "c": "Ketersediaan (Availability) jaringan dari serangan DDoS.",
-      "d": "Kecepatan throughput komputasi pada CPU multi-core.",
-      "e": "Kompresi data sebelum ditransmisikan."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Integritas (Integrity) data agar informasi tidak terkontaminasi oleh sumber yang tidak tepercaya.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 147
-  },
-  {
-    "week": "Week 2",
-    "type": "Pre Test",
-    "question": "Pada Role-Based Access Control (RBAC), hak akses (permissions) diasosiasikan langsung kepada ...",
-    "options": {
-      "a": "Identitas nama individu masing-masing karyawan secara mandiri.",
-      "b": "Peran atau fungsi jabatan (Role), di mana pengguna kemudian ditugaskan ke dalam peran tersebut.",
-      "c": "Alamat IP dan MAC address perangkat keras yang digunakan.",
-      "d": "Nama komputer server database.",
-      "e": "Waktu kadaluarsa token OAuth."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Peran atau fungsi jabatan (Role), di mana pengguna kemudian ditugaskan ke dalam peran tersebut.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 148
-  },
-  {
-    "week": "Week 2",
-    "type": "Pre Test",
-    "question": "Model Attribute-Based Access Control (ABAC) mengevaluasi kebijakan akses berdasarkan kombinasi atribut subjek, sumber daya, tindakan, dan ...",
-    "options": {
-      "a": "Kondisi lingkungan (environment conditions seperti waktu akses, lokasi, dan status jaringan).",
-      "b": "Nomor seri kartu identitas fisik pengguna.",
-      "c": "Hash MD5 dari password database administrator.",
-      "d": "Panjang kabel jaringan Ethernet.",
-      "e": "Merek monitor yang digunakan klien."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Kondisi lingkungan (environment conditions seperti waktu akses, lokasi, dan status jaringan).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 149
-  },
-  {
-    "week": "Week 2",
-    "type": "Pre Test",
-    "question": "Dalam arsitektur protokol Kerberos, komponen yang bertugas mengeluarkan Ticket Granting Ticket (TGT) kepada klien setelah autentikasi awal berhasil adalah ...",
-    "options": {
-      "a": "Ticket Granting Server (TGS)",
-      "b": "Authentication Server (AS)",
-      "c": "Resource Server (RS)",
-      "d": "Service Provider (SP)",
-      "e": "Certificate Revocation List (CRL)"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Authentication Server (AS)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 150
-  },
-  {
-    "week": "Week 2",
-    "type": "Pre Test",
-    "question": "Mengapa protokol Kerberos sangat bergantung pada sinkronisasi waktu (NTP) antar komputer dengan toleransi drift waktu biasanya maksimal 5 menit?",
-    "options": {
-      "a": "Untuk menghitung biaya sewa bandwidth jaringan secara presisi.",
-      "b": "Untuk memvalidasi timestamp tiket guna mencegah serangan replay (replay attack).",
-      "c": "Agar file log server tidak terhapus otomatis oleh sistem operasi.",
-      "d": "Untuk memastikan CPU tidak mengalami overheat saat enkripsi data.",
-      "e": "Agar proses handshake TLS tidak memerlukan sertifikat X.509."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Untuk memvalidasi timestamp tiket guna mencegah serangan replay (replay attack).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 151
-  },
-  {
-    "week": "Week 2",
-    "type": "Post Test",
-    "question": "Dalam federated identity menggunakan SAML 2.0, entitas yang bertugas memverifikasi identitas pengguna dan menerbitkan SAML Assertion bertanda tangan digital disebut ...",
-    "options": {
-      "a": "Service Provider (SP)",
-      "b": "Identity Provider (IdP)",
-      "c": "Relying Party (RP)",
-      "d": "Authorization Server (AS)",
-      "e": "API Gateway"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Identity Provider (IdP)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 152
-  },
-  {
-    "week": "Week 2",
-    "type": "Post Test",
-    "question": "Pada alur OAuth 2.0 Authorization Code Grant, apa tujuan utama penggunaan parameter 'state' yang dikirimkan klien saat mengarahkan pengguna ke Authorization Server?",
-    "options": {
-      "a": "Menyimpan data password pengguna dalam format base64.",
-      "b": "Mencegah serangan Cross-Site Request Forgery (CSRF) pada proses pertukaran kode otorisasi.",
-      "c": "Mempercepat proses parsing JSON pada token response.",
-      "d": "Menentukan hak akses scope pengguna secara dinamis tanpa persetujuan server.",
-      "e": "Mengenkripsi payload access token agar tidak terbaca oleh klien."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Mencegah serangan Cross-Site Request Forgery (CSRF) pada proses pertukaran kode otorisasi.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 153
-  },
-  {
-    "week": "Week 2",
-    "type": "Post Test",
-    "question": "OpenID Connect (OIDC) dibangun di atas protokol OAuth 2.0 untuk melengkapi fungsi yang sebelumnya tidak disediakan oleh OAuth 2.0 murni, yaitu fungsi ...",
-    "options": {
-      "a": "Otorisasi delegasi hak akses sumber daya API",
-      "b": "Autentikasi identitas pengguna (federated authentication) melalui ID Token berbentuk JWT",
-      "c": "Routing paket data pada layer transport TCP",
-      "d": "Kompresi citra biometric sidik jari",
-      "e": "Enkripsi media penyimpanan harddisk lokal"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Autentikasi identitas pengguna (federated authentication) melalui ID Token berbentuk JWT",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 154
-  },
-  {
-    "week": "Week 2",
-    "type": "Post Test",
-    "question": "JSON Web Token (JWT) terdiri dari tiga bagian utama yang dipisahkan oleh karakter titik (.), yaitu ...",
-    "options": {
-      "a": "Header, Payload, dan Signature",
-      "b": "Username, Password, dan Salt",
-      "c": "Metadata, Hash, dan Private Key",
-      "d": "Issuer, Subject, dan Expiration",
-      "e": "IV, Ciphertext, dan MAC"
-    },
-    "correct_letter": "a",
-    "correct_answer": "Header, Payload, dan Signature",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 155
-  },
-  {
-    "week": "Week 2",
-    "type": "Post Test",
-    "question": "Kerentanan kritis pada implementasi JWT di mana penyerang dapat memodifikasi payload dan meminta server memverifikasi token tanpa memeriksa tanda tangan terjadi apabila server menerima nilai header ...",
-    "options": {
-      "a": "\"alg\": \"RS256\"",
-      "b": "\"alg\": \"none\"",
-      "c": "\"typ\": \"JWT\"",
-      "d": "\"alg\": \"HS512\"",
-      "e": "\"enc\": \"A128GCM\""
-    },
-    "correct_letter": "b",
-    "correct_answer": "\"alg\": \"none\"",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 156
-  },
-  {
-    "week": "Week 2",
-    "type": "Post Test",
-    "question": "Pada serangan Session Fixation, penyerang memanfaatkan celah keamanan di mana ...",
-    "options": {
-      "a": "Sistem aplikasi mempertahankan session identifier yang sama persis sebelum dan sesudah pengguna berhasil login.",
-      "b": "Penyerang memecahkan kunci enkripsi SSL server menggunakan quantum computing.",
-      "c": "Pengguna memilih password yang sama untuk lima akun website berbeda.",
-      "d": "Server database mengalami crash akibat buffer overflow pada driver SQL.",
-      "e": "Session cookie kadaluarsa terlalu cepat dalam hitungan detik."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Sistem aplikasi mempertahankan session identifier yang sama persis sebelum dan sesudah pengguna berhasil login.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 157
-  },
-  {
-    "week": "Week 2",
-    "type": "Post Test",
-    "question": "Mitigasi paling efektif pada aplikasi web untuk mencegah pencurian session cookie melalui serangan Cross-Site Scripting (XSS) adalah ...",
-    "options": {
-      "a": "Menambahkan flag HttpOnly pada cookie sesi.",
-      "b": "Menyimpan session identifier di dalam LocalStorage browser.",
-      "c": "Mengurangi panjang session identifier menjadi hanya 4 karakter.",
-      "d": "Menonaktifkan protokol HTTPS pada web server.",
-      "e": "Mengirimkan session token melalui URL query string."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Menambahkan flag HttpOnly pada cookie sesi.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 158
-  },
-  {
-    "week": "Week 2",
-    "type": "Post Test",
-    "question": "Atribut cookie 'SameSite=Strict' memberikan perlindungan keamanan yang kuat terhadap serangan ...",
-    "options": {
-      "a": "SQL Injection",
-      "b": "Cross-Site Request Forgery (CSRF)",
-      "c": "Denial of Service (DoS)",
-      "d": "Directory Traversal",
-      "e": "Man-in-the-Middle (MitM)"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Cross-Site Request Forgery (CSRF)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 159
-  },
-  {
-    "week": "Week 2",
-    "type": "Post Test",
-    "question": "Perbedaan mendasar antara Access Token dan Refresh Token pada protokol OAuth 2.0 adalah ...",
-    "options": {
-      "a": "Access token berumur pendek untuk mengakses resource API, sedangkan refresh token berumur lebih panjang dan digunakan untuk mendapatkan access token baru.",
-      "b": "Access token disimpan di server, sedangkan refresh token disimpan di DNS publik.",
-      "c": "Refresh token dikirimkan pada setiap HTTP request header ke Resource Server.",
-      "d": "Access token tidak memiliki masa kedaluwarsa selamanya.",
-      "e": "Refresh token hanya boleh menggunakan algoritma enkripsi simetris DES."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Access token berumur pendek untuk mengakses resource API, sedangkan refresh token berumur lebih panjang dan digunakan untuk mendapatkan access token baru.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 160
-  },
-  {
-    "week": "Week 2",
-    "type": "Post Test",
-    "question": "Prinsip Separation of Duties (Pemisahan Tugas) dalam sistem Access Control bertujuan untuk ...",
-    "options": {
-      "a": "Memastikan semua karyawan memiliki wewenang setara dengan sistem administrator.",
-      "b": "Mencegah kecurangan atau penyalahgunaan wewenang dengan mensyaratkan keterlibatan lebih dari satu individu untuk menyelesaikan tugas kritis.",
-      "c": "Membagi beban kerja komputasi jaringan secara merata ke seluruh server.",
-      "d": "Memisahkan partisi harddisk sistem operasi dari partisi data pengguna.",
-      "e": "Memaksa setiap pengguna mengganti password setiap 24 jam sekali."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Mencegah kecurangan atau penyalahgunaan wewenang dengan mensyaratkan keterlibatan lebih dari satu individu untuk menyelesaikan tugas kritis.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 161
-  },
-  {
-    "week": "Week 2",
-    "type": "Post Test",
-    "question": "Ketika merancang sistem autentikasi berbasis biometric wajah, manajemen memutuskan untuk memprioritaskan keamanan fisik fasilitas berisiko tinggi di atas kenyamanan pengguna. Penyesuaian threshold matching score (t) yang tepat adalah ...",
-    "options": {
-      "a": "Menurunkan nilai threshold t agar pengguna dapat masuk lebih cepat tanpa antrean.",
-      "b": "Menaikkan nilai threshold t untuk meminimalkan False Acceptance Rate (FAR), meskipun False Rejection Rate (FRR) meningkat.",
-      "c": "Menonaktifkan threshold dan menerima seluruh citra wajah yang terdeteksi kamera.",
-      "d": "Menyetel threshold ke nilai nol mutlak.",
-      "e": "Mengganti kamera beresolusi tinggi dengan sensor suhu inframerah sederhana."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Menaikkan nilai threshold t untuk meminimalkan False Acceptance Rate (FAR), meskipun False Rejection Rate (FRR) meningkat.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 162
-  },
-  {
-    "week": "Week 2",
-    "type": "Post Test",
-    "question": "Apa kelemahan utama dari mekanisme autentikasi berbasis SMS OTP (One-Time Password) dibandingkan Time-based One-Time Password (TOTP) berbasis aplikasi authenticator?",
-    "options": {
-      "a": "SMS OTP membutuhkan perangkat hardware token khusus yang mahal.",
-      "b": "SMS rentan terhadap intersepsi jaringan seluler (SS7 vulnerability) dan serangan SIM Swapping oleh penyerang.",
-      "c": "SMS OTP hanya dapat digunakan pada komputer desktop tanpa koneksi internet.",
-      "d": "Aplikasi authenticator selalu mengirimkan kode OTP secara plaintext ke server telekomunikasi.",
-      "e": "SMS OTP tidak memiliki batas waktu kedaluwarsa."
-    },
-    "correct_letter": "b",
-    "correct_answer": "SMS rentan terhadap intersepsi jaringan seluler (SS7 vulnerability) dan serangan SIM Swapping oleh penyerang.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 163
-  },
-  {
-    "week": "Week 3",
-    "type": "Pre Test",
-    "question": "Seorang security researcher menemukan zero-day vulnerability pada portal perbankan nasional. Menurut etika profesional Coordinated Vulnerability Disclosure (Responsible Disclosure), langkah pertama yang wajib diambil oleh researcher tersebut adalah ...",
-    "options": {
-      "a": "Menjual exploit tersebut di pasar gelap dark web untuk mendapatkan keuntungan finansial.",
-      "b": "Mempublikasikan detail exploit secara publik di media sosial sebelum vendor sempat mengetahuinya.",
-      "c": "Melaporkan temuan secara tertutup kepada pihak pengembang/vendor terkait dan memberikan waktu yang wajar untuk patch sebelum pengungkapan publik.",
-      "d": "Menggunakan kerentanan tersebut untuk mengekstrak saldo nasabah demi membuktikan dampak risiko.",
-      "e": "Menghapus seluruh database server agar kerentanan tidak dieksploitasi pihak lain."
-    },
-    "correct_letter": "c",
-    "correct_answer": "Melaporkan temuan secara tertutup kepada pihak pengembang/vendor terkait dan memberikan waktu yang wajar untuk patch sebelum pengungkapan publik.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 164
-  },
-  {
-    "week": "Week 3",
-    "type": "Pre Test",
-    "question": "Berdasarkan prinsip Data Minimization dalam regulasi perlindungan data pribadi (UU PDP dan GDPR), sebuah aplikasi toko online wajib ...",
-    "options": {
-      "a": "Mengumpulkan seluruh data pribadi pengguna termasuk rekam medis dan data biometrik untuk cadangan masa depan.",
-      "b": "Hanya mengumpulkan dan memproses data pribadi yang benar-benar relevan, memadai, dan terbatas pada tujuan transaksi yang telah disepakati.",
-      "c": "Menjual data pelanggan kepada pihak ketiga tanpa memerlukan persetujuan pemilik data.",
-      "d": "Menyimpan data log percakapan telepon pengguna selama minimal 50 tahun.",
-      "e": "Menonaktifkan enkripsi database agar data mudah diaudit oleh publik."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Hanya mengumpulkan dan memproses data pribadi yang benar-benar relevan, memadai, dan terbatas pada tujuan transaksi yang telah disepakati.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 165
-  },
-  {
-    "week": "Week 3",
-    "type": "Pre Test",
-    "question": "Dalam UU ITE (Undang-Undang Informasi dan Transaksi Elektronik), tindakan mengakses komputer atau sistem elektronik milik orang lain dengan cara melanggar, menerobos, melampaui, atau menjebol sistem pengamanan diatur secara spesifik dalam ...",
-    "options": {
-      "a": "Pasal 27 ayat (1) (Larangan mendistribusikan konten elektronik berkonten asusila/pornografi)",
-      "b": "Pasal 28 ayat (2) (Larangan menyebarkan ujaran kebencian berbasis SARA)",
-      "c": "Pasal 30 ayat (3) (Illegal access dengan melanggar, menerobos, melampaui, atau menjebol sistem pengamanan/cracking)",
-      "d": "Pasal 35 (Manipulasi atau pemalsuan dokumen elektronik/electronic forgery)",
-      "e": "Pasal 45 (Ketentuan sanksi pidana penjara dan denda)"
-    },
-    "correct_letter": "c",
-    "correct_answer": "Pasal 30 ayat (3) (Illegal access dengan melanggar, menerobos, melampaui, atau menjebol sistem pengamanan/cracking)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 166
-  },
-  {
-    "week": "Week 3",
-    "type": "Pre Test",
-    "question": "Seseorang memasang packet sniffer pada jaringan Wi-Fi privat perusahaan tanpa izin untuk menangkap transmisi data sensitif yang tidak bersifat publik. Tindakan penyadapan ini diatur dan dilarang dalam UU ITE pada ...",
-    "options": {
-      "a": "Pasal 31 ayat (1) (Interception/penyadapan transmisi informasi elektronik pada sistem privat tanpa hak/sniffing)",
-      "b": "Pasal 30 ayat (1) (Akses tanpa hak ke komputer atau sistem elektronik)",
-      "c": "Pasal 33 (Tindakan yang berakibat terganggunya kinerja sistem elektronik/serangan DoS)",
-      "d": "Pasal 35 (Pemalsuan data atau manipulasi dokumen elektronik)",
-      "e": "Pasal 36 (Pemberatan hukuman apabila kejahatan siber mengakibatkan kerugian materiil bagi pihak lain)"
-    },
-    "correct_letter": "a",
-    "correct_answer": "Pasal 31 ayat (1) (Interception/penyadapan transmisi informasi elektronik pada sistem privat tanpa hak/sniffing)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 167
-  },
-  {
-    "week": "Week 3",
-    "type": "Pre Test",
-    "question": "Seorang mantan karyawan yang kecewa sengaja menghapus tabel database nasabah dan mengubah record saldo rekening. Tindakan pengubahan, perusakan, dan penghapusan informasi elektronik milik orang lain ini melanggar UU ITE ...",
-    "options": {
-      "a": "Pasal 27 ayat (3) (Pencemaran nama baik dan penghinaan melalui media sosial)",
-      "b": "Pasal 32 ayat (1) (Data interference: mengubah, menambah, mengurangi, merusak, atau menghapus informasi/dokumen elektronik orang lain)",
-      "c": "Pasal 31 ayat (2) (Penyadapan transmisi data dari satu komputer ke komputer lain)",
-      "d": "Pasal 34 (Penyediaan atau penjualan alat dan perangkat lunak peretas)",
-      "e": "Pasal 30 ayat (1) (Mengakses sistem komputer tanpa mengubah isi data)"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Pasal 32 ayat (1) (Data interference: mengubah, menambah, mengurangi, merusak, atau menghapus informasi/dokumen elektronik orang lain)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 168
-  },
-  {
-    "week": "Week 3",
-    "type": "Pre Test",
-    "question": "Tindakan melancarkan serangan Distributed Denial of Service (DDoS) yang menyebabkan server layanan publik lumpuh dan tidak dapat diakses masyarakat termasuk pelanggaran UU ITE ...",
-    "options": {
-      "a": "Pasal 33 (Tindakan yang berakibat terganggunya Sistem Elektronik dan/atau mengakibatkan Sistem Elektronik menjadi tidak bekerja sebagaimana mestinya)",
-      "b": "Pasal 27 ayat (2) tentang perjudian online",
-      "c": "Pasal 31 ayat (1) tentang penyadapan",
-      "d": "Pasal 35 tentang manipulasi dokumen",
-      "e": "Pasal 30 ayat (1) tentang browsing biasa"
-    },
-    "correct_letter": "a",
-    "correct_answer": "Pasal 33 (Tindakan yang berakibat terganggunya Sistem Elektronik dan/atau mengakibatkan Sistem Elektronik menjadi tidak bekerja sebagaimana mestinya)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 169
-  },
-  {
-    "week": "Week 3",
-    "type": "Pre Test",
-    "question": "Seseorang memproduksi dan memperjualbelikan software peretas (exploit kit) yang dirancang khusus untuk memfasilitasi pembobolan sistem perbankan. Tindakan penyediaan perangkat keras atau lunak untuk memfasilitasi kejahatan komputer ini diatur dalam UU ITE ...",
-    "options": {
-      "a": "Pasal 30 ayat (2) (Akses ilegal untuk memperoleh informasi/dokumen elektronik)",
-      "b": "Pasal 34 ayat (1) (Misuse of devices: memproduksi, menjual, menyebarkan, atau memiliki perangkat keras/lunak yang dirancang untuk memfasilitasi peretasan)",
-      "c": "Pasal 31 ayat (1) (Penyadapan transmisi data jaringan privat)",
-      "d": "Pasal 28 ayat (1) (Penyebaran berita bohong yang merugikan konsumen transaksi elektronik)",
-      "e": "Pasal 29 (Pengiriman informasi elektronik yang berisi ancaman kekerasan pribadi)"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Pasal 34 ayat (1) (Misuse of devices: memproduksi, menjual, menyebarkan, atau memiliki perangkat keras/lunak yang dirancang untuk memfasilitasi peretasan)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 170
-  },
-  {
-    "week": "Week 3",
-    "type": "Pre Test",
-    "question": "Membuat sertifikat digital palsu atau memanipulasi dokumen elektronik rekening bank agar tampak seolah-olah merupakan data yang otentik (Electronic Forgery) dilarang dalam UU ITE pada ...",
-    "options": {
-      "a": "Pasal 35 (Electronic forgery: memanipulasi, menciptakan, atau mengubah dokumen elektronik agar seolah-olah otentik)",
-      "b": "Pasal 30 (Illegal access ke dalam jaringan komputer tanpa hak)",
-      "c": "Pasal 31 (Interception atau penyadapan kabel/gelombang radio transmisi)",
-      "d": "Pasal 32 (Perusakan atau penghapusan data database perusahaan)",
-      "e": "Pasal 33 (Serangan siber yang mengakibatkan lumpuhnya layanan server)"
-    },
-    "correct_letter": "a",
-    "correct_answer": "Pasal 35 (Electronic forgery: memanipulasi, menciptakan, atau mengubah dokumen elektronik agar seolah-olah otentik)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 171
-  },
-  {
-    "week": "Week 3",
-    "type": "Pre Test",
-    "question": "Budapest Convention on Cybercrime (Convention ETS 185) merupakan instrumen internasional penting yang bertujuan untuk ...",
-    "options": {
-      "a": "Mewajibkan seluruh negara memblokir akses internet secara sepihak.",
-      "b": "Mengharmonisasikan hukum pidana siber nasional, meningkatkan kemampuan investigasi, dan memfasilitasi kerjasama peradilan internasional lintas batas.",
-      "c": "Menetapkan tarif pajak standar untuk transaksi e-commerce global.",
-      "d": "Melarang riset kriptografi sumber terbuka di perguruan tinggi.",
-      "e": "Menghapus wewenang aparat penegak hukum lokal dalam menyita barang bukti digital."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Mengharmonisasikan hukum pidana siber nasional, meningkatkan kemampuan investigasi, dan memfasilitasi kerjasama peradilan internasional lintas batas.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 172
-  },
-  {
-    "week": "Week 3",
-    "type": "Pre Test",
-    "question": "Dalam hukum forensik digital, dokumentasi kronologis ketat mengenai siapa yang menyita, menerima, memindahkan, menganalisis, dan menyimpan barang bukti digital disebut ...",
-    "options": {
-      "a": "Order of Volatility",
-      "b": "Chain of Custody",
-      "c": "Incident Response Plan",
-      "d": "Electronic Discovery Protocol",
-      "e": "Forensic Audit Log"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Chain of Custody",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 173
-  },
-  {
-    "week": "Week 3",
-    "type": "Pre Test",
-    "question": "Mengapa penyidik forensik digital wajib menggunakan perangkat hardware write-blocker saat menghubungkan media penyimpanan bukti asli ke komputer workstation analisis?",
-    "options": {
-      "a": "Agar kecepatan transfer data harddisk meningkat dua kali lipat.",
-      "b": "Untuk mencegah sistem operasi workstation mengubah, menulis, atau memodifikasi metadata/isi berkas pada media bukti asli secara tidak sengaja.",
-      "c": "Untuk menghapus malware yang mungkin aktif pada harddisk bukti secara otomatis.",
-      "d": "Agar partisi harddisk yang terenkripsi langsung terdekripsi tanpa kata sandi.",
-      "e": "Untuk mengompresi ukuran disk image menjadi format zip."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Untuk mencegah sistem operasi workstation mengubah, menulis, atau memodifikasi metadata/isi berkas pada media bukti asli secara tidak sengaja.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 174
-  },
-  {
-    "week": "Week 3",
-    "type": "Pre Test",
-    "question": "Bagaimana seorang ahli forensik membuktikan di depan pengadilan bahwa salinan bit-stream image identik secara sempurna dengan harddisk bukti asli di tempat kejadian perkara (TKP)?",
-    "options": {
-      "a": "Dengan membandingkan jumlah folder pada Windows Explorer.",
-      "b": "Dengan menunjukkan bahwa nilai cryptographic hash (misalnya SHA-256) dari media asli sama persis dengan nilai hash salinan image sebelum dan sesudah analisis.",
-      "c": "Dengan mencetak isi seluruh file di atas kertas bermaterai.",
-      "d": "Dengan mengonfirmasi pengakuan lisan dari tersangka peretasan.",
-      "e": "Dengan memeriksa tanggal pembuatan casing komputer."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Dengan menunjukkan bahwa nilai cryptographic hash (misalnya SHA-256) dari media asli sama persis dengan nilai hash salinan image sebelum dan sesudah analisis.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 175
-  },
-  {
-    "week": "Week 3",
-    "type": "Pre Test",
-    "question": "Berdasarkan standar RFC 3227 mengenai urutan volatilitas data (Order of Volatility), manakah sumber data yang paling mudah hilang / mudah menguap dan wajib diakuisisi pertama kali?",
-    "options": {
-      "a": "Data pada harddisk magnetik lokal",
-      "b": "Media pita cadangan (backup tape)",
-      "c": "Isi register CPU, cache memori, dan memori fisik (RAM)",
-      "d": "Dokumen cetak pada lemari arsip",
-      "e": "Kabel jaringan serat optik"
-    },
-    "correct_letter": "c",
-    "correct_answer": "Isi register CPU, cache memori, dan memori fisik (RAM)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 176
-  },
-  {
-    "week": "Week 3",
-    "type": "Post Test",
-    "question": "Pada penanganan insiden ransomware yang sedang aktif menginfeksi sebuah server, mengapa mematikan daya secara mendadak (hard power-off) sering kali tidak disarankan sebelum live memory capture dilakukan?",
-    "options": {
-      "a": "Mematikan server akan merusak fisik monitor dan keyboard.",
-      "b": "Daya yang hilang akan melenyapkan isi RAM yang berpotensi menyimpan kunci enkripsi ransomware, proses malware aktif, dan koneksi jaringan memori.",
-      "c": "Ransomware akan langsung menyebar ke seluruh internet secara otomatis.",
-      "d": "Sistem operasi tidak akan bisa diinstal ulang selamanya.",
-      "e": "Harddisk akan kehilangan partisi booting secara permanen."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Daya yang hilang akan melenyapkan isi RAM yang berpotensi menyimpan kunci enkripsi ransomware, proses malware aktif, dan koneksi jaringan memori.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 177
-  },
-  {
-    "week": "Week 3",
-    "type": "Post Test",
-    "question": "Teknik anti-forensik di mana penyerang dengan sengaja memanipulasi timestamp MAC (Modified, Accessed, Created) pada file system untuk mengaburkan kronologi insiden disebut ...",
-    "options": {
-      "a": "Data Degaussing",
-      "b": "Timestomping",
-      "c": "Buffer Overflow",
-      "d": "Memory Injection",
-      "e": "Traffic Sniffing"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Timestomping",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 178
-  },
-  {
-    "week": "Week 3",
-    "type": "Post Test",
-    "question": "Serangan Business Email Compromise (BEC) umumnya menargetkan divisi keuangan perusahaan dengan modus ...",
-    "options": {
-      "a": "Menginfeksi komputer dengan worm jaringan yang menggandakan diri.",
-      "b": "Memalsukan email identitas eksekutif/vendor rekanan tepercaya untuk menginstruksikan transfer dana ke rekening penipu melalui rekayasa sosial.",
-      "c": "Melakukan serangan brute-force terhadap password BIOS server.",
-      "d": "Memutuskan kabel optik bawah laut antarnegara.",
-      "e": "Mengubah tampilan visual halaman depan website perusahaan (web defacement)."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Memalsukan email identitas eksekutif/vendor rekanan tepercaya untuk menginstruksikan transfer dana ke rekening penipu melalui rekayasa sosial.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 179
-  },
-  {
-    "week": "Week 3",
-    "type": "Post Test",
-    "question": "Serangan phishing yang ditargetkan secara spesifik kepada individu berpangkat tinggi seperti CEO, CFO, atau pejabat pemerintah dengan informasi personal yang sangat mendalam disebut ...",
-    "options": {
-      "a": "Bulk Spamming",
-      "b": "Whaling",
-      "c": "Phreaking",
-      "d": "Adware Infiltration",
-      "e": "Denial of Service"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Whaling",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 180
-  },
-  {
-    "week": "Week 3",
-    "type": "Post Test",
-    "question": "Perbedaan lisensi perangkat lunak Copyleft (seperti GNU GPL) dengan lisensi Permissive (seperti MIT atau Apache 2.0) adalah ...",
-    "options": {
-      "a": "Lisensi GPL melarang siapa pun mengunduh kode sumber.",
-      "b": "Lisensi GPL mewajibkan setiap karya turunan untuk tetap dirilis dengan lisensi open source yang sama (GPL), sedangkan MIT mengizinkan integrasi ke software komersial berpemilik.",
-      "c": "Lisensi MIT melarang penggunaan perangkat lunak untuk keperluan komersial.",
-      "d": "Lisensi GPL memungut royalti sebesar 10% dari setiap penjualan.",
-      "e": "Lisensi MIT hanya berlaku untuk aplikasi berbasis mobile Android."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Lisensi GPL mewajibkan setiap karya turunan untuk tetap dirilis dengan lisensi open source yang sama (GPL), sedangkan MIT mengizinkan integrasi ke software komersial berpemilik.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 181
-  },
-  {
-    "week": "Week 3",
-    "type": "Post Test",
-    "question": "Dalam konteks etika dan legalitas Penetration Testing, dokumen krusial yang mendefinisikan batasan sistem target, jadwal waktu pengujian, teknik yang diizinkan, dan kontak darurat disebut ...",
-    "options": {
-      "a": "Certificate of Authenticity (CoA)",
-      "b": "Rules of Engagement (RoE) / Scope of Work",
-      "c": "End-User License Agreement (EULA)",
-      "d": "Privacy Policy Statement",
-      "e": "Hardware Warranty Agreement"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Rules of Engagement (RoE) / Scope of Work",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 182
-  },
-  {
-    "week": "Week 3",
-    "type": "Post Test",
-    "question": "Karakteristik utama dari ancaman Insider Threat yang menjadikannya sangat berbahaya dan sulit dideteksi oleh firewall konvensional adalah ...",
-    "options": {
-      "a": "Penyerang tidak memiliki akun login ke dalam sistem perusahaan.",
-      "b": "Pelaku telah memiliki kredensial resmi dan hak akses sah ke jaringan internal sehingga aktivitas awalnya tampak seperti perilaku kerja biasa.",
-      "c": "Serangan selalu berasal dari negara dengan zona waktu yang berbeda.",
-      "d": "Pelaku selalu menggunakan alat peretas automated exploit yang meninggalkan jejak jelas.",
-      "e": "Insider threat hanya terjadi pada sistem operasi lama yang tidak lagi diperbarui."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Pelaku telah memiliki kredensial resmi dan hak akses sah ke jaringan internal sehingga aktivitas awalnya tampak seperti perilaku kerja biasa.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 183
-  },
-  {
-    "week": "Week 3",
-    "type": "Post Test",
-    "question": "Sifat 'Non-Repudiation' (penyangkalan yang tidak dapat dilakukan) dalam transaksi elektronik paling tepat diwujudkan melalui penggunaan teknologi ...",
-    "options": {
-      "a": "CAPTCHA berbasis gambar",
-      "b": "Tanda tangan digital (Digital Signature) berbasis kriptografi asimetris dan sertifikat elektronik tersertifikasi",
-      "c": "Protokol HTTP tanpa enkripsi",
-      "d": "Password bersama (shared password) satu kantor",
-      "e": "Firewall berbasis stateless packet filter"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Tanda tangan digital (Digital Signature) berbasis kriptografi asimetris dan sertifikat elektronik tersertifikasi",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 184
-  },
-  {
-    "week": "Week 3",
-    "type": "Post Test",
-    "question": "Berdasarkan regulasi UU Perlindungan Data Pribadi (UU PDP), ketika terjadi insiden kegagalan perlindungan data pribadi (data breach), pengendali data wajib menyampaikan pemberitahuan tertulis kepada lembaga pengawas dan subjek data paling lambat dalam waktu ...",
-    "options": {
-      "a": "3 x 24 jam",
-      "b": "30 hari kerja",
-      "c": "6 bulan setelah audit tahunan",
-      "d": "1 tahun setelah insiden selesai diinvestigasi",
-      "e": "Tidak ada kewajiban memberitahukan insiden kepada subjek data"
-    },
-    "correct_letter": "a",
-    "correct_answer": "3 x 24 jam",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 185
-  },
-  {
-    "week": "Week 3",
-    "type": "Post Test",
-    "question": "Prinsip etika ACM Code of Ethics mengenai 'Honor Property Rights including Copyrights and Patents' menegaskan bahwa profesional komputer dilarang ...",
-    "options": {
-      "a": "Membaca dokumentasi open-source di internet.",
-      "b": "Menduplikasi, mendistribusikan, atau menggunakan karya perangkat lunak atau kekayaan intelektual orang lain tanpa izin atau lisensi yang sah.",
-      "c": "Membuat kode program yang menggunakan pustaka matematika standar.",
-      "d": "Membeli perangkat keras komputer dari vendor luar negeri.",
-      "e": "Menulis program komputer untuk tujuan komersial."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Menduplikasi, mendistribusikan, atau menggunakan karya perangkat lunak atau kekayaan intelektual orang lain tanpa izin atau lisensi yang sah.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 186
-  },
-  {
-    "week": "Week 3",
-    "type": "Post Test",
-    "question": "Dokumen hukum internasional non-mengikat yang merumuskan bagaimana hukum humaniter internasional berlaku pada domain perang siber (cyber warfare) dikenal dengan nama ...",
-    "options": {
-      "a": "Geneva Convention Amendment 1999",
-      "b": "Tallinn Manual on the International Law Applicable to Cyber Warfare",
-      "c": "Wassenaar Arrangement on Cyber Arms",
-      "d": "Kyoto Protocol Cyber Annex",
-      "e": "Rome Statute Cyber Article"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Tallinn Manual on the International Law Applicable to Cyber Warfare",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 187
-  },
-  {
-    "week": "Week 3",
-    "type": "Post Test",
-    "question": "Seorang teknisi TI menemukan log bahwa salah satu pengguna mengunduh data rahasia perusahaan dalam jumlah mencurigakan pada pukul 02:00 dini hari. Sebelum mengambil tindakan hukum atau disipliner, langkah kepatuhan profesional yang harus dijaga teknisi adalah ...",
-    "options": {
-      "a": "Menyebarkan nama pengguna tersebut di grup obrolan publik agar dipermalukan.",
-      "b": "Menjaga integritas data log sebagai barang bukti, mencatat rantai penanganan bukti (chain of custody), dan melaporkannya kepada tim kepatuhan internal/CISO sesuai SOP.",
-      "c": "Menghapus akun pengguna dan memformat komputer tanpa menyimpan salinan forensik.",
-      "d": "Meretas perangkat pribadi pengguna tersebut untuk membalas dendam.",
-      "e": "Mengabaikan insiden tersebut karena bukan tanggung jawab langsung."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Menjaga integritas data log sebagai barang bukti, mencatat rantai penanganan bukti (chain of custody), dan melaporkannya kepada tim kepatuhan internal/CISO sesuai SOP.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 188
-  },
-  {
-    "week": "Week 4",
-    "type": "Pre Test",
-    "question": "Prinsip 'Fail-Safe Defaults' dalam desain perangkat lunak aman menyatakan bahwa ...",
-    "options": {
-      "a": "Jika terjadi kegagalan atau galat pada sistem, hak akses secara bawaan harus ditolak (default deny), bukan diizinkan.",
-      "b": "Sistem harus terus berjalan meskipun memori bocor tanpa membatasi hak akses pengguna.",
-      "c": "Aplikasi harus mematikan firewall server jika terjadi kesalahan jaringan.",
-      "d": "Semua pengguna baru secara otomatis diberikan hak akses administrator sistem.",
-      "e": "Sistem harus merahasiakan algoritma enkripsi agar tidak diketahui penguji keamanan."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Jika terjadi kegagalan atau galat pada sistem, hak akses secara bawaan harus ditolak (default deny), bukan diizinkan.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 189
-  },
-  {
-    "week": "Week 4",
-    "type": "Pre Test",
-    "question": "Pada arsitektur memori program berbasis arsitektur x86/x64, arah pertumbuhan stack dan letak Return Address (EIP/RIP) dalam stack frame menyebabkan buffer overflow dapat mengeksploitasi sistem karena ...",
-    "options": {
-      "a": "Stack tumbuh ke arah alamat memori lebih rendah, sementara pengisian array buffer lokal tumbuh ke arah alamat lebih tinggi menuju Saved Frame Pointer dan Return Address.",
-      "b": "Stack dan Heap berada pada segmen memori yang sama persis tanpa pemisah.",
-      "c": "Return Address selalu disimpan di dalam register prosesor dan tidak pernah diletakkan di memori RAM.",
-      "d": "Ukuran stack selalu bersifat dinamis tanpa batas maksimal.",
-      "e": "Compiler C selalu menyisipkan kode NOP sled secara otomatis pada setiap fungsi."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Stack tumbuh ke arah alamat memori lebih rendah, sementara pengisian array buffer lokal tumbuh ke arah alamat lebih tinggi menuju Saved Frame Pointer dan Return Address.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 190
-  },
-  {
-    "week": "Week 4",
-    "type": "Pre Test",
-    "question": "Sebuah loop pada bahasa C menulis data sebanyak N+1 elemen ke dalam array buffer berukuran N. Kesalahan batas memori satu byte ini dikenal sebagai ...",
-    "options": {
-      "a": "Null Pointer Dereference",
-      "b": "Off-by-one vulnerability",
-      "c": "Type Confusion",
-      "d": "Integer Underflow",
-      "e": "Cross-Site Scripting"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Off-by-one vulnerability",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 191
-  },
-  {
-    "week": "Week 4",
-    "type": "Pre Test",
-    "question": "Mekanisme proteksi Stack Canary (Stack Cookie) yang disisipkan oleh compiler antara variabel lokal dan Saved Frame Pointer bekerja dengan cara ...",
-    "options": {
-      "a": "Mengenkripsi seluruh instruksi biner menggunakan AES-256 sebelum dieksekusi CPU.",
-      "b": "Menaruh nilai integer acak sebelum Return Address dan memverifikasi integritas nilai tersebut sebelum fungsi melakukan instruksi return (RET).",
-      "c": "Mengalokasikan seluruh variabel lokal di memori Read-Only Data (.rodata).",
-      "d": "Menonaktifkan pointer arithmetic pada runtime sistem operasi.",
-      "e": "Mengganti semua tipe data integer menjadi float."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Menaruh nilai integer acak sebelum Return Address dan memverifikasi integritas nilai tersebut sebelum fungsi melakukan instruksi return (RET).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 192
-  },
-  {
-    "week": "Week 4",
-    "type": "Pre Test",
-    "question": "Fitur keamanan Address Space Layout Randomization (ASLR) pada sistem operasi modern dirancang untuk menggagalkan eksploitasi buffer overflow dengan cara ...",
-    "options": {
-      "a": "Mengacak lokasi base address memori stack, heap, dan shared libraries setiap kali program dieksekusi sehingga penyerang tidak dapat memprediksi alamat lompatan shellcode.",
-      "b": "Menghapus kode biner program setelah proses selesai berjalan.",
-      "c": "Mengubah nama file executable menjadi string acak di direktori instalasi.",
-      "d": "Memblokir seluruh port jaringan TCP yang terbuka di server.",
-      "e": "Membatasi kecepatan eksekusi instruksi per detik pada CPU."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Mengacak lokasi base address memori stack, heap, dan shared libraries setiap kali program dieksekusi sehingga penyerang tidak dapat memprediksi alamat lompatan shellcode.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 193
-  },
-  {
-    "week": "Week 4",
-    "type": "Pre Test",
-    "question": "Data Execution Prevention (DEP) atau fitur No-Execute (NX / W^X) melindungi sistem operasi dengan menerapkan aturan bahwa ...",
-    "options": {
-      "a": "Sebuah halaman memori tidak boleh memiliki izin tulis (writable) dan izin eksekusi (executable) secara bersamaan.",
-      "b": "File biner tidak boleh dibaca oleh pengguna non-root.",
-      "c": "Aplikasi tidak diizinkan membuka koneksi soket jaringan keluar.",
-      "d": "Program C dilarang menggunakan fungsi alokasi memori dinamis malloc().",
-      "e": "Setiap file teks harus memiliki ekstensi .bin sebelum dijalankan."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Sebuah halaman memori tidak boleh memiliki izin tulis (writable) dan izin eksekusi (executable) secara bersamaan.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 194
-  },
-  {
-    "week": "Week 4",
-    "type": "Pre Test",
-    "question": "Ketika mekanisme proteksi DEP/NX aktif sehingga shellcode di stack tidak dapat dieksekusi langsung, teknik eksploitasi canggih yang merangkai potongan instruksi biner yang sudah ada di memori dan diakhiri instruksi 'ret' disebut ...",
-    "options": {
-      "a": "SQL Injection",
-      "b": "Return-Oriented Programming (ROP)",
-      "c": "Cross-Site Request Forgery (CSRF)",
-      "d": "Denial of Service (DoS)",
-      "e": "Directory Traversal"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Return-Oriented Programming (ROP)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 195
-  },
-  {
-    "week": "Week 4",
-    "type": "Pre Test",
-    "question": "Kerentanan memori Use-After-Free (UAF) terjadi pada sebuah aplikasi ketika ...",
-    "options": {
-      "a": "Sebuah pointer tetap merujuk dan mengakses area memori heap yang sebelumnya telah dibebaskan (deallocated/freed).",
-      "b": "Aplikasi tidak menggunakan lisensi perangkat lunak berbayar.",
-      "c": "Sistem kehabisan ruang harddisk saat menyimpan log aplikasi.",
-      "d": "Dua thread mengakses variabel konstan secara bersamaan.",
-      "e": "Program C dikompilasi menggunakan compiler berbasis Java."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Sebuah pointer tetap merujuk dan mengakses area memori heap yang sebelumnya telah dibebaskan (deallocated/freed).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 196
-  },
-  {
-    "week": "Week 4",
-    "type": "Pre Test",
-    "question": "Memanggil fungsi free() sebanyak dua kali pada alamat pointer memori heap yang sama tanpa alokasi baru di antaranya memicu kerentanan yang disebut ...",
-    "options": {
-      "a": "Double Free",
-      "b": "Memory Leak",
-      "c": "Buffer Underflow",
-      "d": "Stack Exhaustion",
-      "e": "Deadlock Threading"
-    },
-    "correct_letter": "a",
-    "correct_answer": "Double Free",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 197
-  },
-  {
-    "week": "Week 4",
-    "type": "Pre Test",
-    "question": "Perhatikan potongan kode C berikut: printf(user_input);. Mengapa penulisan kode tersebut sangat berbahaya?",
-    "options": {
-      "a": "Fungsi printf tidak mendukung tampilan teks berwarna di terminal.",
-      "b": "Jika user_input berisi format specifier seperti %x, %s, atau %n, penyerang dapat membaca isi stack atau menulis data ke alamat memori arbitrer (Format String Vulnerability).",
-      "c": "Fungsi printf akan otomatis mengunduh malware dari internet jika string terlalu panjang.",
-      "d": "Compiler akan menolak mengompilasi kode tersebut secara permanen.",
-      "e": "Variabel user_input otomatis terhapus dari sistem berkas."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Jika user_input berisi format specifier seperti %x, %s, atau %n, penyerang dapat membaca isi stack atau menulis data ke alamat memori arbitrer (Format String Vulnerability).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 198
-  },
-  {
-    "week": "Week 4",
-    "type": "Pre Test",
-    "question": "Sebuah variabel unsigned 16-bit integer bernilai 65535 ditambah dengan nilai 1. Fenomena aritmatika yang terjadi sehingga nilai variabel tersebut membungkus menjadi 0 disebut ...",
-    "options": {
-      "a": "Floating-point division by zero",
-      "b": "Integer Overflow / Wraparound",
-      "c": "Buffer Smashing",
-      "d": "Race Condition",
-      "e": "Type Casting Violation"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Integer Overflow / Wraparound",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 199
-  },
-  {
-    "week": "Week 4",
-    "type": "Pre Test",
-    "question": "Kondisi balapan Time-of-Check to Time-of-Use (TOCTOU) pada sistem berkas terjadi ketika ...",
-    "options": {
-      "a": "Terdapat jeda waktu antara saat sistem memeriksa izin suatu berkas (check) dan saat sistem melakukan operasi terhadap berkas tersebut (use), yang memungkinkan penyerang mengganti berkas dengan symlink.",
-      "b": "Jam internal server mengalami lompatan waktu ke masa lampau akibat manipulasi NTP.",
-      "c": "Waktu kedaluwarsa password pengguna habis saat proses login berlangsung.",
-      "d": "Dua query SQL dijalankan pada koneksi database yang berbeda tanpa transaksi.",
-      "e": "Sistem kompilasi kode membutuhkan waktu lebih dari 60 menit."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Terdapat jeda waktu antara saat sistem memeriksa izin suatu berkas (check) dan saat sistem melakukan operasi terhadap berkas tersebut (use), yang memungkinkan penyerang mengganti berkas dengan symlink.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 200
-  },
-  {
-    "week": "Week 4",
-    "type": "Pre Test",
-    "question": "Manakah fungsi pustaka standar bahasa C berikut yang dianggap SANGAT BERBAHAYA dan dilarang digunakan dalam secure coding karena tidak memiliki mekanisme pembatasan ukuran input sama sekali?",
-    "options": {
-      "a": "fgets()",
-      "b": "snprintf()",
-      "c": "gets()",
-      "d": "strncpy()",
-      "e": "strncat()"
-    },
-    "correct_letter": "c",
-    "correct_answer": "gets()",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 201
-  },
-  {
-    "week": "Week 4",
-    "type": "Post Test",
-    "question": "Mengapa pendekatan input validation berbasis Whitelisting (Positive Validation) jauh lebih aman dibandingkan Blacklisting (Negative Validation)?",
-    "options": {
-      "a": "Whitelisting hanya menerima pola data yang secara eksplisit diketahui valid dan aman, sedangkan blacklisting berisiko gagal mendeteksi teknik pengaburan baru (obfuscation/evasion).",
-      "b": "Whitelisting menggunakan algoritma AI canggih yang tidak memerlukan konfigurasi aturan.",
-      "c": "Blacklisting membuat ukuran file program menjadi terlalu besar untuk memori RAM.",
-      "d": "Whitelisting hanya memeriksa ekstensi file tanpa memeriksa isi konten.",
-      "e": "Blacklisting dilarang oleh standar keamanan perangkat keras PCI-DSS."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Whitelisting hanya menerima pola data yang secara eksplisit diketahui valid dan aman, sedangkan blacklisting berisiko gagal mendeteksi teknik pengaburan baru (obfuscation/evasion).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 202
-  },
-  {
-    "week": "Week 4",
-    "type": "Post Test",
-    "question": "Sebelum data input pengguna divalidasi terhadap pola aturan keamanan, data tersebut wajib melalui proses 'Canonicalization'. Tujuan proses ini adalah ...",
-    "options": {
-      "a": "Mengubah data input menjadi bentuk representasi standar yang seragam untuk mencegah bypass berbasis berbagai variasi encoding (seperti URL encoding, Unicode ganda, atau path traversal).",
-      "b": "Menghapus seluruh angka dan menyisakan huruf alfabet saja.",
-      "c": "Mengompresi data input agar hemat penyimpanan disk.",
-      "d": "Menyimpan data input ke file log tanpa divalidasi.",
-      "e": "Mengenkripsi data input menggunakan kunci publik server."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Mengubah data input menjadi bentuk representasi standar yang seragam untuk mencegah bypass berbasis berbagai variasi encoding (seperti URL encoding, Unicode ganda, atau path traversal).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 203
-  },
-  {
-    "week": "Week 4",
-    "type": "Post Test",
-    "question": "Static Application Security Testing (SAST) memiliki keunggulan dibandingkan Dynamic Application Security Testing (DAST) dalam hal ...",
-    "options": {
-      "a": "SAST menguji aplikasi pada kondisi runtime aktif tanpa membutuhkan kode sumber.",
-      "b": "SAST dapat menganalisis seluruh alur kode sumber secara mendalam pada fase awal pengembangan (shift-left) dan menunjukkan lokasi baris kode yang rentan secara presisi.",
-      "c": "SAST tidak pernah menghasilkan false positive sama sekali.",
-      "d": "SAST hanya dapat mendeteksi kerentanan konfigurasi web server dan firewall.",
-      "e": "SAST memerlukan kredensial login aktif pengguna untuk bekerja."
-    },
-    "correct_letter": "b",
-    "correct_answer": "SAST dapat menganalisis seluruh alur kode sumber secara mendalam pada fase awal pengembangan (shift-left) dan menunjukkan lokasi baris kode yang rentan secara presisi.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 204
-  },
-  {
-    "week": "Week 4",
-    "type": "Post Test",
-    "question": "Keterbatasan utama dari pengujian keamanan dinamis (DAST) adalah ...",
-    "options": {
-      "a": "DAST memerlukan akses penuh ke seluruh repositori kode sumber (white-box).",
-      "b": "DAST hanya menguji jalur eksekusi yang berhasil dipicu selama sesi pengujian runtime (black-box) dan kesulitan mendeteksi fungsi tersembunyi yang tidak terhubung ke antarmuka.",
-      "c": "DAST tidak dapat dijalankan pada aplikasi berbasis web.",
-      "d": "DAST menghasilkan laporan analisis kode baris per baris secara otomatis.",
-      "e": "DAST hanya dapat menguji kelemahan fisik perangkat keras komputer."
-    },
-    "correct_letter": "b",
-    "correct_answer": "DAST hanya menguji jalur eksekusi yang berhasil dipicu selama sesi pengujian runtime (black-box) dan kesulitan mendeteksi fungsi tersembunyi yang tidak terhubung ke antarmuka.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 205
-  },
-  {
-    "week": "Week 4",
-    "type": "Post Test",
-    "question": "Teknik pengujian Interactive Application Security Testing (IAST) bekerja dengan cara ...",
-    "options": {
-      "a": "Memasang sensor/agent instrumentasi di dalam runtime aplikasi untuk memantau aliran data dan perilaku kode saat pengujian fungsional berlangsung.",
-      "b": "Mengirimkan formulir kuesioner wawancara keamanan kepada seluruh programmer.",
-      "c": "Melakukan brute-force dictionary attack terhadap port SSH server.",
-      "d": "Menguji daya tahan fisik server terhadap guncangan gempa bumi.",
-      "e": "Membongkar chip mikrokontroler hardware menggunakan mikroskop elektron."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Memasang sensor/agent instrumentasi di dalam runtime aplikasi untuk memantau aliran data dan perilaku kode saat pengujian fungsional berlangsung.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 206
-  },
-  {
-    "week": "Week 4",
-    "type": "Post Test",
-    "question": "Metode pengujian Fuzzing (Fuzz Testing) bertujuan menemukan cacat software (seperti crash atau buffer overflow) dengan mekanisme ...",
-    "options": {
-      "a": "Menganalisis dokumentasi manual penggunaan sistem secara teliti.",
-      "b": "Mengirimkan volume besar data input acak, malformed, atau semi-terstruktur yang tidak terduga ke dalam program dan memantau terjadinya anomali.",
-      "c": "Mengecek apakah tampilan UI tombol telah simetris di berbagai browser.",
-      "d": "Mengaudit laporan keuangan perusahaan pengembang software.",
-      "e": "Memeriksa ejaan tata bahasa pada komentar kode sumber."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Mengirimkan volume besar data input acak, malformed, atau semi-terstruktur yang tidak terduga ke dalam program dan memantau terjadinya anomali.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 207
-  },
-  {
-    "week": "Week 4",
-    "type": "Post Test",
-    "question": "Dalam pemodelan ancaman (Threat Modeling) STRIDE, huruf 'T' mewakili ancaman 'Tampering' yang didefinisikan sebagai ...",
-    "options": {
-      "a": "Tindakan menyamar sebagai pengguna yang sah (Spoofing).",
-      "b": "Modifikasi atau manipulasi data yang tidak sah baik saat diam maupun saat transit di jaringan.",
-      "c": "Penyangkalan keterlibatan dalam suatu transaksi (Repudiation).",
-      "d": "Pembocoran informasi rahasia kepada pihak tidak berhak (Information Disclosure).",
-      "e": "Melumpuhkan ketersediaan layanan sistem (Denial of Service)."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Modifikasi atau manipulasi data yang tidak sah baik saat diam maupun saat transit di jaringan.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 208
-  },
-  {
-    "week": "Week 4",
-    "type": "Post Test",
-    "question": "Dalam STRIDE, ancaman 'Elevation of Privilege' mengacu pada situasi di mana ...",
-    "options": {
-      "a": "Penyerang berhasil memperoleh tingkat hak akses yang lebih tinggi daripada yang semestinya diizinkan (misalnya dari user biasa menjadi root/admin).",
-      "b": "Pengguna menghapus log audit untuk menyembunyikan jejak transaksi.",
-      "c": "Aplikasi menampilkan error stack trace lengkap ke layar browser.",
-      "d": "Server kehabisan kapasitas memori RAM akibat memory leak.",
-      "e": "Pengguna lupa kata sandi dan meminta reset password melalui email."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Penyerang berhasil memperoleh tingkat hak akses yang lebih tinggi daripada yang semestinya diizinkan (misalnya dari user biasa menjadi root/admin).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 209
-  },
-  {
-    "week": "Week 4",
-    "type": "Post Test",
-    "question": "Mengapa bahasa pemrograman modern seperti Rust dianggap kebal terhadap sebagian besar bug memori (memory-safety) dibandingkan C/C++?",
-    "options": {
-      "a": "Rust tidak menggunakan memori RAM sama sekali saat mengeksekusi program.",
-      "b": "Rust menerapkan sistem Ownership, Borrowing, dan Lifetimes yang ketat pada saat compile-time tanpa memerlukan garbage collector runtime.",
-      "c": "Rust secara otomatis mengenkripsi seluruh variabel menggunakan kunci AES.",
-      "d": "Program Rust hanya dapat dijalankan di dalam virtual machine terisolasi.",
-      "e": "Rust tidak mengizinkan pembuatan fungsi atau loop perulangan."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Rust menerapkan sistem Ownership, Borrowing, dan Lifetimes yang ketat pada saat compile-time tanpa memerlukan garbage collector runtime.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 210
-  },
-  {
-    "week": "Week 4",
-    "type": "Post Test",
-    "question": "Praktik penanganan kesalahan (error handling) yang BURUK dan membahayakan keamanan aplikasi web adalah ...",
-    "options": {
-      "a": "Mencatat detail error lengkap ke file log internal yang hanya bisa diakses administrator berwenang.",
-      "b": "Menampilkan pesan galat generik yang sopan kepada pengguna akhir seperti 'Terjadi kesalahan sistem, silakan hubungi tim dukungan'.",
-      "c": "Mengekspos stack trace mentah, nama tabel database, versi framework, dan potongan query SQL secara langsung ke layar pengguna saat terjadi exception.",
-      "d": "Menutup koneksi database dan merilis sumber daya secara aman pada blok finally/catch.",
-      "e": "Mengirimkan notifikasi alert otomatis ke dashboard SIEM saat terjadi unhandled exception berulang."
-    },
-    "correct_letter": "c",
-    "correct_answer": "Mengekspos stack trace mentah, nama tabel database, versi framework, dan potongan query SQL secara langsung ke layar pengguna saat terjadi exception.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 211
-  },
-  {
-    "week": "Week 4",
-    "type": "Post Test",
-    "question": "Dalam penulisan kode C yang aman, fungsi strncpy(dest, src, n) sering digunakan untuk menggantikan strcpy. Namun, kelemahan yang tetap harus diwaspadai dari strncpy adalah ...",
-    "options": {
-      "a": "Fungsi tersebut tidak menjamin null-terminator ('\\0') ditambahkan pada string tujuan jika panjang src melebihi atau sama dengan n.",
-      "b": "Fungsi tersebut menghapus isi string sumber secara permanen.",
-      "c": "strncpy hanya dapat memproses karakter angka numerik.",
-      "d": "Fungsi tersebut berjalan sepuluh kali lebih lambat daripada operasi disk IO.",
-      "e": "strncpy secara otomatis memicu buffer overflow pada compiler modern."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Fungsi tersebut tidak menjamin null-terminator ('\\0') ditambahkan pada string tujuan jika panjang src melebihi atau sama dengan n.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 212
-  },
-  {
-    "week": "Week 4",
-    "type": "Post Test",
-    "question": "Prinsip 'Complete Mediation' dalam arsitektur software security mengharuskan bahwa ...",
-    "options": {
-      "a": "Setiap permintaan akses ke setiap objek harus diperiksa dan divalidasi keabsahannya setiap saat, tanpa mengandalkan hasil pemeriksaan sebelumnya yang di-cache secara membabi buta.",
-      "b": "Pengguna hanya perlu diautentikasi sekali seumur hidup pada saat pendaftaran akun.",
-      "c": "Sistem keamanan harus memediasi perselisihan hukum antara pengguna dan penyedia layanan.",
-      "d": "Semua berkas konfigurasi harus disimpan dalam satu file terpusat tanpa enkripsi.",
-      "e": "Hak akses administratif harus diberikan secara penuh kepada seluruh developer."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Setiap permintaan akses ke setiap objek harus diperiksa dan divalidasi keabsahannya setiap saat, tanpa mengandalkan hasil pemeriksaan sebelumnya yang di-cache secara membabi buta.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 213
-  },
-  {
-    "week": "Week 5",
-    "type": "Pre Test",
-    "question": "Metode pertahanan paling efektif dan mutlak untuk mencegah kerentanan SQL Injection pada kode backend aplikasi web adalah ...",
-    "options": {
-      "a": "Menggunakan Parameterized Queries (Prepared Statements) yang memisahkan kode query SQL dari data input pengguna.",
-      "b": "Menyaring karakter petik tunggal (') menggunakan fungsi regex buatan sendiri (blacklisting).",
-      "c": "Menyimpan seluruh data input dalam format huruf kapital (uppercase).",
-      "d": "Mengganti web server Apache dengan Nginx.",
-      "e": "Menambahkan firewall hardware di depan router utama."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Menggunakan Parameterized Queries (Prepared Statements) yang memisahkan kode query SQL dari data input pengguna.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 214
-  },
-  {
-    "week": "Week 5",
-    "type": "Pre Test",
-    "question": "Seorang penyerang menyisipkan payload JavaScript berbahaya ke dalam kolom komentar blog. Setiap kali pengguna lain membuka artikel blog tersebut, script penyerang dieksekusi di browser korban dan mencuri session cookie. Jenis serangan XSS ini adalah ...",
-    "options": {
-      "a": "Reflected XSS",
-      "b": "Stored (Persistent) XSS",
-      "c": "DOM-based XSS",
-      "d": "Self-XSS",
-      "e": "Blind SQL Injection"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Stored (Persistent) XSS",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 215
-  },
-  {
-    "week": "Week 5",
-    "type": "Pre Test",
-    "question": "Mengapa mitigasi Cross-Site Scripting (XSS) mensyaratkan 'Context-Aware Output Encoding' (misalnya HTML Body Encoding berbeda dengan JavaScript Context Encoding)?",
-    "options": {
-      "a": "Karena parser browser menafsirkan karakter khusus secara berbeda bergantung pada konteks sintaksis tempat data dirender (HTML tag, atribut, script block, atau URL).",
-      "b": "Agar ukuran dokumen HTML menjadi lebih kecil saat ditransmisikan melalui jaringan.",
-      "c": "Karena encoding hanya berlaku untuk browser berbasis Chromium.",
-      "d": "Untuk mempercepat waktu render CSS pada perangkat mobile.",
-      "e": "Agar aplikasi web tidak memerlukan sertifikat SSL/TLS."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Karena parser browser menafsirkan karakter khusus secara berbeda bergantung pada konteks sintaksis tempat data dirender (HTML tag, atribut, script block, atau URL).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 216
-  },
-  {
-    "week": "Week 5",
-    "type": "Pre Test",
-    "question": "Header keamanan Content Security Policy (CSP) dengan direktif 'script-src 'self'' memberikan perlindungan bagi browser pengguna dengan cara ...",
-    "options": {
-      "a": "Melarang eksekusi skrip JavaScript yang berasal dari domain eksternal pihak ketiga serta memblokir inline script yang tidak memiliki nonce/hash valid.",
-      "b": "Mengenkripsi seluruh file JavaScript di server menggunakan AES.",
-      "c": "Menonaktifkan fitur JavaScript sepenuhnya pada komputer klien.",
-      "d": "Menghapus cookie sesi browser setiap 5 menit secara otomatis.",
-      "e": "Mengalihkan seluruh traffic HTTP ke protokol FTP."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Melarang eksekusi skrip JavaScript yang berasal dari domain eksternal pihak ketiga serta memblokir inline script yang tidak memiliki nonce/hash valid.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 217
-  },
-  {
-    "week": "Week 5",
-    "type": "Pre Test",
-    "question": "Serangan Cross-Site Request Forgery (CSRF) memanfaatkan karakteristik bawaan web browser, yaitu ...",
-    "options": {
-      "a": "Browser secara otomatis menyertakan kredensial autentikasi (seperti session cookie) saat mengirimkan request HTTP lintas domain ke situs target yang sedang aktif login.",
-      "b": "Browser dapat mengeksekusi shellcode biner langsung pada kernel sistem operasi.",
-      "c": "Browser menyimpan password plaintext di dalam file konfigurasi Windows.",
-      "d": "Browser selalu menonaktifkan validasi sertifikat HTTPS pada form POST.",
-      "e": "Browser membagikan riwayat pencarian kepada semua tab yang terbuka."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Browser secara otomatis menyertakan kredensial autentikasi (seperti session cookie) saat mengirimkan request HTTP lintas domain ke situs target yang sedang aktif login.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 218
-  },
-  {
-    "week": "Week 5",
-    "type": "Pre Test",
-    "question": "Mekanisme pertahanan paling standar untuk mencegah serangan CSRF pada formulir HTML aplikasi web adalah ...",
-    "options": {
-      "a": "Penggunaan Anti-CSRF Token (Synchronizer Token Pattern) yang unik, tidak dapat ditebak, dan terikat pada sesi pengguna aktif.",
-      "b": "Mengganti metode HTTP POST menjadi GET pada seluruh formulir.",
-      "c": "Menyembunyikan formulir menggunakan styling CSS display:none.",
-      "d": "Memperpanjang masa kedaluwarsa sesi menjadi 30 hari.",
-      "e": "Menghapus atribut action pada tag form HTML."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Penggunaan Anti-CSRF Token (Synchronizer Token Pattern) yang unik, tidak dapat ditebak, dan terikat pada sesi pengguna aktif.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 219
-  },
-  {
-    "week": "Week 5",
-    "type": "Pre Test",
-    "question": "Pada kerentanan Server-Side Request Forgery (SSRF), penyerang memanipulasi aplikasi web backend untuk ...",
-    "options": {
-      "a": "Membuat server backend mengirimkan permintaan HTTP yang tidak sah ke layanan internal yang dilindungi firewall (misalnya layanan metadata cloud 169.254.169.254 atau database lokal).",
-      "b": "Menjalankan script berbahaya di browser pengguna lain secara acak.",
-      "c": "Mengubah warna tema antarmuka website menjadi gelap.",
-      "d": "Mematikan koneksi internet pengguna rumahan.",
-      "e": "Mencuri keyboard fisik di kantor perusahaan."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Membuat server backend mengirimkan permintaan HTTP yang tidak sah ke layanan internal yang dilindungi firewall (misalnya layanan metadata cloud 169.254.169.254 atau database lokal).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 220
-  },
-  {
-    "week": "Week 5",
-    "type": "Pre Test",
-    "question": "Seorang pengguna biasa dapat melihat tagihan medis pasien lain dengan cara mengganti parameter ID pada URL dari '/invoice?id=1001' menjadi '/invoice?id=1002' karena server tidak memverifikasi kepemilikan data. Kerentanan ini diklasifikasikan sebagai ...",
-    "options": {
-      "a": "Insecure Direct Object Reference (IDOR) / Broken Object Level Authorization (BOLA)",
-      "b": "Cross-Site Scripting (XSS)",
-      "c": "Buffer Overflow",
-      "d": "Denial of Service (DoS)",
-      "e": "Weak Password Hashing"
-    },
-    "correct_letter": "a",
-    "correct_answer": "Insecure Direct Object Reference (IDOR) / Broken Object Level Authorization (BOLA)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 221
-  },
-  {
-    "week": "Week 5",
-    "type": "Pre Test",
-    "question": "Header keamanan 'Strict-Transport-Security' (HSTS) pada respons HTTP berfungsi untuk ...",
-    "options": {
-      "a": "Memaksa browser agar selalu berkomunikasi dengan situs tersebut hanya menggunakan protokol aman HTTPS dan menolak downgrade ke HTTP biasa.",
-      "b": "Menutup port 80 pada firewall perangkat router klien.",
-      "c": "Menghapus cache DNS lokal setiap kali browser ditutup.",
-      "d": "Mengizinkan koneksi HTTP tanpa enkripsi untuk file gambar.",
-      "e": "Mengirimkan log error aplikasi ke server Google."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Memaksa browser agar selalu berkomunikasi dengan situs tersebut hanya menggunakan protokol aman HTTPS dan menolak downgrade ke HTTP biasa.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 222
-  },
-  {
-    "week": "Week 5",
-    "type": "Pre Test",
-    "question": "Konfigurasi Cross-Origin Resource Sharing (CORS) yang sangat berbahaya dan membuka celah pencurian data sensitif antar-origin terjadi ketika server merespons dengan kombinasi header ...",
-    "options": {
-      "a": "Access-Control-Allow-Origin: * dan Access-Control-Allow-Credentials: true",
-      "b": "Access-Control-Allow-Origin: null dan Access-Control-Max-Age: 0",
-      "c": "Access-Control-Allow-Methods: GET dan Access-Control-Allow-Headers: Content-Type",
-      "d": "Content-Type: application/json dan X-Frame-Options: SAMEORIGIN",
-      "e": "Strict-Transport-Security: max-age=31536000"
-    },
-    "correct_letter": "a",
-    "correct_answer": "Access-Control-Allow-Origin: * dan Access-Control-Allow-Credentials: true",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 223
-  },
-  {
-    "week": "Week 5",
-    "type": "Pre Test",
-    "question": "Kerentanan XML External Entity (XXE) Injection terjadi ketika parser XML pada aplikasi web dikonfigurasi untuk ...",
-    "options": {
-      "a": "Mengizinkan resolusi external Document Type Definition (DTD) dan entitas eksternal, sehingga penyerang dapat membaca berkas lokal server (misal /etc/passwd) atau memicu SSRF.",
-      "b": "Menolak parsing dokumen XML yang memiliki spasi ganda.",
-      "c": "Mengompresi format XML menjadi format binary JSON.",
-      "d": "Menyimpan data XML ke dalam file gambar format PNG.",
-      "e": "Mengharuskan dokumen XML ditandatangani oleh sertifikat SSL berbayar."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Mengizinkan resolusi external Document Type Definition (DTD) dan entitas eksternal, sehingga penyerang dapat membaca berkas lokal server (misal /etc/passwd) atau memicu SSRF.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 224
-  },
-  {
-    "week": "Week 5",
-    "type": "Pre Test",
-    "question": "Pada fitur upload file di aplikasi web, praktik keamanan yang PALING EFEKTIF untuk mencegah eksekusi webshell berbahaya adalah ...",
-    "options": {
-      "a": "Menyimpan file yang diunggah di luar web root direktori publik, mengganti nama file dengan nama acak/UUID unik, dan menonaktifkan izin eksekusi script pada folder penyimpanan.",
-      "b": "Hanya memeriksa MIME-type yang dikirimkan oleh browser klien (Content-Type header).",
-      "c": "Hanya memeriksa ekstensi file menggunakan huruf kecil (misal .jpg).",
-      "d": "Menyimpan file di folder yang sama dengan file index.php aplikasi.",
-      "e": "Membatasi ukuran file maksimal 10 megabyte tanpa memeriksa isi berkas."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Menyimpan file yang diunggah di luar web root direktori publik, mengganti nama file dengan nama acak/UUID unik, dan menonaktifkan izin eksekusi script pada folder penyimpanan.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 225
-  },
-  {
-    "week": "Week 5",
-    "type": "Pre Test",
-    "question": "Dalam standar OWASP ASVS (Application Security Verification Standard), aplikasi yang mengelola transaksi keuangan penting, data bisnis bernilai tinggi, atau informasi kesehatan pribadi (B2B) wajib memenuhi minimal verifikasi pada ...",
-    "options": {
-      "a": "Level 1 (Opportunistic)",
-      "b": "Level 2 (Standard)",
-      "c": "Level 3 (Advanced)",
-      "d": "Level 0 (Basic Entry)",
-      "e": "Level 4 (Military Grade)"
-    },
-    "correct_letter": "b",
-    "correct_answer": "Level 2 (Standard)",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 226
-  },
-  {
-    "week": "Week 5",
-    "type": "Post Test",
-    "question": "Karakteristik utama yang membedakan OWASP ASVS Level 1 dengan Level 2 dan Level 3 adalah bahwa ASVS Level 1 ...",
-    "options": {
-      "a": "Dapat diverifikasi secara penuh menggunakan teknik pengujian black-box tanpa mengharuskan akses ke kode sumber aplikasi atau wawancara arsitektur mendalam.",
-      "b": "Hanya berlaku untuk aplikasi yang dibangun menggunakan bahasa pemrograman Java.",
-      "c": "Tidak memiliki persyaratan kontrol autentikasi dan otorisasi sama sekali.",
-      "d": "Mengharuskan audit forensik militer di laboratorium bersertifikasi internasional.",
-      "e": "Hanya dapat diaudit oleh lembaga penegak hukum pemerintah."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Dapat diverifikasi secara penuh menggunakan teknik pengujian black-box tanpa mengharuskan akses ke kode sumber aplikasi atau wawancara arsitektur mendalam.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 227
-  },
-  {
-    "week": "Week 5",
-    "type": "Post Test",
-    "question": "Berdasarkan Chapter V2 (Authentication) pada OWASP ASVS v4, rekomendasi modern mengenai kebijakan kata sandi pengguna adalah ...",
-    "options": {
-      "a": "Mewajibkan penggantian password berkala setiap 30 hari dan memaksa kombinasi karakter aneh yang rumit.",
-      "b": "Mengizinkan panjang password minimal 12 karakter (dan mendukung hingga minimal 64 karakter), serta memverifikasi password terhadap daftar password yang pernah bocor (breached passwords list).",
-      "c": "Membatasi panjang password maksimal hanya 8 karakter demi efisiensi hashing.",
-      "d": "Mengharuskan password berisi nomor induk kependudukan (NIK) pengguna.",
-      "e": "Mengirimkan password baru dalam format plaintext melalui pesan SMS berkala."
-    },
-    "correct_letter": "b",
-    "correct_answer": "Mengizinkan panjang password minimal 12 karakter (dan mendukung hingga minimal 64 karakter), serta memverifikasi password terhadap daftar password yang pernah bocor (breached passwords list).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 228
-  },
-  {
-    "week": "Week 5",
-    "type": "Post Test",
-    "question": "Berdasarkan Chapter V3 (Session Management) pada OWASP ASVS, nilai entropi minimum yang diwajibkan untuk pembuatan session identifier adalah ...",
-    "options": {
-      "a": "16 bit",
-      "b": "32 bit",
-      "c": "64 bit",
-      "d": "Minimal 128 bit pseudorandom entropy",
-      "e": "1024 bit"
+    "question": "Jika pada stack Linux PAM suatu modul bertipe 'sufficient' berhasil dievaluasi (success) dan belum ada modul 'required' sebelumnya yang gagal, apa yang terjadi?",
+    "options": {
+      "a": "PAM mengabaikan keberhasilan tersebut hingga semua modul bertipe optional memberikan respon sukses.",
+      "b": "PAM mewajibkan modul berikutnya diuji ulang menggunakan algoritma enkripsi password yang berbeda.",
+      "c": "PAM membatalkan sesi login karena modul sufficient memerlukan konfirmasi dari modul requisite yang diverifikasi melalui ticket granting service terpusat.",
+      "d": "PAM langsung mengembalikan status sukses ke aplikasi tanpa mengeksekusi modul-modul di bawahnya secara komprehensif.",
+      "e": "PAM beralih ke mode otentikasi interaktif untuk meminta kredensial faktor kedua (MFA)."
     },
     "correct_letter": "d",
-    "correct_answer": "Minimal 128 bit pseudorandom entropy",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 229
+    "correct_answer": "PAM langsung mengembalikan status sukses ke aplikasi tanpa mengeksekusi modul-modul di bawahnya secara komprehensif."
   },
   {
-    "week": "Week 5",
-    "type": "Post Test",
-    "question": "Pada Chapter V4 (Access Control) OWASP ASVS, prinsip utama yang harus diimplementasikan pada mekanisme otorisasi server adalah ...",
+    "id": 147,
+    "week": "Week 2",
+    "type": "Pre Test",
+    "question": "Pada protokol FIDO2 / WebAuthn, mengapa mekanisme autentikasi menggunakan security key perangkat keras (hardware token) kebal terhadap serangan Phishing dan Adversary-in-the-Middle (AiTM)?",
     "options": {
-      "a": "Otorisasi hanya perlu diperiksa sekali pada halaman beranda utama aplikasi.",
-      "b": "Penerapan prinsip 'Deny by Default', di mana seluruh akses ditolak secara bawaan kecuali diberikan izin secara eksplisit, dan penegakan otorisasi wajib dilakukan di sisi server.",
-      "c": "Otorisasi dapat dipercayakan sepenuhnya kepada logika JavaScript di sisi browser klien.",
-      "d": "Hak akses pengguna disimpan di dalam URL parameter tanpa enkripsi.",
-      "e": "Administrator sistem boleh mengabaikan logging akses data sensitif."
+      "a": "Kunci publik disimpan pada token fisik dan didekripsi menggunakan biometric PIN pengguna.",
+      "b": "Data kredensial pengguna di-hash berulang kali menggunakan PBKDF2 dengan salt rahasia dari browser.",
+      "c": "Server autentikasi menyimpan master secret simetris yang disinkronisasi setiap 60 detik via satelit.",
+      "d": "Browser mengirimkan rekaman sidik jari mentah ke server autentikasi melalui tunnel TLS terenkripsi.",
+      "e": "Private key tidak pernah keluar dari authenticator, dan challenge ditandatangani bersama origin domain (Relying Party ID)."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Private key tidak pernah keluar dari authenticator, dan challenge ditandatangani bersama origin domain (Relying Party ID)."
+  },
+  {
+    "id": 148,
+    "week": "Week 2",
+    "type": "Pre Test",
+    "question": "Manakah di antara pasangan faktor berikut yang memenuhi kualifikasi True Two-Factor Authentication (2FA) menurut klasifikasi standar NIST SP 800-63B?",
+    "options": {
+      "a": "Password statis 12 karakter dan PIN numerik 6 digit pada layar login perbankan sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.",
+      "b": "Jawaban pertanyaan keamanan masa kecil dan kata sandi email pemulihan akun.",
+      "c": "Password akun sistem dan token OTP dari authenticator app pada smartphone pengguna.",
+      "d": "Pemindaian sidik jari optik dan pengenalan wajah 3D pada sensor smartphone.",
+      "e": "Kartu magnetik akses pintu kantor dan lencana RFID badge yang dikalungkan."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Password akun sistem dan token OTP dari authenticator app pada smartphone pengguna."
+  },
+  {
+    "id": 149,
+    "week": "Week 2",
+    "type": "Pre Test",
+    "question": "Pada sistem file Linux konvensional berbasis Discretionary Access Control (DAC), jika direktori memiliki izin octal 1777 (sticky bit aktif), dampak langsung terhadap hak pengguna non-root adalah ...",
+    "options": {
+      "a": "Hanya user pembuat direktori yang berhak menulis file baru, sedangkan user lain hanya bisa mengeksekusi berdasarkan kebijakan kontrol akses formal yang terdaftar.",
+      "b": "Semua pengguna dapat membaca dan memodifikasi file, namun file hanya dapat dihapus oleh pemilik file atau root.",
+      "c": "File di dalam direktori dieksekusi dengan hak akses pemilik direktori (setuid privilege) guna mencegah serangan replay token otentikasi jaringan.",
+      "d": "File dienkripsi secara transparan menggunakan kunci grup pemilik direktori (setgid privilege) sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.",
+      "e": "Pengguna biasa dilarang melihat daftar nama file di dalam direktori tanpa izin dari administrator pada infrastruktur autentikasi enterprise berskala besar."
     },
     "correct_letter": "b",
-    "correct_answer": "Penerapan prinsip 'Deny by Default', di mana seluruh akses ditolak secara bawaan kecuali diberikan izin secara eksplisit, dan penegakan otorisasi wajib dilakukan di sisi server.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 230
+    "correct_answer": "Semua pengguna dapat membaca dan memodifikasi file, namun file hanya dapat dihapus oleh pemilik file atau root."
   },
   {
-    "week": "Week 5",
-    "type": "Post Test",
-    "question": "Untuk mencegah browser menyimpan halaman yang berisi informasi rahasia perbankan ke dalam web cache lokal (Chapter V8 Data Protection), header respons HTTP yang wajib disertakan adalah ...",
+    "id": 150,
+    "week": "Week 2",
+    "type": "Pre Test",
+    "question": "Dalam penyerangan Active Directory, teknik peretasan 'Pass-the-Hash' (PtH) memungkinkan penyerang mengotentikasi dirinya ke server target tanpa mengetahui password teks asli karena ...",
     "options": {
-      "a": "Cache-Control: no-store, max-age=0 dan Pragma: no-cache",
-      "b": "Cache-Control: public, max-age=86400",
-      "c": "Accept-Encoding: gzip, deflate",
-      "d": "Connection: keep-alive",
-      "e": "Content-Encoding: br"
+      "a": "Protokol autentikasi NTLM memvalidasi response otentikasi yang dihitung langsung dari NTLM hash password secara komprehensif.",
+      "b": "NTLM hash dapat di-crack menjadi cleartext password secara deterministik dalam waktu kurang dari satu detik.",
+      "c": "Server domain controller menyimpan private key RSA pengguna dalam bentuk plaintext di memori LSASS yang diverifikasi melalui ticket granting service terpusat.",
+      "d": "Penyerang menyusupkan Ticket-Granting Ticket (TGT) palsu yang dibuat tanpa menggunakan session key KDC.",
+      "e": "Protokol Kerberos secara otomatis menurunkan tingkat proteksi ke LM hash jika terjadi kegagalan transmisi."
     },
     "correct_letter": "a",
-    "correct_answer": "Cache-Control: no-store, max-age=0 dan Pragma: no-cache",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 231
+    "correct_answer": "Protokol autentikasi NTLM memvalidasi response otentikasi yang dihitung langsung dari NTLM hash password secara komprehensif."
   },
   {
-    "week": "Week 5",
-    "type": "Post Test",
-    "question": "Kerentanan 'Mass Assignment' (atau Over-Posting) pada framework web modern terjadi ketika ...",
+    "id": 151,
+    "week": "Week 2",
+    "type": "Pre Test",
+    "question": "Model kontrol akses Role-Based Access Control (RBAC) sering menerapkan aturan Separation of Duties (SoD). Apa tujuan fundamental dari implementasi Static SoD (SSOD)?",
     "options": {
-      "a": "Framework secara otomatis mengikat (bind) seluruh parameter input HTTP request langsung ke atribut objek data/model tanpa membatasi field sensitif (misal field role='admin').",
-      "b": "Pengguna mengirimkan email ke 10.000 alamat sekaligus.",
-      "c": "Aplikasi tidak mendukung database relasional MySQL.",
-      "d": "Dua pengguna menggunakan satu akun secara bersamaan dari lokasi berbeda.",
-      "e": "Server web kehabisan soket TCP akibat serangan SYN flood."
+      "a": "Mencegah pengguna mengaktifkan dua peran yang saling bertentangan secara bersamaan dalam satu sesi aktif sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.",
+      "b": "Membatasi hak akses pengguna berdasarkan alamat IP dan jadwal jam operasional kerja kantor sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.",
+      "c": "Mengharuskan otorisasi supervisor secara real-time setiap kali seorang user mengeksekusi transaksi finansial berdasarkan kebijakan kontrol akses formal yang terdaftar.",
+      "d": "Mencegah pengguna yang sama ditugaskan ke dua peran yang saling berkonflik kepentingan sejak tahap alokasi hak.",
+      "e": "Menghapus peran pengguna secara otomatis setelah masa kerja kontrak pegawai berakhir pada database sesuai dengan pedoman standar NIST SP 800-63 Digital Identity."
     },
-    "correct_letter": "a",
-    "correct_answer": "Framework secara otomatis mengikat (bind) seluruh parameter input HTTP request langsung ke atribut objek data/model tanpa membatasi field sensitif (misal field role='admin').",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 232
+    "correct_letter": "d",
+    "correct_answer": "Mencegah pengguna yang sama ditugaskan ke dua peran yang saling berkonflik kepentingan sejak tahap alokasi hak."
   },
   {
-    "week": "Week 5",
+    "id": 152,
+    "week": "Week 2",
     "type": "Post Test",
-    "question": "Header 'X-Content-Type-Options: nosniff' memiliki fungsi krusial untuk mencegah serangan ...",
+    "question": "Serangan 'Golden Ticket' pada domain Microsoft Active Directory melibatkan pemalsuan Ticket-Granting Ticket (TGT) Kerberos secara penuh. Kunci kriptografi krusial apa yang wajib diperoleh penyerang agar dapat menciptakan tiket tersebut?",
     "options": {
-      "a": "MIME-type Confusion / MIME Sniffing, di mana browser mengeksekusi file non-eksekusi (seperti file teks atau gambar yang disusupi skrip) sebagai JavaScript.",
-      "b": "Brute-force password SSH",
-      "c": "Man-in-the-Middle pada router Wi-Fi",
-      "d": "Buffer overflow pada compiler C++",
-      "e": "Denial of Service pada server DNS"
+      "a": "Hash NTLM dari akun admin lokal pada workstation target yang diekstrak dari registry SAM.",
+      "b": "Kunci privat sertifikat SSL/TLS domain controller yang tersimpan di Active Directory Certificate Services.",
+      "c": "Password hash dari akun Domain Admin saat ini yang tersimpan di memori LSASS server aplikasi.",
+      "d": "Hash NTLM atau kunci AES dari akun layanan khusus 'krbtgt' pada domain controller.",
+      "e": "Master session key publik yang dibagikan oleh Time Stamping Authority eksternal."
     },
-    "correct_letter": "a",
-    "correct_answer": "MIME-type Confusion / MIME Sniffing, di mana browser mengeksekusi file non-eksekusi (seperti file teks atau gambar yang disusupi skrip) sebagai JavaScript.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 233
+    "correct_letter": "d",
+    "correct_answer": "Hash NTLM atau kunci AES dari akun layanan khusus 'krbtgt' pada domain controller."
   },
   {
-    "week": "Week 5",
+    "id": 153,
+    "week": "Week 2",
     "type": "Post Test",
-    "question": "Header 'X-Frame-Options: DENY' (atau CSP frame-ancestors 'none') digunakan untuk melindungi pengguna aplikasi web dari serangan ...",
+    "question": "Apa perbedaan fungsional utama antara serangan Golden Ticket dan Silver Ticket dalam domain lingkungan Kerberos?",
     "options": {
-      "a": "SQL Injection",
-      "b": "Clickjacking (UI Redressing), di mana situs korban dimuat dalam iframe transparan di atas halaman penyerang untuk memanipulasi klik pengguna.",
-      "c": "Session Fixation",
-      "d": "Format String Attack",
-      "e": "Buffer Overflow"
+      "a": "Golden Ticket hanya memberi hak user biasa, sedangkan Silver Ticket memberikan hak domain controller forest-wide pada infrastruktur autentikasi enterprise berskala besar.",
+      "b": "Golden Ticket memalsukan TGT menggunakan kunci krbtgt, sedangkan Silver Ticket memalsukan TGS menggunakan hash akun layanan spesifik.",
+      "c": "Silver Ticket berkomunikasi langsung dengan KDC, sedangkan Golden Ticket tidak memerlukan komunikasi dengan KDC sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.",
+      "d": "Silver Ticket menggunakan enkripsi kurva eliptik ECC, sedangkan Golden Ticket mengandalkan cipher simetris DES usang.",
+      "e": "Golden Ticket dibuat menggunakan akun Administrator lokal, sedangkan Silver Ticket dibuat via akun guest domain."
     },
     "correct_letter": "b",
-    "correct_answer": "Clickjacking (UI Redressing), di mana situs korban dimuat dalam iframe transparan di atas halaman penyerang untuk memanipulasi klik pengguna.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 234
+    "correct_answer": "Golden Ticket memalsukan TGT menggunakan kunci krbtgt, sedangkan Silver Ticket memalsukan TGS menggunakan hash akun layanan spesifik."
   },
   {
-    "week": "Week 5",
+    "id": 154,
+    "week": "Week 2",
     "type": "Post Test",
-    "question": "Pada OWASP MASVS (Mobile Application Security Verification Standard), kontrol MASVS-STORAGE mensyaratkan penyimpanan data kredensial dan kunci kriptografi pada perangkat mobile harus menggunakan ...",
+    "question": "Dalam federasi identitas berbasis OpenID Connect (OIDC) dan OAuth 2.0, token manakah yang secara spesifik dirancang untuk membuktikan otentisitas identitas pengguna ke Client Application?",
     "options": {
-      "a": "Mekanisme penyimpanan aman berbasis perangkat keras (Hardware-backed Keystore pada Android atau Keychain pada iOS).",
-      "b": "Penyimpanan berkas teks biasa pada SD Card eksternal yang dapat diakses publik.",
-      "c": "SharedPreferences atau NSUserDefaults tanpa enkripsi.",
-      "d": "Komentar hardcoded di dalam source code file Java/Swift.",
-      "e": "File database SQLite lokal yang dapat dibaca semua aplikasi lain."
+      "a": "ID Token dalam format JSON Web Token (JWT) yang ditandatangani secara kriptografis oleh Identity Provider.",
+      "b": "Refresh Token berumur panjang yang disimpan pada secure storage browser untuk rotasi sesi yang diverifikasi melalui ticket granting service terpusat.",
+      "c": "Access Token berbentuk opaque string yang dikirim ke Resource Server pada header Authorization sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.",
+      "d": "Authorization Code acak sekali pakai yang ditukarkan melalui front-channel browser redirection guna mencegah serangan replay token otentikasi jaringan.",
+      "e": "SAML Artifact ticket yang dipetakan ke dalam database session back-channel Identity Provider."
     },
     "correct_letter": "a",
-    "correct_answer": "Mekanisme penyimpanan aman berbasis perangkat keras (Hardware-backed Keystore pada Android atau Keychain pada iOS).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 235
+    "correct_answer": "ID Token dalam format JSON Web Token (JWT) yang ditandatangani secara kriptografis oleh Identity Provider."
   },
   {
-    "week": "Week 5",
+    "id": 155,
+    "week": "Week 2",
     "type": "Post Test",
-    "question": "Sebuah aplikasi web memuat data input serialized objek dari cookie pengguna tanpa verifikasi tanda tangan kriptografi (HMAC). Bahaya terbesar dari kerentanan Insecure Deserialization ini adalah ...",
+    "question": "Mengapa ekstensi PKCE (Proof Key for Code Exchange - RFC 7636) diwajibkan pada alur Authorization Code OAuth 2.0 untuk aplikasi mobile atau Single-Page Application (SPA)?",
     "options": {
-      "a": "Penyerang dapat merekayasa serialized object berbahaya (gadget chain) yang mengeksekusi kode perintah sistem operasi secara Remote Code Execution (RCE).",
-      "b": "Tampilan website menjadi tidak responsif pada layar ponsel.",
-      "c": "Ukuran font tulisan paragraf artikel membesar sendiri.",
-      "d": "Waktu loading halaman web bertambah sekitar 10 milidetik.",
-      "e": "Browser menampilkan notifikasi bahwa halaman belum diterjemahkan."
+      "a": "Untuk memverifikasi keaslian sidik jari biometrik perangkat sebelum kode otorisasi dikirimkan server.",
+      "b": "Untuk mengenkripsi seluruh muatan Access Token menggunakan cipher simetris AES-GCM 256-bit di sisi browser.",
+      "c": "Untuk menggantikan fungsi sertifikat SSL/TLS pada komunikasi jaringan antara client dan Authorization Server.",
+      "d": "Untuk mencegah intersepsi Authorization Code oleh aplikasi berbahaya lokal yang mendaftarkan custom URI scheme yang sama.",
+      "e": "Untuk menonaktifkan mekanisme CORS (Cross-Origin Resource Sharing) pada browser modern pengguna."
     },
-    "correct_letter": "a",
-    "correct_answer": "Penyerang dapat merekayasa serialized object berbahaya (gadget chain) yang mengeksekusi kode perintah sistem operasi secara Remote Code Execution (RCE).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 236
+    "correct_letter": "d",
+    "correct_answer": "Untuk mencegah intersepsi Authorization Code oleh aplikasi berbahaya lokal yang mendaftarkan custom URI scheme yang sama."
   },
   {
-    "week": "Week 5",
+    "id": 156,
+    "week": "Week 2",
     "type": "Post Test",
-    "question": "Perbedaan mendasar antara Blind SQL Injection (Time-based / Boolean-based) dan In-Band SQL Injection (Union-based) adalah ...",
+    "question": "Pada kurva Receiver Operating Characteristic (ROC) sistem biometrik, titik potong di mana nilai False Acceptance Rate (FAR) persis sama dengan False Rejection Rate (FRR) disebut ...",
     "options": {
-      "a": "Blind SQLi tidak menampilkan data hasil query atau pesan error database secara langsung pada respon HTTP, sehingga penyerang harus merekonstruksi data karakter demi karakter berdasarkan respons boolean atau jeda waktu.",
-      "b": "Blind SQLi hanya dapat dilakukan pada server web berbasis Microsoft IIS.",
-      "c": "In-Band SQLi tidak memerlukan koneksi internet untuk mengekstrak data.",
-      "d": "Blind SQLi selalu terdeteksi dan diblokir oleh antivirus komputer pengguna.",
-      "e": "In-Band SQLi tidak pernah merusak integritas database server."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Blind SQLi tidak menampilkan data hasil query atau pesan error database secara langsung pada respon HTTP, sehingga penyerang harus merekonstruksi data karakter demi karakter berdasarkan respons boolean atau jeda waktu.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 237
-  },
-  {
-    "week": "Week 5",
-    "type": "Post Test",
-    "question": "Kategori OWASP Top 10 'Vulnerable and Outdated Components' (A06) paling efektif dimitigasi dalam siklus CI/CD pipeline modern menggunakan perkakas ...",
-    "options": {
-      "a": "Software Composition Analysis (SCA) seperti Dependency-Check, Snyk, atau npm audit yang memindai kerentanan CVE pada library pihak ketiga.",
-      "b": "Aplikasi defragmentasi harddisk terjadwal.",
-      "c": "Pemeriksa ejaan kata (spell checker) pada file markdown.",
-      "d": "Perangkat penstabil tegangan listrik (UPS) server.",
-      "e": "Generator gambar AI untuk thumbnail artikel."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Software Composition Analysis (SCA) seperti Dependency-Check, Snyk, atau npm audit yang memindai kerentanan CVE pada library pihak ketiga.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 238
-  },
-  {
-    "week": "Week 6",
-    "type": "Pre Test",
-    "question": "Prinsip dasar Shannon mengenai 'Confusion' dan 'Diffusion' dalam perancangan algoritma block cipher bertujuan untuk ...",
-    "options": {
-      "a": "Confusion membuat hubungan antara kunci dan ciphertext serumit mungkin, sedangkan Diffusion menyebarkan pengaruh satu bit plaintext ke banyak bit ciphertext.",
-      "b": "Confusion mempercepat proses komputasi CPU, sedangkan Diffusion mengompresi ukuran data.",
-      "c": "Confusion mengubah ciphertext menjadi plaintext tanpa memerlukan kunci rahasia.",
-      "d": "Diffusion mengganti seluruh karakter alfabet dengan angka acak.",
-      "e": "Confusion hanya berlaku untuk enkripsi asimetris, sedangkan Diffusion untuk fungsi hash."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Confusion membuat hubungan antara kunci dan ciphertext serumit mungkin, sedangkan Diffusion menyebarkan pengaruh satu bit plaintext ke banyak bit ciphertext.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 239
-  },
-  {
-    "week": "Week 6",
-    "type": "Pre Test",
-    "question": "Dalam perancangan algoritma Advanced Encryption Standard (AES), tahapan transformasi non-linear yang bertanggung jawab menyediakan sifat 'Confusion' adalah ...",
-    "options": {
-      "a": "ShiftRows",
-      "b": "SubBytes (menggunakan S-box berbasis invers perkalian Galois Field GF(2^8))",
-      "c": "MixColumns",
-      "d": "AddRoundKey",
-      "e": "Key Expansion"
+      "a": "Area Under Curve (AUC) optimum pada infrastruktur autentikasi enterprise berskala besar.",
+      "b": "Equal Error Rate (EER) atau Crossover Error Rate (CER).",
+      "c": "True Positive Saturation Point (TPSP) sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.",
+      "d": "Biometric Calibration Boundary (BCB).",
+      "e": "Zero False Rejection Threshold (ZFRT)."
     },
     "correct_letter": "b",
-    "correct_answer": "SubBytes (menggunakan S-box berbasis invers perkalian Galois Field GF(2^8))",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 240
+    "correct_answer": "Equal Error Rate (EER) atau Crossover Error Rate (CER)."
   },
   {
-    "week": "Week 6",
-    "type": "Pre Test",
-    "question": "Mengapa penggunaan algoritma Double-DES (enkripsi DES dua kali berturut-turut dengan dua kunci berbeda K1 dan K2) TIDAK memberikan keamanan 112 bit sebagaimana yang diharapkan?",
+    "id": 157,
+    "week": "Week 2",
+    "type": "Post Test",
+    "question": "Dua sistem biometrik diuji di laboratorium: Sistem X memiliki EER sebesar 0.05%, sedangkan Sistem Y memiliki EER sebesar 2.1%. Kesimpulan performa akurasi yang paling valid adalah ...",
     "options": {
-      "a": "Double-DES rentan terhadap serangan Meet-in-the-Middle Attack yang mereduksi kompleksitas pencarian kunci menjadi sekitar 2^57 operasi.",
-      "b": "Kunci kedua otomatis terhapus oleh prosesor saat enkripsi tahap pertama selesai.",
-      "c": "Dua kunci DES selalu menghasilkan nilai ciphertext yang identik dengan plaintext.",
-      "d": "Double-DES hanya dapat mengenkripsi file dengan ukuran kurang dari 8 byte.",
-      "e": "Algoritma DES tidak mendukung operasi perulangan round."
+      "a": "Sistem Y memiliki akurasi keseluruhan yang jauh lebih tinggi daripada Sistem X guna mencegah serangan replay token otentikasi jaringan.",
+      "b": "Kedua sistem memiliki akurasi identik karena nilai EER tidak berkorelasi dengan akurasi pengenalan.",
+      "c": "Sistem X membutuhkan waktu komputasi pencocokan template yang 40 kali lebih lambat dibanding Sistem Y.",
+      "d": "Sistem Y lebih cocok diterapkan di fasilitas militer berkategori keamanan tinggi dibanding Sistem X.",
+      "e": "Sistem X memiliki tingkat akurasi dan kinerja pembeda biometrik yang lebih unggul dibandingkan Sistem Y."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Sistem X memiliki tingkat akurasi dan kinerja pembeda biometrik yang lebih unggul dibandingkan Sistem Y."
+  },
+  {
+    "id": 158,
+    "week": "Week 2",
+    "type": "Post Test",
+    "question": "Dalam model kontrol akses berbasis Brewer-Nash (sering disebut Chinese Wall Model), aturan keamanan diformulasikan secara khusus dengan tujuan utama untuk ...",
+    "options": {
+      "a": "Mencegah timbulnya konflik kepentingan (conflict of interest) pada konsultan yang menangani perusahaan pesaing.",
+      "b": "Mencegah kebocoran data rahasia pertahanan negara ke domain sipil berkategori unclassified berdasarkan kebijakan kontrol akses formal yang terdaftar.",
+      "c": "Menjaga integritas data transaksi perbankan agar tidak dimodifikasi oleh entitas luar tanpa otorisasi pada infrastruktur autentikasi enterprise berskala besar.",
+      "d": "Menyediakan mekanisme delegasi wewenang administratif root secara transparan kepada user biasa guna mencegah serangan replay token otentikasi jaringan.",
+      "e": "Mengisolasi malware worm agar tidak menyebar antar-subnet jaringan lokal yang berbeda VLAN yang diverifikasi melalui ticket granting service terpusat."
     },
     "correct_letter": "a",
-    "correct_answer": "Double-DES rentan terhadap serangan Meet-in-the-Middle Attack yang mereduksi kompleksitas pencarian kunci menjadi sekitar 2^57 operasi.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 241
+    "correct_answer": "Mencegah timbulnya konflik kepentingan (conflict of interest) pada konsultan yang menangani perusahaan pesaing."
   },
   {
-    "week": "Week 6",
-    "type": "Pre Test",
-    "question": "Kelemahan paling fatal dari mode operasi Electronic Codebook (ECB) pada enkripsi berkas yang menjadikannya tidak aman untuk data lebih dari satu blok adalah ...",
+    "id": 159,
+    "week": "Week 2",
+    "type": "Post Test",
+    "question": "Pada sistem Linux dengan kontrol akses Discretionary Access Control (DAC), jika suatu executable binary memiliki bit 'Setuid' (SUID) aktif (izin octal 4755) dan dimiliki oleh root, maka saat dieksekusi oleh user 'alice' ...",
     "options": {
-      "a": "ECB berjalan sangat lambat dibandingkan mode operasi lainnya.",
-      "b": "ECB bersifat deterministik di mana blok plaintext yang identik akan selalu menghasilkan blok ciphertext yang identik, sehingga membocorkan pola struktur data asli.",
-      "c": "ECB memerlukan kunci yang berbeda untuk setiap blok data.",
-      "d": "ECB hanya dapat digunakan untuk mendekripsi data tetapi tidak dapat mengenkripsi.",
-      "e": "Ciphertext yang dihasilkan ECB memiliki ukuran 10 kali lebih besar dari plaintext."
+      "a": "File binary tersebut disalin ke direktori /root/ sebelum proses eksekusi dimulai kernel.",
+      "b": "Program menolak eksekusi kecuali password akun root dimasukkan alice di command line.",
+      "c": "Program berjalan dengan Effective User ID (EUID) milik root, bukan EUID milik alice secara komprehensif.",
+      "d": "Program berjalan dengan Real User ID root namun hak akses dibatasi sandbox SELinux.",
+      "e": "Sistem operasi mencatat peringatan pelanggaran hak akses ke file audit log /var/log/secure."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Program berjalan dengan Effective User ID (EUID) milik root, bukan EUID milik alice secara komprehensif."
+  },
+  {
+    "id": 160,
+    "week": "Week 2",
+    "type": "Post Test",
+    "question": "Serangan 'Kerberoasting' pada Active Directory menargetkan komponen tiket layanan Kerberos (TGS). Mengapa penyerang dapat melakukan cracking password secara offline tanpa memicu lockout akun?",
+    "options": {
+      "a": "Penyerang menyadap private key domain controller melalui kelemahan pada protokol pertukaran kunci Diffie-Hellman.",
+      "b": "Server KDC mengirimkan salinan plaintext password akun layanan di dalam field PAC tiket layanan berdasarkan kebijakan kontrol akses formal yang terdaftar.",
+      "c": "Tiket TGS dienkripsi menggunakan NTLM hash akun layanan (SPN), sehingga penyerang dapat mengekstrak dan men-crack tiket di mesin lokalnya.",
+      "d": "KDC tidak mencatat request tiket TGS pada Event Viewer keamanan Active Directory.",
+      "e": "Akun layanan Active Directory tidak dilindungi fungsi hash melainkan pengacakan XOR sederhana."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Tiket TGS dienkripsi menggunakan NTLM hash akun layanan (SPN), sehingga penyerang dapat mengekstrak dan men-crack tiket di mesin lokalnya."
+  },
+  {
+    "id": 161,
+    "week": "Week 2",
+    "type": "Post Test",
+    "question": "Dalam federasi identitas SAML 2.0 (Security Assertion Markup Language), apa fungsi dari elemen '<SubjectConfirmationData>' pada assertion XML?",
+    "options": {
+      "a": "Menyimpan salinan password terenkripsi pengguna untuk verifikasi login ganda di Service Provider.",
+      "b": "Menyediakan private key Identity Provider untuk mendekripsi payload sesi database pengguna sesuai dengan pedoman standar NIST SP 800-63 Digital Identity.",
+      "c": "Membatasi validitas assertion berdasarkan rentang waktu, alamat IP, dan URL penerima yang sah.",
+      "d": "Menentukan daftar hak akses tabel SQL yang boleh dikueri oleh Service Provider guna mencegah serangan replay token otentikasi jaringan.",
+      "e": "Mengonversi token SAML menjadi format JSON Web Token (JWT) secara otomatis."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Membatasi validitas assertion berdasarkan rentang waktu, alamat IP, dan URL penerima yang sah."
+  },
+  {
+    "id": 162,
+    "week": "Week 2",
+    "type": "Post Test",
+    "question": "Pada model kontrol akses Clark-Wilson, integritas data transaksi bisnis dijamin melalui pemisahan data menjadi Constrained Data Items (CDI) dan Unconstrained Data Items (UDI). Mekanisme apa yang wajib digunakan untuk memanipulasi CDI?",
+    "options": {
+      "a": "Perintah sistem operasi langsung melalui shell root tanpa proses validasi perantara pada infrastruktur autentikasi enterprise berskala besar.",
+      "b": "Fungsi enkripsi asimetris RSA 4096-bit yang dijalankan di level kernel driver.",
+      "c": "Transformation Procedures (TP) yang tersertifikasi dan Integrity Verification Procedures (IVP).",
+      "d": "Akses kontrol ACL berbasis daftar nama pengguna (UID) di sistem berkas lokal.",
+      "e": "Protokol transmisi data UDP tanpa handshake untuk menghindari overhead latensi."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Transformation Procedures (TP) yang tersertifikasi dan Integrity Verification Procedures (IVP)."
+  },
+  {
+    "id": 163,
+    "week": "Week 2",
+    "type": "Post Test",
+    "question": "Dalam arsitektur XACML untuk kontrol akses Attribute-Based Access Control (ABAC), entitas arsitektur yang bertugas mengevaluasi kebijakan akses dan membuat keputusan otorisasi (Permit / Deny) adalah ...",
+    "options": {
+      "a": "Policy Enforcement Point (PEP) yang mencegat permintaan akses dari subjek guna mencegah serangan replay token otentikasi jaringan.",
+      "b": "Policy Information Point (PIP) yang mengambil atribut subjek dan objek dari database eksternal.",
+      "c": "Policy Administration Point (PAP) yang mengelola siklus pembuatan berkas kebijakan berdasarkan kebijakan kontrol akses formal yang terdaftar.",
+      "d": "Policy Decision Point (PDP) yang menerima atribut dan mengevaluasi aturan kebijakan.",
+      "e": "Policy Retrieval Authority (PRA) yang menyinkronkan token autentikasi client guna mencegah serangan replay token otentikasi jaringan."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Policy Decision Point (PDP) yang menerima atribut dan mengevaluasi aturan kebijakan."
+  },
+  {
+    "id": 164,
+    "week": "Week 3",
+    "type": "Pre Test",
+    "question": "Berdasarkan pedoman urutan volatilitas bukti digital (RFC 3227 - Order of Volatility), manakah urutan akuisisi bukti yang paling tepat dari yang paling volatil ke yang paling stabil?",
+    "options": {
+      "a": "Registers & cache CPU, Physical memory (RAM), Routing table & kernel statistics, Disk storage, Optical media.",
+      "b": "Routing table & ARP cache, Registers & cache CPU, Physical memory (RAM), Non-volatile storage, Remote logging.",
+      "c": "Physical memory (RAM), Registers & cache CPU, Network state & process table, Storage disk, Remote logging data.",
+      "d": "Registers & cache CPU, Routing table & ARP cache, Physical memory (RAM), Temporary file systems, Optical media secara terperinci.",
+      "e": "Temporary file systems, Physical memory (RAM), Registers & cache CPU, Routing table & ARP cache, Backup tapes."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Registers & cache CPU, Routing table & ARP cache, Physical memory (RAM), Temporary file systems, Optical media secara terperinci."
+  },
+  {
+    "id": 165,
+    "week": "Week 3",
+    "type": "Pre Test",
+    "question": "Mengapa penggunaan hardware write-blocker merupakan standar wajib saat melakukan forensik bit-stream image terhadap media penyimpanan barang bukti digital?",
+    "options": {
+      "a": "Mencegah sistem operasi forensik menulis metadata mount, update timestamp berkas, atau cache ke media bukti.",
+      "b": "Mempercepat transfer data transfer bus SATA hingga dua kali lipat dibanding pembacaan port USB standar berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.",
+      "c": "Mendekripsi partisi BitLocker atau LUKS pada disk target secara otomatis sebelum proses hashing dimulai.",
+      "d": "Menghapus cluster bad sector pada hard disk sehingga proses bit-by-bit imaging tidak mengalami freezing.",
+      "e": "Mengompresi raw disk image ke format E01 secara real-time guna menghemat ruang penyimpanan host forensik."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Mencegah sistem operasi forensik menulis metadata mount, update timestamp berkas, atau cache ke media bukti."
+  },
+  {
+    "id": 166,
+    "week": "Week 3",
+    "type": "Pre Test",
+    "question": "Dalam konteks hukum siber Indonesia (UU ITE), tindakan seorang penyerang yang menembus firewall dan sistem autentikasi server perbankan secara ilegal diatur dalam ...",
+    "options": {
+      "a": "Pasal 27 ayat (3) terkait penghinaan dan pencemaran nama baik melalui media transmisi elektronik umum dalam kerangka pembuktian tindak pidana siber menurut undang-undang.",
+      "b": "Pasal 31 ayat (2) terkait intersepsi atau penyadapan transmisi informasi elektronik pada jaringan privat sesuai dengan prosedur standar ISO/IEC 27037 bukti digital.",
+      "c": "Pasal 30 ayat (3) terkait akses ilegal dengan melanggar, menerobos, melampaui, atau menjebol sistem pengamanan.",
+      "d": "Pasal 32 ayat (1) terkait pengubahan, perusakan, atau pemindahan dokumen elektronik milik pihak berwenang dalam kerangka pembuktian tindak pidana siber menurut undang-undang.",
+      "e": "Pasal 33 terkait gangguan terhadap sistem elektronik yang berakibat sistem tidak bekerja sebagaimana mestinya guna memastikan integritas rantai keabsahan bukti chain of custody."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Pasal 30 ayat (3) terkait akses ilegal dengan melanggar, menerobos, melampaui, atau menjebol sistem pengamanan."
+  },
+  {
+    "id": 167,
+    "week": "Week 3",
+    "type": "Pre Test",
+    "question": "Aksi pemasangan software packet sniffer di switch internal untuk menyadap kredensial login dan pesan confidential tanpa izin secara spesifik melanggar UU ITE ...",
+    "options": {
+      "a": "Pasal 30 ayat (1) mengenai pengaksesan komputer pihak lain tanpa hak secara umum tanpa menjebol proteksi berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.",
+      "b": "Pasal 35 mengenai manipulasi atau penciptaan dokumen elektronik seolah-olah merupakan data yang otentik.",
+      "c": "Pasal 32 ayat (2) mengenai pemindahan dokumen elektronik rahasia ke sistem elektronik yang tidak berhak.",
+      "d": "Pasal 34 ayat (1) mengenai pemanfaatan sandi lewat (password) atau kode akses untuk keuntungan finansial.",
+      "e": "Pasal 31 ayat (1) mengenai intersepsi atau penyadapan informasi/dokumen elektronik dalam sistem tertutup secara komprehensif."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Pasal 31 ayat (1) mengenai intersepsi atau penyadapan informasi/dokumen elektronik dalam sistem tertutup secara komprehensif."
+  },
+  {
+    "id": 168,
+    "week": "Week 3",
+    "type": "Pre Test",
+    "question": "Seorang insinyur perangkat lunak dengan sengaja mengubah nilai saldo di basis data aplikasi keuangan tanpa otorisasi. Dalam UU ITE, delik pidana ini diatur pada ...",
+    "options": {
+      "a": "Pasal 30 ayat (2) terkait perolehan informasi elektronik dari komputer pihak lain dengan tujuan menguntungkan diri.",
+      "b": "Pasal 31 ayat (1) terkait intersepsi paket transmisi data keuangan antar server basis data dan server aplikasi.",
+      "c": "Pasal 28 ayat (1) terkait penyebaran informasi palsu dan menyesatkan yang mengakibatkan kerugian konsumen e-commerce.",
+      "d": "Pasal 33 terkait tindakan mengganggu integritas perangkat keras server hingga menimbulkan kegagalan daya guna memastikan integritas rantai keabsahan bukti chain of custody.",
+      "e": "Pasal 32 ayat (1) terkait pengubahan, penambahan, pengurangan, transmisi, atau perusakan dokumen elektronik secara komprehensif."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Pasal 32 ayat (1) terkait pengubahan, penambahan, pengurangan, transmisi, atau perusakan dokumen elektronik secara komprehensif."
+  },
+  {
+    "id": 169,
+    "week": "Week 3",
+    "type": "Pre Test",
+    "question": "Penyerangan Distributed Denial of Service (DDoS) yang membanjiri bandwidth server instansi publik hingga layanan mati total dijerat dengan ketentuan UU ITE ...",
+    "options": {
+      "a": "Pasal 33 tentang perbuatan apa pun yang berakibat terganggunya sistem elektronik menjadi tidak bekerja sebagaimana mestinya.",
+      "b": "Pasal 31 ayat (2) tentang intersepsi komunikasi data yang tidak diperuntukkan bagi umum dalam lalu lintas internet sesuai dengan prosedur standar ISO/IEC 27037 bukti digital.",
+      "c": "Pasal 32 ayat (3) tentang pemindahan dokumen elektronik yang mengakibatkan terbukanya data rahasia institusi sesuai dengan prosedur standar ISO/IEC 27037 bukti digital.",
+      "d": "Pasal 30 ayat (3) tentang penerobosan perimeter sistem keamanan jaringan komputer milik lembaga publik berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.",
+      "e": "Pasal 35 tentang pemalsuan tanda tangan elektronik pejabat berwenang dalam sistem dokumen administrasi negara."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Pasal 33 tentang perbuatan apa pun yang berakibat terganggunya sistem elektronik menjadi tidak bekerja sebagaimana mestinya."
+  },
+  {
+    "id": 170,
+    "week": "Week 3",
+    "type": "Pre Test",
+    "question": "Dalam Budapest Convention on Cybercrime (ETS No. 185), pasal berapakah yang secara spesifik mewajibkan penandatangan mengkriminalisasi tindakan 'Data Interference'?",
+    "options": {
+      "a": "Article 2 (Illegal access to computer systems without right) guna memastikan integritas rantai keabsahan bukti chain of custody.",
+      "b": "Article 3 (Illegal interception of non-public transmissions) sesuai dengan prosedur standar ISO/IEC 27037 bukti digital.",
+      "c": "Article 4 (Data interference involving damaging or altering data).",
+      "d": "Article 5 (System interference hindering functioning of systems).",
+      "e": "Article 6 (Misuse of devices designed for committing offenses)."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Article 4 (Data interference involving damaging or altering data)."
+  },
+  {
+    "id": 171,
+    "week": "Week 3",
+    "type": "Pre Test",
+    "question": "Berdasarkan UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP), manakah di antara opsi berikut yang seluruhnya termasuk dalam kategori 'Data Pribadi Spesifik'?",
+    "options": {
+      "a": "Nama lengkap, jenis kelamin, alamat rumah tinggal, dan nomor telepon seluler pribadi.",
+      "b": "Data kesehatan, informasi biometrik, data genetika, dan catatan kejahatan seseorang secara komprehensif.",
+      "c": "Kewarganegaraan, agama, status perkawinan terdaftar, dan riwayat pekerjaan formal sesuai dengan prosedur standar ISO/IEC 27037 bukti digital.",
+      "d": "Alamat IP publik, preferensi peramban web, riwayat browsing internet, dan cookie web.",
+      "e": "Nomor induk kependudukan (NIK), tempat tanggal lahir, nama ibu kandung, dan golongan darah."
     },
     "correct_letter": "b",
-    "correct_answer": "ECB bersifat deterministik di mana blok plaintext yang identik akan selalu menghasilkan blok ciphertext yang identik, sehingga membocorkan pola struktur data asli.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 242
+    "correct_answer": "Data kesehatan, informasi biometrik, data genetika, dan catatan kejahatan seseorang secara komprehensif."
   },
   {
-    "week": "Week 6",
+    "id": 172,
+    "week": "Week 3",
     "type": "Pre Test",
-    "question": "Pada mode operasi Cipher Block Chaining (CBC), apa peran utama dari Initialization Vector (IV) yang di-XOR dengan blok plaintext pertama?",
+    "question": "Dalam Chain of Custody forensik digital, tindakan yang wajib dicatat secara mendetail saat serah terima barang bukti flashdisk mencakup ...",
     "options": {
-      "a": "Memastikan bahwa dua plaintext identik yang dienkripsi dengan kunci yang sama menghasilkan ciphertext yang sepenuhnya berbeda dan tidak dapat diprediksi.",
-      "b": "Menyimpan nilai hash dari seluruh file untuk verifikasi tanda tangan digital.",
-      "c": "Mengompresi blok pertama agar muat dalam register CPU 32-bit.",
-      "d": "Menggantikan kebutuhan kunci simetris rahasia.",
-      "e": "Menghapus padding PKCS#7 secara otomatis saat dekripsi."
+      "a": "Pernyataan pengakuan bersalah yang ditandatangani oleh tersangka di hadapan saksi ahli forensik digital.",
+      "b": "Daftar seluruh password akun pengguna yang tersimpan di dalam perangkat beserta nomor PIN perbankan pemilik.",
+      "c": "Estimasi nilai rupiah perangkat di pasaran perangkat keras bekas saat barang bukti tersebut disita penyidik.",
+      "d": "Konfigurasi detail register prosesor dan suhu operasional perangkat sebelum dimasukkan ke dalam kantong antistatis.",
+      "e": "Nilai hash cryptographic (MD5/SHA-256), nomor seri perangkat, identitas pemeriksa, dan tanggal waktu perpindahan fisik."
     },
-    "correct_letter": "a",
-    "correct_answer": "Memastikan bahwa dua plaintext identik yang dienkripsi dengan kunci yang sama menghasilkan ciphertext yang sepenuhnya berbeda dan tidak dapat diprediksi.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 243
+    "correct_letter": "e",
+    "correct_answer": "Nilai hash cryptographic (MD5/SHA-256), nomor seri perangkat, identitas pemeriksa, dan tanggal waktu perpindahan fisik."
   },
   {
-    "week": "Week 6",
+    "id": 173,
+    "week": "Week 3",
     "type": "Pre Test",
-    "question": "Serangan Padding Oracle Attack pada implementasi enkripsi mode CBC memanfaatkan kerentanan di mana ...",
+    "question": "Ketika menangani insiden komputer menyala yang menjalankan enkripsi disk BitLocker aktif dan malware RAM-resident, mengapa 'Live Acquisition' lebih diprioritaskan daripada langsung mencabut kabel daya?",
     "options": {
-      "a": "Server membocorkan informasi melalui pesan error yang membedakan kegagalan padding PKCS#7 yang tidak valid dengan kegagalan dekripsi lainnya, sehingga penyerang dapat mendekripsi ciphertext blok demi blok.",
-      "b": "Penyerang memecahkan kunci AES-256 menggunakan serangan brute-force dalam hitungan menit.",
-      "c": "Server web tidak memperbarui sertifikat SSL yang sudah kadaluarsa.",
-      "d": "Pengguna menggunakan IV bernilai nol untuk seluruh komunikasi.",
-      "e": "Sistem operasi menonaktifkan fitur firewall pada port database."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Server membocorkan informasi melalui pesan error yang membedakan kegagalan padding PKCS#7 yang tidak valid dengan kegagalan dekripsi lainnya, sehingga penyerang dapat mendekripsi ciphertext blok demi blok.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 244
-  },
-  {
-    "week": "Week 6",
-    "type": "Pre Test",
-    "question": "Mode operasi Counter (CTR) mengubah block cipher menjadi stream cipher dengan mengenkripsi kombinasi nonce dan counter. Aturan keamanan MUTLAK yang tidak boleh dilanggar pada mode CTR adalah ...",
-    "options": {
-      "a": "Kunci dan nonce tidak boleh digunakan kembali untuk mengenkripsi dua pesan yang berbeda (keberulangan keystream membocorkan plaintext melalui operasi XOR).",
-      "b": "Ukuran plaintext harus selalu kelipatan tepat 128 bit.",
-      "c": "Proses enkripsi tidak boleh dijalankan secara paralel pada multi-core CPU.",
-      "d": "Counter harus selalu bernilai bilangan prima negatif.",
-      "e": "Kunci harus diganti setiap kali satu byte data selesai diproses."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Kunci dan nonce tidak boleh digunakan kembali untuk mengenkripsi dua pesan yang berbeda (keberulangan keystream membocorkan plaintext melalui operasi XOR).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 245
-  },
-  {
-    "week": "Week 6",
-    "type": "Pre Test",
-    "question": "Mengapa mode Galois/Counter Mode (GCM) menjadi standar mode enkripsi simetris paling direkomendasikan pada protokol modern seperti TLS 1.3?",
-    "options": {
-      "a": "GCM menyediakan Authenticated Encryption with Associated Data (AEAD) yang menjamin kerahasiaan (confidentiality) sekaligus keaslian dan integritas data (authenticity/integrity) dengan performa tinggi.",
-      "b": "GCM tidak memerlukan kunci rahasia sama sekali dalam operasinya.",
-      "c": "GCM kebal terhadap serangan komputer kuantum selamanya.",
-      "d": "GCM menggantikan kebutuhan algoritma asimetris RSA pada pertukaran kunci.",
-      "e": "GCM secara otomatis menghapus malware dari file yang dienkripsi."
-    },
-    "correct_letter": "a",
-    "correct_answer": "GCM menyediakan Authenticated Encryption with Associated Data (AEAD) yang menjamin kerahasiaan (confidentiality) sekaligus keaslian dan integritas data (authenticity/integrity) dengan performa tinggi.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 246
-  },
-  {
-    "week": "Week 6",
-    "type": "Pre Test",
-    "question": "Properti 'Collision Resistance' pada fungsi cryptographic hash menjamin bahwa ...",
-    "options": {
-      "a": "Secara komputasi sangat sulit untuk menemukan dua pesan berbeda sembarang m1 dan m2 sehingga H(m1) = H(m2).",
-      "b": "Sangat mudah untuk merekonstruksi pesan asli m jika diberikan nilai hash H(m).",
-      "c": "Nilai hash selalu bertambah panjang jika ukuran file bertambah besar.",
-      "d": "Fungsi hash dapat didekripsi menggunakan private key pemilik data.",
-      "e": "Dua file berbeda akan selalu menghasilkan nilai hash yang sama pada tanggal ganjil."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Secara komputasi sangat sulit untuk menemukan dua pesan berbeda sembarang m1 dan m2 sehingga H(m1) = H(m2).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 247
-  },
-  {
-    "week": "Week 6",
-    "type": "Pre Test",
-    "question": "Berdasarkan fenomena Birthday Paradox (Birthday Attack), untuk menemukan tabrakan (collision) pada fungsi hash dengan panjang output n bit, kompleksitas rata-rata operasi yang dibutuhkan penyerang adalah sekitar ...",
-    "options": {
-      "a": "2^n operasi",
-      "b": "2^(n/2) operasi",
-      "c": "n^2 operasi",
-      "d": "2^(n/4) operasi",
-      "e": "n/2 operasi"
+      "a": "Pencabutan daya langsung dapat merusak struktur fisik sirkuit motherboard dan power supply server target.",
+      "b": "Kunci enkripsi memori (FVEK) dan artefak malware dalam RAM akan lenyap seketika daya listrik terputus secara komprehensif.",
+      "c": "Sistem operasi modern akan memformat ulang media penyimpanan jika komputer dimatikan secara mendadak berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.",
+      "d": "Live acquisition menghasilkan ukuran berkas citra bukti digital yang jauh lebih kecil daripada cold acquisition.",
+      "e": "Sertifikat digital forensik hanya sah secara hukum jika diambil ketika sistem operasi dalam status running."
     },
     "correct_letter": "b",
-    "correct_answer": "2^(n/2) operasi",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 248
+    "correct_answer": "Kunci enkripsi memori (FVEK) dan artefak malware dalam RAM akan lenyap seketika daya listrik terputus secara komprehensif."
   },
   {
-    "week": "Week 6",
+    "id": 174,
+    "week": "Week 3",
     "type": "Pre Test",
-    "question": "Mengapa konstruksi naif MAC berbasis hash H(k || m) pada algoritma keluarga Merkle-Damgård (seperti MD5 dan SHA-256) rentan terhadap serangan Length Extension Attack?",
+    "question": "Teknik anti-forensik 'Timestomping' sering digunakan pelaku kejahatan siber untuk mengelabui analis timeline forensik. Pada sistem berkas NTFS, teknik ini bekerja dengan cara ...",
     "options": {
-      "a": "Karena output hash H(k || m) mewakili internal state akhir fungsi hash, penyerang dapat melanjutkan komputasi hash untuk pesan tambahan m' tanpa perlu mengetahui nilai secret key k.",
-      "b": "Karena kunci rahasia k otomatis tertulis di dalam file log sistem operasi.",
-      "c": "Karena ukuran output SHA-256 terlalu pendek untuk standar keamanan modern.",
-      "d": "Karena algoritma MD5 menggunakan kunci asimetris publik.",
-      "e": "Karena penyerang dapat membalikkan fungsi hash satu arah menggunakan tabel pembagian matematika."
+      "a": "Memanipulasi timestamp berkas pada atribut $STANDARD_INFORMATION tanpa menyelaraskan atribut $FILE_NAME secara komprehensif.",
+      "b": "Mengubah frekuensi kristal clock pada CMOS hardware BIOS agar waktu sistem berjalan mundur secara konstan.",
+      "c": "Menghapus berkas log Event Viewer Application dan Security secara berkala menggunakan skrip batch terjadwal.",
+      "d": "Mengenkripsi seluruh sektor metadata Master File Table ($MFT) dengan algoritma asimetris RSA 2048-bit dalam kerangka pembuktian tindak pidana siber menurut undang-undang.",
+      "e": "Menyematkan payload malware ke dalam slack space cluster disk yang tidak terpetakan oleh sistem operasi."
     },
     "correct_letter": "a",
-    "correct_answer": "Karena output hash H(k || m) mewakili internal state akhir fungsi hash, penyerang dapat melanjutkan komputasi hash untuk pesan tambahan m' tanpa perlu mengetahui nilai secret key k.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 249
+    "correct_answer": "Memanipulasi timestamp berkas pada atribut $STANDARD_INFORMATION tanpa menyelaraskan atribut $FILE_NAME secara komprehensif."
   },
   {
-    "week": "Week 6",
+    "id": 175,
+    "week": "Week 3",
     "type": "Pre Test",
-    "question": "Konstruksi Hash-based Message Authentication Code (HMAC) dirumuskan sebagai H((K XOR opad) || H((K XOR ipad) || m)). Tujuan penggunaan dua putaran hash bersarang dengan bantalan opad dan ipad ini adalah ...",
+    "question": "Dalam analisis dump memori RAM menggunakan Volatility Framework, mengapa plugin 'psscan' mampu menemukan proses malware tersembunyi yang gagal dideteksi oleh plugin 'pslist'?",
     "options": {
-      "a": "Mencegah serangan Length Extension Attack dan membuktikan keaslian serta integritas pesan menggunakan kunci rahasia bersama.",
-      "b": "Membuat fungsi hash dapat berjalan tanpa membutuhkan memori RAM.",
-      "c": "Mengompresi pesan m agar ukuran filenya menjadi separuh ukuran asli.",
-      "d": "Mengubah algoritma simetris menjadi algoritma tanda tangan digital publik.",
-      "e": "Menghilangkan kebutuhan inisialisasi kunci pada pihak penerima."
+      "a": "psscan membaca berkas prefetch di hard disk, sedangkan pslist hanya memeriksa cache CPU prosesor host dalam kerangka pembuktian tindak pidana siber menurut undang-undang.",
+      "b": "pslist hanya dapat berjalan pada sistem operasi Linux, sedangkan psscan didesain eksklusif untuk kernel Windows.",
+      "c": "psscan melakukan scanning pola pool tag memori, sedangkan pslist hanya menelusuri linked-list EPROCESS aktif.",
+      "d": "pslist memerlukan privilege root untuk membaca memori, sedangkan psscan dapat berjalan di unprivileged mode.",
+      "e": "psscan menggunakan algoritma deobfuskasi XOR dinamis untuk membongkar injeksi shellcode pada stack memori."
     },
-    "correct_letter": "a",
-    "correct_answer": "Mencegah serangan Length Extension Attack dan membuktikan keaslian serta integritas pesan menggunakan kunci rahasia bersama.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 250
+    "correct_letter": "c",
+    "correct_answer": "psscan melakukan scanning pola pool tag memori, sedangkan pslist hanya menelusuri linked-list EPROCESS aktif."
   },
   {
-    "week": "Week 6",
+    "id": 176,
+    "week": "Week 3",
     "type": "Pre Test",
-    "question": "Keamanan algoritma kriptografi asimetris RSA secara fundamental didasarkan pada kesulitan komputasi matematika dalam menyelesaikan masalah ...",
+    "question": "Artefak Windows Registry manakah yang paling krusial dianalisis penyidik untuk merekonstruksi riwayat mounting perangkat USB flashdisk eksternal pada komputer tersangka?",
     "options": {
-      "a": "Faktorisasi bilangan bulat besar yang merupakan hasil kali dua bilangan prima acak besar (Integer Factorization Problem).",
-      "b": "Penyelesaian persamaan diferensial linier orde tiga.",
-      "c": "Pencarian akar kuadrat bilangan negatif pada domain riil.",
-      "d": "Pengurutan array bilangan acak berukuran gigabyte.",
-      "e": "Perhitungan logaritma natural pada CPU grafis."
+      "a": "SYSTEM\\CurrentControlSet\\Enum\\USBSTOR dan berkas setupapi.dev.log.",
+      "b": "SAM\\Domains\\Account\\Users dan berkas Ntds.dit direktori domain controller.",
+      "c": "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunOnce startup keys dalam kerangka pembuktian tindak pidana siber menurut undang-undang.",
+      "d": "SECURITY\\Policy\\Secrets dan berkas master key Credential Manager berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.",
+      "e": "SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Exclusions keys guna memastikan integritas rantai keabsahan bukti chain of custody."
     },
     "correct_letter": "a",
-    "correct_answer": "Faktorisasi bilangan bulat besar yang merupakan hasil kali dua bilangan prima acak besar (Integer Factorization Problem).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 251
+    "correct_answer": "SYSTEM\\CurrentControlSet\\Enum\\USBSTOR dan berkas setupapi.dev.log."
   },
   {
-    "week": "Week 6",
+    "id": 177,
+    "week": "Week 3",
     "type": "Post Test",
-    "question": "Pada algoritma RSA, mengapa skema padding probabilistik seperti Optimal Asymmetric Encryption Padding (OAEP) wajib digunakan alih-alih Textbook RSA?",
+    "question": "Pada sistem operasi Windows, analisis terhadap artefak Prefetch (.pf) memberikan nilai bukti digital yang sangat kuat karena mampu membuktikan ...",
     "options": {
-      "a": "Textbook RSA bersifat deterministik dan memiliki sifat homomorfik perkalian yang memungkinkan penyerang memanipulasi ciphertext tanpa mengetahui plaintext asli (malleability).",
-      "b": "OAEP memperkecil ukuran ciphertext menjadi 16 byte.",
-      "c": "Textbook RSA hanya dapat digunakan pada prosesor 8-bit.",
-      "d": "OAEP menghapus kebutuhan kunci privat dalam proses dekripsi.",
-      "e": "Textbook RSA tidak mendukung enkripsi karakter teks alfabet."
+      "a": "Daftar alamat URL website perbankan yang diakses pengguna melalui browser mode incognito dalam kerangka pembuktian tindak pidana siber menurut undang-undang.",
+      "b": "Isi plaintext percakapan instan yang terjadi sebelum prosesor mengalami crash blue screen.",
+      "c": "Kunci simetris AES yang digunakan ransomware untuk mengenkripsi volume partisi sekunder.",
+      "d": "Eksekusi suatu executable, waktu eksekusi terakhir, run count, serta DLL yang dimuat ke memori.",
+      "e": "Daftar kata sandi Wi-Fi SSID publik yang pernah terhubung ke adapter nirkabel laptop target."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Eksekusi suatu executable, waktu eksekusi terakhir, run count, serta DLL yang dimuat ke memori."
+  },
+  {
+    "id": 178,
+    "week": "Week 3",
+    "type": "Post Test",
+    "question": "Metode pemulihan berkas 'File Carving' dalam investigasi disk forensik bekerja berdasarkan prinsip apa ketika tabel sistem berkas (seperti FAT/MFT) telah rusak atau terhapus?",
+    "options": {
+      "a": "Melakukan rekonstruksi struktur pohon direktori berdasarkan sisa cache metadata pada RAM prosesor berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.",
+      "b": "Mendekompilasi file sistem operasi menggunakan teknik reverse engineering machine code berbasis AI.",
+      "c": "Mengirimkan kueri recovery data ke server bayangan Volume Shadow Copy Service melalui jaringan dalam kerangka pembuktian tindak pidana siber menurut undang-undang.",
+      "d": "Mengidentifikasi magic bytes signature (header dan footer spesifik format berkas) pada raw unallocated cluster.",
+      "e": "Menghitung nilai parity cluster RAID menggunakan algoritma Reed-Solomon untuk membangkitkan berkas."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Mengidentifikasi magic bytes signature (header dan footer spesifik format berkas) pada raw unallocated cluster."
+  },
+  {
+    "id": 179,
+    "week": "Week 3",
+    "type": "Post Test",
+    "question": "Dalam steganografi gambar digital, metode Least Significant Bit (LSB) embedding menyembunyikan payload rahasia dengan cara mengubah ...",
+    "options": {
+      "a": "Bit paling rendah dari nilai byte warna piksel sehingga perubahan visual tidak kasat mata bagi mata manusia.",
+      "b": "Metadata Exif kamera seperti focal length, aperture, dan koordinat GPS penangkapan foto guna memastikan integritas rantai keabsahan bukti chain of custody.",
+      "c": "Algoritma kompresi Huffman dari lossless format PNG menjadi lossy compression format JPEG secara dinamis guna memastikan integritas rantai keabsahan bukti chain of custody.",
+      "d": "Resolusi lebar dan tinggi gambar di header IHDR tanpa mengubah payload matriks piksel sebenarnya dalam kerangka pembuktian tindak pidana siber menurut undang-undang.",
+      "e": "Tabel kuantisasi Discrete Cosine Transform (DCT) pada kanal chrominance secara acak merata yang dicatat dalam berkas berita acara pemeriksaan forensik."
     },
     "correct_letter": "a",
-    "correct_answer": "Textbook RSA bersifat deterministik dan memiliki sifat homomorfik perkalian yang memungkinkan penyerang memanipulasi ciphertext tanpa mengetahui plaintext asli (malleability).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 252
+    "correct_answer": "Bit paling rendah dari nilai byte warna piksel sehingga perubahan visual tidak kasat mata bagi mata manusia."
   },
   {
-    "week": "Week 6",
+    "id": 180,
+    "week": "Week 3",
     "type": "Post Test",
-    "question": "Protokol pertukaran kunci Diffie-Hellman (DH) memungkinkan dua pihak membangun kunci rahasia bersama melalui saluran komunikasi publik yang tidak aman berdasarkan kesulitan komputasi ...",
+    "question": "Pada sistem berkas NTFS, berkas teks berukuran sangat kecil (< 700 byte) sering kali dikategorikan sebagai 'Resident File'. Karakteristik unik berkas resident ini adalah ...",
     "options": {
-      "a": "Discrete Logarithm Problem (Masalah Logaritma Diskrit pada grup siklik berhingga).",
-      "b": "Invers matriks 2x2 modular.",
-      "c": "Penjumlahan deret aritmatika Gauss.",
-      "d": "Pencarian nilai determinan matriks bujur sangkar.",
-      "e": "Kompresi data lossy format JPEG."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Discrete Logarithm Problem (Masalah Logaritma Diskrit pada grup siklik berhingga).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 253
-  },
-  {
-    "week": "Week 6",
-    "type": "Post Test",
-    "question": "Kelemahan paling mendasar dari protokol Diffie-Hellman standar (unauthenticated DH) jika tidak dikombinasikan dengan mekanisme autentikasi adalah kerentanannya terhadap serangan ...",
-    "options": {
-      "a": "Man-in-the-Middle (MitM) Attack, di mana penyerang secara aktif mencegat dan menegosiasikan kunci terpisah dengan masing-masing pihak tanpa terdeteksi.",
-      "b": "Buffer Overflow pada compiler C",
-      "c": "SQL Injection pada server basis data",
-      "d": "Cross-Site Scripting (XSS)",
-      "e": "Directory Traversal pada web server"
-    },
-    "correct_letter": "a",
-    "correct_answer": "Man-in-the-Middle (MitM) Attack, di mana penyerang secara aktif mencegat dan menegosiasikan kunci terpisah dengan masing-masing pihak tanpa terdeteksi.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 254
-  },
-  {
-    "week": "Week 6",
-    "type": "Post Test",
-    "question": "Sifat 'Perfect Forward Secrecy' (PFS) pada protokol keamanan TLS menjamin bahwa ...",
-    "options": {
-      "a": "Jika private key jangka panjang server terkompromi/bocor di masa depan, penyerang tetap tidak dapat mendekripsi rekaman traffic sesi komunikasi masa lalu yang menggunakan kunci sesi ephemeral (seperti ECDHE).",
-      "b": "Data pengguna akan dienkripsi ulang setiap 24 jam secara otomatis di harddisk server.",
-      "c": "Website tidak akan pernah mengalami downtime meskipun server terbakar.",
-      "d": "Pengguna tidak perlu menggunakan password saat login ke aplikasi perbankan.",
-      "e": "Koneksi internet klien akan selalu memiliki kecepatan bandwidth maksimum tanpa batas."
-    },
-    "correct_letter": "a",
-    "correct_answer": "Jika private key jangka panjang server terkompromi/bocor di masa depan, penyerang tetap tidak dapat mendekripsi rekaman traffic sesi komunikasi masa lalu yang menggunakan kunci sesi ephemeral (seperti ECDHE).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 255
-  },
-  {
-    "week": "Week 6",
-    "type": "Post Test",
-    "question": "Keunggulan utama Elliptic Curve Cryptography (ECC) dibandingkan RSA adalah ...",
-    "options": {
-      "a": "ECC menawarkan tingkat kekuatan keamanan kriptografi yang setara dengan RSA namun dengan ukuran kunci yang jauh lebih pendek (misalnya kunci ECC 256-bit setara dengan RSA 3072-bit), sehingga menghemat bandwidth dan daya komputasi.",
-      "b": "ECC tidak memerlukan operasi matematika modular sama sekali.",
-      "c": "ECC dapat didekripsi oleh siapa saja tanpa membutuhkan kunci privat.",
-      "d": "Kunci ECC dapat disimpan dalam format plaintext di repositori publik GitHub tanpa risiko.",
-      "e": "ECC merupakan algoritma enkripsi simetris tercepat di dunia."
-    },
-    "correct_letter": "a",
-    "correct_answer": "ECC menawarkan tingkat kekuatan keamanan kriptografi yang setara dengan RSA namun dengan ukuran kunci yang jauh lebih pendek (misalnya kunci ECC 256-bit setara dengan RSA 3072-bit), sehingga menghemat bandwidth dan daya komputasi.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 256
-  },
-  {
-    "week": "Week 6",
-    "type": "Post Test",
-    "question": "Pada mekanisme pembuatan Tanda Tangan Digital (Digital Signature), operasi kriptografi yang dilakukan oleh pengirim pesan adalah ...",
-    "options": {
-      "a": "Mendekripsi seluruh file dokumen menggunakan public key penerima.",
-      "b": "Menghitung nilai cryptographic hash (digest) dari pesan, lalu mengenkripsi nilai digest tersebut menggunakan private key milik pengirim.",
-      "c": "Mengenkripsi pesan menggunakan kunci simetris rahasia milik penerima pesan.",
-      "d": "Mengirimkan password akun pengirim ke server verifikasi pihak ketiga.",
-      "e": "Menandatangani dokumen secara fisik di atas kertas lalu memindainya menjadi file PDF."
+      "a": "Datanya selalu dikompresi menggunakan algoritma LZX dan hanya bisa dibaca oleh pengguna berhak istimewa root.",
+      "b": "Datanya disimpan langsung di dalam record Master File Table ($MFT) itu sendiri tanpa alokasi cluster eksternal.",
+      "c": "Datanya tidak akan pernah terhapus meskipun sistem berkas diformat ulang menggunakan perintah quick format.",
+      "d": "Datanya disimpan secara eksklusif di dalam NVRAM motherboard dan tidak tertulis di media piringan disk.",
+      "e": "Datanya secara otomatis diduplikasi ke sektor bad block untuk mencegah kehilangan data akibat kegagalan baca."
     },
     "correct_letter": "b",
-    "correct_answer": "Menghitung nilai cryptographic hash (digest) dari pesan, lalu mengenkripsi nilai digest tersebut menggunakan private key milik pengirim.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 257
+    "correct_answer": "Datanya disimpan langsung di dalam record Master File Table ($MFT) itu sendiri tanpa alokasi cluster eksternal."
   },
   {
-    "week": "Week 6",
+    "id": 181,
+    "week": "Week 3",
     "type": "Post Test",
-    "question": "Bagaimana pihak penerima memverifikasi keabsahan tanda tangan digital pada sebuah dokumen elektronik?",
+    "question": "Dalam forensik perangkat bergerak (mobile forensics), perbedaan mendasar antara 'Logical Extraction' dan 'Physical Extraction' adalah ...",
     "options": {
-      "a": "Mendekripsi tanda tangan digital menggunakan public key pengirim untuk memperoleh digest asli, lalu membandingkannya dengan digest yang dihitung sendiri dari dokumen yang diterima.",
-      "b": "Membuka file dokumen menggunakan program pengolah kata Microsoft Word.",
-      "c": "Menelepon pengirim untuk menanyakan apakah dokumen tersebut benar dikirimkan.",
-      "d": "Memeriksa apakah ukuran file dokumen merupakan bilangan bulat genap.",
-      "e": "Mengirimkan dokumen ke kantor pos terdekat untuk distempel manual."
+      "a": "Logical mengekstrak salinan bit-by-bit flash memory mentah, sedangkan Physical hanya mengambil file via backup API guna memastikan integritas rantai keabsahan bukti chain of custody.",
+      "b": "Logical mampu memulihkan seluruh berkas yang terhapus dari unallocated space, sedangkan Physical tidak bisa memulihkannya.",
+      "c": "Logical memerlukan solder chip-off pada papan PCB ponsel, sedangkan Physical cukup menggunakan kabel data USB biasa guna memastikan integritas rantai keabsahan bukti chain of custody.",
+      "d": "Logical hanya mengambil data struktur logis melalui API OS, sedangkan Physical mengambil bit-by-bit raw flash memory secara komprehensif.",
+      "e": "Logical hanya dapat diterapkan pada sistem operasi iOS, sedangkan Physical hanya dapat dieksekusi pada ponsel Android."
     },
-    "correct_letter": "a",
-    "correct_answer": "Mendekripsi tanda tangan digital menggunakan public key pengirim untuk memperoleh digest asli, lalu membandingkannya dengan digest yang dihitung sendiri dari dokumen yang diterima.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 258
+    "correct_letter": "d",
+    "correct_answer": "Logical hanya mengambil data struktur logis melalui API OS, sedangkan Physical mengambil bit-by-bit raw flash memory secara komprehensif."
   },
   {
-    "week": "Week 6",
+    "id": 182,
+    "week": "Week 3",
     "type": "Post Test",
-    "question": "Tiga layanan keamanan informasi yang diwujudkan secara simultan oleh tanda tangan digital adalah ...",
+    "question": "Seorang individu memproduksi, memperjualbelikan, dan mendistribusikan software keylogger serta tool exploit kit untuk membobol sistem pihak lain. Pasal UU ITE yang mengatur larangan ini adalah ...",
     "options": {
-      "a": "Otentikasi Pengirim (Authenticity), Integritas Pesan (Integrity), dan Anti-Penyangkalan (Non-Repudiation).",
-      "b": "Kerahasiaan Mutlak (Confidentiality), Kompresi Data, dan Kecepatan Transmisi.",
-      "c": "Ketersediaan Jaringan (Availability), Alokasi Bandwidth, dan Load Balancing.",
-      "d": "Pencegahan Virus, Pemulihan Bencana, dan Redundansi Penyimpanan.",
-      "e": "Enkripsi Hardware, Proteksi BIOS, dan Pembersihan Disk."
+      "a": "Pasal 30 ayat (1) mengenai tindakan mengakses komputer tanpa izin demi memperoleh hiburan semata yang dicatat dalam berkas berita acara pemeriksaan forensik.",
+      "b": "Pasal 32 ayat (2) mengenai pengiriman data elektronik rahasia ke server luar negeri tanpa sertifikasi keamanan yang dicatat dalam berkas berita acara pemeriksaan forensik.",
+      "c": "Pasal 34 ayat (1) mengenai pembuatan, penjualan, pengimporan, atau pendistribusian perangkat keras/lunak untuk tindak pidana siber.",
+      "d": "Pasal 36 mengenai perbuatan melawan hukum yang tidak mengakibatkan kerugian materiil bagi korban secara riil guna memastikan integritas rantai keabsahan bukti chain of custody.",
+      "e": "Pasal 37 mengenai kewajiban penyelenggara sistem elektronik mendaftarkan sertifikat elektronik ke kementerian yang dicatat dalam berkas berita acara pemeriksaan forensik."
     },
-    "correct_letter": "a",
-    "correct_answer": "Otentikasi Pengirim (Authenticity), Integritas Pesan (Integrity), dan Anti-Penyangkalan (Non-Repudiation).",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 259
+    "correct_letter": "c",
+    "correct_answer": "Pasal 34 ayat (1) mengenai pembuatan, penjualan, pengimporan, atau pendistribusian perangkat keras/lunak untuk tindak pidana siber."
   },
   {
-    "week": "Week 6",
+    "id": 183,
+    "week": "Week 3",
     "type": "Post Test",
-    "question": "Dalam infrastruktur Public Key Infrastructure (PKI), fungsi utama dari Certificate Authority (CA) adalah ...",
+    "question": "Berdasarkan UU PDP (Undang-Undang Pelindungan Data Pribadi No. 27 Tahun 2022), hak subjek data pribadi untuk menuntut penghapusan data pribadinya dikenal sebagai ...",
     "options": {
-      "a": "Bertindak sebagai pihak ketiga tepercaya (trusted third party) yang memverifikasi identitas pemilik kunci dan menerbitkan sertifikat digital X.509 bertanda tangan digital yang mengikat identitas dengan public key pemilik.",
-      "b": "Menyimpan seluruh private key pengguna di server publik agar tidak hilang.",
-      "c": "Memungut pajak internet tahunan atas kepemilikan nama domain website.",
-      "d": "Menerjemahkan nama domain URL menjadi alamat IP numerik (DNS).",
-      "e": "Memperbaiki kerusakan fisik kabel fiber optik jaringan internet."
+      "a": "Hak atas Portabilitas Data Pribadi antar pengendali data secara otomatis yang dicatat dalam berkas berita acara pemeriksaan forensik.",
+      "b": "Hak Menunda Pembayaran Ganti Rugi Pelanggaran Keamanan Sistem Informasi.",
+      "c": "Hak Mengajukan Keberatan atas Keputusan Otomatisasi Profiling Konsumen.",
+      "d": "Hak Mengakses dan Memperoleh Salinan Data Tanpa Biaya Administrasi Tambahan.",
+      "e": "Hak Mengakhiri Pemrosesan dan Hak Penghapusan (Right to Erasure / to be Forgotten)."
     },
-    "correct_letter": "a",
-    "correct_answer": "Bertindak sebagai pihak ketiga tepercaya (trusted third party) yang memverifikasi identitas pemilik kunci dan menerbitkan sertifikat digital X.509 bertanda tangan digital yang mengikat identitas dengan public key pemilik.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 260
+    "correct_letter": "e",
+    "correct_answer": "Hak Mengakhiri Pemrosesan dan Hak Penghapusan (Right to Erasure / to be Forgotten)."
   },
   {
-    "week": "Week 6",
+    "id": 184,
+    "week": "Week 3",
     "type": "Post Test",
-    "question": "Mekanisme Online Certificate Status Protocol (OCSP) Stapling dirancang untuk meningkatkan efisiensi dan privasi pengecekan status pencabutan sertifikat SSL/TLS dengan cara ...",
+    "question": "Dalam network forensics, mengapa berkas PCAP (Full Packet Capture) memberikan visibilitas yang jauh lebih tinggi dibanding rekaman NetFlow / IPFIX?",
     "options": {
-      "a": "Server web secara berkala meminta bukti validitas sertifikat bertanda tangan waktu dari CA (OCSP response) dan menyertakannya langsung kepada klien selama proses TLS handshake.",
-      "b": "Mengharuskan klien mengunduh file daftar CRL berukuran ratusan megabyte setiap kali membuka website.",
-      "c": "Menghapus kebutuhan sertifikat SSL sehingga browser tidak pernah menampilkan error koneksi.",
-      "d": "Menyimpan seluruh histori browsing pengguna di server CA pusat.",
-      "e": "Mengizinkan server menggunakan sertifikat yang sudah kadaluarsa hingga 5 tahun."
+      "a": "NetFlow mengenkripsi data lalu lintas menggunakan private key router, sedangkan PCAP menyimpan data dalam plaintext sesuai dengan prosedur standar ISO/IEC 27037 bukti digital.",
+      "b": "PCAP menyimpan seluruh payload aplikasi dan header layer 2-7, sedangkan NetFlow hanya mencatat metadata flow 5-tuple.",
+      "c": "PCAP memerlukan bandwidth jaringan yang jauh lebih kecil dan ruang disk minimal dibanding rekaman NetFlow dalam kerangka pembuktian tindak pidana siber menurut undang-undang.",
+      "d": "NetFlow hanya mampu mencatat paket protokol TCP, sedangkan PCAP secara eksklusif hanya memantau lalu lintas UDP guna memastikan integritas rantai keabsahan bukti chain of custody.",
+      "e": "PCAP langsung menyaring serangan malware di switch core tanpa memerlukan analisis lanjut di workstation forensik berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem."
     },
-    "correct_letter": "a",
-    "correct_answer": "Server web secara berkala meminta bukti validitas sertifikat bertanda tangan waktu dari CA (OCSP response) dan menyertakannya langsung kepada klien selama proses TLS handshake.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 261
+    "correct_letter": "b",
+    "correct_answer": "PCAP menyimpan seluruh payload aplikasi dan header layer 2-7, sedangkan NetFlow hanya mencatat metadata flow 5-tuple."
   },
   {
-    "week": "Week 6",
+    "id": 185,
+    "week": "Week 3",
     "type": "Post Test",
-    "question": "Jika suatu organisasi memiliki 100 karyawan yang saling ingin berkomunikasi secara rahasia sepasang-demi-sepasang menggunakan kriptografi simetris murni, jumlah pasangan kunci rahasia berbeda yang harus didistribusikan dan dikelola adalah ...",
+    "question": "Mengapa pemulihan berkas terhapus menggunakan carver pada media Solid State Drive (SSD) modern jauh lebih sulit dibanding pada Hard Disk Drive (HDD) mekanis?",
     "options": {
-      "a": "N(N-1)/2 = 100 x 99 / 2 = 4.950 kunci rahasia",
-      "b": "100 kunci",
-      "c": "200 kunci",
-      "d": "1 kunci master bersama",
-      "e": "10.000 kunci"
+      "a": "SSD memiliki piringan magnetik yang berputar pada kecepatan ekstrem sehingga sisa magnetisme terdistorsi yang dicatat dalam berkas berita acara pemeriksaan forensik.",
+      "b": "Kontroler SSD menolak seluruh perintah pembacaan raw bit-stream yang dikirimkan oleh software forensic imaging.",
+      "c": "Sistem operasi selalu menerapkan enkripsi AES-512 level chip hardware pada setiap sektor NAND flash SSD yang dicatat dalam berkas berita acara pemeriksaan forensik.",
+      "d": "SSD tidak menggunakan cluster sistem berkas dan hanya mengandalkan alamat memori virtual acak dinamis guna memastikan integritas rantai keabsahan bukti chain of custody.",
+      "e": "Perintah TRIM dan garbage collection pada SSD secara proaktif membersihkan blok memori flash yang ditandai terhapus."
     },
-    "correct_letter": "a",
-    "correct_answer": "N(N-1)/2 = 100 x 99 / 2 = 4.950 kunci rahasia",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 262
+    "correct_letter": "e",
+    "correct_answer": "Perintah TRIM dan garbage collection pada SSD secara proaktif membersihkan blok memori flash yang ditandai terhapus."
   },
   {
-    "week": "Week 6",
+    "id": 186,
+    "week": "Week 3",
     "type": "Post Test",
-    "question": "Bagaimana sistem Hybrid Cryptography (seperti pada protokol HTTPS/TLS) menggabungkan keunggulan kriptografi asimetris dan simetris secara harmonis?",
+    "question": "Dalam investigasi memori (memory forensics), indikator kuat adanya teknik Process Hollowing atau DLL Injection oleh malware tingkat lanjut ditandai dengan alokasi memori berkategori ...",
     "options": {
-      "a": "Kriptografi asimetris (RSA/ECDHE) digunakan pada fase awal handshake untuk mengotentikasi server dan mempertukarkan kunci sesi (session key) secara aman, kemudian seluruh data komunikasi bervolume besar dienkripsi menggunakan kriptografi simetris (AES-GCM) yang jauh lebih cepat dan efisien.",
-      "b": "Kriptografi simetris digunakan untuk menandatangani dokumen, sedangkan kriptografi asimetris untuk mengenkripsi harddisk.",
-      "c": "Data teks dienkripsi dengan kriptografi simetris, sedangkan gambar dan video dienkripsi dengan asimetris.",
-      "d": "Kriptografi asimetris dijalankan hanya saat komputer dalam mode hemat daya (sleep).",
-      "e": "Kedua algoritma dijalankan bergantian setiap 10 detik secara berulang."
+      "a": "Halaman memori berstatus PAGE_READONLY yang dipetakan langsung dari berkas sistem Windows asli (ntdll.dll).",
+      "b": "Halaman memori privat (MEM_PRIVATE) yang memiliki izin eksekusi dan penulisan sekaligus (PAGE_EXECUTE_READWRITE).",
+      "c": "Halaman memori bersama (MEM_SHARED) dengan izin akses eksklusif PAGE_NOACCESS untuk proses thread kernel.",
+      "d": "Halaman memori stack proses yang dialokasikan di area memory-mapped I/O perangkat keras grafis terpasang.",
+      "e": "Halaman memori berkas swapfile.sys yang telah ditandai sebagai uncommitted space oleh sistem virtual memory."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Halaman memori privat (MEM_PRIVATE) yang memiliki izin eksekusi dan penulisan sekaligus (PAGE_EXECUTE_READWRITE)."
+  },
+  {
+    "id": 187,
+    "week": "Week 3",
+    "type": "Post Test",
+    "question": "Agar bukti digital dapat diterima (admissible) di persidangan menurut hukum acara pidana dan UU ITE Pasal 5 dan 6, syarat formil dan materiil yang paling mendasar adalah ...",
+    "options": {
+      "a": "Bukti harus berupa perangkat keras fisik asli bergaransi distributor resmi dan belum pernah dibuka bautnya berdasarkan pedoman urutan volatilitas RFC 3227 forensik sistem.",
+      "b": "Telah didekripsi secara penuh tanpa menyisakan enkripsi apa pun dan disetujui langsung oleh tersangka perkara.",
+      "c": "Diperoleh secara sah menurut hukum, terjaga integritas dan keasliannya (chain of custody), serta dapat dipertanggungjawabkan.",
+      "d": "Telah diuji coba di tiga laboratorium forensik universitas swasta berbeda dalam kurun waktu satu minggu kalender.",
+      "e": "Memiliki ukuran file minimal 1 Terabyte dan disimpan di dalam media penyimpanan cloud bersertifikat internasional."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Diperoleh secara sah menurut hukum, terjaga integritas dan keasliannya (chain of custody), serta dapat dipertanggungjawabkan."
+  },
+  {
+    "id": 188,
+    "week": "Week 3",
+    "type": "Post Test",
+    "question": "Berdasarkan standar Computer Security Incident Handling Guide (NIST SP 800-61 Rev. 2), urutan 4 fase utama siklus penanganan insiden keamanan siber adalah ...",
+    "options": {
+      "a": "Risk Assessment, Security Auditing, Penetration Testing, Legal Prosecution Report.",
+      "b": "Triage, Evidence Hashing, Malware Reverse Engineering, System Reinstallation.",
+      "c": "Identification, Authentication, Authorization, Accounting, Continuous Monitoring.",
+      "d": "Preparation, Detection & Analysis, Containment, Eradication & Recovery, Post-Incident Activity.",
+      "e": "Policy Definition, Architecture Design, Tool Deployment, Annual Compliance Review."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Preparation, Detection & Analysis, Containment, Eradication & Recovery, Post-Incident Activity."
+  },
+  {
+    "id": 189,
+    "week": "Week 4",
+    "type": "Pre Test",
+    "question": "Pada arsitektur x86-64, bagaimana mekanisme mendasar sebuah serangan Stack-based Buffer Overflow klasik berhasil membajak alur eksekusi (control flow) program?",
+    "options": {
+      "a": "Menimpa frame pointer (RBP) dan saved return address pada call stack sehingga instruksi RET melompat ke alamat yang dikontrol penyerang.",
+      "b": "Mengubah nilai register penunjuk instruksi (RIP) secara langsung melalui instruksi MOV unprivileged pada ring 3 sistem operasi sehingga memicu eksekusi instruksi pada privilege level kernel.",
+      "c": "Mengganti tabel Global Descriptor Table (GDT) di kernel space sehingga seluruh hak akses proses dialihkan ke mode superuser yang dievaluasi compiler selama fase kompilasi dan optimasi.",
+      "d": "Memodifikasi pointer Global Offset Table (GOT) tanpa menyentuh batasan alokasi array lokal yang tersimpan di stack memori fungsi sesuai prinsip secure software development lifecycle enterprise.",
+      "e": "Menginstruksikan CPU untuk mengeksekusi trap interrupt 0x80 dengan muatan payload shellcode di dalam register akumulator RAX."
     },
     "correct_letter": "a",
-    "correct_answer": "Kriptografi asimetris (RSA/ECDHE) digunakan pada fase awal handshake untuk mengotentikasi server dan mempertukarkan kunci sesi (session key) secara aman, kemudian seluruh data komunikasi bervolume besar dienkripsi menggunakan kriptografi simetris (AES-GCM) yang jauh lebih cepat dan efisien.",
-    "source": "Bank Soal Tambahan",
-    "mark": "1.00 out of 1.00",
-    "id": 263
+    "correct_answer": "Menimpa frame pointer (RBP) dan saved return address pada call stack sehingga instruksi RET melompat ke alamat yang dikontrol penyerang."
+  },
+  {
+    "id": 190,
+    "week": "Week 4",
+    "type": "Pre Test",
+    "question": "Mekanisme mitigasi Stack Canary (Stack Cookie) melindungi program dari buffer overflow dengan menempatkan nilai integer acak di memori. Di manakah posisi persis canary tersebut diletakkan?",
+    "options": {
+      "a": "Di antara segmen instruksi .text dan segmen konstanta data read-only .rodata pada struktur berkas biner ELF sehingga memicu eksekusi instruksi pada privilege level kernel.",
+      "b": "Tepat di antara buffer array lokal dan saved base pointer / return address pada stack frame fungsi yang aktif secara komprehensif.",
+      "c": "Di dalam tabel Thread Local Storage (TLS) untuk mengamankan komunikasi antar-thread dari race condition paralel.",
+      "d": "Pada alamat terendah dari heap memory sebelum pointer chunk metadata pertama dialokasikan oleh runtime allocator.",
+      "e": "Di puncak stack tepat sebelum parameter fungsi pertama disorongkan (pushed) oleh pemanggil fungsi (caller)."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Tepat di antara buffer array lokal dan saved base pointer / return address pada stack frame fungsi yang aktif secara komprehensif."
+  },
+  {
+    "id": 191,
+    "week": "Week 4",
+    "type": "Pre Test",
+    "question": "Address Space Layout Randomization (ASLR) secara acak mengacak posisi stack, heap, dan pustaka bersama. Mengapa vulnerability 'Information Disclosure' (seperti format string leak) sering kali menjadi prasyarat untuk membobol ASLR?",
+    "options": {
+      "a": "Information disclosure mengubah hak akses memori dari read-only menjadi read-write-execute secara dinamis pada arsitektur biner 64-bit yang diproteksi compiler flags.",
+      "b": "Bocoran alamat pointer memori aktual memungkinkan penyerang menghitung base address pustaka (misal libc) via offset tetap.",
+      "c": "Bocoran data memicu proses crash berulang sehingga kernel Linux secara otomatis menonaktifkan proteksi ASLR sistem untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "d": "Alamat memori yang bocor dapat dimanfaatkan untuk menulis shellcode langsung ke dalam register prosesor host sehingga memicu eksekusi instruksi pada privilege level kernel.",
+      "e": "Information disclosure secara otomatis mereset nilai stack canary menjadi deretan byte null (0x0000000000000000) yang dievaluasi compiler selama fase kompilasi dan optimasi."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Bocoran alamat pointer memori aktual memungkinkan penyerang menghitung base address pustaka (misal libc) via offset tetap."
+  },
+  {
+    "id": 192,
+    "week": "Week 4",
+    "type": "Pre Test",
+    "question": "Ketika Data Execution Prevention (DEP / NX bit) aktif, halaman memori stack dan heap ditandai sebagai non-executable. Teknik eksploitasi apa yang dirancang khusus untuk memotong proteksi ini tanpa perlu mengeksekusi shellcode di stack?",
+    "options": {
+      "a": "Heap Spraying dengan membanjiri memori menggunakan ribuan objek string NOP sled berukuran raksasa untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "b": "Timing Attack pada algoritma kriptografi kunci publik untuk memulihkan eksponen privat enkripsi RSA.",
+      "c": "Blind SQL Injection dengan memanfaatkan delay query waktu (time-based) untuk menebak hash kata sandi root yang dievaluasi compiler selama fase kompilasi dan optimasi.",
+      "d": "Cross-Site Scripting berbasis DOM dengan menyuntikkan payload JavaScript ke atribut innerHTML halaman web.",
+      "e": "Return-Oriented Programming (ROP) dengan merangkai potongan kode executable biner yang berakhiran instruksi RET (gadgets)."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Return-Oriented Programming (ROP) dengan merangkai potongan kode executable biner yang berakhiran instruksi RET (gadgets)."
+  },
+  {
+    "id": 193,
+    "week": "Week 4",
+    "type": "Pre Test",
+    "question": "Dalam eksploitasi celah format string pada fungsi `printf(user_input)` bahasa C, penentu format (format specifier) manakah yang dapat dimanfaatkan penyerang untuk MENULIS nilai ke alamat memori tertentu?",
+    "options": {
+      "a": "Specifier %x yang mencetak representasi heksadesimal dari nilai yang tersimpan di stack memori saat ini.",
+      "b": "Specifier %p yang menampilkan alamat virtual pointer register stack sebagai string heksadesimal standar.",
+      "c": "Specifier %s yang membaca deretan string biner secara rekursif hingga menemukan karakter null byte pembatas.",
+      "d": "Specifier %n yang menuliskan jumlah karakter yang telah diformat sejauh ini ke alamat pointer yang ditunjuk secara terperinci.",
+      "e": "Specifier %d yang mengonversi bilangan integer bertanda ke format desimal untuk verifikasi tipe data variabel."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Specifier %n yang menuliskan jumlah karakter yang telah diformat sejauh ini ke alamat pointer yang ditunjuk secara terperinci."
+  },
+  {
+    "id": 194,
+    "week": "Week 4",
+    "type": "Pre Test",
+    "question": "Bagaimana kerentanan 'Integer Overflow' dapat bertransisi menjadi Heap Buffer Overflow pada potongan kode: `size_t total = count * sizeof(Item); Item *buf = malloc(total); memcpy(buf, src, count * sizeof(Item));`?",
+    "options": {
+      "a": "Fungsi malloc mengembalikan pointer NULL yang langsung dieksekusi oleh instruksi memcpy sebagai instruksi jump CPU untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "b": "Perkalian variabel count meluap melampaui batas tipe data sehingga malloc mengalokasikan buffer kecil, namun memcpy menulis data besar.",
+      "c": "Ukuran sizeof(Item) berubah secara dinamis pada saat runtime sehingga pointer buf berpindah ke stack memori internal.",
+      "d": "Tipe data size_t dipaksa menjadi signed integer negatif sehingga memicu alokasi memori berukuran tak hingga (infinite heap).",
+      "e": "Instruksi memcpy menolak menyalin data bertipe struktural biner jika buffer dialokasikan menggunakan alokator malloc standar."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Perkalian variabel count meluap melampaui batas tipe data sehingga malloc mengalokasikan buffer kecil, namun memcpy menulis data besar."
+  },
+  {
+    "id": 195,
+    "week": "Week 4",
+    "type": "Pre Test",
+    "question": "Kerentanan Use-After-Free (UAF) terjadi akibat pengelolaan memori dinamis yang keliru. Dampak keamanan paling berbahaya yang dapat ditimbulkan oleh UAF ketika penyerang dapat mengontrol isi chunk yang telah dibebaskan adalah ...",
+    "options": {
+      "a": "Penurunan performa throughput jaringan akibat fragmentasi paket data TCP pada soket komunikasi server.",
+      "b": "Perubahan status koneksi database dari mode transaksional ACID menjadi mode autocommit tanpa peringatan sistem.",
+      "c": "Pembajakan pointer fungsi atau virtual method table (vtable) objek yang menyebabkan Arbitrary Code Execution secara terperinci.",
+      "d": "Penghapusan seluruh indeks tabel basis data akibat kesalahan penulisan pointer pada struktur berkas b-tree.",
+      "e": "Kegagalan sinkronisasi waktu NTP antara server aplikasi dan server domain controller di infrastruktur lokal."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Pembajakan pointer fungsi atau virtual method table (vtable) objek yang menyebabkan Arbitrary Code Execution secara terperinci."
+  },
+  {
+    "id": 196,
+    "week": "Week 4",
+    "type": "Pre Test",
+    "question": "Apa dampak utama dari kerentanan 'Double Free' pada alokator memori heap modern (seperti glibc ptmalloc) jika mitigasi integritas bin rusak atau berhasil dilewati penyerang?",
+    "options": {
+      "a": "Prosesor secara permanen mengunci bus memori hardware sehingga sistem operasi mengalami kernel panic untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "b": "Sertifikat SSL/TLS server web dihapus dari direktori konfigurasi web server secara permanen tanpa jejak log.",
+      "c": "Alamat IP publik server web langsung diubah menjadi alamat loopback 127.0.0.1 oleh driver antarmuka jaringan.",
+      "d": "Sistem operasi mematikan seluruh firewall iptables dan membuka port layanan administrasi SSH tanpa autentikasi.",
+      "e": "Penyerang dapat merusak linked-list alokator heap (seperti tcache/fastbin) untuk menghasilkan alokasi chunk di alamat memori sembarang."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Penyerang dapat merusak linked-list alokator heap (seperti tcache/fastbin) untuk menghasilkan alokasi chunk di alamat memori sembarang."
+  },
+  {
+    "id": 197,
+    "week": "Week 4",
+    "type": "Pre Test",
+    "question": "Kerentanan 'Off-by-One' (Single Byte Overflow) tampak sepele karena hanya meluapkan tepat satu byte ke memori adjacent. Namun, mengapa cacat ini dapat menyebabkan pembajakan kontrol alur program pada stack frame?",
+    "options": {
+      "a": "Satu byte tersebut dapat menimpa least significant byte dari saved frame pointer (EBP/RBP), membelokkan stack frame pemanggil saat epilog leave/ret.",
+      "b": "Kernel Linux secara otomatis mengeksekusi shell root setiap kali mendeteksi anomali penulisan satu byte di memori virtual.",
+      "c": "Satu byte tersebut menghapus seluruh proteksi enkripsi hardware TPM pada motherboard secara seketika.",
+      "d": "Single byte overflow memicu prosesor beralih dari mode 64-bit long mode ke mode 16-bit real mode tanpa validasi.",
+      "e": "Penulisan satu byte ke stack frame secara otomatis menonaktifkan seluruh aturan firewall jaringan tingkat kernel."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Satu byte tersebut dapat menimpa least significant byte dari saved frame pointer (EBP/RBP), membelokkan stack frame pemanggil saat epilog leave/ret."
+  },
+  {
+    "id": 198,
+    "week": "Week 4",
+    "type": "Pre Test",
+    "question": "Dalam pemodelan ancaman STRIDE, kategori ancaman 'Repudiation' berkaitan langsung dengan pelanggaran terhadap prinsip keamanan informasi apa, dan bagaimana mitigasi standarnya?",
+    "options": {
+      "a": "Ketiadaan sangkalan (Non-repudiation); dimitigasi dengan digital signature dan secure audit logging yang tamper-proof secara terperinci.",
+      "b": "Kerahasiaan data (Confidentiality); dimitigasi dengan penerapan algoritma enkripsi simetris AES-256 GCM.",
+      "c": "Ketersediaan layanan (Availability); dimitigasi dengan implementasi load balancer dan arsitektur redundansi multi-zona.",
+      "d": "Otorisasi pengguna (Authorization); dimitigasi dengan pembatasan hak akses berbasis Role-Based Access Control.",
+      "e": "Otentikasi identitas (Authenticity); dimitigasi dengan pengaktifan Multi-Factor Authentication berbasis token FIDO2."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Ketiadaan sangkalan (Non-repudiation); dimitigasi dengan digital signature dan secure audit logging yang tamper-proof secara terperinci."
+  },
+  {
+    "id": 199,
+    "week": "Week 4",
+    "type": "Pre Test",
+    "question": "Model penilaian risiko kerentanan DREAD mengevaluasi tingkat keparahan risiko berdasarkan 5 parameter. Parameter 'Discoverability' dalam DREAD mengukur ...",
+    "options": {
+      "a": "Berapa besar kerugian finansial yang diderita organisasi apabila kerentanan berhasil dieksploitasi musuh.",
+      "b": "Tingkat keahlian teknis dan perkakas khusus yang dibutuhkan untuk membuat senjata exploit fungsional.",
+      "c": "Seberapa konsisten exploit dapat dijalankan berulang kali untuk menghasilkan efek serangan yang sama persis.",
+      "d": "Berapa persentase total pengguna sistem yang terkena dampak langsung dari eksploitasi celah keamanan.",
+      "e": "Seberapa mudah seorang penyerang dapat menemukan keberadaan kerentanan tersebut dalam sistem secara komprehensif."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Seberapa mudah seorang penyerang dapat menemukan keberadaan kerentanan tersebut dalam sistem secara komprehensif."
+  },
+  {
+    "id": 200,
+    "week": "Week 4",
+    "type": "Pre Test",
+    "question": "Mengapa mitigasi compiler `-fstack-protector-strong` dianggap lebih optimal dan komprehensif dibanding `-fstack-protector` biasa pada GCC/Clang?",
+    "options": {
+      "a": "Menolak melakukan kompilasi terhadap kode sumber yang memanggil pustaka standar libc yang tidak tersertifikasi ISO sehingga memicu eksekusi instruksi pada privilege level kernel.",
+      "b": "Mendekripsi seluruh biner executable saat runtime menggunakan kunci sesi dinamis yang disimpan di register CPU yang dievaluasi compiler selama fase kompilasi dan optimasi.",
+      "c": "Memasang stack canary pada semua fungsi yang memiliki buffer array bertipe apa pun, referensi lokal, atau alokasi alloca().",
+      "d": "Mengalokasikan seluruh variabel lokal di memori video GPU untuk menghindari serangan buffer overflow pada RAM utama sehingga memicu eksekusi instruksi pada privilege level kernel.",
+      "e": "Menghapus instruksi RET dari assembly dan menggantinya dengan panggilan interrupt kernel langsung di setiap akhir fungsi."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Memasang stack canary pada semua fungsi yang memiliki buffer array bertipe apa pun, referensi lokal, atau alokasi alloca()."
+  },
+  {
+    "id": 201,
+    "week": "Week 4",
+    "type": "Pre Test",
+    "question": "Kompilasi biner dengan flag `-Wl,-z,relro,-z,now` (Full RELRO) memberikan proteksi memori yang sangat tangguh terhadap teknik GOT Overwrite dengan cara ...",
+    "options": {
+      "a": "Mengacak alamat memori basis dari seluruh pustaka bersama setiap kali fungsi pustaka baru dipanggil oleh program.",
+      "b": "Mengenkripsi setiap entri pada Global Offset Table menggunakan algoritma ChaCha20 dengan nonce sekali pakai.",
+      "c": "Memisahkan tabel pointer fungsi ke dalam segmen memori privat yang hanya dapat diakses melalui instruksi hypervisor.",
+      "d": "Menyelesaikan seluruh symbol resolusi dinamis saat startup program dan menandai tabel GOT sebagai read-only secara komprehensif.",
+      "e": "Menghapus simbol fungsi pustaka sepenuhnya dari berkas biner dan mengonversinya menjadi fungsi inline statis."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Menyelesaikan seluruh symbol resolusi dinamis saat startup program dan menandai tabel GOT sebagai read-only secara komprehensif."
+  },
+  {
+    "id": 202,
+    "week": "Week 4",
+    "type": "Post Test",
+    "question": "Dalam metodologi pengujian keamanan perangkat lunak, kelemahan mendasar dari Static Application Security Testing (SAST) dibanding DAST adalah ...",
+    "options": {
+      "a": "SAST memerlukan aplikasi berjalan penuh di environment staging dan tidak dapat memeriksa berkas kode sumber.",
+      "b": "Waktu eksekusi SAST memakan waktu berminggu-minggu karena memerlukan serangan penetrasi dinamis ke port jaringan aktif.",
+      "c": "SAST hanya mampu mendeteksi kerentanan konfigurasi server web dan sama sekali buta terhadap bug logika pemrograman.",
+      "d": "Tingkat false positive yang cenderung tinggi karena analyzer menganalisis aliran kode tanpa memahami konteks runtime sistem aktual.",
+      "e": "SAST hanya kompatibel dengan arsitektur cloud serverless dan tidak dapat memindai aplikasi monolitik on-premise."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Tingkat false positive yang cenderung tinggi karena analyzer menganalisis aliran kode tanpa memahami konteks runtime sistem aktual."
+  },
+  {
+    "id": 203,
+    "week": "Week 4",
+    "type": "Post Test",
+    "question": "Kerentanan Time-of-Check to Time-of-Use (TOCTOU) adalah varian cacat race condition. Manakah skenario implementasi yang rentan terhadap eksploitasi symlink race berbasis TOCTOU?",
+    "options": {
+      "a": "Aplikasi memverifikasi checksum SHA-256 berkas biner pembaruan sebelum memuat pustaka ke memori prosesor yang terlindungi ASLR pada arsitektur biner 64-bit yang diproteksi compiler flags.",
+      "b": "Aplikasi menggunakan fungsi atomic `open(\"/tmp/lock\", O_CREAT | O_EXCL | O_WRONLY, 0600)` untuk membuat berkas sementara tanpa jeda waktu untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "c": "Aplikasi mengenkripsi berkas konfigurasi dengan algoritma simetris AES-256-CBC sebelum menyimpannya ke direktori root pengguna sistem pada arsitektur biner 64-bit yang diproteksi compiler flags.",
+      "d": "Aplikasi memeriksa izin berkas via `access(\"/tmp/lock\", W_OK)`, lalu ada jeda sebelum memanggil `open(\"/tmp/lock\", O_WRONLY)`. Penyerang mengganti berkas dengan symlink ke /etc/shadow di antara kedua operasi.",
+      "e": "Aplikasi mengisolasi proses pembuatan file di dalam container Docker yang tidak memiliki akses root ke filesystem host induk."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Aplikasi memeriksa izin berkas via `access(\"/tmp/lock\", W_OK)`, lalu ada jeda sebelum memanggil `open(\"/tmp/lock\", O_WRONLY)`. Penyerang mengganti berkas dengan symlink ke /etc/shadow di antara kedua operasi."
+  },
+  {
+    "id": 204,
+    "week": "Week 4",
+    "type": "Post Test",
+    "question": "Pada arsitektur 64-bit ARMv8.3-A ke atas, fitur Pointer Authentication Code (PAC) mencegah eksploitasi ROP/JOP dengan mekanisme apa?",
+    "options": {
+      "a": "Mengenkripsi seluruh RAM komputer menggunakan kunci perangkat keras AES-128 saat perangkat dalam mode siaga (sleep) yang dievaluasi compiler selama fase kompilasi dan optimasi.",
+      "b": "Mematikan eksekusi seluruh instruksi cabang kondisional (conditional branch) yang memiliki latensi clock siklus tinggi pada arsitektur biner 64-bit yang diproteksi compiler flags.",
+      "c": "Menyisipkan tanda tangan kriptografi (cryptographic MAC) ke dalam bit-bit alamat pointer yang tidak terpakai dan memvalidasinya sebelum pointer digunakan.",
+      "d": "Menolak alokasi memori berukuran lebih dari 4 Gigabyte per proses untuk mencegah terjadinya teknik heap spraying untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "e": "Mengganti register penunjuk stack RSP dengan pointer berbasis hardware register yang tidak dapat dibaca oleh kernel OS."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Menyisipkan tanda tangan kriptografi (cryptographic MAC) ke dalam bit-bit alamat pointer yang tidak terpakai dan memvalidasinya sebelum pointer digunakan."
+  },
+  {
+    "id": 205,
+    "week": "Week 4",
+    "type": "Post Test",
+    "question": "Mekanisme Control Flow Integrity (CFI) pada compiler modern seperti Clang/LLVM membatasi serangan pembajakan kendali eksekusi dengan cara ...",
+    "options": {
+      "a": "Memaksa setiap fungsi mengembalikan nilai integer 0 untuk memastikan tidak ada kode kesalahan runtime yang bocor.",
+      "b": "Menjalankan setiap fungsi di dalam thread terpisah dengan ruang alamat memori virtual terisolasi tanpa izin berbagi yang dievaluasi compiler selama fase kompilasi dan optimasi.",
+      "c": "Menonaktifkan pengoptimalan kompilasi loop unrolling agar alur instruksi mesin mudah dipindai oleh antivirus host sesuai prinsip secure software development lifecycle enterprise.",
+      "d": "Menyandikan setiap opcode instruksi x86 assembly ke format bytecode Java sebelum dieksekusi oleh unit prosesor pada arsitektur biner 64-bit yang diproteksi compiler flags.",
+      "e": "Memastikan target pemanggilan fungsi tak langsung (indirect call/jump) hanya boleh melompat ke daftar fungsi sah yang telah ditentukan saat kompilasi."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Memastikan target pemanggilan fungsi tak langsung (indirect call/jump) hanya boleh melompat ke daftar fungsi sah yang telah ditentukan saat kompilasi."
+  },
+  {
+    "id": 206,
+    "week": "Week 4",
+    "type": "Post Test",
+    "question": "Dalam pengujian perangkat lunak berbasis Fuzzing, mengapa 'Coverage-guided Fuzzing' (seperti AFL atau libFuzzer) jauh lebih efektif dibanding fuzzer acak (blackbox random dumb fuzzing)?",
+    "options": {
+      "a": "Menggunakan instrumentasi biner untuk melacak branch coverage kode baru yang terjamah oleh mutasi input dan memprioritaskannya di corpus uji.",
+      "b": "Fuzzer ini membaca dokumentasi manual perangkat lunak menggunakan natural language processing untuk merumuskan kasus uji sehingga memicu eksekusi instruksi pada privilege level kernel.",
+      "c": "Menjalankan proses dekompilasi otomatis ke bahasa C++ tingkat tinggi untuk memperbaiki bug secara langsung di repositori Git untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "d": "Secara otomatis membongkar enkripsi HTTPS pada lalu lintas jaringan tanpa membutuhkan sertifikat root CA lokal untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "e": "Hanya menguji fungsi-fungsi yang menggunakan kata kunci public pada antarmuka pemrograman aplikasi (API) pada arsitektur biner 64-bit yang diproteksi compiler flags."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Menggunakan instrumentasi biner untuk melacak branch coverage kode baru yang terjamah oleh mutasi input dan memprioritaskannya di corpus uji."
+  },
+  {
+    "id": 207,
+    "week": "Week 4",
+    "type": "Post Test",
+    "question": "Mengapa bahasa pemrograman modern seperti Rust mampu menjamin keamanan memori (memory safety) tanpa memerlukan Garbage Collector (GC) runtime seperti Java/Go?",
+    "options": {
+      "a": "Rust melarang penggunaan alokasi memori dinamis di heap dan hanya mengizinkan variabel statis di stack frame untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "b": "Setiap pointer dalam kode Rust dienkripsi menggunakan algoritma RSA 1024-bit sebelum disimpan di register prosesor untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "c": "Kompiler Rust secara otomatis menyuntikkan mesin virtual JVM mini ke dalam setiap berkas biner executable yang dihasilkan pada arsitektur biner 64-bit yang diproteksi compiler flags.",
+      "d": "Menerapkan sistem kepemilikan (ownership), peminjaman (borrowing), dan masa hidup (lifetimes) yang divalidasi ketat saat kompilasi oleh borrow checker.",
+      "e": "Rust mengeksekusi semua operasi aritmatika di dalam lingkungan sandbox WebAssembly sebelum menyentuh perangkat keras sesuai prinsip secure software development lifecycle enterprise."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Menerapkan sistem kepemilikan (ownership), peminjaman (borrowing), dan masa hidup (lifetimes) yang divalidasi ketat saat kompilasi oleh borrow checker."
+  },
+  {
+    "id": 208,
+    "week": "Week 4",
+    "type": "Post Test",
+    "question": "Dari perspektif arsitektur Unix, mengapa pemanggilan perintah eksternal menggunakan `execve()` jauh lebih aman dari Command Injection dibanding pemanggilan fungsi `system()`?",
+    "options": {
+      "a": "execve() mengenkripsi seluruh argumen baris perintah menggunakan protokol TLS sebelum mengirimkannya ke kernel Linux sehingga memicu eksekusi instruksi pada privilege level kernel.",
+      "b": "system() hanya dapat berjalan pada hak akses pengguna biasa, sedangkan execve() selalu mewajibkan hak akses administrator root untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "c": "execve() meneruskan argumen langsung sebagai array terpisah ke kernel tanpa melalui perantara shell (/bin/sh) yang menafsirkan metakarakter.",
+      "d": "execve() secara otomatis menolak eksekusi jika input pengguna mengandung spasi atau karakter tanda baca apa pun sesuai prinsip secure software development lifecycle enterprise.",
+      "e": "system() memuat biner ke memori virtual tanpa membersihkan cache instruksi prosesor terlebih dahulu yang dievaluasi compiler selama fase kompilasi dan optimasi."
+    },
+    "correct_letter": "c",
+    "correct_answer": "execve() meneruskan argumen langsung sebagai array terpisah ke kernel tanpa melalui perantara shell (/bin/sh) yang menafsirkan metakarakter."
+  },
+  {
+    "id": 209,
+    "week": "Week 4",
+    "type": "Post Test",
+    "question": "Kerentanan Insecure Deserialization pada aplikasi Java (seperti eksploitasi Apache Commons Collections) dapat berujung pada Remote Code Execution (RCE) karena ...",
+    "options": {
+      "a": "Fungsi deserialisasi membuka port remote debugging 5005 pada antarmuka jaringan publik tanpa autentikasi kata sandi untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "b": "Proses deserialisasi objek membangkitkan metode magic (seperti `readObject()`) yang mengeksekusi rantai kelas berbahaya (gadget chain) di classpath.",
+      "c": "Data yang diserialisasi selalu dikonversi menjadi skrip shell Bash mentah yang langsung dieksekusi di terminal server hosting pada arsitektur biner 64-bit yang diproteksi compiler flags.",
+      "d": "Objek Java yang diserialisasi secara otomatis menimpa berkas konfigurasi web server Tomcat di direktori sistem.",
+      "e": "Algoritma serialisasi Java mematikan proteksi sandbox Security Manager sistem operasi secara permanen saat parsing stream."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Proses deserialisasi objek membangkitkan metode magic (seperti `readObject()`) yang mengeksekusi rantai kelas berbahaya (gadget chain) di classpath."
+  },
+  {
+    "id": 210,
+    "week": "Week 4",
+    "type": "Post Test",
+    "question": "Apa keunggulan keamanan utama dari mengompilasi program dengan opsi Position Independent Executable (`-fPIE -pie`) pada sistem operasi berbasis Linux?",
+    "options": {
+      "a": "Memungkinkan segmen kode biner utama (.text) dimuat pada alamat virtual acak oleh ASLR, bukan pada alamat tetap secara komprehensif.",
+      "b": "Mencegah program memuat pustaka pihak ketiga yang tidak memiliki tanda tangan digital resmi dari pengembang distro.",
+      "c": "Memaksa sistem operasi mengeksekusi program di dalam ruang isolasi kernel chroot secara transparan.",
+      "d": "Menonaktifkan fasilitas debugging gdb dan ptrace sehingga aplikasi tidak dapat dianalisis secara reverse engineering.",
+      "e": "Menghapus seluruh simbol string dan nama variabel dari berkas biner berekstensi ELF secara permanen."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Memungkinkan segmen kode biner utama (.text) dimuat pada alamat virtual acak oleh ASLR, bukan pada alamat tetap secara komprehensif."
+  },
+  {
+    "id": 211,
+    "week": "Week 4",
+    "type": "Post Test",
+    "question": "Cacat keamanan 'Uninitialized Memory Disclosure' (seperti yang mendasari kerentanan Heartbleed) terjadi ketika program ...",
+    "options": {
+      "a": "Mengizinkan penyerang mengeksekusi instruksi perakitan mesin langsung pada register status prosesor kontroler host yang dievaluasi compiler selama fase kompilasi dan optimasi.",
+      "b": "Menulis data melampaui batas akhir partisi disk fisik tempat sistem berkas swap memory dialokasikan yang dievaluasi compiler selama fase kompilasi dan optimasi.",
+      "c": "Mengalokasikan ruang memori berukuran nol byte yang menyebabkan kegagalan segmentasi memori pada pustaka glibc untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "d": "Memanggil pointer fungsi sebelum tabel metode virtual selesai diinisialisasi oleh konstruktor objek pemrograman sesuai prinsip secure software development lifecycle enterprise.",
+      "e": "Mengembalikan buffer memori yang belum dibersihkan (zeroed) ke pengguna, sehingga data sensitif dari operasi sebelumnya terbaca."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Mengembalikan buffer memori yang belum dibersihkan (zeroed) ke pengguna, sehingga data sensitif dari operasi sebelumnya terbaca."
+  },
+  {
+    "id": 212,
+    "week": "Week 4",
+    "type": "Post Test",
+    "question": "Dalam paradigma DevSecOps dan Secure Software Development Lifecycle (SSDLC), aktivitas 'Software Bill of Materials' (SBOM) dan Software Composition Analysis (SCA) bertujuan untuk ...",
+    "options": {
+      "a": "Memverifikasi apakah sintaksis penulisan kode sumber telah mematuhi pedoman indentasi dan penamaan variabel resmi sesuai prinsip secure software development lifecycle enterprise.",
+      "b": "Mengukur kecepatan respons antarmuka pengguna terhadap beban kueri basis data pada kondisi lalu lintas puncak server untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "c": "Menginventarisasi seluruh pustaka open-source pihak ketiga (dependensi) serta mendeteksi kerentanan yang tercatat di database CVE.",
+      "d": "Memastikan bahwa seluruh pengembang perangkat lunak memiliki sertifikat keahlian keamanan siber tingkat internasional.",
+      "e": "Menggantikan peran pengujian penetrasi manual (pentest) secara penuh menggunakan algoritma kecerdasan buatan terapan."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Menginventarisasi seluruh pustaka open-source pihak ketiga (dependensi) serta mendeteksi kerentanan yang tercatat di database CVE."
+  },
+  {
+    "id": 213,
+    "week": "Week 4",
+    "type": "Post Test",
+    "question": "Kerentanan 'Type Confusion' pada mesin peramban web modern (seperti V8 pada Chrome atau SpiderMonkey pada Firefox) sering dimanfaatkan oleh exploit karena ...",
+    "options": {
+      "a": "Membuat peramban salah mengidentifikasi protokol komunikasi dari HTTPS menjadi HTTP biasa pada port 80 jaringan untuk mencegah bypass terhadap mitigasi proteksi ASLR sistem.",
+      "b": "Menyebabkan compiler Just-In-Time (JIT) mengoptimalkan kode dengan asumsi objek bertipe X, padahal objek sebenarnya bertipe Y, menghasilkan memory out-of-bounds.",
+      "c": "Menghapus cookie sesi otentikasi pengguna secara acak sehingga pengguna dipaksa melakukan login ulang berkali-kali yang dievaluasi compiler selama fase kompilasi dan optimasi.",
+      "d": "Mengubah font teks halaman web dari format TrueType menjadi format bitmap raster yang merusak tampilan dokumen CSS.",
+      "e": "Mencegah peramban memuat elemen skrip JavaScript eksternal yang dihosting di jaringan Content Delivery Network."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Menyebabkan compiler Just-In-Time (JIT) mengoptimalkan kode dengan asumsi objek bertipe X, padahal objek sebenarnya bertipe Y, menghasilkan memory out-of-bounds."
+  },
+  {
+    "id": 214,
+    "week": "Week 5",
+    "type": "Pre Test",
+    "question": "Dalam pengujian penetrasi web, ketika aplikasi tidak menampilkan data hasil kueri maupun pesan error basis data, teknik SQL Injection apa yang paling efektif untuk mengekstrak data karakter per karakter?",
+    "options": {
+      "a": "Union-based SQL Injection dengan mencocokkan jumlah kolom menggunakan klausa ORDER BY secara berurutan yang dievaluasi secara asinkron pada runtime sisi klien.",
+      "b": "Error-based SQL Injection dengan memicu kegagalan konversi tipe data numerik menggunakan fungsi CAST() atau CONVERT().",
+      "c": "Time-based Blind SQL Injection dengan menyuntikkan fungsi penundaan waktu seperti pg_sleep() atau WAITFOR DELAY secara komprehensif.",
+      "d": "Second-order SQL Injection dengan menyimpan payload di tabel profil pengguna dan menunggu sesi administrator aktif.",
+      "e": "Out-of-band SQL Injection dengan memaksa basis data mengirimkan kueri DNS lookup ke server eksternal milik penyerang."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Time-based Blind SQL Injection dengan menyuntikkan fungsi penundaan waktu seperti pg_sleep() atau WAITFOR DELAY secara komprehensif."
+  },
+  {
+    "id": 215,
+    "week": "Week 5",
+    "type": "Pre Test",
+    "question": "Mengapa penggunaan Parameterized Queries (Prepared Statements) mampu mengeliminasi celah SQL Injection secara tuntas pada level arsitektur basis data?",
+    "options": {
+      "a": "Driver basis data mengompresi teks kueri menggunakan algoritma gzip sehingga metakarakter SQL tidak terbaca mesin yang dievaluasi secara asinkron pada runtime sisi klien.",
+      "b": "Prepared statements menolak kueri yang dieksekusi lebih dari satu kali dalam kurun waktu 100 milidetik oleh client yang sama.",
+      "c": "Sistem basis data secara otomatis mengonversi seluruh input teks pengguna menjadi tipe data integer acak sebelum eksekusi sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.",
+      "d": "Koneksi basis data dipaksa berjalan melalui terowongan VPN terenkripsi IPsec dengan autentikasi sertifikat digital X.509.",
+      "e": "Struktur logika kueri dikompilasi terlebih dahulu ke Abstract Syntax Tree, dan data input hanya diperlakukan sebagai nilai parameter murni."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Struktur logika kueri dikompilasi terlebih dahulu ke Abstract Syntax Tree, dan data input hanya diperlakukan sebagai nilai parameter murni."
+  },
+  {
+    "id": 216,
+    "week": "Week 5",
+    "type": "Pre Test",
+    "question": "Manakah skenario alur serangan di bawah ini yang merepresentasikan kerentanan 'Second-Order SQL Injection'?",
+    "options": {
+      "a": "Payload SQL berbahaya disimpan dengan aman di database saat registrasi, namun dieksekusi tanpa sanitasi oleh proses background terpisah.",
+      "b": "Penyerang menyuntikkan payload SQL melalui header HTTP Referer yang langsung menghasilkan error pada halaman login seketika.",
+      "c": "Penyerang membobol dua server web yang berbeda secara simultan menggunakan satu skrip exploit otomatis berbasis Python.",
+      "d": "Eksekusi injeksi SQL yang memerlukan dua parameter HTTP POST berbeda yang dikirimkan secara paralel dalam satu koneksi TCP.",
+      "e": "Penyerang menyuntikkan perintah SQL yang menginstruksikan database server untuk menginfeksi server sekunder dalam cluster replica."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Payload SQL berbahaya disimpan dengan aman di database saat registrasi, namun dieksekusi tanpa sanitasi oleh proses background terpisah."
+  },
+  {
+    "id": 217,
+    "week": "Week 5",
+    "type": "Pre Test",
+    "question": "Apa perbedaan esensial dari DOM-based Cross-Site Scripting (DOM XSS) jika dibandingkan dengan Stored XSS maupun Reflected XSS?",
+    "options": {
+      "a": "Payload DOM XSS hanya dapat dieksekusi apabila browser target membuka halaman web menggunakan koneksi HTTP unencrypted berdasarkan spesifikasi dokumen standar World Wide Web Consortium.",
+      "b": "Payload dieksekusi sepenuhnya di sisi peramban klien saat membaca source yang tidak aman dan menuliskannya ke sink tanpa keterlibatan server.",
+      "c": "DOM XSS selalu menghasilkan berkas cookie sesi yang memiliki atribut HttpOnly dan Secure secara otomatis di penyimpanan browser yang dievaluasi secara asinkron pada runtime sisi klien.",
+      "d": "Payload DOM XSS disimpan secara permanen di database PostgreSQL server dan dikirimkan ulang ke setiap pengunjung halaman pada endpoint RESTful API yang memproses pertukaran data.",
+      "e": "DOM XSS hanya menyerang server backend yang dibangun menggunakan arsitektur microservices berbasis Node.js Express guna memitigasi risiko pembajakan sesi otentikasi pengguna."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Payload dieksekusi sepenuhnya di sisi peramban klien saat membaca source yang tidak aman dan menuliskannya ke sink tanpa keterlibatan server."
+  },
+  {
+    "id": 218,
+    "week": "Week 5",
+    "type": "Pre Test",
+    "question": "Dalam konfigurasi Content Security Policy (CSP), mengapa keberadaan arahan 'unsafe-inline' pada header `script-src` sangat berbahaya bagi pertahanan XSS?",
+    "options": {
+      "a": "Memaksa peramban untuk mengizinkan transfer berkas biner executable melalui koneksi WebSocket tanpa enkripsi TLS yang dievaluasi secara asinkron pada runtime sisi klien.",
+      "b": "Mengizinkan peramban mengeksekusi tag <script> inline dan event handler atribut (seperti onerror/onload) yang disuntikkan penyerang.",
+      "c": "Menonaktifkan seluruh sistem proteksi memori Address Space Layout Randomization pada sistem operasi komputer pengguna berdasarkan spesifikasi dokumen standar World Wide Web Consortium.",
+      "d": "Membuka seluruh port firewall internal pada server web sehingga dapat diakses secara publik melalui jaringan internet.",
+      "e": "Menghapus tanda tangan digital pada sertifikat HTTPS server web sehingga peramban menampilkan peringatan keamanan merah."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Mengizinkan peramban mengeksekusi tag <script> inline dan event handler atribut (seperti onerror/onload) yang disuntikkan penyerang."
+  },
+  {
+    "id": 219,
+    "week": "Week 5",
+    "type": "Pre Test",
+    "question": "Pemasangan atribut 'HttpOnly' pada header `Set-Cookie` sesi pengguna secara khusus dirancang untuk menangkal serangan ...",
+    "options": {
+      "a": "SQL Injection yang mencoba mengekstrak data kredensial login melalui pesan kesalahan sintaksis basis data berdasarkan spesifikasi dokumen standar World Wide Web Consortium.",
+      "b": "Distributed Denial of Service (DDoS) yang membanjiri antrean permintaan server aplikasi dengan paket TCP SYN flood.",
+      "c": "Man-in-the-Middle (MitM) yang menyadap lalu lintas komunikasi data pada jaringan nirkabel publik tanpa kata sandi.",
+      "d": "Pencurian cookie sesi melalui skrip jahat JavaScript sisi klien (XSS) yang membaca properti document.cookie.",
+      "e": "Server-Side Request Forgery (SSRF) yang memanipulasi permintaan HTTP internal ke metadata instance cloud AWS."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Pencurian cookie sesi melalui skrip jahat JavaScript sisi klien (XSS) yang membaca properti document.cookie."
+  },
+  {
+    "id": 220,
+    "week": "Week 5",
+    "type": "Pre Test",
+    "question": "Pada penanganan Cross-Site Request Forgery (CSRF), bagaimana perilaku pengiriman cookie pada peramban jika atribut cookie disetel ke `SameSite=Lax`?",
+    "options": {
+      "a": "Cookie dikirimkan pada semua permintaan lintas domain tanpa terkecuali, termasuk AJAX POST dan iframe tersemat guna memitigasi risiko pembajakan sesi otentikasi pengguna.",
+      "b": "Cookie ditahan pada permintaan sub-request lintas domain (seperti gambar/POST), namun tetap disertakan pada navigasi top-level GET yang aman.",
+      "c": "Cookie tidak akan pernah dikirimkan pada permintaan apa pun yang berasal dari tautan di luar domain utama aplikasi pada endpoint RESTful API yang memproses pertukaran data.",
+      "d": "Cookie hanya dikirimkan jika alamat IP klien terdaftar di dalam whitelist firewall Content Delivery Network server sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.",
+      "e": "Cookie dihapus secara permanen dari penyimpanan peramban seketika tab halaman web ditutup oleh pengguna sistem."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Cookie ditahan pada permintaan sub-request lintas domain (seperti gambar/POST), namun tetap disertakan pada navigasi top-level GET yang aman."
+  },
+  {
+    "id": 221,
+    "week": "Week 5",
+    "type": "Pre Test",
+    "question": "Mengapa implementasi Anti-CSRF Token berbasis 'Synchronizer Token Pattern' efektif mematahkan serangan pemalsuan permintaan antar-situs?",
+    "options": {
+      "a": "Token dienkripsi menggunakan kunci privat peramban klien sehingga server dapat memverifikasi identitas perangkat keras pengguna pada endpoint RESTful API yang memproses pertukaran data.",
+      "b": "Server menolak permintaan jika alamat MAC antarmuka jaringan penyerang tidak sesuai dengan alamat MAC pengguna terdaftar.",
+      "c": "Token secara otomatis memutus koneksi internet penyerang jika terdeteksi pengiriman permintaan dari domain yang berbeda.",
+      "d": "Penyerang dari situs eksternal terhalang oleh Same-Origin Policy untuk membaca token rahasia unik sesi yang disisipkan dalam form/header.",
+      "e": "Setiap formulir HTML secara otomatis mewajibkan pengguna memasukkan kode CAPTCHA audio sebelum permintaan dikirimkan."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Penyerang dari situs eksternal terhalang oleh Same-Origin Policy untuk membaca token rahasia unik sesi yang disisipkan dalam form/header."
+  },
+  {
+    "id": 222,
+    "week": "Week 5",
+    "type": "Pre Test",
+    "question": "Pada arsitektur cloud AWS, payload SSRF (Server-Side Request Forgery) yang menyasar alamat `http://169.254.169.254/latest/meta-data/iam/security-credentials/` bertujuan untuk ...",
+    "options": {
+      "a": "Mematikan instans virtual EC2 secara paksa sehingga memicu kondisi Denial of Service pada kluster produksi berdasarkan spesifikasi dokumen standar World Wide Web Consortium.",
+      "b": "Mengubah aturan konfigurasi Virtual Private Cloud (VPC) agar seluruh port firewall terbuka ke publik secara bebas berdasarkan spesifikasi dokumen standar World Wide Web Consortium.",
+      "c": "Mencuri kredensial token keamanan sementara IAM role yang melekat pada instance guna membajak infrastruktur cloud.",
+      "d": "Mendekripsi seluruh snapshot volume Amazon EBS yang terpasang pada instans server basis data terisolasi berdasarkan spesifikasi dokumen standar World Wide Web Consortium.",
+      "e": "Mengirimkan email spam massal menggunakan layanan Amazon Simple Email Service melalui akun administrator."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Mencuri kredensial token keamanan sementara IAM role yang melekat pada instance guna membajak infrastruktur cloud."
+  },
+  {
+    "id": 223,
+    "week": "Week 5",
+    "type": "Pre Test",
+    "question": "Teknik 'DNS Rebinding' digunakan penyerang untuk melewati proteksi validasi IP internal pada kerentanan SSRF dengan cara ...",
+    "options": {
+      "a": "Mengirimkan jutaan permintaan kueri DNS berukuran besar untuk membanjiri kapasitas bandwidth DNS resolver lokal target sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.",
+      "b": "Menyediakan server DNS khusus yang mengembalikan IP publik saat validasi awal, lalu mengembalikan IP privat 127.0.0.1 saat permintaan fetch data.",
+      "c": "Memalsukan tanda tangan kriptografi DNSSEC pada rekaman zona domain publik menggunakan kunci privat curian pada endpoint RESTful API yang memproses pertukaran data.",
+      "d": "Mengubah alamat MAC gateway lokal pada tabel ARP cache router perantara menggunakan serangan ARP poisoning.",
+      "e": "Mengonfigurasi rekaman DNS TXT agar berisi skrip JavaScript berbahaya yang dieksekusi di peramban pengguna web."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Menyediakan server DNS khusus yang mengembalikan IP publik saat validasi awal, lalu mengembalikan IP privat 127.0.0.1 saat permintaan fetch data."
+  },
+  {
+    "id": 224,
+    "week": "Week 5",
+    "type": "Pre Test",
+    "question": "Konfigurasi Cross-Origin Resource Sharing (CORS) yang sangat rentan terjadi ketika server merespons permintaan lintas domain dengan header ...",
+    "options": {
+      "a": "Access-Control-Allow-Origin yang merefleksikan nilai Origin penyerang secara dinamis disertai Access-Control-Allow-Credentials: true.",
+      "b": "Access-Control-Allow-Origin: null dan Access-Control-Allow-Methods: GET secara ketat tanpa cookie.",
+      "c": "Access-Control-Allow-Origin: * pada endpoint publik yang hanya menyajikan data katalog produk tanpa autentikasi.",
+      "d": "Access-Control-Max-Age: 86400 yang menginstruksikan peramban untuk menyimpan cache respons preflight selama 24 jam.",
+      "e": "Access-Control-Allow-Headers: Content-Type, Authorization pada permintaan API yang telah terverifikasi token JWT."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Access-Control-Allow-Origin yang merefleksikan nilai Origin penyerang secara dinamis disertai Access-Control-Allow-Credentials: true."
+  },
+  {
+    "id": 225,
+    "week": "Week 5",
+    "type": "Pre Test",
+    "question": "Celah keamanan Insecure Direct Object References (IDOR / BOLA) pada endpoint REST API `GET /api/v1/invoices/1042` terjadi terutama disebabkan oleh ...",
+    "options": {
+      "a": "Penggunaan protokol HTTP versi 1.1 yang belum mendukung multiplexing stream seperti pada protokol HTTP/2 sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.",
+      "b": "Penyimpanan kunci privat enkripsi data transaksi pada sistem berkas yang memiliki izin akses berkas 0644.",
+      "c": "Ukuran payload respons JSON yang melebihi batas buffer transfer maksimum yang diizinkan oleh reverse proxy server.",
+      "d": "Ketidakmampuan database engine memproses kueri SELECT yang menggunakan klausa WHERE berbasis primary key integer.",
+      "e": "Kegagalan backend memverifikasi kepemilikan objek (apakah invoice 1042 benar milik pengguna yang sedang terautentikasi)."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Kegagalan backend memverifikasi kepemilikan objek (apakah invoice 1042 benar milik pengguna yang sedang terautentikasi)."
+  },
+  {
+    "id": 226,
+    "week": "Week 5",
+    "type": "Pre Test",
+    "question": "Eksploitasi Server-Side Template Injection (SSTI) pada mesin template Python (seperti Jinja2) sering kali mampu dieskalasi hingga Remote Code Execution (RCE) melalui teknik ...",
+    "options": {
+      "a": "Penyuntikan berkas binary shellcode x86 mentah ke dalam tag penutup template web tanpa encoding base64 yang dievaluasi secara asinkron pada runtime sisi klien.",
+      "b": "Pengiriman payload berukuran sangat besar yang memicu kondisi buffer overflow pada parser sintaksis template engine yang dievaluasi secara asinkron pada runtime sisi klien.",
+      "c": "Penelusuran hirarki kelas bawaan objek via atribut `__class__.__mro__` untuk menemukan modul `subprocess.Popen` atau `os`.",
+      "d": "Pemanipulasian alamat IP resolver DNS pada konfigurasi jaringan server melalui injeksi variabel template string sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.",
+      "e": "Penggantian berkas sertifikat HTTPS server secara otomatis menggunakan fungsi bawaan template rendering engine sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Penelusuran hirarki kelas bawaan objek via atribut `__class__.__mro__` untuk menemukan modul `subprocess.Popen` atau `os`."
+  },
+  {
+    "id": 227,
+    "week": "Week 5",
+    "type": "Post Test",
+    "question": "Kerentanan XML External Entity (XXE) Injection pada parser XML yang tidak terkonfigurasi dengan aman memungkinkan penyerang membaca berkas sensitif server melalui definisi entitas ...",
+    "options": {
+      "a": "<!ENTITY xxe SYSTEM \"file:///etc/passwd\"> yang merujuk pada URI sistem berkas lokal melalui Document Type Definition (DTD).",
+      "b": "<!ELEMENT note (to,from,heading,body)> yang mendefinisikan struktur skema dokumen berkas XML internal berdasarkan spesifikasi dokumen standar World Wide Web Consortium.",
+      "c": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> yang menentukan set karakter dan format serialisasi payload data yang dievaluasi secara asinkron pada runtime sisi klien.",
+      "d": "<!ATTLIST payment status CDATA #REQUIRED> yang mewajibkan atribut status pada setiap elemen transaksi keuangan pada endpoint RESTful API yang memproses pertukaran data.",
+      "e": "<![CDATA[SELECT * FROM users WHERE role='admin']]> yang membungkus teks kueri agar tidak diparsing oleh parser XML."
+    },
+    "correct_letter": "a",
+    "correct_answer": "<!ENTITY xxe SYSTEM \"file:///etc/passwd\"> yang merujuk pada URI sistem berkas lokal melalui Document Type Definition (DTD)."
+  },
+  {
+    "id": 228,
+    "week": "Week 5",
+    "type": "Post Test",
+    "question": "Pada implementasi token JSON Web Token (JWT), serangan 'Algorithm Confusion' (RS256 ke HS256) terjadi ketika penyerang ...",
+    "options": {
+      "a": "Mengubah header token menjadi HS256 dan menandatanganinya menggunakan kunci publik RSA server yang diperlakukan sebagai HMAC shared secret.",
+      "b": "Mengganti payload JSON token dengan kode skrip bash yang langsung dieksekusi saat proses deserialisasi header.",
+      "c": "Menghapus tanda tangan kriptografi token dan mengatur field klausa expiration time menjadi nilai tak terhingga.",
+      "d": "Memanfaatkan tabrakan hash pada fungsi MD5 untuk menghasilkan token duplikat yang memiliki nilai hash identik.",
+      "e": "Mengirimkan token dengan ukuran string lebih dari 65536 byte untuk memicu kegagalan alokasi memori stack backend."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Mengubah header token menjadi HS256 dan menandatanganinya menggunakan kunci publik RSA server yang diperlakukan sebagai HMAC shared secret."
+  },
+  {
+    "id": 229,
+    "week": "Week 5",
+    "type": "Post Test",
+    "question": "Berdasarkan standar OWASP Application Security Verification Standard (ASVS 4.0), tingkatan 'Level 2' diverifikasi secara khusus untuk kategori aplikasi ...",
+    "options": {
+      "a": "Aplikasi publik sederhana yang hanya memuat konten informasi statis tanpa adanya fungsi transaksi atau autentikasi data.",
+      "b": "Aplikasi open-source komunitas nirlaba yang tidak memerlukan audit keamanan kode sumber secara independen.",
+      "c": "Infrastruktur militer dan sistem kendali kritis (critical infrastructure) yang kegagalannya dapat mengancam keselamatan jiwa.",
+      "d": "Aplikasi bisnis umum (business-to-business) yang memproses transaksi bernilai penting, data pribadi, atau alur kerja bisnis korporat.",
+      "e": "Prototipe perangkat lunak internal yang masih dalam fase perancangan ide dan belum terhubung ke jaringan internet."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Aplikasi bisnis umum (business-to-business) yang memproses transaksi bernilai penting, data pribadi, atau alur kerja bisnis korporat."
+  },
+  {
+    "id": 230,
+    "week": "Week 5",
+    "type": "Post Test",
+    "question": "Ancaman 'Subdomain Takeover' terjadi ketika sebuah organisasi memiliki konfigurasi DNS yang mengandung ...",
+    "options": {
+      "a": "Rekaman DNS A yang mengarah ke beberapa alamat IP publik internal dalam konfigurasi round-robin load balancing.",
+      "b": "Rekaman NS cadangan yang dihosting di penyedia layanan registrasi domain yang sama dengan domain utama institusi.",
+      "c": "Rekaman MX yang menunjuk ke server penyedia email korporat dengan sertifikat TLS yang kedaluwarsa satu hari.",
+      "d": "Rekaman TXT SPF yang memiliki entri konfigurasi mekanisme pengecekan softfail (~all) alih-alih hardfail (-all).",
+      "e": "Rekaman CNAME yang mengarah ke layanan cloud pihak ketiga yang layanannya telah dinonaktifkan (dangling DNS pointer)."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Rekaman CNAME yang mengarah ke layanan cloud pihak ketiga yang layanannya telah dinonaktifkan (dangling DNS pointer)."
+  },
+  {
+    "id": 231,
+    "week": "Week 5",
+    "type": "Post Test",
+    "question": "Pada arsitektur GraphQL API, mengapa serangan DoS berbasis kueri bersarang (Recursive / Deeply Nested Query) sangat berbahaya bagi performa backend server?",
+    "options": {
+      "a": "Kueri rekursif secara otomatis menghapus seluruh indeks relasi tabel foreign key pada basis data relasional server guna memitigasi risiko pembajakan sesi otentikasi pengguna.",
+      "b": "Kueri bersarang menyebabkan compiler bahasa server memuat ulang seluruh dependensi npm package ke memori virtual.",
+      "c": "GraphQL parser akan mematikan koneksi soket jaringan TLS setiap kali membaca kueri yang memiliki kedalaman lebih dari dua tingkat pada endpoint RESTful API yang memproses pertukaran data.",
+      "d": "Relasi sirkular antar tipe data (misal author->posts->author) dapat dieksploitasi untuk memicu beban pemrosesan dan kueri database eksponensial.",
+      "e": "Format kueri GraphQL mengubah izin sistem berkas server aplikasi menjadi mode baca-tulis publik untuk seluruh proses."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Relasi sirkular antar tipe data (misal author->posts->author) dapat dieksploitasi untuk memicu beban pemrosesan dan kueri database eksponensial."
+  },
+  {
+    "id": 232,
+    "week": "Week 5",
+    "type": "Post Test",
+    "question": "Kerentanan HTTP Request Smuggling (HRS) varian 'CL.TE' terjadi karena desinkronisasi penafsiran batas permintaan HTTP antara front-end proxy dan back-end server, di mana ...",
+    "options": {
+      "a": "Front-end memblokir seluruh header Content-Type, sedangkan back-end mewajibkan header Content-Type bertipe multipart/form-data.",
+      "b": "Front-end memproses header Transfer-Encoding, sedangkan back-end server memproses header Content-Length.",
+      "c": "Front-end memproses header Content-Length, sedangkan back-end server memproses header Transfer-Encoding: chunked secara komprehensif.",
+      "d": "Front-end menolak koneksi HTTP/1.1, sedangkan back-end server hanya mendukung koneksi HTTP/0.9 versi lawas.",
+      "e": "Front-end mengenkripsi isi payload HTTP, sedangkan back-end server mengharapkan payload dikirim dalam teks biasa."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Front-end memproses header Content-Length, sedangkan back-end server memproses header Transfer-Encoding: chunked secara komprehensif."
+  },
+  {
+    "id": 233,
+    "week": "Week 5",
+    "type": "Post Test",
+    "question": "Cross-Site WebSocket Hijacking (CSWSH) dapat terjadi pada aplikasi yang mengandalkan komunikasi dua arah WebSocket jika server aplikasi ...",
+    "options": {
+      "a": "Tidak membatasi laju pengiriman frame data WebSocket per detik menggunakan algoritma token bucket yang dievaluasi secara asinkron pada runtime sisi klien.",
+      "b": "Mengizinkan pengiriman frame data biner di samping frame data berbasis teks berformat serialisasi JSON berdasarkan spesifikasi dokumen standar World Wide Web Consortium.",
+      "c": "Menggunakan port transmisi default 80 alih-alih port terenkripsi TLS 443 pada koneksi internet publik yang dievaluasi secara asinkron pada runtime sisi klien.",
+      "d": "Hanya mengandalkan cookie sesi bawaan peramban tanpa memvalidasi header Origin atau token anti-CSRF saat proses handshake HTTP upgrade.",
+      "e": "Tidak mengimplementasikan mekanisme deteksi heartbeat (ping/pong frame) secara berkala pada koneksi aktif."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Hanya mengandalkan cookie sesi bawaan peramban tanpa memvalidasi header Origin atau token anti-CSRF saat proses handshake HTTP upgrade."
+  },
+  {
+    "id": 234,
+    "week": "Week 5",
+    "type": "Post Test",
+    "question": "Ketika aplikasi web melakukan filter sederhana dengan menghapus string `../` dari input nama berkas, penyerang dapat melewati filter Path Traversal ini menggunakan teknik ...",
+    "options": {
+      "a": "Mengirimkan input yang terdiri dari karakter spasi dan baris baru (CRLF) pada parameter kueri URL aplikasi yang dievaluasi secara asinkron pada runtime sisi klien.",
+      "b": "Menyisipkan urutan bertingkat seperti `....//` atau melakukan URL double-encoding seperti `%252e%252e%252f` secara komprehensif.",
+      "c": "Mengompresi berkas target ke dalam format arsip tar.gz sebelum mengirimkan permintaan unduh berkas ke server.",
+      "d": "Menambahkan ekstensi berkas palsu seperti `.jpg` pada akhir permintaan HTTP POST yang dikirimkan klien.",
+      "e": "Mengubah metode permintaan HTTP dari GET menjadi OPTIONS untuk meminta daftar opsi metode yang diizinkan."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Menyisipkan urutan bertingkat seperti `....//` atau melakukan URL double-encoding seperti `%252e%252e%252f` secara komprehensif."
+  },
+  {
+    "id": 235,
+    "week": "Week 5",
+    "type": "Post Test",
+    "question": "Kerentanan Mass Assignment (Over-Posting) pada framework web modern (seperti Ruby on Rails, ASP.NET, atau Spring) terjadi ketika ...",
+    "options": {
+      "a": "Aplikasi mengizinkan pengiriman ribuan permintaan pendaftaran akun pengguna dalam rentang waktu satu detik yang dievaluasi secara asinkron pada runtime sisi klien.",
+      "b": "Database administrator memberikan hak akses DBA kepada pengguna biasa pada skema tabel data transaksional sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.",
+      "c": "Server web mengalami kehabisan memori akibat proses parsing berkas unggahan berukuran lebih dari 100 Megabyte guna memitigasi risiko pembajakan sesi otentikasi pengguna.",
+      "d": "Pengembang lupa memasang sertifikat enkripsi SSL pada antarmuka manajemen basis data relasional server produksi sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.",
+      "e": "Framework secara otomatis memetakan seluruh parameter HTTP request ke properti model database tanpa daftar putih atribut yang diizinkan."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Framework secara otomatis memetakan seluruh parameter HTTP request ke properti model database tanpa daftar putih atribut yang diizinkan."
+  },
+  {
+    "id": 236,
+    "week": "Week 5",
+    "type": "Post Test",
+    "question": "Dalam arsitektur API Gateway modern, algoritma 'Token Bucket' diterapkan untuk mitigasi serangan brute-force dan DoS dengan cara kerja ...",
+    "options": {
+      "a": "Menyimpan seluruh payload permintaan ke dalam antrean disk lokal hingga ruang penyimpanan server habis total guna memitigasi risiko pembajakan sesi otentikasi pengguna.",
+      "b": "Mengirimkan email peringatan ke administrator setiap kali ada permintaan HTTP yang mengembalikan status kode 404.",
+      "c": "Memblokir secara permanen seluruh alamat IP yang melakukan permintaan lebih dari satu kali dalam satu hari kerja.",
+      "d": "Mewajibkan klien melakukan proses kalkulasi Proof-of-Work berbasis penambangan kripto sebelum permintaan diproses.",
+      "e": "Mengisi token ke wadah dengan laju konstan; setiap permintaan memakan token, dan permintaan ditolak/dibatasi jika wadah kosong."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Mengisi token ke wadah dengan laju konstan; setiap permintaan memakan token, dan permintaan ditolak/dibatasi jika wadah kosong."
+  },
+  {
+    "id": 237,
+    "week": "Week 5",
+    "type": "Post Test",
+    "question": "Mengapa kerentanan Open Redirect (URL Redirection) pada alur otentikasi OAuth 2.0 dapat berakibat fatal bagi keamanan akun pengguna?",
+    "options": {
+      "a": "Mengubah algoritma enkripsi password database dari Argon2id menjadi fungsi hash MD5 tanpa salt secara otomatis berdasarkan spesifikasi dokumen standar World Wide Web Consortium.",
+      "b": "Mengakibatkan server otentikasi menghapus seluruh tabel basis data pengguna akibat kegagalan resolusi URL redirect berdasarkan spesifikasi dokumen standar World Wide Web Consortium.",
+      "c": "Penyerang dapat memanipulasi parameter redirect_uri yang tidak divalidasi ketat untuk mencuri authorization code atau token akses korban.",
+      "d": "Memicu kebocoran kunci privat TLS server otentikasi ke peramban pengguna melalui pesan error redirection pada endpoint RESTful API yang memproses pertukaran data.",
+      "e": "Menonaktifkan proteksi firewall Web Application Firewall (WAF) pada seluruh endpoint API penyedia identitas."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Penyerang dapat memanipulasi parameter redirect_uri yang tidak divalidasi ketat untuk mencuri authorization code atau token akses korban."
+  },
+  {
+    "id": 238,
+    "week": "Week 5",
+    "type": "Post Test",
+    "question": "Header `Strict-Transport-Security` (HSTS) dengan arahan `max-age=31536000; includeSubDomains; preload` secara proaktif melindungi pengguna dari ...",
+    "options": {
+      "a": "Serangan SSL Stripping yang menurunkan koneksi aman HTTPS menjadi HTTP biasa saat inisiasi koneksi pertama kali.",
+      "b": "Serangan SQL Injection berbasis kueri bertingkat pada halaman formulir pencarian data transaksi guna memitigasi risiko pembajakan sesi otentikasi pengguna.",
+      "c": "Serangan brute-force pada formulir otentikasi pengguna melalui jaringan botnet terdistribusi global yang dievaluasi secara asinkron pada runtime sisi klien.",
+      "d": "Serangan eksfiltrasi data melalui rekaman kueri DNS terowongan (DNS Tunneling data exfiltration) sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi.",
+      "e": "Serangan perusakan integritas data pada cache memori sistem Redis yang tidak dilindungi kata sandi sesuai rekomendasi keamanan OWASP ASVS tingkat korporasi."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Serangan SSL Stripping yang menurunkan koneksi aman HTTPS menjadi HTTP biasa saat inisiasi koneksi pertama kali."
+  },
+  {
+    "id": 239,
+    "week": "Week 6",
+    "type": "Pre Test",
+    "question": "Dalam protokol komunikasi aman modern (seperti TLS 1.3 dan PGP), mengapa arsitektur Hybrid Cryptosystem selalu dipilih daripada hanya mengandalkan kriptografi kunci publik murni?",
+    "options": {
+      "a": "Kriptografi asimetris tidak dapat memproses data bertipe teks biner dan hanya kompatibel dengan deretan karakter ASCII murni yang diverifikasi menggunakan kode autentikasi pesan kriptografis.",
+      "b": "Kriptografi asimetris memiliki komputasi matematika yang sangat lambat, sehingga hanya digunakan untuk pertukaran kunci simetris cepat.",
+      "c": "Kriptografi simetris tidak memerlukan kunci rahasia apa pun sehingga data dapat didekripsi secara langsung oleh siapa saja berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "d": "Algoritma asimetris telah dilarang penggunaannya oleh standar keamanan NIST karena rentan terhadap serangan brute-force sederhana sesuai dengan rekomendasi panjang kunci NIST SP 800-57.",
+      "e": "Kriptografi simetris menghasilkan ukuran ciphertext yang membengkak hingga sepuluh kali lipat dibanding ukuran plaintext aslinya."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Kriptografi asimetris memiliki komputasi matematika yang sangat lambat, sehingga hanya digunakan untuk pertukaran kunci simetris cepat."
+  },
+  {
+    "id": 240,
+    "week": "Week 6",
+    "type": "Pre Test",
+    "question": "Mengapa mode operasi Electronic Codebook (ECB) dianggap sangat tidak aman untuk mengenkripsi data gambar atau dokumen yang memiliki pola berulang?",
+    "options": {
+      "a": "Blok plaintext yang identik akan selalu menghasilkan blok ciphertext yang identik, sehingga pola data asli tetap terpancar jelas.",
+      "b": "ECB membatasi panjang pesan maksimum hanya sampai 128 byte dan secara otomatis menolak pesan berukuran besar pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.",
+      "c": "ECB mewajibkan pertukaran kunci privat melalui jaringan internet tanpa adanya enkripsi saluran sama sekali berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "d": "ECB menggunakan fungsi hash satu arah yang tidak memungkinkan proses dekripsi kembali ke plaintext asli.",
+      "e": "ECB menyisipkan alamat IP pengguna ke dalam header setiap blok ciphertext yang dihasilkan saat enkripsi."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Blok plaintext yang identik akan selalu menghasilkan blok ciphertext yang identik, sehingga pola data asli tetap terpancar jelas."
+  },
+  {
+    "id": 241,
+    "week": "Week 6",
+    "type": "Pre Test",
+    "question": "Pada mode operasi Cipher Block Chaining (CBC), apa dampak matematis pada plaintext berikutnya jika seorang penyerang membalikkan 1 bit pada blok ciphertext $C_i$ saat transmisi data?",
+    "options": {
+      "a": "Blok plaintext $P_i$ rusak total menjadi data acak, dan bit yang bersesuaian pada blok plaintext $P_{i+1}$ ikut terbalik persis.",
+      "b": "Seluruh blok ciphertext setelahnya secara instan berubah menjadi deretan nilai null byte (0x00) secara serentak.",
+      "c": "Kunci enkripsi AES server seketika bocor ke penyerang melalui perbedaan waktu pemrosesan bit transmisi.",
+      "d": "Dekripsi blok $P_i$ dan seluruh blok setelahnya tetap berhasil sempurna tanpa adanya distorsi satu bit pun.",
+      "e": "Sistem operasi penerima data langsung mengalami kernel panic akibat pelanggaran batasan memori buffer."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Blok plaintext $P_i$ rusak total menjadi data acak, dan bit yang bersesuaian pada blok plaintext $P_{i+1}$ ikut terbalik persis."
+  },
+  {
+    "id": 242,
+    "week": "Week 6",
+    "type": "Pre Test",
+    "question": "Kerentanan Padding Oracle Attack (seperti serangan POODLE pada mode CBC dengan PKCS#7 padding) memungkinkan penyerang memulihkan seluruh plaintext tanpa mengetahui kunci enkripsi karena ...",
+    "options": {
+      "a": "Server membocorkan kunci privat master melalui respon kode status HTTP 500 saat validasi sertifikat SSL gagal berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "b": "Penyerang dapat memaksa prosesor server beralih ke mode komputasi 8-bit yang mudah dibobol secara exhaustive search.",
+      "c": "Algoritma CBC secara otomatis menyisipkan kata sandi login pengguna ke dalam byte padding terakhir dari pesan pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.",
+      "d": "Panjang blok enkripsi CBC selalu berkurang setengahnya setiap kali terjadi kegagalan transmisi paket data TCP.",
+      "e": "Server membedakan respons antara kesalahan format padding PKCS#7 dan kesalahan integritas payload, menjadi oracle validasi byte."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Server membedakan respons antara kesalahan format padding PKCS#7 dan kesalahan integritas payload, menjadi oracle validasi byte."
+  },
+  {
+    "id": 243,
+    "week": "Week 6",
+    "type": "Pre Test",
+    "question": "Dalam mode operasi Counter (CTR) maupun Galois/Counter Mode (GCM), mengapa penggunaan ulang Initialization Vector (IV / Nonce) dengan kunci yang sama berakibat fatal bagi kerahasiaan?",
+    "options": {
+      "a": "Keystream yang dihasilkan identik, sehingga operasi XOR dua ciphertext ($C_1 \\oplus C_2$) membuka XOR kedua plaintext ($P_1 \\oplus P_2$).",
+      "b": "Penggunaan ulang IV menyebabkan server web langsung mematikan protokol TLS dan beralih ke transmisi telnet pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.",
+      "c": "Alamat memori heap kernel server akan terhapus secara otomatis oleh pengendali hardware disk penyimpanan.",
+      "d": "Sertifikat digital root CA peramban klien langsung masuk ke dalam daftar pencabutan sertifikat global.",
+      "e": "Kunci AES secara otomatis direset kembali ke nilai default pabrik (seluruh byte bernilai 0x00)."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Keystream yang dihasilkan identik, sehingga operasi XOR dua ciphertext ($C_1 \\oplus C_2$) membuka XOR kedua plaintext ($P_1 \\oplus P_2$)."
+  },
+  {
+    "id": 244,
+    "week": "Week 6",
+    "type": "Pre Test",
+    "question": "Skema Authenticated Encryption with Associated Data (AEAD), seperti AES-GCM atau ChaCha20-Poly1305, memberikan keunggulan keamanan mutlak dibanding skema enkripsi konvensional karena ...",
+    "options": {
+      "a": "AEAD menjamin kecepatan transmisi hingga seratus gigabit per detik tanpa memerlukan perangkat keras tambahan sesuai dengan rekomendasi panjang kunci NIST SP 800-57.",
+      "b": "Mampu mengenkripsi data secara permanen sehingga data tersebut tidak dapat didekripsi oleh siapa pun di masa depan.",
+      "c": "Menghilangkan kebutuhan akan pertukaran kunci rahasia antara pihak pengirim dan penerima data informasi.",
+      "d": "Menyediakan jaminan kerahasiaan sekaligus integritas dan autentikasi data (melalui auth tag) secara simultan dalam satu primitif.",
+      "e": "Mengizinkan penggunaan kunci enkripsi yang memiliki panjang fleksibel mulai dari 1 bit hingga tak terhingga."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Menyediakan jaminan kerahasiaan sekaligus integritas dan autentikasi data (melalui auth tag) secara simultan dalam satu primitif."
+  },
+  {
+    "id": 245,
+    "week": "Week 6",
+    "type": "Pre Test",
+    "question": "Dalam struktur algoritma Advanced Encryption Standard (AES), tahapan transformasi manakah yang bertanggung jawab menghadirkan sifat non-linearitas (confusion) yang kuat terhadap kriptoanalisis?",
+    "options": {
+      "a": "Transformasi ShiftRows yang menggeser byte pada tiap baris matriks state secara siklik ke arah kiri yang diverifikasi menggunakan kode autentikasi pesan kriptografis.",
+      "b": "Transformasi MixColumns yang mengalikan tiap kolom state dengan polinomial matriks konstan yang dapat dibalik sesuai dengan rekomendasi panjang kunci NIST SP 800-57.",
+      "c": "Transformasi SubBytes yang mengganti setiap byte state menggunakan kotak substitusi (S-Box) berbasis invers Galois Field GF(2^8).",
+      "d": "Transformasi AddRoundKey yang melakukan operasi bitwise XOR antara matriks state dengan subkunci ronde saat ini.",
+      "e": "Transformasi KeyExpansion yang menggandakan panjang kunci master menggunakan deret bilangan Fibonacci."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Transformasi SubBytes yang mengganti setiap byte state menggunakan kotak substitusi (S-Box) berbasis invers Galois Field GF(2^8)."
+  },
+  {
+    "id": 246,
+    "week": "Week 6",
+    "type": "Pre Test",
+    "question": "Mengapa skema 2DES (Double DES dengan dua kunci independen 56-bit) tidak memberikan keamanan $2^{112}$ bit, melainkan hanya setara $2^{57}$ operasi?",
+    "options": {
+      "a": "Adanya kelemahan pada generator bilangan acak semu sistem operasi yang menghasilkan kunci kembar.",
+      "b": "Kunci kedua selalu dapat diturunkan dari kunci pertama melalui fungsi permutasi terbalik (IP-1).",
+      "c": "Panjang blok DES yang berukuran 64-bit memicu tabrakan ciphertext secara instan akibat Sweet32 attack.",
+      "d": "Tabel permutasi ekspansi (E-box) pada putaran Feistel DES dapat diselesaikan menggunakan eliminasi Gauss.",
+      "e": "Rentan terhadap serangan Meet-in-the-Middle yang mencocokkan hasil enkripsi maju dan dekripsi mundur di tabel memori tengah."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Rentan terhadap serangan Meet-in-the-Middle yang mencocokkan hasil enkripsi maju dan dekripsi mundur di tabel memori tengah."
+  },
+  {
+    "id": 247,
+    "week": "Week 6",
+    "type": "Pre Test",
+    "question": "Pada algoritma kriptografi kunci publik RSA, jika dipilih dua bilangan prima $p=61$ dan $q=53$, nilai dari fungsi totien Euler $\\phi(n)$ yang digunakan untuk menghitung pasangan kunci privat adalah ...",
+    "options": {
+      "a": "Nilai 3233 yang merupakan hasil perkalian skalar langsung antara bilangan prima $p$ dan bilangan prima $q$ berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "b": "Nilai 65537 yang merupakan nilai konstanta eksponen publik Fermat keempat paling umum digunakan di dunia.",
+      "c": "Nilai 114 yang merupakan hasil penjumlahan langsung dari parameter $p$ dan parameter prima $q$ yang diverifikasi menggunakan kode autentikasi pesan kriptografis.",
+      "d": "Nilai 1560 yang didapatkan dari pembagian nilai modulus sistem dengan bilangan bulat terkecil dua pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.",
+      "e": "Nilai 3120 yang dihitung dari rumus matematis totien Euler $\\phi(n) = (p - 1) \\times (q - 1) = 60 \\times 52$."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Nilai 3120 yang dihitung dari rumus matematis totien Euler $\\phi(n) = (p - 1) \\times (q - 1) = 60 \\times 52$."
+  },
+  {
+    "id": 248,
+    "week": "Week 6",
+    "type": "Pre Test",
+    "question": "Mengapa penggunaan enkripsi RSA tanpa padding ('Textbook RSA' di mana $C = M^e \\pmod n$) sangat berbahaya dan dilarang dalam sistem keamanan nyata?",
+    "options": {
+      "a": "Textbook RSA hanya dapat dijalankan pada prosesor komputer bertipe arsitektur kuantum superkonduktor yang diverifikasi menggunakan kode autentikasi pesan kriptografis.",
+      "b": "Ukuran kunci publik RSA secara otomatis bocor ke jaringan publik setiap kali proses enkripsi pesan berlangsung sesuai dengan rekomendasi panjang kunci NIST SP 800-57.",
+      "c": "Memiliki sifat multiplikatif homogen (malleable), sehingga penyerang dapat memanipulasi ciphertext untuk mengubah isi plaintext secara terprediksi.",
+      "d": "Fungsi modular eksponensiasi textbook RSA selalu menghasilkan nilai ciphertext negatif pada bilangan ganjil yang diverifikasi menggunakan kode autentikasi pesan kriptografis.",
+      "e": "Mewajibkan pihak penerima membagikan kunci privat dekripsinya kepada publik sebelum pesan dapat dibaca guna menjamin properti kerahasiaan dan integritas pesan data."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Memiliki sifat multiplikatif homogen (malleable), sehingga penyerang dapat memanipulasi ciphertext untuk mengubah isi plaintext secara terprediksi."
+  },
+  {
+    "id": 249,
+    "week": "Week 6",
+    "type": "Pre Test",
+    "question": "Dalam protokol pertukaran kunci Diffie-Hellman Ephemeral (DHE / ECDHE), properti 'Perfect Forward Secrecy' (PFS) berhasil dicapai karena ...",
+    "options": {
+      "a": "Data dienkripsi menggunakan tiga lapisan algoritma simetris yang berbeda secara paralel di saluran jaringan berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "b": "Kunci sesi diturunkan dari pasangan kunci sementara yang dibuang setelah sesi berakhir, sehingga pembobolan kunci privat server di masa depan tidak bisa mendekripsi rekaman lalu lintas masa lalu.",
+      "c": "Server dan klien tidak pernah melakukan pertukaran parameter angka apa pun melalui jaringan internet publik guna menjamin properti kerahasiaan dan integritas pesan data.",
+      "d": "Sertifikat digital X.509 diperbarui secara otomatis setiap lima detik melalui koneksi satelit GPS terisolasi pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.",
+      "e": "Kunci sesi disimpan secara permanen di dalam modul keamanan perangkat keras TPM motherboard pengguna yang diverifikasi menggunakan kode autentikasi pesan kriptografis."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Kunci sesi diturunkan dari pasangan kunci sementara yang dibuang setelah sesi berakhir, sehingga pembobolan kunci privat server di masa depan tidak bisa mendekripsi rekaman lalu lintas masa lalu."
+  },
+  {
+    "id": 250,
+    "week": "Week 6",
+    "type": "Pre Test",
+    "question": "Properti 'Collision Resistance' pada fungsi hash kriptografis menyatakan bahwa secara komputasi tidak layak (computationally infeasible) untuk ...",
+    "options": {
+      "a": "Menemukan nilai input $m$ apa pun yang menghasilkan nilai hash keluaran $H(m)$ bernilai genap pada indeks bit awal berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "b": "Mengompresi pesan berukuran 512 bit menjadi nilai hash keluaran yang berukuran tepat 256 bit secara efisien.",
+      "c": "Mendekripsi nilai hash kembali menjadi pesan aslinya tanpa menggunakan kunci privat asimetris penerima data berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "d": "Menghitung nilai hash suatu berkas yang memiliki ukuran fisik lebih besar daripada 4 Gigabyte pada sistem FAT32 sesuai dengan rekomendasi panjang kunci NIST SP 800-57.",
+      "e": "Menemukan dua pesan berbeda sembarang $m_1$ dan $m_2$ ($m_1 \\neq m_2$) sehingga menghasilkan nilai hash yang identik $H(m_1) = H(m_2)$."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Menemukan dua pesan berbeda sembarang $m_1$ dan $m_2$ ($m_1 \\neq m_2$) sehingga menghasilkan nilai hash yang identik $H(m_1) = H(m_2)$."
+  },
+  {
+    "id": 251,
+    "week": "Week 6",
+    "type": "Pre Test",
+    "question": "Mengapa konstruksi otentikasi pesan sederhana seperti `Hash(Secret || Message)` sangat rentan terhadap serangan 'Length Extension Attack' pada fungsi hash berbasis Merkle-Damgård (seperti SHA-256)?",
+    "options": {
+      "a": "Struktur Merkle-Damgård membocorkan kunci rahasia secara otomatis di setiap akhir putaran pemrosesan blok pesan berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "b": "Fungsi kompresi Merkle-Damgård menolak memproses padding bit jika pesan dikirimkan melalui protokol HTTP sesuai dengan rekomendasi panjang kunci NIST SP 800-57.",
+      "c": "Algoritma SHA-256 memotong panjang pesan secara otomatis menjadi 128 bit jika pesan diawali dengan kata rahasia pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.",
+      "d": "Keluaran hash merepresentasikan state internal akhir kompresi, memungkinkan penyerang menambahkan data baru dan melanjutkan komputasi hash tanpa tahu Secret.",
+      "e": "Penyerang dapat membalikkan fungsi kompresi menggunakan tabel pelangi (rainbow table) publik dalam hitungan detik."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Keluaran hash merepresentasikan state internal akhir kompresi, memungkinkan penyerang menambahkan data baru dan melanjutkan komputasi hash tanpa tahu Secret."
+  },
+  {
+    "id": 252,
+    "week": "Week 6",
+    "type": "Post Test",
+    "question": "Mengapa fungsi hashing cepat seperti SHA-256 atau MD5 sangat dilarang digunakan untuk penyimpanan kata sandi (password storage), dan harus digantikan oleh Argon2id atau bcrypt?",
+    "options": {
+      "a": "SHA-256 menghasilkan nilai hash yang memiliki panjang karakter berbeda-beda pada setiap sistem operasi pengguna berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "b": "Algoritma Argon2id tidak membutuhkan salt unik dan dapat memulihkan kata sandi asli jika pengguna lupa login sesuai dengan rekomendasi panjang kunci NIST SP 800-57.",
+      "c": "Fungsi cepat memungkinkan penyerang menguji miliaran tebakan per detik menggunakan GPU/ASIC; fungsi KDF menerapkan parameter work factor (waktu dan memori besar) untuk memperlambat cracking.",
+      "d": "SHA-256 hanya dapat berjalan pada prosesor 32-bit dan tidak mendukung komputasi pada arsitektur modern 64-bit.",
+      "e": "Sistem operasi Linux secara otomatis menolak menyimpan nilai hash SHA-256 pada berkas konfigurasi /etc/shadow."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Fungsi cepat memungkinkan penyerang menguji miliaran tebakan per detik menggunakan GPU/ASIC; fungsi KDF menerapkan parameter work factor (waktu dan memori besar) untuk memperlambat cracking."
+  },
+  {
+    "id": 253,
+    "week": "Week 6",
+    "type": "Post Test",
+    "question": "Apa perbedaan fundamental antara tanda tangan digital (Digital Signature berbasis RSA/ECDSA) dan kode otentikasi pesan (HMAC) dalam konteks hukum dan jaminan keamanan?",
+    "options": {
+      "a": "HMAC memerlukan sepasang kunci publik dan privat, sedangkan Digital Signature hanya memakai kunci simetris tunggal yang diverifikasi menggunakan kode autentikasi pesan kriptografis.",
+      "b": "Digital Signature tidak memerlukan fungsi hash apa pun dan langsung mengomputasi data teks biner plaintext.",
+      "c": "HMAC menjamin kerahasiaan isi pesan (enkripsi), sedangkan Digital Signature hanya mengompresi ukuran pesan fisik.",
+      "d": "Digital Signature memberikan jaminan Non-Repudiation karena dibuat dengan private key unik, sedangkan HMAC memakai shared secret yang diketahui kedua pihak sehingga bukti dapat disangkal.",
+      "e": "HMAC telah dinyatakan usang oleh standar internasional dan tidak boleh diimplementasikan pada protokol TLS."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Digital Signature memberikan jaminan Non-Repudiation karena dibuat dengan private key unik, sedangkan HMAC memakai shared secret yang diketahui kedua pihak sehingga bukti dapat disangkal."
+  },
+  {
+    "id": 254,
+    "week": "Week 6",
+    "type": "Post Test",
+    "question": "Dalam arsitektur Public Key Infrastructure (PKI), mekanisme 'OCSP Stapling' diperkenalkan untuk mengatasi kelemahan privasi dan performa pada pemeriksaan status sertifikat X.509 konvensional dengan cara ...",
+    "options": {
+      "a": "Mewajibkan klien mengunduh seluruh daftar berkas CRL berukuran puluhan megabyte setiap kali membuka peramban pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.",
+      "b": "Memaksa peramban mengabaikan tanggal kedaluwarsa sertifikat jika nama domain server cocok dengan header HTTP berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "c": "Menghapus seluruh otoritas Root CA komersial dan menggantinya dengan sertifikat self-signed lokal institusi berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "d": "Server web secara berkala meminta respons status OCSP bertanda tangan CA lalu menyematkannya (staple) langsung ke klien saat TLS handshake, menghemat kueri klien ke CA.",
+      "e": "Mengenkripsi sertifikat digital klien menggunakan algoritma kuantum sebelum diteruskan ke server aplikasi."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Server web secara berkala meminta respons status OCSP bertanda tangan CA lalu menyematkannya (staple) langsung ke klien saat TLS handshake, menghemat kueri klien ke CA."
+  },
+  {
+    "id": 255,
+    "week": "Week 6",
+    "type": "Post Test",
+    "question": "Mengapa Elliptic Curve Cryptography (ECC, seperti kurva secp256r1 atau Curve25519) lebih unggul diaplikasikan pada perangkat mobile dan IoT dibanding RSA konvensional?",
+    "options": {
+      "a": "ECC tidak membutuhkan pemrosesan aritmatika modular sama sekali pada unit arithmetic logic unit (ALU) prosesor.",
+      "b": "Kunci privat kurva eliptik dapat dibagikan secara bebas kepada publik tanpa mengurangi kerahasiaan pesan.",
+      "c": "Algoritma kurva eliptik sepenuhnya kebal terhadap segala jenis serangan algoritma Shor pada komputer kuantum.",
+      "d": "ECC memungkinkan proses dekripsi dilakukan tanpa memerlukan kunci privat oleh penerima data terdaftar.",
+      "e": "Memberikan tingkat kekuatan keamanan setara RSA 3072-bit hanya dengan panjang kunci 256-bit, memangkas komputasi, konsumsi daya baterai, dan ukuran bandwidth."
+    },
+    "correct_letter": "e",
+    "correct_answer": "Memberikan tingkat kekuatan keamanan setara RSA 3072-bit hanya dengan panjang kunci 256-bit, memangkas komputasi, konsumsi daya baterai, dan ukuran bandwidth."
+  },
+  {
+    "id": 256,
+    "week": "Week 6",
+    "type": "Post Test",
+    "question": "Pembaruan arsitektur keamanan pada standar TLS 1.3 (RFC 8446) dibandingkan TLS 1.2 secara radikal meningkatkan keamanan dengan langkah tegas berupa ...",
+    "options": {
+      "a": "Menghapus protokol transmisi TCP dan menggantikannya secara eksklusif dengan protokol User Datagram Protocol (UDP) berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "b": "Menghapus pertukaran kunci RSA statis dan seluruh cipher non-AEAD (seperti CBC mode), mewajibkan cipher AEAD dan pertukaran ephemeral DH (PFS).",
+      "c": "Mewajibkan penggunaan panjang kunci simetris minimal 4096 bit pada seluruh cipher suite yang terdaftar aktif berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "d": "Menonaktifkan enkripsi pada fase transmisi data aplikasi untuk memprioritaskan latensi nol (0-RTT performance) guna menjamin properti kerahasiaan dan integritas pesan data.",
+      "e": "Mengizinkan penggunaan fungsi hash MD5 untuk verifikasi integritas pesan handshake pada jaringan berkecepatan tinggi berdasarkan prinsip matematika komputasi kurva eliptik modern."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Menghapus pertukaran kunci RSA statis dan seluruh cipher non-AEAD (seperti CBC mode), mewajibkan cipher AEAD dan pertukaran ephemeral DH (PFS)."
+  },
+  {
+    "id": 257,
+    "week": "Week 6",
+    "type": "Post Test",
+    "question": "Mengapa algoritma pertukaran kunci Diffie-Hellman murni (tanpa tanda tangan digital atau sertifikat) sangat rentan terhadap serangan Man-in-the-Middle (MitM)?",
+    "options": {
+      "a": "Diffie-Hellman hanya dapat dijalankan pada perangkat keras yang memiliki modul pemrosesan grafis dedicated.",
+      "b": "Protokol dasar DH tidak menyediakan mekanisme autentikasi entitas, sehingga penyerang di tengah dapat melakukan dua negosiasi kunci terpisah secara transparan.",
+      "c": "Nilai bilangan prima modulus yang dipilih selalu dibatasi bernilai kurang dari angka seratus oleh spesifikasi RFC.",
+      "d": "Diffie-Hellman mewajibkan pengiriman nilai kunci privat master dalam bentuk teks biasa (plaintext) di jaringan.",
+      "e": "Penyerang dapat dengan mudah menebak nilai pangkat rahasia menggunakan operasi logaritma biasa kalkulator saku."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Protokol dasar DH tidak menyediakan mekanisme autentikasi entitas, sehingga penyerang di tengah dapat melakukan dua negosiasi kunci terpisah secara transparan."
+  },
+  {
+    "id": 258,
+    "week": "Week 6",
+    "type": "Post Test",
+    "question": "Dalam konteks Post-Quantum Cryptography (PQC), mengapa algoritma kriptografi asimetris seperti RSA dan ECC terancam punah jika komputer kuantum skala besar terwujud?",
+    "options": {
+      "a": "Algoritma Grover dapat memecahkan faktorisasi prima RSA dalam kompleksitas waktu konstan $O(1)$ siklus kuantum pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.",
+      "b": "Algoritma kuantum Shor mampu menyelesaikan masalah faktorisasi prima (RSA) dan logaritma diskret kurva eliptik (ECC) dalam waktu polinomial.",
+      "c": "Komputer kuantum secara instan membalikkan arah aliran daya listrik pada kabel serat optik bawah laut global pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.",
+      "d": "Sistem operasi kuantum menolak mengeksekusi fungsi matematika yang melibatkan operasi pembagian bilangan bulat.",
+      "e": "Enkripsi kunci publik menghasilkan interferensi gelombang elektromagnetik yang menghancurkan status superposisi qubit."
+    },
+    "correct_letter": "b",
+    "correct_answer": "Algoritma kuantum Shor mampu menyelesaikan masalah faktorisasi prima (RSA) dan logaritma diskret kurva eliptik (ECC) dalam waktu polinomial."
+  },
+  {
+    "id": 259,
+    "week": "Week 6",
+    "type": "Post Test",
+    "question": "Untuk mencegah serangan Side-Channel berbasis analisis waktu (Timing Attack) saat membandingkan hash atau MAC autentikasi pada kode program, praktik terbaik yang wajib diterapkan adalah ...",
+    "options": {
+      "a": "Menggunakan operator pembanding standar `==` yang langsung mengembalikan nilai false saat karakter pertama tidak cocok pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.",
+      "b": "Menambahkan jeda waktu acak (random sleep) antara 1 hingga 10 detik sebelum memanggil fungsi perbandingan bawaan bahasa.",
+      "c": "Menggunakan fungsi perbandingan dengan waktu konstan (constant-time comparison) yang selalu memeriksa seluruh byte tanpa keluar lebih awal.",
+      "d": "Mengalokasikan kedua string variabel pembanding pada memori video GPU sebelum melakukan perbandingan karakter.",
+      "e": "Mengonversi kedua nilai hash menjadi bilangan floating-point ganda sebelum melakukan operasi pengurangan skalar."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Menggunakan fungsi perbandingan dengan waktu konstan (constant-time comparison) yang selalu memeriksa seluruh byte tanpa keluar lebih awal."
+  },
+  {
+    "id": 260,
+    "week": "Week 6",
+    "type": "Post Test",
+    "question": "Mengapa penggunaan fungsi pembangkit bilangan acak bawaan seperti `rand()` atau `Math.random()` sangat berbahaya jika digunakan untuk menghasilkan token sesi atau kunci kriptografi?",
+    "options": {
+      "a": "Fungsi-fungsi tersebut menghasilkan keluaran bilangan bertipe string yang tidak dapat dienkripsi oleh pustaka OpenSSL.",
+      "b": "Standar keamanan W3C melarang penggunaan bilangan desimal acak dalam pembuatan cookie peramban internet klien.",
+      "c": "Penggunaan fungsi tersebut memicu pemakaian CPU hingga 100 persen dan menyebabkan server web mengalami crash permanen.",
+      "d": "Fungsi PRNG non-kriptografis memiliki entropi rendah dan algoritma deterministik (seperti Linear Congruential Generator) yang mudah ditebak state berikutnya.",
+      "e": "Fungsi Math.random() selalu mengirimkan nilai seed acak ke server peramban eksternal melalui koneksi telemetry."
+    },
+    "correct_letter": "d",
+    "correct_answer": "Fungsi PRNG non-kriptografis memiliki entropi rendah dan algoritma deterministik (seperti Linear Congruential Generator) yang mudah ditebak state berikutnya."
+  },
+  {
+    "id": 261,
+    "week": "Week 6",
+    "type": "Post Test",
+    "question": "Berdasarkan prinsip Birthday Paradox, berapa perkiraan jumlah percobaan hash acak yang dibutuhkan seorang penyerang untuk menemukan tabrakan (collision) pada fungsi hash dengan panjang digest $n$ bit?",
+    "options": {
+      "a": "Hanya dibutuhkan sekitar $2^{n/2}$ operasi percobaan hash, mereduksi ruang pencarian eksponensial menjadi setengah pangkatnya.",
+      "b": "Dibutuhkan sekitar $2^n$ operasi hash penuh untuk menemukan tabrakan secara deterministik pada ruang pencarian guna menjamin properti kerahasiaan dan integritas pesan data.",
+      "c": "Dibutuhkan sekitar $n^2$ operasi perhitungan matematis sederhana pada register unit floating point CPU host.",
+      "d": "Hanya membutuhkan $n \\times 2$ operasi hash berkat pengoptimalan memori paralel arsitektur grafis GPU modern.",
+      "e": "Dibutuhkan tepat $\\log_2(n)$ siklus detak instruksi perakitan mesin mikroprosesor pada arsitektur x86."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Hanya dibutuhkan sekitar $2^{n/2}$ operasi percobaan hash, mereduksi ruang pencarian eksponensial menjadi setengah pangkatnya."
+  },
+  {
+    "id": 262,
+    "week": "Week 6",
+    "type": "Post Test",
+    "question": "Prinsip dasar protokol kriptografi Zero-Knowledge Proof (ZKP, seperti zk-SNARKs) memungkinkan sebuah pihak pembukti (prover) untuk meyakinkan pihak pemverifikasi (verifier) bahwa ...",
+    "options": {
+      "a": "Pihak pembukti telah berhasil meretas basis data pihak pemverifikasi tanpa meninggalkan berkas jejak audit di log sistem yang diverifikasi menggunakan kode autentikasi pesan kriptografis.",
+      "b": "Seluruh data transaksi perbankan pengguna disiarkan ke seluruh node jaringan blockchain secara publik tanpa enkripsi guna menjamin properti kerahasiaan dan integritas pesan data.",
+      "c": "Sebuah pernyataan matematis adalah benar tanpa membocorkan informasi atau rahasia apa pun selain kebenaran pernyataan tersebut.",
+      "d": "Kunci privat enkripsi data telah dimusnahkan secara fisik dari media penyimpanan cold storage menggunakan demagnetizer pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.",
+      "e": "Sistem operasi server telah diperbarui dengan patch keamanan kernel terbaru dari vendor perangkat lunak resmi berdasarkan prinsip matematika komputasi kurva eliptik modern."
+    },
+    "correct_letter": "c",
+    "correct_answer": "Sebuah pernyataan matematis adalah benar tanpa membocorkan informasi atau rahasia apa pun selain kebenaran pernyataan tersebut."
+  },
+  {
+    "id": 263,
+    "week": "Week 6",
+    "type": "Post Test",
+    "question": "Pada sistem berkas terenkripsi tingkat partisi (Full Disk Encryption seperti LUKS atau BitLocker), peran Master Key (Volume Encryption Key) yang dibungkus oleh User Key (Key Encryption Key) bertujuan untuk ...",
+    "options": {
+      "a": "Memungkinkan pengguna mengganti password otentikasi tanpa harus melakukan enkripsi ulang seluruh volume disk yang memakan waktu berjam-jam.",
+      "b": "Menghindari proses penulisan data ke dalam sektor piringan disk fisik sehingga memperpanjang usia pakai memori NAND berdasarkan prinsip matematika komputasi kurva eliptik modern.",
+      "c": "Menyediakan pintu belakang (backdoor) darurat bagi penegak hukum untuk memulihkan data tanpa persetujuan pemilik sah pada saluran komunikasi aman berbasis spesifikasi TLS 1.3.",
+      "d": "Meningkatkan kecepatan putaran spindle motor hard disk mekanis hingga mencapai kecepatan lima belas ribu RPM yang diverifikasi menggunakan kode autentikasi pesan kriptografis.",
+      "e": "Membagi setiap berkas dokumen pengguna menjadi pecahan data terenkripsi yang disebar ke beberapa server cloud publik berdasarkan prinsip matematika komputasi kurva eliptik modern."
+    },
+    "correct_letter": "a",
+    "correct_answer": "Memungkinkan pengguna mengganti password otentikasi tanpa harus melakukan enkripsi ulang seluruh volume disk yang memakan waktu berjam-jam."
   }
 ];
