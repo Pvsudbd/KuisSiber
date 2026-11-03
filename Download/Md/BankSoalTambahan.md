@@ -435,46 +435,37 @@ Berdasarkan prinsip Data Minimization dalam regulasi perlindungan data pribadi (
 **Pertanyaan:**  
 Dalam UU ITE (Undang-Undang Informasi dan Transaksi Elektronik), tindakan mengakses komputer atau sistem elektronik milik orang lain dengan cara melanggar, menerobos, melampaui, atau menjebol sistem pengamanan diatur secara spesifik dalam ...
 
-**Pilihan Jawaban:**
-- **A.** Pasal 27 ayat (1)
-- **B.** Pasal 28 ayat (2)
-- **C.** Pasal 30 ayat (3) *(Kunci Jawaban)*
-- **D.** Pasal 35
-- **E.** Pasal 45
+- **A**. Pasal 27 ayat (1) (Larangan mendistribusikan konten elektronik berkonten asusila/pornografi)
+- **B**. Pasal 28 ayat (2) (Larangan menyebarkan ujaran kebencian berbasis SARA)
+- **C**. Pasal 30 ayat (3) (Illegal access dengan melanggar, menerobos, melampaui, atau menjebol sistem pengamanan/cracking)
+- **D**. Pasal 35 (Manipulasi atau pemalsuan dokumen elektronik/electronic forgery)
+- **E**. Pasal 45 (Ketentuan sanksi pidana penjara dan denda)
 
-> **Kunci Jawaban Benar:** **C. Pasal 30 ayat (3)**
-
----
+> **Kunci Jawaban:** `C` - Pasal 30 ayat (3) (Illegal access dengan melanggar, menerobos, melampaui, atau menjebol sistem pengamanan/cracking)
 
 ### Soal 4 (Pre Test)
 **Pertanyaan:**  
 Seseorang memasang packet sniffer pada jaringan Wi-Fi privat perusahaan tanpa izin untuk menangkap transmisi data sensitif yang tidak bersifat publik. Tindakan penyadapan ini diatur dan dilarang dalam UU ITE pada ...
 
-**Pilihan Jawaban:**
-- **A.** Pasal 31 ayat (1) *(Kunci Jawaban)*
-- **B.** Pasal 30 ayat (1)
-- **C.** Pasal 33
-- **D.** Pasal 35
-- **E.** Pasal 36
+- **A**. Pasal 31 ayat (1) (Interception/penyadapan transmisi informasi elektronik pada sistem privat tanpa hak/sniffing)
+- **B**. Pasal 30 ayat (1) (Akses tanpa hak ke komputer atau sistem elektronik)
+- **C**. Pasal 33 (Tindakan yang berakibat terganggunya kinerja sistem elektronik/serangan DoS)
+- **D**. Pasal 35 (Pemalsuan data atau manipulasi dokumen elektronik)
+- **E**. Pasal 36 (Pemberatan hukuman apabila kejahatan siber mengakibatkan kerugian materiil bagi pihak lain)
 
-> **Kunci Jawaban Benar:** **A. Pasal 31 ayat (1)**
-
----
+> **Kunci Jawaban:** `A` - Pasal 31 ayat (1) (Interception/penyadapan transmisi informasi elektronik pada sistem privat tanpa hak/sniffing)
 
 ### Soal 5 (Pre Test)
 **Pertanyaan:**  
 Seorang mantan karyawan yang kecewa sengaja menghapus tabel database nasabah dan mengubah record saldo rekening. Tindakan pengubahan, perusakan, dan penghapusan informasi elektronik milik orang lain ini melanggar UU ITE ...
 
-**Pilihan Jawaban:**
-- **A.** Pasal 27 ayat (3)
-- **B.** Pasal 32 ayat (1) *(Kunci Jawaban)*
-- **C.** Pasal 31 ayat (2)
-- **D.** Pasal 34
-- **E.** Pasal 30 ayat (1)
+- **A**. Pasal 27 ayat (3) (Pencemaran nama baik dan penghinaan melalui media sosial)
+- **B**. Pasal 32 ayat (1) (Data interference: mengubah, menambah, mengurangi, merusak, atau menghapus informasi/dokumen elektronik orang lain)
+- **C**. Pasal 31 ayat (2) (Penyadapan transmisi data dari satu komputer ke komputer lain)
+- **D**. Pasal 34 (Penyediaan atau penjualan alat dan perangkat lunak peretas)
+- **E**. Pasal 30 ayat (1) (Mengakses sistem komputer tanpa mengubah isi data)
 
-> **Kunci Jawaban Benar:** **B. Pasal 32 ayat (1)**
-
----
+> **Kunci Jawaban:** `B` - Pasal 32 ayat (1) (Data interference: mengubah, menambah, mengurangi, merusak, atau menghapus informasi/dokumen elektronik orang lain)
 
 ### Soal 6 (Pre Test)
 **Pertanyaan:**  
@@ -495,31 +486,25 @@ Tindakan melancarkan serangan Distributed Denial of Service (DDoS) yang menyebab
 **Pertanyaan:**  
 Seseorang memproduksi dan memperjualbelikan software peretas (exploit kit) yang dirancang khusus untuk memfasilitasi pembobolan sistem perbankan. Tindakan penyediaan perangkat keras atau lunak untuk memfasilitasi kejahatan komputer ini diatur dalam UU ITE ...
 
-**Pilihan Jawaban:**
-- **A.** Pasal 30 ayat (2)
-- **B.** Pasal 34 ayat (1) *(Kunci Jawaban)*
-- **C.** Pasal 31 ayat (1)
-- **D.** Pasal 28 ayat (1)
-- **E.** Pasal 29
+- **A**. Pasal 30 ayat (2) (Akses ilegal untuk memperoleh informasi/dokumen elektronik)
+- **B**. Pasal 34 ayat (1) (Misuse of devices: memproduksi, menjual, menyebarkan, atau memiliki perangkat keras/lunak yang dirancang untuk memfasilitasi peretasan)
+- **C**. Pasal 31 ayat (1) (Penyadapan transmisi data jaringan privat)
+- **D**. Pasal 28 ayat (1) (Penyebaran berita bohong yang merugikan konsumen transaksi elektronik)
+- **E**. Pasal 29 (Pengiriman informasi elektronik yang berisi ancaman kekerasan pribadi)
 
-> **Kunci Jawaban Benar:** **B. Pasal 34 ayat (1)**
-
----
+> **Kunci Jawaban:** `B` - Pasal 34 ayat (1) (Misuse of devices: memproduksi, menjual, menyebarkan, atau memiliki perangkat keras/lunak yang dirancang untuk memfasilitasi peretasan)
 
 ### Soal 8 (Pre Test)
 **Pertanyaan:**  
 Membuat sertifikat digital palsu atau memanipulasi dokumen elektronik rekening bank agar tampak seolah-olah merupakan data yang otentik (Electronic Forgery) dilarang dalam UU ITE pada ...
 
-**Pilihan Jawaban:**
-- **A.** Pasal 35 *(Kunci Jawaban)*
-- **B.** Pasal 30
-- **C.** Pasal 31
-- **D.** Pasal 32
-- **E.** Pasal 33
+- **A**. Pasal 35 (Electronic forgery: memanipulasi, menciptakan, atau mengubah dokumen elektronik agar seolah-olah otentik)
+- **B**. Pasal 30 (Illegal access ke dalam jaringan komputer tanpa hak)
+- **C**. Pasal 31 (Interception atau penyadapan kabel/gelombang radio transmisi)
+- **D**. Pasal 32 (Perusakan atau penghapusan data database perusahaan)
+- **E**. Pasal 33 (Serangan siber yang mengakibatkan lumpuhnya layanan server)
 
-> **Kunci Jawaban Benar:** **A. Pasal 35**
-
----
+> **Kunci Jawaban:** `A` - Pasal 35 (Electronic forgery: memanipulasi, menciptakan, atau mengubah dokumen elektronik agar seolah-olah otentik)
 
 ### Soal 9 (Pre Test)
 **Pertanyaan:**  

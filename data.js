@@ -2810,14 +2810,14 @@ const QUIZ_DATA = [
     "type": "Pre Test",
     "question": "Dalam UU ITE (Undang-Undang Informasi dan Transaksi Elektronik), tindakan mengakses komputer atau sistem elektronik milik orang lain dengan cara melanggar, menerobos, melampaui, atau menjebol sistem pengamanan diatur secara spesifik dalam ...",
     "options": {
-      "a": "Pasal 27 ayat (1)",
-      "b": "Pasal 28 ayat (2)",
-      "c": "Pasal 30 ayat (3)",
-      "d": "Pasal 35",
-      "e": "Pasal 45"
+      "a": "Pasal 27 ayat (1) (Larangan mendistribusikan konten elektronik berkonten asusila/pornografi)",
+      "b": "Pasal 28 ayat (2) (Larangan menyebarkan ujaran kebencian berbasis SARA)",
+      "c": "Pasal 30 ayat (3) (Illegal access dengan melanggar, menerobos, melampaui, atau menjebol sistem pengamanan/cracking)",
+      "d": "Pasal 35 (Manipulasi atau pemalsuan dokumen elektronik/electronic forgery)",
+      "e": "Pasal 45 (Ketentuan sanksi pidana penjara dan denda)"
     },
     "correct_letter": "c",
-    "correct_answer": "Pasal 30 ayat (3)",
+    "correct_answer": "Pasal 30 ayat (3) (Illegal access dengan melanggar, menerobos, melampaui, atau menjebol sistem pengamanan/cracking)",
     "source": "Bank Soal Tambahan",
     "mark": "1.00 out of 1.00",
     "id": 166
@@ -2827,14 +2827,14 @@ const QUIZ_DATA = [
     "type": "Pre Test",
     "question": "Seseorang memasang packet sniffer pada jaringan Wi-Fi privat perusahaan tanpa izin untuk menangkap transmisi data sensitif yang tidak bersifat publik. Tindakan penyadapan ini diatur dan dilarang dalam UU ITE pada ...",
     "options": {
-      "a": "Pasal 31 ayat (1)",
-      "b": "Pasal 30 ayat (1)",
-      "c": "Pasal 33",
-      "d": "Pasal 35",
-      "e": "Pasal 36"
+      "a": "Pasal 31 ayat (1) (Interception/penyadapan transmisi informasi elektronik pada sistem privat tanpa hak/sniffing)",
+      "b": "Pasal 30 ayat (1) (Akses tanpa hak ke komputer atau sistem elektronik)",
+      "c": "Pasal 33 (Tindakan yang berakibat terganggunya kinerja sistem elektronik/serangan DoS)",
+      "d": "Pasal 35 (Pemalsuan data atau manipulasi dokumen elektronik)",
+      "e": "Pasal 36 (Pemberatan hukuman apabila kejahatan siber mengakibatkan kerugian materiil bagi pihak lain)"
     },
     "correct_letter": "a",
-    "correct_answer": "Pasal 31 ayat (1)",
+    "correct_answer": "Pasal 31 ayat (1) (Interception/penyadapan transmisi informasi elektronik pada sistem privat tanpa hak/sniffing)",
     "source": "Bank Soal Tambahan",
     "mark": "1.00 out of 1.00",
     "id": 167
@@ -2844,14 +2844,14 @@ const QUIZ_DATA = [
     "type": "Pre Test",
     "question": "Seorang mantan karyawan yang kecewa sengaja menghapus tabel database nasabah dan mengubah record saldo rekening. Tindakan pengubahan, perusakan, dan penghapusan informasi elektronik milik orang lain ini melanggar UU ITE ...",
     "options": {
-      "a": "Pasal 27 ayat (3)",
-      "b": "Pasal 32 ayat (1)",
-      "c": "Pasal 31 ayat (2)",
-      "d": "Pasal 34",
-      "e": "Pasal 30 ayat (1)"
+      "a": "Pasal 27 ayat (3) (Pencemaran nama baik dan penghinaan melalui media sosial)",
+      "b": "Pasal 32 ayat (1) (Data interference: mengubah, menambah, mengurangi, merusak, atau menghapus informasi/dokumen elektronik orang lain)",
+      "c": "Pasal 31 ayat (2) (Penyadapan transmisi data dari satu komputer ke komputer lain)",
+      "d": "Pasal 34 (Penyediaan atau penjualan alat dan perangkat lunak peretas)",
+      "e": "Pasal 30 ayat (1) (Mengakses sistem komputer tanpa mengubah isi data)"
     },
     "correct_letter": "b",
-    "correct_answer": "Pasal 32 ayat (1)",
+    "correct_answer": "Pasal 32 ayat (1) (Data interference: mengubah, menambah, mengurangi, merusak, atau menghapus informasi/dokumen elektronik orang lain)",
     "source": "Bank Soal Tambahan",
     "mark": "1.00 out of 1.00",
     "id": 168
@@ -2878,14 +2878,14 @@ const QUIZ_DATA = [
     "type": "Pre Test",
     "question": "Seseorang memproduksi dan memperjualbelikan software peretas (exploit kit) yang dirancang khusus untuk memfasilitasi pembobolan sistem perbankan. Tindakan penyediaan perangkat keras atau lunak untuk memfasilitasi kejahatan komputer ini diatur dalam UU ITE ...",
     "options": {
-      "a": "Pasal 30 ayat (2)",
-      "b": "Pasal 34 ayat (1)",
-      "c": "Pasal 31 ayat (1)",
-      "d": "Pasal 28 ayat (1)",
-      "e": "Pasal 29"
+      "a": "Pasal 30 ayat (2) (Akses ilegal untuk memperoleh informasi/dokumen elektronik)",
+      "b": "Pasal 34 ayat (1) (Misuse of devices: memproduksi, menjual, menyebarkan, atau memiliki perangkat keras/lunak yang dirancang untuk memfasilitasi peretasan)",
+      "c": "Pasal 31 ayat (1) (Penyadapan transmisi data jaringan privat)",
+      "d": "Pasal 28 ayat (1) (Penyebaran berita bohong yang merugikan konsumen transaksi elektronik)",
+      "e": "Pasal 29 (Pengiriman informasi elektronik yang berisi ancaman kekerasan pribadi)"
     },
     "correct_letter": "b",
-    "correct_answer": "Pasal 34 ayat (1)",
+    "correct_answer": "Pasal 34 ayat (1) (Misuse of devices: memproduksi, menjual, menyebarkan, atau memiliki perangkat keras/lunak yang dirancang untuk memfasilitasi peretasan)",
     "source": "Bank Soal Tambahan",
     "mark": "1.00 out of 1.00",
     "id": 170
@@ -2895,14 +2895,14 @@ const QUIZ_DATA = [
     "type": "Pre Test",
     "question": "Membuat sertifikat digital palsu atau memanipulasi dokumen elektronik rekening bank agar tampak seolah-olah merupakan data yang otentik (Electronic Forgery) dilarang dalam UU ITE pada ...",
     "options": {
-      "a": "Pasal 35",
-      "b": "Pasal 30",
-      "c": "Pasal 31",
-      "d": "Pasal 32",
-      "e": "Pasal 33"
+      "a": "Pasal 35 (Electronic forgery: memanipulasi, menciptakan, atau mengubah dokumen elektronik agar seolah-olah otentik)",
+      "b": "Pasal 30 (Illegal access ke dalam jaringan komputer tanpa hak)",
+      "c": "Pasal 31 (Interception atau penyadapan kabel/gelombang radio transmisi)",
+      "d": "Pasal 32 (Perusakan atau penghapusan data database perusahaan)",
+      "e": "Pasal 33 (Serangan siber yang mengakibatkan lumpuhnya layanan server)"
     },
     "correct_letter": "a",
-    "correct_answer": "Pasal 35",
+    "correct_answer": "Pasal 35 (Electronic forgery: memanipulasi, menciptakan, atau mengubah dokumen elektronik agar seolah-olah otentik)",
     "source": "Bank Soal Tambahan",
     "mark": "1.00 out of 1.00",
     "id": 171
