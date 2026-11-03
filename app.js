@@ -307,37 +307,78 @@ window.App = (function () {
   // ==========================================
   // QUIZ DETAILS (Card click in Dashboard)
   // ==========================================
-  function openQuizDetails(week, type) {
-    state.detailQuiz = { week, type };
+  function openQuizDetails(week, type, source = 'all') {
+    state.detailQuiz = { week, type, source };
+    state.detailSourceFilter = source;
     state.showDetailAnswers = true;
 
-    const filtered = state.allQuestions.filter(q => {
+    // Base pool for this week and type
+    const baseQuestions = state.allQuestions.filter(q => {
       const matchWeek = (week === 'all') || (q.week === week);
       const matchType = (type === 'all') || (q.type === type);
       return matchWeek && matchType;
     });
 
+    const totalBase = baseQuestions.length;
+    const totalExtra = baseQuestions.filter(q => q.source === 'Bank Soal Tambahan').length;
+    const totalLms = totalBase - totalExtra;
+
+    // Update filter tab counts
+    const tabCountAll = document.getElementById('tab-count-all');
+    const tabCountExtra = document.getElementById('tab-count-extra');
+    const tabCountLms = document.getElementById('tab-count-lms');
+    if (tabCountAll) tabCountAll.textContent = totalBase;
+    if (tabCountExtra) tabCountExtra.textContent = totalExtra;
+    if (tabCountLms) tabCountLms.textContent = totalLms;
+
+    // Update active tab button style
+    document.querySelectorAll('.filter-tab-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.filter === state.detailSourceFilter);
+    });
+
+    renderDetailCardsList();
+
     // Header info
-    if (week === 'all') {
+    if (source === 'Bank Soal Tambahan') {
+      detailQuizType.textContent = '⭐ Soal Tambahan';
+      detailQuizTitle.textContent = (week === 'all') ? '125 Bank Soal Tambahan UTS Siber' : `${week} - Soal Tambahan`;
+      detailQuizCount.textContent = `${totalExtra} Soal Pendalaman Baru`;
+    } else if (week === 'all') {
       detailQuizType.textContent = 'Super Master';
       detailQuizTitle.textContent = 'Semua Soal Lengkap (Week 2 - 6)';
-      detailQuizCount.textContent = `${filtered.length} Soal Lengkap (Yoga + Kafi Unik)`;
+      detailQuizCount.textContent = `${totalBase} Soal Lengkap (${totalLms} LMS + ${totalExtra} Baru)`;
     } else {
       detailQuizType.textContent = type;
       detailQuizTitle.textContent = `${week} - ${getWeekTopic(week)}`;
-      detailQuizCount.textContent = `${filtered.length} Soal Tersedia`;
+      detailQuizCount.textContent = `${totalBase} Soal Tersedia (${totalLms} LMS + ${totalExtra} Baru)`;
     }
     detailQuizGrade.textContent = 'Grade: 10.00 / 10.00 (100%)';
 
-    // Render question list
+    btnToggleAnswersDetail.textContent = state.showDetailAnswers ? 'Sembunyikan Kunci' : 'Tampilkan Kunci';
+    switchView('view-quiz-details');
+  }
+
+  function renderDetailCardsList() {
+    const { week, type } = state.detailQuiz;
+    const source = state.detailSourceFilter;
+
+    const filtered = state.allQuestions.filter(q => {
+      const matchWeek = (week === 'all') || (q.week === week);
+      const matchType = (type === 'all') || (q.type === type);
+      let matchSource = true;
+      if (source === 'Bank Soal Tambahan') {
+        matchSource = (q.source === 'Bank Soal Tambahan');
+      } else if (source === 'lms') {
+        matchSource = (q.source !== 'Bank Soal Tambahan');
+      }
+      return matchWeek && matchType && matchSource;
+    });
+
     detailCardsList.innerHTML = '';
     filtered.forEach((q, idx) => {
       const card = renderQuestionDetailCard(q, '', state.showDetailAnswers, idx + 1);
       detailCardsList.appendChild(card);
     });
-
-    btnToggleAnswersDetail.textContent = state.showDetailAnswers ? 'Sembunyikan Kunci' : 'Tampilkan Kunci';
-    switchView('view-quiz-details');
   }
 
   function getWeekTopic(week) {
@@ -374,13 +415,17 @@ window.App = (function () {
     });
 
     const highlightedAns = highlightText(`${q.correct_letter.toUpperCase()}. ${q.correct_answer}`, query);
+    const isExtra = (q.source === 'Bank Soal Tambahan');
+    const sourceBadge = isExtra
+      ? `<span class="badge-chip source tambahan">✨ ${q.source}</span>`
+      : `<span class="badge-chip source">${q.source}</span>`;
 
     card.innerHTML = `
       <div class="q-detail-header">
         <div class="q-detail-badges">
           <span class="badge-chip week">${q.week}</span>
           <span class="badge-chip type">${q.type}</span>
-          <span class="badge-chip source">${q.source}</span>
+          ${sourceBadge}
         </div>
         <span class="q-detail-num">${numLabel}</span>
       </div>
@@ -413,12 +458,17 @@ window.App = (function () {
 
   function getFilteredQuestionCount() {
     if (!filterWeek || !filterType) return 10;
+    const filterSource = document.getElementById('filter-source');
+    const source = filterSource ? filterSource.value : 'all';
     const week = filterWeek.value;
     const type = filterType.value;
     const pool = state.allQuestions.filter(q => {
       const matchWeek = (week === 'all') || (q.week === week);
       const matchType = (type === 'all') || (q.type === type);
-      return matchWeek && matchType;
+      let matchSource = true;
+      if (source === 'Bank Soal Tambahan') matchSource = (q.source === 'Bank Soal Tambahan');
+      else if (source === 'lms') matchSource = (q.source !== 'Bank Soal Tambahan');
+      return matchWeek && matchType && matchSource;
     });
     return pool.length;
   }
@@ -500,10 +550,11 @@ window.App = (function () {
     }, 1000);
   }
 
-  function quickStartQuiz(week, type) {
+  function quickStartQuiz(week, type, source = 'all') {
     startQuiz({
       week: week,
       type: type,
+      source: source,
       count: 10,
       timer: 'auto',
       feedback: 'exam'
@@ -516,7 +567,13 @@ window.App = (function () {
     let pool = state.allQuestions.filter(q => {
       const matchWeek = (config.week === 'all') || (q.week === config.week);
       const matchType = (config.type === 'all') || (q.type === config.type);
-      return matchWeek && matchType;
+      let matchSource = true;
+      if (config.source === 'Bank Soal Tambahan') {
+        matchSource = (q.source === 'Bank Soal Tambahan');
+      } else if (config.source === 'lms') {
+        matchSource = (q.source !== 'Bank Soal Tambahan');
+      }
+      return matchWeek && matchType && matchSource;
     });
 
     if (pool.length === 0) {
@@ -542,8 +599,11 @@ window.App = (function () {
     const totalSeconds = totalMinutes * 60;
     const timerMode = config.timer || 'auto';
 
-    const weekLabel = (config.week === 'all') ? 'Semua Pertemuan (Week 2 - 6)' : config.week;
-    const typeLabel = (config.type === 'all') ? 'Pre & Post Test' : config.type;
+    let weekLabel = (config.week === 'all') ? 'Semua Pertemuan (Week 2 - 6)' : config.week;
+    let typeLabel = (config.type === 'all') ? 'Pre & Post Test' : config.type;
+    if (config.source === 'Bank Soal Tambahan') {
+      typeLabel += ' • ⭐ Soal Baru';
+    }
     const timeLabel = (timerMode === 'none') ? 'Tanpa Waktu' : `⏱️ ${totalMinutes} Menit`;
     quizTopicTitle.textContent = `${weekLabel} (${typeLabel})`;
     quizModeTag.textContent = `${totalQ} Soal Diacak • ${timeLabel} • Mode ${config.feedback === 'instant' ? 'Latihan' : 'Ujian'}`;
@@ -952,16 +1012,28 @@ window.App = (function () {
     btnBackToDashboard.addEventListener('click', () => switchView('view-dashboard'));
     btnToggleAnswersDetail.addEventListener('click', () => {
       state.showDetailAnswers = !state.showDetailAnswers;
-      openQuizDetails(state.detailQuiz.week, state.detailQuiz.type);
+      openQuizDetails(state.detailQuiz.week, state.detailQuiz.type, state.detailQuiz.source);
     });
     btnQuizThisDetail.addEventListener('click', () => {
-      quickStartQuiz(state.detailQuiz.week, state.detailQuiz.type);
+      quickStartQuiz(state.detailQuiz.week, state.detailQuiz.type, state.detailQuiz.source);
+    });
+
+    // Detail View Source Filter Tabs
+    document.querySelectorAll('.filter-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        state.detailSourceFilter = btn.dataset.filter;
+        document.querySelectorAll('.filter-tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderDetailCardsList();
+      });
     });
 
     // Quiz Setup Form Submit
     quizForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      const filterSource = document.getElementById('filter-source');
       startQuiz({
+        source: filterSource ? filterSource.value : 'all',
         week: filterWeek.value,
         type: filterType.value,
         count: filterCount.value,
@@ -971,6 +1043,8 @@ window.App = (function () {
     });
 
     // Dynamic timer duration preview listeners
+    const filterSource = document.getElementById('filter-source');
+    if (filterSource) filterSource.addEventListener('change', updateTimerSetupHint);
     if (filterCount) filterCount.addEventListener('change', updateTimerSetupHint);
     if (filterWeek) filterWeek.addEventListener('change', updateTimerSetupHint);
     if (filterType) filterType.addEventListener('change', updateTimerSetupHint);
@@ -1079,12 +1153,51 @@ window.App = (function () {
     });
   }
 
+  function updateDashboardCards() {
+    const cards = document.querySelectorAll('.course-card');
+    cards.forEach(card => {
+      const week = card.dataset.week;
+      const type = card.dataset.type;
+      const source = card.dataset.source;
+
+      const matching = state.allQuestions.filter(q => {
+        const matchWeek = (!week || week === 'all') || (q.week === week);
+        const matchType = (!type || type === 'all') || (q.type === type);
+        let matchSource = true;
+        if (source === 'Bank Soal Tambahan') matchSource = (q.source === 'Bank Soal Tambahan');
+        else if (source === 'lms') matchSource = (q.source !== 'Bank Soal Tambahan');
+        return matchWeek && matchType && matchSource;
+      });
+
+      const totalQ = matching.length;
+      const extraQ = matching.filter(q => q.source === 'Bank Soal Tambahan').length;
+      const lmsQ = totalQ - extraQ;
+
+      const btnAction = card.querySelector('.btn-card-action');
+      if (btnAction) {
+        if (source === 'Bank Soal Tambahan') {
+          btnAction.textContent = `Lihat ${totalQ} Soal Tambahan`;
+        } else if (week === 'all') {
+          btnAction.textContent = `Lihat Semua (${totalQ} Soal)`;
+        } else {
+          btnAction.textContent = `Lihat ${totalQ} Soal (${extraQ} Baru)`;
+        }
+      }
+
+      const statusLbl = card.querySelector('.card-status-label');
+      if (statusLbl && week !== 'all' && !source) {
+        statusLbl.textContent = `${lmsQ} LMS + ${extraQ} Tambahan`;
+      }
+    });
+  }
+
   // ==========================================
   // INITIALIZATION
   // ==========================================
   function init() {
     initEvents();
     updateTimerSetupHint();
+    updateDashboardCards();
 
     const savedTheme = localStorage.getItem('cyberquiz_theme');
     if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
